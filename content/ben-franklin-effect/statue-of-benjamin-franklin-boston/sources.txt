@@ -1,0 +1,2 @@
+http://geohack.toolforge.org/geohack.php?pagename=Statue_of_Benjamin_Franklin_(Boston)&params=42_21_28.7_N_71_3_34.7_W_type:landmark_region:US-MA
+https://siris-artinventories.si.edu/ipac20/ipac.jsp?&profile=ariall&source=~!siartinventories&uri=full=3100001~!17020~!0#focus

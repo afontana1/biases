@@ -1,0 +1,11 @@
+http://hdl.handle.net/2027.42%2F92179
+http://doi.org/10.1016%2F0022-1031(85)90025-3
+http://doi.org/10.1016%2F0022-1031(87)90016-3
+http://doi.org/10.1016%2FS0065-2601(08)60236-1
+http://doi.org/10.1037%2F0022-3514.39.4.578
+http://doi.org/10.1037%2F0022-3514.53.4.673
+http://doi.org/10.1177%2F0146167201274005
+http://doi.org/10.1177%2F014616727900500407
+https://web.archive.org/web/20160511145714/https://deepblue.lib.umich.edu/bitstream/handle/2027.42/92179/InsensitivityToSampleBias.pdf
+https://api.semanticscholar.org/CorpusID:144300903
+https://api.semanticscholar.org/CorpusID:17149379

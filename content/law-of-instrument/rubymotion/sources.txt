@@ -1,0 +1,11 @@
+http://37signals.com/svn/posts/3432-why-i-loved-building-basecamp-for-iphone-in-rubymotion
+http://www.hipbyte.com
+http://blog.rubymotion.com/post/49943751398/rubymotion-goes-2-0-and-gets-os-x-support-templates
+http://www.rubymotion.com
+http://www.rubymotion.com/
+http://www.rubymotion.com/about/
+http://www.rubymotion.com/news/2014/12/11/announcing-rubymotion-3.html
+http://www.rubymotion.com/references/success-stories/a-dark-room/
+http://www.rubymotion.com/references/success-stories/bandcamp/
+https://arstechnica.com/business/2012/05/exclusive-building-ruby-ios-applications-with-rubymotion/
+https://confluence.jetbrains.com/display/RUBYDEV/Getting+Started+with+RubyMotion

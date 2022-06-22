@@ -1,0 +1,386 @@
+<div class="mw-parser-output"><p>In <a href="/wiki/Mathematics" title="Mathematics">mathematics</a> and <a href="/wiki/Logic" title="Logic">logic</a>, a <b>vacuous truth</b> is a <a href="/wiki/Material_conditional" title="Material conditional">conditional</a> or <a href="/wiki/Universal_quantification" title="Universal quantification">universal</a> <a href="/wiki/Statement_(logic)" title="Statement (logic)">statement</a> (a universal statement that can be converted to a conditional statement) that is true because the <a href="/wiki/Antecedent_(logic)" title="Antecedent (logic)">antecedent</a> cannot be <a href="/wiki/Satisfiability" title="Satisfiability">satisfied</a>.<sup id="cite_ref-:1_1-0" class="reference"><a href="#cite_note-:1-1">&#91;1&#93;</a></sup> For example, the statement "all cell phones in the room are turned off" will be <a href="/wiki/Truth" title="Truth">true</a> when no cell phones are in the room. In this case, the statement "all cell phones in the room are turned <i>on</i>" would also be vacuously true, as would the <a href="/wiki/Logical_conjunction" title="Logical conjunction">conjunction</a> of the two: "all cell phones in the room are turned on <i>and</i> turned off", which would otherwise be incoherent and false. For that reason, it is sometimes said that a statement is vacuously true because it does not really say anything.<sup id="cite_ref-:2_2-0" class="reference"><a href="#cite_note-:2-2">&#91;2&#93;</a></sup>
+</p><p>More formally, a relatively <a href="/wiki/Well-definition" class="mw-redirect" title="Well-definition">well-defined</a> usage refers to a conditional statement (or a universal conditional statement) with a false <a href="/wiki/Antecedent_(logic)" title="Antecedent (logic)">antecedent</a>.<sup id="cite_ref-:1_1-1" class="reference"><a href="#cite_note-:1-1">&#91;1&#93;</a></sup><sup id="cite_ref-:3_3-0" class="reference"><a href="#cite_note-:3-3">&#91;3&#93;</a></sup><sup id="cite_ref-:2_2-1" class="reference"><a href="#cite_note-:2-2">&#91;2&#93;</a></sup><sup id="cite_ref-:4_4-0" class="reference"><a href="#cite_note-:4-4">&#91;4&#93;</a></sup> One example of such a statement is "if <a href="/wiki/London" title="London">London</a> is in <a href="/wiki/France" title="France">France</a>, then the <a href="/wiki/Eiffel_Tower" title="Eiffel Tower">Eiffel Tower</a> is in <a href="/wiki/Bolivia" title="Bolivia">Bolivia</a>".
+</p><p>Such statements are considered vacuous truths, because the fact that the antecedent is false prevents using the statement to infer anything about the truth value of the <a href="/wiki/Consequent" title="Consequent">consequent</a>. In essence, a conditional statement, that is based on the <a href="/wiki/Material_conditional" title="Material conditional">material conditional</a>, is true when the antecedent ("London is in France" in the example) is false regardless of whether the conclusion or <a href="/wiki/Consequent" title="Consequent">consequent</a> ("the Eiffel Tower is in Bolivia" in the example) is true or false because the material conditional is defined in that way.
+</p><p>Examples common to everyday speech include conditional phrases like "when hell freezes over..." and "when pigs can fly...", indicating that not before the given (impossible) condition is met will the speaker accept some respective (typically false or absurd) proposition.
+</p><p>In <a href="/wiki/Pure_mathematics" title="Pure mathematics">pure mathematics</a>, vacuously true statements are not generally of interest by themselves, but they frequently arise as the base case of proofs by <a href="/wiki/Mathematical_induction" title="Mathematical induction">mathematical induction</a>.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup> This notion has relevance in <a href="/wiki/Pure_mathematics" title="Pure mathematics">pure mathematics</a>, as well as in any other field that uses <a href="/wiki/Classical_logic" title="Classical logic">classical logic</a>.
+</p><p>Outside of mathematics, statements which can be characterized informally as vacuously true can be misleading. Such statements make reasonable assertions about <a href="/wiki/Qualifier" class="mw-redirect" title="Qualifier">qualified</a> objects which <a href="/wiki/Nonexistence" class="mw-redirect" title="Nonexistence">do not actually exist</a>. For example, a child might truthfully tell their parent "I ate every vegetable on my plate", when there were no vegetables on the child's plate to begin with. In this case, the parent can believe that the child has actually eaten some vegetables, even though that is not true. In addition, a vacuous truth is often used colloquially with absurd statements, either to confidently assert something (e.g. "the dog was red, or I'm a monkey's uncle" to strongly claim that the dog was red), or to express doubt, sarcasm, disbelief, incredulity or indignation (e.g. "yes, and I'm the Queen of England" to disagree a previously made statement).
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Scope_of_the_concept"><span class="tocnumber">1</span> <span class="toctext">Scope of the concept</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#In_computer_programming"><span class="tocnumber">2</span> <span class="toctext">In computer programming</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Examples"><span class="tocnumber">3</span> <span class="toctext">Examples</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Bibliography"><span class="tocnumber">6</span> <span class="toctext">Bibliography</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Scope_of_the_concept">Scope of the concept</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Vacuous_truth&amp;action=edit&amp;section=1" title="Edit section: Scope of the concept">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A statement <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle S}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>S</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle S}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4611d85173cd3b508e67077d4a1252c9c05abca2" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.499ex; height:2.176ex;" alt="S"/></span> is "vacuously true" if it <a href="/wiki/Logical_form" title="Logical form">resembles</a> a <a href="/wiki/Material_conditional" title="Material conditional">material conditional</a> statement <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle P\Rightarrow Q}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>P</mi>
+        <mo stretchy="false">&#x21D2;<!-- ⇒ --></mo>
+        <mi>Q</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle P\Rightarrow Q}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/27a57c9bc077d0b20e4f5ec006f5342cfbb18fd2" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:7.198ex; height:2.509ex;" alt="P\Rightarrow Q"/></span>, where the <a href="/wiki/Antecedent_(logic)" title="Antecedent (logic)">antecedent</a> <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle P}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>P</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle P}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b4dc73bf40314945ff376bd363916a738548d40a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.745ex; height:2.176ex;" alt="P"/></span> is known to be false.<sup id="cite_ref-:1_1-2" class="reference"><a href="#cite_note-:1-1">&#91;1&#93;</a></sup><sup id="cite_ref-:3_3-1" class="reference"><a href="#cite_note-:3-3">&#91;3&#93;</a></sup><sup id="cite_ref-:2_2-2" class="reference"><a href="#cite_note-:2-2">&#91;2&#93;</a></sup>
+</p><p>Vacuously true statements that can be reduced (<a href="/wiki/Mutatis_mutandis" title="Mutatis mutandis">with suitable transformations</a>) to this basic form (material conditional) include the following <a href="/wiki/Universal_quantifier" class="mw-redirect" title="Universal quantifier">universally quantified</a> statements:
+</p>
+<ul><li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \forall x:P(x)\Rightarrow Q(x)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x2200;<!-- ∀ --></mi>
+        <mi>x</mi>
+        <mo>:</mo>
+        <mi>P</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">&#x21D2;<!-- ⇒ --></mo>
+        <mi>Q</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \forall x:P(x)\Rightarrow Q(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b7521524fc766bf25239aedf21360970fad24ff5" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:18.035ex; height:2.843ex;" alt="\forall x:P(x)\Rightarrow Q(x)"/></span>, where it is the case that <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \forall x:\neg P(x)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x2200;<!-- ∀ --></mi>
+        <mi>x</mi>
+        <mo>:</mo>
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+        <mi>P</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \forall x:\neg P(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/68c75b9fd30a0582ad27c4f4893f9541c7e46ae7" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:10.994ex; height:2.843ex;" alt="\forall x:\neg P(x)"/></span>.<sup id="cite_ref-:4_4-1" class="reference"><a href="#cite_note-:4-4">&#91;4&#93;</a></sup></li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \forall x\in A:Q(x)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x2200;<!-- ∀ --></mi>
+        <mi>x</mi>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>A</mi>
+        <mo>:</mo>
+        <mi>Q</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \forall x\in A:Q(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1fc6a3e213d98016ed07f18f737a0fe59d69a22c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:14.12ex; height:2.843ex;" alt="\forall x\in A:Q(x)"/></span>, where the <a href="/wiki/Set_(mathematics)" title="Set (mathematics)">set</a> <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle A}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>A</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle A}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7daff47fa58cdfd29dc333def748ff5fa4c923e3" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.743ex; height:2.176ex;" alt="A"/></span> is <a href="/wiki/Empty_set" title="Empty set">empty</a>.
+<ul><li>This logical form <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \forall x\in A:Q(x)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x2200;<!-- ∀ --></mi>
+        <mi>x</mi>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>A</mi>
+        <mo>:</mo>
+        <mi>Q</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \forall x\in A:Q(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1fc6a3e213d98016ed07f18f737a0fe59d69a22c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:14.12ex; height:2.843ex;" alt="\forall x\in A:Q(x)"/></span> can be converted to the material conditional form in order to easily identify the <a href="/wiki/Antecedent_(logic)" title="Antecedent (logic)">antecedent</a>. For the above example <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle S}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>S</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle S}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4611d85173cd3b508e67077d4a1252c9c05abca2" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.499ex; height:2.176ex;" alt="S"/></span> "all cell phones in the room are turned off", it can be formally written as <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \forall x\in A:Q(x)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x2200;<!-- ∀ --></mi>
+        <mi>x</mi>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>A</mi>
+        <mo>:</mo>
+        <mi>Q</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \forall x\in A:Q(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1fc6a3e213d98016ed07f18f737a0fe59d69a22c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:14.12ex; height:2.843ex;" alt="\forall x\in A:Q(x)"/></span> where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle A}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>A</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle A}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7daff47fa58cdfd29dc333def748ff5fa4c923e3" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.743ex; height:2.176ex;" alt="A"/></span> is the set of all cell phones in the room and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle Q(x)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>Q</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle Q(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/bde0d39b408d6f794d58388248774df9f4d96528" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.977ex; height:2.843ex;" alt="Q(x)"/></span> is "<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle x}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/87f9e315fd7e2ba406057a97300593c4802b53e4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.33ex; height:1.676ex;" alt="x"/></span> is turned off". This can be written to a material conditional statement <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \forall x\in B:P(x)\Rightarrow Q(x)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x2200;<!-- ∀ --></mi>
+        <mi>x</mi>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>B</mi>
+        <mo>:</mo>
+        <mi>P</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">&#x21D2;<!-- ⇒ --></mo>
+        <mi>Q</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \forall x\in B:P(x)\Rightarrow Q(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0ca7a9b99ec6ffb983289e107726224e9b19eee6" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:22.64ex; height:2.843ex;" alt="{\displaystyle \forall x\in B:P(x)\Rightarrow Q(x)}"/></span> where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle B}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>B</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle B}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/47136aad860d145f75f3eed3022df827cee94d7a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.764ex; height:2.176ex;" alt="B"/></span> is the set of all things in the room (including cell phones if they exist in the room), the antecedent <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle P(x)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>P</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle P(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/89833156eff2c51bfb8750db3306a0544ce34e14" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.884ex; height:2.843ex;" alt="P(x)"/></span> is "<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle x}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/87f9e315fd7e2ba406057a97300593c4802b53e4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.33ex; height:1.676ex;" alt="x"/></span> is a cell phone", and the <a href="/wiki/Consequent" title="Consequent">consequent</a> <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle Q(x)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>Q</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle Q(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/bde0d39b408d6f794d58388248774df9f4d96528" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.977ex; height:2.843ex;" alt="Q(x)"/></span> is "<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle x}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/87f9e315fd7e2ba406057a97300593c4802b53e4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.33ex; height:1.676ex;" alt="x"/></span> is turned off".</li></ul></li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \forall \xi :Q(\xi )}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x2200;<!-- ∀ --></mi>
+        <mi>&#x03BE;<!-- ξ --></mi>
+        <mo>:</mo>
+        <mi>Q</mi>
+        <mo stretchy="false">(</mo>
+        <mi>&#x03BE;<!-- ξ --></mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \forall \xi :Q(\xi )}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/14b2faddb01e2288622ed382d0a5f85d6fffc2a5" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:8.937ex; height:2.843ex;" alt="\forall \xi :Q(\xi )"/></span>, where the symbol <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \xi }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03BE;<!-- ξ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \xi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e0b461aaf61091abd5d2c808931c48b8ff9647db" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.03ex; height:2.509ex;" alt="\xi "/></span> is restricted to a <a href="/wiki/Type_(type_theory)" class="mw-redirect" title="Type (type theory)">type</a> that has no representatives.</li></ul>
+<p>Vacuous truths most commonly appear in <a href="/wiki/Classical_logic" title="Classical logic">classical logic</a> with <a href="/wiki/Bivalent_logic" class="mw-redirect" title="Bivalent logic">two truth values</a>. However, vacuous truths can also appear in, for example, <a href="/wiki/Intuitionistic_logic" title="Intuitionistic logic">intuitionistic logic</a>, in the same situations as given above. Indeed, if <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle P}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>P</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle P}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b4dc73bf40314945ff376bd363916a738548d40a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.745ex; height:2.176ex;" alt="P"/></span> is false, then <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle P\Rightarrow Q}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>P</mi>
+        <mo stretchy="false">&#x21D2;<!-- ⇒ --></mo>
+        <mi>Q</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle P\Rightarrow Q}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/27a57c9bc077d0b20e4f5ec006f5342cfbb18fd2" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:7.198ex; height:2.509ex;" alt="P\Rightarrow Q"/></span> will yield a vacuous truth in any logic that uses the <a href="/wiki/Material_conditional" title="Material conditional">material conditional</a>; if <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle P}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>P</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle P}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b4dc73bf40314945ff376bd363916a738548d40a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.745ex; height:2.176ex;" alt="P"/></span> is a <a href="/wiki/Contradiction" title="Contradiction">necessary falsehood</a>, then it will also yield a vacuous truth under the <a href="/wiki/Strict_conditional" title="Strict conditional">strict conditional</a>.
+</p><p>Other non-classical logics, such as <a href="/wiki/Relevance_logic" title="Relevance logic">relevance logic</a>, may attempt to avoid vacuous truths by using alternative conditionals (such as the case of the <a href="/wiki/Counterfactual_conditional" title="Counterfactual conditional">counterfactual conditional</a>).
+</p>
+<h2><span class="mw-headline" id="In_computer_programming">In computer programming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Vacuous_truth&amp;action=edit&amp;section=2" title="Edit section: In computer programming">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In <a href="/wiki/JavaScript" title="JavaScript">JavaScript</a>, the <a href="/wiki/Array" title="Array">array</a> method <code>every</code> executes a provided callback function once for each element present in the array, only stopping (if and when) it finds an element where the callback function returns false. Notably, calling the <code>every</code> method on an empty array will return true for any condition.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Examples">Examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Vacuous_truth&amp;action=edit&amp;section=3" title="Edit section: Examples">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>These examples, one from <a href="/wiki/Mathematics" title="Mathematics">mathematics</a> and one from <a href="/wiki/Natural_language" title="Natural language">natural language</a>, illustrate the concept of vacuous truths:
+</p>
+<ul><li>"For any integer x, if x &gt; 5 then x &gt; 3."<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> – This statement is <a href="/wiki/Truth" title="Truth">true</a> non-vacuously (since some <a href="/wiki/Integer" title="Integer">integers</a> are indeed greater than 5), but some of its implications are only vacuously true: for example, when x is the integer 2, the statement implies the vacuous truth that "if 2 &gt; 5 then 2 &gt; 3".</li>
+<li>"All my children are goats" is a vacuous truth, when spoken by someone without children. Similarly, "None of my children is a goat" would also be a vacuous truth, when spoken by the same person.</li></ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Vacuous_truth&amp;action=edit&amp;section=4" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/De_Morgan%27s_laws#Extensions" title="De Morgan&#39;s laws">De Morgan's laws</a> – specifically the law that a universal statement is true just in case no counterexample exists: <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \forall x\,P(x)\equiv \neg \exists x\,\neg P(x)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x2200;<!-- ∀ --></mi>
+        <mi>x</mi>
+        <mspace width="thinmathspace" />
+        <mi>P</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x2261;<!-- ≡ --></mo>
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+        <mi mathvariant="normal">&#x2203;<!-- ∃ --></mi>
+        <mi>x</mi>
+        <mspace width="thinmathspace" />
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+        <mi>P</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \forall x\,P(x)\equiv \neg \exists x\,\neg P(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/295cb14e5ed954f58ae855c78f3c7c000166320f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:21.987ex; height:2.843ex;" alt="\forall x \, P(x) \equiv \neg \exists x \, \neg P(x)"/></span></li>
+<li><a href="/wiki/Empty_sum" title="Empty sum">Empty sum</a> and <a href="/wiki/Empty_product" title="Empty product">empty product</a></li>
+<li><a href="/wiki/Empty_function" class="mw-redirect" title="Empty function">Empty function</a></li>
+<li><a href="/wiki/Paradoxes_of_material_implication" title="Paradoxes of material implication">Paradoxes of material implication</a>, especially the <a href="/wiki/Principle_of_explosion" title="Principle of explosion">principle of explosion</a></li>
+<li><a href="/wiki/Presupposition" title="Presupposition">Presupposition</a>, <a href="/wiki/Double_question" class="mw-redirect" title="Double question">double question</a></li>
+<li><a href="/wiki/State_of_affairs_(philosophy)" title="State of affairs (philosophy)">State of affairs (philosophy)</a></li>
+<li><a href="/wiki/Tautology_(logic)" title="Tautology (logic)">Tautology (logic)</a> – another type of true statement that also fails to convey any substantive information</li>
+<li><a href="/wiki/Triviality_(mathematics)" title="Triviality (mathematics)">Triviality (mathematics)</a> and <a href="/wiki/Degeneracy_(mathematics)" title="Degeneracy (mathematics)">degeneracy (mathematics)</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Vacuous_truth&amp;action=edit&amp;section=5" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r1011085734">.mw-parser-output .reflist{font-size:90%;margin-bottom:0.5em;list-style-type:decimal}.mw-parser-output .reflist .references{font-size:100%;margin-bottom:0;list-style-type:inherit}.mw-parser-output .reflist-columns-2{column-width:30em}.mw-parser-output .reflist-columns-3{column-width:25em}.mw-parser-output .reflist-columns{margin-top:0.3em}.mw-parser-output .reflist-columns ol{margin-top:0}.mw-parser-output .reflist-columns li{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .reflist-upper-alpha{list-style-type:upper-alpha}.mw-parser-output .reflist-upper-roman{list-style-type:upper-roman}.mw-parser-output .reflist-lower-alpha{list-style-type:lower-alpha}.mw-parser-output .reflist-lower-greek{list-style-type:lower-greek}.mw-parser-output .reflist-lower-roman{list-style-type:lower-roman}</style><div class="reflist">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-:1-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-:1_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:1_1-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-:1_1-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><style data-mw-deduplicate="TemplateStyles:r1067248974">.mw-parser-output cite.citation{font-style:inherit;word-wrap:break-word}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation:target{background-color:rgba(0,127,255,0.133)}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output .cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;color:#d33}.mw-parser-output .cs1-visible-error{color:#d33}.mw-parser-output .cs1-maint{display:none;color:#3a3;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://web.cse.ohio-state.edu/~patel.2004/Glossary/HTML_Files/vacuously_true.html">"Vacuously true"</a>. <i>web.cse.ohio-state.edu</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2019-12-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=web.cse.ohio-state.edu&amp;rft.atitle=Vacuously+true&amp;rft_id=http%3A%2F%2Fweb.cse.ohio-state.edu%2F~patel.2004%2FGlossary%2FHTML_Files%2Fvacuously_true.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AVacuous+truth" class="Z3988"></span></span>
+</li>
+<li id="cite_note-:2-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-:2_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:2_2-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-:2_2-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://courses.cs.cornell.edu/cs2800/wiki/index.php/Vacuously_true">"Vacuously true - CS2800 wiki"</a>. <i>courses.cs.cornell.edu</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2019-12-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=courses.cs.cornell.edu&amp;rft.atitle=Vacuously+true+-+CS2800+wiki&amp;rft_id=https%3A%2F%2Fcourses.cs.cornell.edu%2Fcs2800%2Fwiki%2Findex.php%2FVacuously_true&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AVacuous+truth" class="Z3988"></span></span>
+</li>
+<li id="cite_note-:3-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-:3_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:3_3-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://proofwiki.org/wiki/Definition:Vacuous_Truth">"Definition:Vacuous Truth - ProofWiki"</a>. <i>proofwiki.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2019-12-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=proofwiki.org&amp;rft.atitle=Definition%3AVacuous+Truth+-+ProofWiki&amp;rft_id=https%3A%2F%2Fproofwiki.org%2Fwiki%2FDefinition%3AVacuous_Truth&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AVacuous+truth" class="Z3988"></span></span>
+</li>
+<li id="cite_note-:4-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-:4_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:4_4-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFEdwards1998" class="citation web cs1">Edwards, C. H. (January 18, 1998). <a rel="nofollow" class="external text" href="http://www.swarthmore.edu/NatSci/smaurer1/Math18H/vacuous.pdf">"Vacuously True"</a> <span class="cs1-format">(PDF)</span>. <i>swarthmore.edu</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2019-12-14</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=swarthmore.edu&amp;rft.atitle=Vacuously+True&amp;rft.date=1998-01-18&amp;rft.aulast=Edwards&amp;rft.aufirst=C.+H.&amp;rft_id=http%3A%2F%2Fwww.swarthmore.edu%2FNatSci%2Fsmaurer1%2FMath18H%2Fvacuous.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AVacuous+truth" class="Z3988"></span></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFBaldwinScragg2011" class="citation cs2">Baldwin, Douglas L.; Scragg, Greg W. (2011), <a rel="nofollow" class="external text" href="https://books.google.com/books?id=ETA9AAAAQBAJ&amp;pg=PA261"><i>Algorithms and Data Structures: The Science of Computing</i></a>, Cengage Learning, p.&#160;261, <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-285-22512-8" title="Special:BookSources/978-1-285-22512-8"><bdi>978-1-285-22512-8</bdi></a></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Algorithms+and+Data+Structures%3A+The+Science+of+Computing&amp;rft.pages=261&amp;rft.pub=Cengage+Learning&amp;rft.date=2011&amp;rft.isbn=978-1-285-22512-8&amp;rft.aulast=Baldwin&amp;rft.aufirst=Douglas+L.&amp;rft.au=Scragg%2C+Greg+W.&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DETA9AAAAQBAJ%26pg%3DPA261&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AVacuous+truth" class="Z3988"></span>.</span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every#description"><i>Mozilla Developer Network</i>: Array.prototype.every()</a></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://math.stackexchange.com/q/1257728">"What precisely is a vacuous truth?"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=What+precisely+is+a+vacuous+truth%3F&amp;rft_id=https%3A%2F%2Fmath.stackexchange.com%2Fq%2F1257728&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AVacuous+truth" class="Z3988"></span></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="Bibliography">Bibliography</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Vacuous_truth&amp;action=edit&amp;section=6" title="Edit section: Bibliography">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Blackburn, Simon (1994). "vacuous," <i><a href="/wiki/The_Oxford_Dictionary_of_Philosophy" title="The Oxford Dictionary of Philosophy">The Oxford Dictionary of Philosophy</a></i>. Oxford: Oxford University Press, p.&#160;388.</li>
+<li><a href="/wiki/David_H._Sanford" title="David H. Sanford">David H. Sanford</a> (1999). "implication." <i><a href="/wiki/The_Cambridge_Dictionary_of_Philosophy" title="The Cambridge Dictionary of Philosophy">The Cambridge Dictionary of Philosophy</a></i>, 2nd. ed., p.&#160;420.</li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFBeerBen-DavidEisnerRodeh1997" class="citation conference cs1">Beer, Ilan; Ben-David, Shoham; Eisner, Cindy; Rodeh, Yoav (1997). "Efficient Detection of Vacuity in ACTL Formulas". <a rel="nofollow" class="external text" href="http://citeseer.ist.psu.edu/beer97efficient.html"><i>Computer Aided Verification: 9th International Conference, CAV'97 Haifa, Israel, June 22–25, 1997, Proceedings</i></a>. <a href="/wiki/Lecture_Notes_in_Computer_Science" title="Lecture Notes in Computer Science">Lecture Notes in Computer Science</a>. Vol.&#160;1254. pp.&#160;279–290. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.1007%2F3-540-63166-6_28">10.1007/3-540-63166-6_28</a></span>. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-3-540-63166-8" title="Special:BookSources/978-3-540-63166-8"><bdi>978-3-540-63166-8</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.atitle=Efficient+Detection+of+Vacuity+in+ACTL+Formulas&amp;rft.btitle=Computer+Aided+Verification%3A+9th+International+Conference%2C+CAV%2797+Haifa%2C+Israel%2C+June+22%E2%80%9325%2C+1997%2C+Proceedings&amp;rft.series=Lecture+Notes+in+Computer+Science&amp;rft.pages=279-290&amp;rft.date=1997&amp;rft_id=info%3Adoi%2F10.1007%2F3-540-63166-6_28&amp;rft.isbn=978-3-540-63166-8&amp;rft.aulast=Beer&amp;rft.aufirst=Ilan&amp;rft.au=Ben-David%2C+Shoham&amp;rft.au=Eisner%2C+Cindy&amp;rft.au=Rodeh%2C+Yoav&amp;rft_id=http%3A%2F%2Fciteseer.ist.psu.edu%2Fbeer97efficient.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AVacuous+truth" class="Z3988"></span></li></ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Vacuous_truth&amp;action=edit&amp;section=7" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://abstractmath.org/MM/MMConditional.htm">Conditional Assertions: Vacuous truth</a></li></ul></div>

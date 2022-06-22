@@ -1,0 +1,9 @@
+http://scholar.google.com/scholar?q=%22Leading+question%22
+http://www.google.com/search?&q=%22Leading+question%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Leading+question%22
+http://www.google.com/search?tbm=nws&q=%22Leading+question%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Leading+question%22+-wikipedia
+http://doi.org/10.1111%2Fanhu.12015
+http://doi.org/10.3758%2FBF03336715
+https://www.law.cornell.edu/rules/fre/rule_611
+https://www.jstor.org/action/doBasicSearch?Query=%22Leading+question%22&acc=on&wc=on

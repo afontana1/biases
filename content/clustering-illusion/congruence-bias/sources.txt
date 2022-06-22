@@ -1,0 +1,16 @@
+http://scholar.google.com/scholar?q=%22Congruence+bias%22
+http://www.google.com/search?&q=%22Congruence+bias%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Congruence+bias%22
+http://www.google.com/search?tbm=nws&q=%22Congruence+bias%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Congruence+bias%22+-wikipedia
+http://lccn.loc.gov/56007999
+http://pubmed.ncbi.nlm.nih.gov/5683766
+http://doi.org/10.1080%2F14640746808400161
+http://doi.org/10.1080%2F17470216008416717
+http://openlibrary.org/books/OL6199287M
+https://archive.org/details/studyofthinking00brun
+https://archive.org/details/thinkingdeciding00baro
+https://archive.org/details/thinkingdeciding00baro/page/n186
+https://www.jstor.org/action/doBasicSearch?Query=%22Congruence+bias%22&acc=on&wc=on
+https://api.semanticscholar.org/CorpusID:1212273
+https://api.semanticscholar.org/CorpusID:19237642

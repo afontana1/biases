@@ -1,0 +1,332 @@
+<div class="mw-parser-output"><p><b>Visual cryptography</b> is a <a href="/wiki/Cryptography" title="Cryptography">cryptographic</a> technique  which allows visual information (pictures, text, etc.) to be encrypted in such a way that the decrypted information appears as a visual image.
+</p><p>One of the best-known techniques has been credited to <a href="/wiki/Moni_Naor" title="Moni Naor">Moni Naor</a> and <a href="/wiki/Adi_Shamir" title="Adi Shamir">Adi Shamir</a>, who developed it in 1994.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup> They demonstrated a visual <a href="/wiki/Secret_sharing" title="Secret sharing">secret sharing</a> scheme, where an image was broken up into <i>n</i> shares so that only someone with all <i>n</i> shares could decrypt the image, while any <span class="nowrap"><i>n</i> − 1</span> shares revealed no information about the original image. Each share was printed on a separate transparency, and decryption was performed by overlaying the shares. When all <i>n</i> shares were overlaid, the original image would appear. There are several generalizations of the basic scheme including k-out-of-n visual cryptography,<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup><sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup> and using opaque sheets but illuminating them by multiple sets of identical illumination patterns under the recording of only one single-pixel detector.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup>
+</p><p>Using a similar idea, transparencies can be used to implement a <a href="/wiki/One-time_pad" title="One-time pad">one-time pad</a> encryption, where one transparency is a shared random pad, and another transparency acts as the ciphertext. Normally, there is an expansion of space requirement in visual cryptography. But if one of the two shares is structured recursively, the efficiency of visual cryptography can be increased to 100%.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</p><p>Some antecedents of visual cryptography are in patents from the 1960s.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup><sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> Other antecedents are in the work on perception and secure communication.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup><sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup>
+</p><p>Visual cryptography can be used to protect biometric templates in which decryption does not require any complex computations.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Example"><span class="tocnumber">1</span> <span class="toctext">Example</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#(2,_N)_Visual_Cryptography_Sharing_Case"><span class="tocnumber">2</span> <span class="toctext">(2, N) Visual Cryptography Sharing Case</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Cheating_the_(2,N)_Visual_Secret_Sharing_Scheme"><span class="tocnumber">3</span> <span class="toctext">Cheating the (2,N) Visual Secret Sharing Scheme</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#In_popular_culture"><span class="tocnumber">4</span> <span class="toctext">In popular culture</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Example">Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Visual_cryptography&amp;action=edit&amp;section=1" title="Edit section: Example">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:341px;"><a href="/wiki/File:Visual_crypto_animation_demo.gif" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/0/0e/Visual_crypto_animation_demo.gif" decoding="async" width="339" height="100" class="thumbimage" data-file-width="339" data-file-height="100" /></a>  <div class="thumbcaption">A demonstration of visual cryptography. When two same-sized images of apparently random black-and-white pixels are superimposed, the <a href="/wiki/Wikipedia" title="Wikipedia">Wikipedia</a> logo appears.</div></div></div>
+<p>In this example, the image has been split into two component images. Each component image has a <i>pair</i> of pixels for every pixel in the original image. These pixel pairs are shaded black or white according to the following rule: if the original image pixel was black, the pixel pairs in the component images must be complementary; randomly shade one ■□, and the other □■. When these complementary pairs are overlapped, they will appear dark gray. On the other hand, if the original image pixel was white, the pixel pairs in the component images must match: both ■□ or both □■. When these matching pairs are overlapped, they will appear light gray.
+</p><p>So, when the two component images are superimposed, the original image appears. However, without the other component, a component image reveals no information about the original image; it is indistinguishable from a random pattern of ■□ / □■ pairs. Moreover, if you have one component image, you can use the shading rules above to produce a <i>counterfeit</i> component image that combines with it to produce any image at all.
+</p>
+<h2><span id=".282.2C_N.29_Visual_Cryptography_Sharing_Case"></span><span class="mw-headline" id="(2,_N)_Visual_Cryptography_Sharing_Case">(2, N) Visual Cryptography Sharing Case</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Visual_cryptography&amp;action=edit&amp;section=2" title="Edit section: (2, N) Visual Cryptography Sharing Case">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Sharing a secret with an arbitrary number of people N such that at least 2 of them are required to decode the secret is one form of the visual secret sharing scheme presented by <a href="/wiki/Moni_Naor" title="Moni Naor">Moni Naor</a> and <a href="/wiki/Adi_Shamir" title="Adi Shamir">Adi Shamir</a> in 1994. In this scheme we have a secret image which is encoded into N shares printed on transparencies. The shares appear random and contain no decipherable information about the underlying secret image, however if any 2 of the shares are stacked on top of one another the secret image becomes decipherable by the human eye.
+</p><p>Every pixel from the secret image is encoded into multiple subpixels in each share image using a matrix to determine the color of the pixels. 
+In the (2,N) case a white pixel in the secret image is encoded using a matrix from the following set, where each row gives the subpixel pattern for one of the components:
+</p><p>{all permutations of the columns of}&#160;: <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mathbf {C_{0}=} {\begin{bmatrix}1&amp;0&amp;...&amp;0\\1&amp;0&amp;...&amp;0\\...\\1&amp;0&amp;...&amp;0\end{bmatrix}}.}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <msub>
+            <mi mathvariant="bold">C</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mn mathvariant="bold">0</mn>
+            </mrow>
+          </msub>
+          <mo mathvariant="bold">=</mo>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow>
+            <mo>[</mo>
+            <mtable rowspacing="4pt" columnspacing="1em">
+              <mtr>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mo>.</mo>
+                  <mo>.</mo>
+                  <mo>.</mo>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mo>.</mo>
+                  <mo>.</mo>
+                  <mo>.</mo>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mo>.</mo>
+                  <mo>.</mo>
+                  <mo>.</mo>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mo>.</mo>
+                  <mo>.</mo>
+                  <mo>.</mo>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo>]</mo>
+          </mrow>
+        </mrow>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mathbf {C_{0}=} {\begin{bmatrix}1&amp;0&amp;...&amp;0\\1&amp;0&amp;...&amp;0\\...\\1&amp;0&amp;...&amp;0\end{bmatrix}}.}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ca8afb67adfa8bb7cf09a3891fcd042323242cc1" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -5.671ex; width:25.052ex; height:12.509ex;" alt="\mathbf{C_0 = }  \begin{bmatrix}&#10;1 &amp; 0 &amp; ... &amp;0 \\&#10;1 &amp; 0 &amp; ... &amp; 0 \\&#10;...\\ &#10;1 &amp; 0 &amp; ... &amp;0 \end{bmatrix}."/></span>
+</p><p>While a black pixel in the secret image is encoded using a matrix from the following set:
+</p><p>{all permutations of the columns of}&#160;: <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mathbf {C_{1}=} {\begin{bmatrix}1&amp;0&amp;...&amp;0\\0&amp;1&amp;...&amp;0\\...\\0&amp;0&amp;...&amp;1\end{bmatrix}}.}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <msub>
+            <mi mathvariant="bold">C</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mn mathvariant="bold">1</mn>
+            </mrow>
+          </msub>
+          <mo mathvariant="bold">=</mo>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow>
+            <mo>[</mo>
+            <mtable rowspacing="4pt" columnspacing="1em">
+              <mtr>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mo>.</mo>
+                  <mo>.</mo>
+                  <mo>.</mo>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mo>.</mo>
+                  <mo>.</mo>
+                  <mo>.</mo>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mo>.</mo>
+                  <mo>.</mo>
+                  <mo>.</mo>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mo>.</mo>
+                  <mo>.</mo>
+                  <mo>.</mo>
+                </mtd>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo>]</mo>
+          </mrow>
+        </mrow>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mathbf {C_{1}=} {\begin{bmatrix}1&amp;0&amp;...&amp;0\\0&amp;1&amp;...&amp;0\\...\\0&amp;0&amp;...&amp;1\end{bmatrix}}.}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/43d5fafd9a9be33cd64a516642e32ee659fb7eeb" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -5.671ex; width:25.052ex; height:12.509ex;" alt=" \mathbf{C_1 =}\begin{bmatrix}&#10;1 &amp; 0 &amp; ...&amp; 0 \\&#10;0 &amp; 1 &amp; ... &amp; 0 \\&#10;... \\&#10;0 &amp; 0 &amp; ...&amp; 1 \end{bmatrix}."/></span>
+</p><p>For instance in the (2,2) sharing case (the secret is split into 2 shares and both shares are required to decode the secret) we use complementary matrices to share a black pixel and identical matrices to share a white pixel. Stacking the shares we have all the subpixels associated with the black pixel now black while 50% of the subpixels associated with the white pixel remain white.
+</p><p><a href="/wiki/Thumb" title="Thumb">thumb</a>
+</p>
+<h2><span id="Cheating_the_.282.2CN.29_Visual_Secret_Sharing_Scheme"></span><span class="mw-headline" id="Cheating_the_(2,N)_Visual_Secret_Sharing_Scheme">Cheating the (2,N) Visual Secret Sharing Scheme</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Visual_cryptography&amp;action=edit&amp;section=3" title="Edit section: Cheating the (2,N) Visual Secret Sharing Scheme">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Horng et al. proposed a method that allows <i>N</i> − 1 colluding parties to cheat an honest party in visual cryptography. They take advantage of knowing the underlying distribution of the pixels in the shares to create new shares that combine with existing shares to form a new secret message of the cheaters choosing.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup>
+</p><p>We know that 2 shares are enough to decode the secret image using the human visual system. But examining two shares also gives some information about the 3rd share. For instance, colluding participants may examine their shares to determine when they both have black pixels and use that information to determine that another participant will also have a black pixel in that location. Knowing where black pixels exist in another party's share allows them to create a new share that will combine with the predicted share to form a new secret message. In this way a set of colluding parties that have enough shares to access the secret code can cheat other honest parties.
+</p>
+<h2><span class="mw-headline" id="In_popular_culture">In popular culture</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Visual_cryptography&amp;action=edit&amp;section=4" title="Edit section: In popular culture">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>In "<a href="/wiki/Do_Not_Forsake_Me_Oh_My_Darling" title="Do Not Forsake Me Oh My Darling">Do Not Forsake Me Oh My Darling</a>", a 1967 episode of TV series <i><a href="/wiki/The_Prisoner" title="The Prisoner">The Prisoner</a></i>, the protagonist uses a visual cryptography overlay of multiple transparencies to reveal a secret message – the location of a scientist friend who had gone into hiding.</li></ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Visual_cryptography&amp;action=edit&amp;section=5" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Grille_(cryptography)" title="Grille (cryptography)">Grille (cryptography)</a></li>
+<li><a href="/wiki/Steganography" title="Steganography">Steganography</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Visual_cryptography&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r1011085734">.mw-parser-output .reflist{font-size:90%;margin-bottom:0.5em;list-style-type:decimal}.mw-parser-output .reflist .references{font-size:100%;margin-bottom:0;list-style-type:inherit}.mw-parser-output .reflist-columns-2{column-width:30em}.mw-parser-output .reflist-columns-3{column-width:25em}.mw-parser-output .reflist-columns{margin-top:0.3em}.mw-parser-output .reflist-columns ol{margin-top:0}.mw-parser-output .reflist-columns li{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .reflist-upper-alpha{list-style-type:upper-alpha}.mw-parser-output .reflist-upper-roman{list-style-type:upper-roman}.mw-parser-output .reflist-lower-alpha{list-style-type:lower-alpha}.mw-parser-output .reflist-lower-greek{list-style-type:lower-greek}.mw-parser-output .reflist-lower-roman{list-style-type:lower-roman}</style><div class="reflist">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><style data-mw-deduplicate="TemplateStyles:r1067248974">.mw-parser-output cite.citation{font-style:inherit;word-wrap:break-word}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation:target{background-color:rgba(0,127,255,0.133)}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output .cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;color:#d33}.mw-parser-output .cs1-visible-error{color:#d33}.mw-parser-output .cs1-maint{display:none;color:#3a3;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><cite id="CITEREFNaorShamir1995" class="citation book cs1">Naor, Moni; Shamir, Adi (1995). "Visual cryptography". <i>Advances in Cryptology — EUROCRYPT'94</i>. Lecture Notes in Computer Science. Vol.&#160;950. pp.&#160;1–12. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1007%2FBFb0053419">10.1007/BFb0053419</a>. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-3-540-60176-0" title="Special:BookSources/978-3-540-60176-0"><bdi>978-3-540-60176-0</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Visual+cryptography&amp;rft.btitle=Advances+in+Cryptology+%E2%80%94+EUROCRYPT%2794&amp;rft.series=Lecture+Notes+in+Computer+Science&amp;rft.pages=1-12&amp;rft.date=1995&amp;rft_id=info%3Adoi%2F10.1007%2FBFb0053419&amp;rft.isbn=978-3-540-60176-0&amp;rft.aulast=Naor&amp;rft.aufirst=Moni&amp;rft.au=Shamir%2C+Adi&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AVisual+cryptography" class="Z3988"></span></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFVerheulVan_Tilborg1997" class="citation journal cs1">Verheul, Eric R.; Van Tilborg, Henk C. A. (1997). "Constructions and Properties of k out of n Visual Secret Sharing Schemes". <i>Designs, Codes and Cryptography</i>. <b>11</b> (2): 179–196. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1023%2FA%3A1008280705142">10.1023/A:1008280705142</a>. <a href="/wiki/S2CID_(identifier)" class="mw-redirect" title="S2CID (identifier)">S2CID</a>&#160;<a rel="nofollow" class="external text" href="https://api.semanticscholar.org/CorpusID:479227">479227</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Designs%2C+Codes+and+Cryptography&amp;rft.atitle=Constructions+and+Properties+of+k+out+of+n+Visual+Secret+Sharing+Schemes&amp;rft.volume=11&amp;rft.issue=2&amp;rft.pages=179-196&amp;rft.date=1997&amp;rft_id=info%3Adoi%2F10.1023%2FA%3A1008280705142&amp;rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A479227%23id-name%3DS2CID&amp;rft.aulast=Verheul&amp;rft.aufirst=Eric+R.&amp;rft.au=Van+Tilborg%2C+Henk+C.+A.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AVisual+cryptography" class="Z3988"></span></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFAtenieseBlundoSantisStinson2001" class="citation journal cs1">Ateniese, Giuseppe; Blundo, Carlo; Santis, Alfredo De; Stinson, Douglas R. (2001). <a rel="nofollow" class="external text" href="https://doi.org/10.1016%2FS0304-3975%2899%2900127-9">"Extended capabilities for visual cryptography"</a>. <i>Theoretical Computer Science</i>. <b>250</b> (1–2): 143–161. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.1016%2FS0304-3975%2899%2900127-9">10.1016/S0304-3975(99)00127-9</a></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Theoretical+Computer+Science&amp;rft.atitle=Extended+capabilities+for+visual+cryptography&amp;rft.volume=250&amp;rft.issue=1%E2%80%932&amp;rft.pages=143-161&amp;rft.date=2001&amp;rft_id=info%3Adoi%2F10.1016%2FS0304-3975%2899%2900127-9&amp;rft.aulast=Ateniese&amp;rft.aufirst=Giuseppe&amp;rft.au=Blundo%2C+Carlo&amp;rft.au=Santis%2C+Alfredo+De&amp;rft.au=Stinson%2C+Douglas+R.&amp;rft_id=%2F%2Fdoi.org%2F10.1016%252FS0304-3975%252899%252900127-9&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AVisual+cryptography" class="Z3988"></span></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFJiaoFengGaoLei2020" class="citation journal cs1">Jiao, Shuming; Feng, Jun; Gao, Yang; Lei, Ting; Yuan, Xiaocong (2020). "Visual cryptography in single-pixel imaging". <i>Optics Express</i>. <b>28</b> (5): 7301–7313. <a href="/wiki/ArXiv_(identifier)" class="mw-redirect" title="ArXiv (identifier)">arXiv</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//arxiv.org/abs/1911.05033">1911.05033</a></span>. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1364%2FOE.383240">10.1364/OE.383240</a>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/32225961">32225961</a>. <a href="/wiki/S2CID_(identifier)" class="mw-redirect" title="S2CID (identifier)">S2CID</a>&#160;<a rel="nofollow" class="external text" href="https://api.semanticscholar.org/CorpusID:207863416">207863416</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Optics+Express&amp;rft.atitle=Visual+cryptography+in+single-pixel+imaging&amp;rft.volume=28&amp;rft.issue=5&amp;rft.pages=7301-7313&amp;rft.date=2020&amp;rft_id=info%3Aarxiv%2F1911.05033&amp;rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A207863416%23id-name%3DS2CID&amp;rft_id=info%3Apmid%2F32225961&amp;rft_id=info%3Adoi%2F10.1364%2FOE.383240&amp;rft.aulast=Jiao&amp;rft.aufirst=Shuming&amp;rft.au=Feng%2C+Jun&amp;rft.au=Gao%2C+Yang&amp;rft.au=Lei%2C+Ting&amp;rft.au=Yuan%2C+Xiaocong&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AVisual+cryptography" class="Z3988"></span></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFGnanaguruparanKak2002" class="citation journal cs1">Gnanaguruparan, Meenakshi; Kak, Subhash (2002). "Recursive Hiding of Secrets in Visual Cryptography". <i>Cryptologia</i>. <b>26</b>: 68–76. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1080%2F0161-110291890768">10.1080/0161-110291890768</a>. <a href="/wiki/S2CID_(identifier)" class="mw-redirect" title="S2CID (identifier)">S2CID</a>&#160;<a rel="nofollow" class="external text" href="https://api.semanticscholar.org/CorpusID:7995141">7995141</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Cryptologia&amp;rft.atitle=Recursive+Hiding+of+Secrets+in+Visual+Cryptography&amp;rft.volume=26&amp;rft.pages=68-76&amp;rft.date=2002&amp;rft_id=info%3Adoi%2F10.1080%2F0161-110291890768&amp;rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A7995141%23id-name%3DS2CID&amp;rft.aulast=Gnanaguruparan&amp;rft.aufirst=Meenakshi&amp;rft.au=Kak%2C+Subhash&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AVisual+cryptography" class="Z3988"></span></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text">Cook, Richard C. (1960) <a rel="nofollow" class="external text" href="http://www.google.com/patents?id=yUIzAAAAEBAJ">Cryptographic process and enciphered product</a>, United States patent 4,682,954.</span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text">Carlson, Carl O. (1961) <a rel="nofollow" class="external text" href="http://www.google.com/patents?id=OVkdAAAAEBAJ">Information encoding and decoding method</a>, United States patent 3,279,095.</span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFKafriKeren1987" class="citation journal cs1">Kafri, O.; Keren, E. (1987). "Encryption of pictures and shapes by random grids". <i>Optics Letters</i>. <b>12</b> (6): 377–9. <a href="/wiki/Bibcode_(identifier)" class="mw-redirect" title="Bibcode (identifier)">Bibcode</a>:<a rel="nofollow" class="external text" href="https://ui.adsabs.harvard.edu/abs/1987OptL...12..377K">1987OptL...12..377K</a>. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1364%2FOL.12.000377">10.1364/OL.12.000377</a>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/19741737">19741737</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Optics+Letters&amp;rft.atitle=Encryption+of+pictures+and+shapes+by+random+grids&amp;rft.volume=12&amp;rft.issue=6&amp;rft.pages=377-9&amp;rft.date=1987&amp;rft_id=info%3Apmid%2F19741737&amp;rft_id=info%3Adoi%2F10.1364%2FOL.12.000377&amp;rft_id=info%3Abibcode%2F1987OptL...12..377K&amp;rft.aulast=Kafri&amp;rft.aufirst=O.&amp;rft.au=Keren%2C+E.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AVisual+cryptography" class="Z3988"></span></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFAraziDinsteinKafri1989" class="citation journal cs1">Arazi, B.; Dinstein, I.; Kafri, O. (1989). "Intuition, perception, and secure communication". <i>IEEE Transactions on Systems, Man, and Cybernetics</i>. <b>19</b> (5): 1016–1020. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1109%2F21.44016">10.1109/21.44016</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IEEE+Transactions+on+Systems%2C+Man%2C+and+Cybernetics&amp;rft.atitle=Intuition%2C+perception%2C+and+secure+communication&amp;rft.volume=19&amp;rft.issue=5&amp;rft.pages=1016-1020&amp;rft.date=1989&amp;rft_id=info%3Adoi%2F10.1109%2F21.44016&amp;rft.aulast=Arazi&amp;rft.aufirst=B.&amp;rft.au=Dinstein%2C+I.&amp;rft.au=Kafri%2C+O.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AVisual+cryptography" class="Z3988"></span></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFAskariMoloneyHeys2011" class="citation conference cs1">Askari, Nazanin; Moloney, Cecilia; Heys, Howard M. (November 2011). <a rel="nofollow" class="external text" href="http://necec.engr.mun.ca/ocs2011/viewpaper.php?id=60&amp;print=1"><i>Application of Visual Cryptography to Biometric Authentication</i></a>. NECEC 2011<span class="reference-accessdate">. Retrieved <span class="nowrap">12 February</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.btitle=Application+of+Visual+Cryptography+to+Biometric+Authentication&amp;rft.date=2011-11&amp;rft.aulast=Askari&amp;rft.aufirst=Nazanin&amp;rft.au=Moloney%2C+Cecilia&amp;rft.au=Heys%2C+Howard+M.&amp;rft_id=http%3A%2F%2Fnecec.engr.mun.ca%2Focs2011%2Fviewpaper.php%3Fid%3D60%26print%3D1&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AVisual+cryptography" class="Z3988"></span></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFHorngChenTsai2006" class="citation journal cs1">Horng, Gwoboa; Chen, Tzungher; Tsai, Du-Shiau (2006). "Cheating in Visual Cryptography". <i>Designs, Codes and Cryptography</i>. <b>38</b> (2): 219–236. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1007%2Fs10623-005-6342-0">10.1007/s10623-005-6342-0</a>. <a href="/wiki/S2CID_(identifier)" class="mw-redirect" title="S2CID (identifier)">S2CID</a>&#160;<a rel="nofollow" class="external text" href="https://api.semanticscholar.org/CorpusID:2109660">2109660</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Designs%2C+Codes+and+Cryptography&amp;rft.atitle=Cheating+in+Visual+Cryptography&amp;rft.volume=38&amp;rft.issue=2&amp;rft.pages=219-236&amp;rft.date=2006&amp;rft_id=info%3Adoi%2F10.1007%2Fs10623-005-6342-0&amp;rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A2109660%23id-name%3DS2CID&amp;rft.aulast=Horng&amp;rft.aufirst=Gwoboa&amp;rft.au=Chen%2C+Tzungher&amp;rft.au=Tsai%2C+Du-Shiau&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AVisual+cryptography" class="Z3988"></span></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Visual_cryptography&amp;action=edit&amp;section=7" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://github.com/LessonStudio/VisualCryptography">Python implementation of Visual Cryptography</a></li>
+<li><a rel="nofollow" class="external text" href="http://users.telenet.be/d.rijmenants/en/visualcrypto.htm">Visual Cryptography on Cipher Machines &amp; Cryptology</a></li>
+<li><a rel="nofollow" class="external text" href="https://cs.uwaterloo.ca/~dstinson/visual.html">Doug Stinson's visual cryptography page</a></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFHammoudiMelkemi2018" class="citation journal cs1">Hammoudi, Karim; Melkemi, Mahmoud (2018). <a rel="nofollow" class="external text" href="https://doi.org/10.3390%2Fjimaging4110126">"Personalized Shares in Visual Cryptography"</a>. <i>Journal of Imaging</i>. <b>4</b> (11): 126. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.3390%2Fjimaging4110126">10.3390/jimaging4110126</a></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+Imaging&amp;rft.atitle=Personalized+Shares+in+Visual+Cryptography&amp;rft.volume=4&amp;rft.issue=11&amp;rft.pages=126&amp;rft.date=2018&amp;rft_id=info%3Adoi%2F10.3390%2Fjimaging4110126&amp;rft.aulast=Hammoudi&amp;rft.aufirst=Karim&amp;rft.au=Melkemi%2C+Mahmoud&amp;rft_id=%2F%2Fdoi.org%2F10.3390%252Fjimaging4110126&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AVisual+cryptography" class="Z3988"></span></li></ul>
+<div class="navbox-styles nomobile"><style data-mw-deduplicate="TemplateStyles:r1061467846">.mw-parser-output .navbox{box-sizing:border-box;border:1px solid #a2a9b1;width:100%;clear:both;font-size:88%;text-align:center;padding:1px;margin:1em auto 0}.mw-parser-output .navbox .navbox{margin-top:0}.mw-parser-output .navbox+.navbox,.mw-parser-output .navbox+.navbox-styles+.navbox{margin-top:-1px}.mw-parser-output .navbox-inner,.mw-parser-output .navbox-subgroup{width:100%}.mw-parser-output .navbox-group,.mw-parser-output .navbox-title,.mw-parser-output .navbox-abovebelow{padding:0.25em 1em;line-height:1.5em;text-align:center}.mw-parser-output .navbox-group{white-space:nowrap;text-align:right}.mw-parser-output .navbox,.mw-parser-output .navbox-subgroup{background-color:#fdfdfd}.mw-parser-output .navbox-list{line-height:1.5em;border-color:#fdfdfd}.mw-parser-output .navbox-list-with-group{text-align:left;border-left-width:2px;border-left-style:solid}.mw-parser-output tr+tr>.navbox-abovebelow,.mw-parser-output tr+tr>.navbox-group,.mw-parser-output tr+tr>.navbox-image,.mw-parser-output tr+tr>.navbox-list{border-top:2px solid #fdfdfd}.mw-parser-output .navbox-title{background-color:#ccf}.mw-parser-output .navbox-abovebelow,.mw-parser-output .navbox-group,.mw-parser-output .navbox-subgroup .navbox-title{background-color:#ddf}.mw-parser-output .navbox-subgroup .navbox-group,.mw-parser-output .navbox-subgroup .navbox-abovebelow{background-color:#e6e6ff}.mw-parser-output .navbox-even{background-color:#f7f7f7}.mw-parser-output .navbox-odd{background-color:transparent}.mw-parser-output .navbox .hlist td dl,.mw-parser-output .navbox .hlist td ol,.mw-parser-output .navbox .hlist td ul,.mw-parser-output .navbox td.hlist dl,.mw-parser-output .navbox td.hlist ol,.mw-parser-output .navbox td.hlist ul{padding:0.125em 0}.mw-parser-output .navbox .navbar{display:block;font-size:100%}.mw-parser-output .navbox-title .navbar{float:left;text-align:left;margin-right:0.5em}</style></div><div role="navigation" class="navbox" aria-label="Navbox" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em"></div><table class="nowraplinks mw-collapsible mw-collapsed navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><style data-mw-deduplicate="TemplateStyles:r1063604349">.mw-parser-output .navbar{display:inline;font-size:88%;font-weight:normal}.mw-parser-output .navbar-collapse{float:left;text-align:left}.mw-parser-output .navbar-boxtext{word-spacing:0}.mw-parser-output .navbar ul{display:inline-block;white-space:nowrap;line-height:inherit}.mw-parser-output .navbar-brackets::before{margin-right:-0.125em;content:"[ "}.mw-parser-output .navbar-brackets::after{margin-left:-0.125em;content:" ]"}.mw-parser-output .navbar li{word-spacing:-0.125em}.mw-parser-output .navbar a>span,.mw-parser-output .navbar a>abbr{text-decoration:inherit}.mw-parser-output .navbar-mini abbr{font-variant:small-caps;border-bottom:none;text-decoration:none;cursor:inherit}.mw-parser-output .navbar-ct-full{font-size:114%;margin:0 7em}.mw-parser-output .navbar-ct-mini{font-size:114%;margin:0 4em}</style><div class="navbar plainlinks hlist navbar-mini"><ul><li class="nv-view"><a href="/wiki/Template:Cryptography_navbox" title="Template:Cryptography navbox"><abbr title="View this template" style=";;background:none transparent;border:none;box-shadow:none;padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Cryptography_navbox" title="Template talk:Cryptography navbox"><abbr title="Discuss this template" style=";;background:none transparent;border:none;box-shadow:none;padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Cryptography_navbox&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;box-shadow:none;padding:0;">e</abbr></a></li></ul></div><div id="Cryptography" style="font-size:114%;margin:0 4em"><a href="/wiki/Cryptography" title="Cryptography">Cryptography</a></div></th></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/History_of_cryptography" title="History of cryptography">History of cryptography</a></li>
+<li><a href="/wiki/Outline_of_cryptography" title="Outline of cryptography">Outline of cryptography</a></li>
+<li><a href="/wiki/Cryptographic_protocol" title="Cryptographic protocol">Cryptographic protocol</a>
+<ul><li><a href="/wiki/Authentication_protocol" title="Authentication protocol">Authentication protocol</a></li></ul></li>
+<li><a href="/wiki/Cryptographic_primitive" title="Cryptographic primitive">Cryptographic primitive</a></li>
+<li><a href="/wiki/Cryptanalysis" title="Cryptanalysis">Cryptanalysis</a></li>
+<li><a href="/wiki/Cryptocurrency" title="Cryptocurrency">Cryptocurrency</a></li>
+<li><a href="/wiki/Cryptosystem" title="Cryptosystem">Cryptosystem</a></li>
+<li><a href="/wiki/Cryptographic_nonce" title="Cryptographic nonce">Cryptographic nonce</a></li>
+<li><a href="/wiki/Cryptovirology" title="Cryptovirology">Cryptovirology</a></li>
+<li><a href="/wiki/Hash_function" title="Hash function">Hash function</a>
+<ul><li><a href="/wiki/Cryptographic_hash_function" title="Cryptographic hash function">Cryptographic hash function</a></li>
+<li><a href="/wiki/Key_derivation_function" title="Key derivation function">Key derivation function</a></li></ul></li>
+<li><a href="/wiki/Digital_signature" title="Digital signature">Digital signature</a></li>
+<li><a href="/wiki/Kleptography" title="Kleptography">Kleptography</a></li>
+<li><a href="/wiki/Key_(cryptography)" title="Key (cryptography)">Key (cryptography)</a></li>
+<li><a href="/wiki/Key_exchange" title="Key exchange">Key exchange</a></li>
+<li><a href="/wiki/Key_generator" title="Key generator">Key generator</a></li>
+<li><a href="/wiki/Key_schedule" title="Key schedule">Key schedule</a></li>
+<li><a href="/wiki/Key_stretching" title="Key stretching">Key stretching</a></li>
+<li><a href="/wiki/Keygen" title="Keygen">Keygen</a></li>
+<li><a href="/wiki/Cryptojacking_malware" class="mw-redirect" title="Cryptojacking malware">Cryptojacking malware</a></li>
+<li><a href="/wiki/Ransomware" title="Ransomware">Ransomware</a></li>
+<li><a href="/wiki/Random_number_generation" title="Random number generation">Random number generation</a>
+<ul><li><a href="/wiki/Cryptographically_secure_pseudorandom_number_generator" class="mw-redirect" title="Cryptographically secure pseudorandom number generator">Cryptographically secure pseudorandom number generator</a> (CSPRNG)</li></ul></li>
+<li><a href="/wiki/Pseudorandom_noise" title="Pseudorandom noise">Pseudorandom noise</a> (PRN)</li>
+<li><a href="/wiki/Secure_channel" title="Secure channel">Secure channel</a></li>
+<li><a href="/wiki/Insecure_channel" class="mw-redirect" title="Insecure channel">Insecure channel</a></li>
+<li><a href="/wiki/Subliminal_channel" title="Subliminal channel">Subliminal channel</a></li>
+<li><a href="/wiki/Encryption" title="Encryption">Encryption</a></li>
+<li><a href="/wiki/Decryption" class="mw-redirect" title="Decryption">Decryption</a></li>
+<li><a href="/wiki/End-to-end_encryption" title="End-to-end encryption">End-to-end encryption</a></li>
+<li><a href="/wiki/Information-theoretic_security" title="Information-theoretic security">Information-theoretic security</a></li>
+<li><a href="/wiki/Plaintext" title="Plaintext">Plaintext</a></li>
+<li><a href="/wiki/Codetext" class="mw-redirect" title="Codetext">Codetext</a></li>
+<li><a href="/wiki/Ciphertext" title="Ciphertext">Ciphertext</a></li>
+<li><a href="/wiki/Shared_secret" title="Shared secret">Shared secret</a></li>
+<li><a href="/wiki/Trapdoor_function" title="Trapdoor function">Trapdoor function</a></li>
+<li><a href="/wiki/Trusted_timestamping" title="Trusted timestamping">Trusted timestamping</a></li>
+<li><a href="/wiki/Key-based_routing" title="Key-based routing">Key-based routing</a></li>
+<li><a href="/wiki/Onion_routing" title="Onion routing">Onion routing</a></li>
+<li><a href="/wiki/Garlic_routing" title="Garlic routing">Garlic routing</a></li>
+<li><a href="/wiki/Kademlia" title="Kademlia">Kademlia</a></li>
+<li><a href="/wiki/Mix_network" title="Mix network">Mix network</a></li></ul>
+</div></td></tr><tr><td colspan="2" class="navbox-list navbox-even" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Cryptographic_hash_function" title="Cryptographic hash function">Cryptographic hash function</a></li>
+<li><a href="/wiki/Block_cipher" title="Block cipher">Block cipher</a></li>
+<li><a href="/wiki/Stream_cipher" title="Stream cipher">Stream cipher</a></li>
+<li><a href="/wiki/Symmetric-key_algorithm" title="Symmetric-key algorithm">Symmetric-key algorithm</a></li>
+<li><a href="/wiki/Authenticated_encryption" title="Authenticated encryption">Authenticated encryption</a></li>
+<li><a href="/wiki/Public-key_cryptography" title="Public-key cryptography">Public-key cryptography</a></li>
+<li><a href="/wiki/Quantum_key_distribution" title="Quantum key distribution">Quantum key distribution</a></li>
+<li><a href="/wiki/Quantum_cryptography" title="Quantum cryptography">Quantum cryptography</a></li>
+<li><a href="/wiki/Post-quantum_cryptography" title="Post-quantum cryptography">Post-quantum cryptography</a></li>
+<li><a href="/wiki/Message_authentication_code" title="Message authentication code">Message authentication code</a></li>
+<li><a href="/wiki/Cryptographically_secure_pseudorandom_number_generator" class="mw-redirect" title="Cryptographically secure pseudorandom number generator">Random numbers</a></li>
+<li><a href="/wiki/Steganography" title="Steganography">Steganography</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/16px-Symbol_category_class.svg.png" decoding="async" title="Category" width="16" height="16" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/23px-Symbol_category_class.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/31px-Symbol_category_class.svg.png 2x" data-file-width="180" data-file-height="185" /> <a href="/wiki/Category:Cryptography" title="Category:Cryptography">Category</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr></tbody></table></div>
+<div class="navbox-styles nomobile"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1061467846"/></div><div role="navigation" class="navbox" aria-labelledby="Hidden_messages" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1063604349"/><div class="navbar plainlinks hlist navbar-mini"><ul><li class="nv-view"><a href="/wiki/Template:Hidden_messages" title="Template:Hidden messages"><abbr title="View this template" style=";;background:none transparent;border:none;box-shadow:none;padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Hidden_messages" title="Template talk:Hidden messages"><abbr title="Discuss this template" style=";;background:none transparent;border:none;box-shadow:none;padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Hidden_messages&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;box-shadow:none;padding:0;">e</abbr></a></li></ul></div><div id="Hidden_messages" style="font-size:114%;margin:0 4em"><a href="/wiki/Hidden_message" title="Hidden message">Hidden messages</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">Main</th><td class="navbox-list-with-group navbox-list navbox-odd hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Subliminal_stimuli" title="Subliminal stimuli">Subliminal message</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Audio</th><td class="navbox-list-with-group navbox-list navbox-even hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Backmasking" title="Backmasking">Backmasking</a></li>
+<li><a href="/wiki/Hidden_track" title="Hidden track">Hidden track</a></li>
+<li><a href="/wiki/Phonetic_reversal" title="Phonetic reversal">Phonetic reversal</a></li>
+<li><a href="/wiki/Reverse_speech" title="Reverse speech">Reverse speech</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Numeric</th><td class="navbox-list-with-group navbox-list navbox-odd hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Chronogram" title="Chronogram">Chronogram</a></li>
+<li><a href="/wiki/Numerology" title="Numerology">Numerology</a></li>
+<li><a href="/wiki/Theomatics" title="Theomatics">Theomatics</a></li>
+<li><a href="/wiki/Bible_code" title="Bible code">Bible code</a></li>
+<li><a href="/wiki/Cryptography" title="Cryptography">Cryptology</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Visual</th><td class="navbox-list-with-group navbox-list navbox-even hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Fnord" title="Fnord">Fnord</a></li>
+<li><a href="/wiki/Hidden_text" title="Hidden text">Hidden text</a></li>
+<li><a href="/wiki/Paranoiac-critical_method" title="Paranoiac-critical method">Paranoiac-critical method</a></li>
+<li><a href="/wiki/Pareidolia" title="Pareidolia">Pareidolia</a></li>
+<li><a href="/wiki/Psychorama" title="Psychorama">Psychorama</a></li>
+<li><a href="/wiki/Sacred_geometry" title="Sacred geometry">Sacred geometry</a></li>
+<li><a href="/wiki/Steganography" title="Steganography">Steganography</a></li>
+<li><a class="mw-selflink selflink">Visual cryptography</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Other</th><td class="navbox-list-with-group navbox-list navbox-odd hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Apophenia" title="Apophenia">Apophenia</a></li>
+<li><a href="/wiki/Asemic_writing" title="Asemic writing">Asemic writing</a></li>
+<li><a href="/wiki/Clustering_illusion" title="Clustering illusion">Clustering illusion</a></li>
+<li><a href="/wiki/Cryptic_crossword" title="Cryptic crossword">Cryptic crossword</a>
+<ul><li><a href="/wiki/Anagram" title="Anagram">Anagram</a></li></ul></li>
+<li><a href="/wiki/Easter_egg_(media)" title="Easter egg (media)">Easter egg</a></li>
+<li><a href="/wiki/Observer-expectancy_effect" title="Observer-expectancy effect">Observer-expectancy effect</a></li>
+<li><a href="/wiki/Pattern_recognition_(psychology)" title="Pattern recognition (psychology)">Pattern recognition</a></li>
+<li><a href="/wiki/Palindrome" title="Palindrome">Palindrome</a></li>
+<li><a href="/wiki/Simulacrum" title="Simulacrum">Simulacrum</a></li>
+<li><a href="/wiki/Synchronicity" title="Synchronicity">Synchronicity</a></li>
+<li><a href="/wiki/Unconscious_mind" title="Unconscious mind">Unconscious mind</a></li></ul>
+</div></td></tr></tbody></table></div></div>

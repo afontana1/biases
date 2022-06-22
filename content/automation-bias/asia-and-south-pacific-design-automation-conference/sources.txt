@@ -1,0 +1,8 @@
+http://www.aspdac.com
+http://scholar.google.com/scholar?q=%22Asia+and+South+Pacific+Design+Automation+Conference%22
+http://www.google.com/search?&q=%22Asia+and+South+Pacific+Design+Automation+Conference%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Asia+and+South+Pacific+Design+Automation+Conference%22
+http://www.google.com/search?tbm=nws&q=%22Asia+and+South+Pacific+Design+Automation+Conference%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Asia+and+South+Pacific+Design+Automation+Conference%22+-wikipedia
+https://web.archive.org/web/20070523100100/http://www.ieek.or.kr/
+https://www.jstor.org/action/doBasicSearch?Query=%22Asia+and+South+Pacific+Design+Automation+Conference%22&acc=on&wc=on

@@ -1,0 +1,14 @@
+http://scholar.google.com/scholar?q=%22Arabic+name%22
+http://www.google.com/search?&q=%22Arabic+name%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Arabic+name%22
+http://www.google.com/search?tbm=nws&q=%22Arabic+name%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Arabic+name%22+-wikipedia
+http://archive.lib.msu.edu/DMC/African%20Journals/pdfs/Journal%20of%20the%20University%20of%20Zimbabwe/vol26n1/juz026001007.pdf
+http://www.press.uchicago.edu/Misc/Chicago/CHIIndexingComplete.pdf
+http://doi.org/10.1163%2F1573-3912_islam_SIM_3641
+http://heraldry.sca.org/laurel/names/arabic-naming2.htm
+https://books.google.com/books?id=pR0LzVCpfw8C&pg=PA344
+https://sites.google.com/site/khaledshaalan/publications/conference-papers/PERA_CameraReady.pdf?attredirects=0
+https://web.archive.org/web/20090306163319/http://www.lib.umich.edu/area/Near.East/cmenas520/BeestonNomen.pdf
+https://www.jstor.org/action/doBasicSearch?Query=%22Arabic+name%22&acc=on&wc=on
+https://www.webcitation.org/6WQIXWdqH?url=http://www.press.uchicago.edu/Misc/Chicago/CHIIndexingComplete.pdf

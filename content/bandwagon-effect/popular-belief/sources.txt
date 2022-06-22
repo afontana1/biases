@@ -1,0 +1,8 @@
+http://scholar.google.com/scholar?q=%22Popular+belief%22
+http://www.google.com/search?&q=%22Popular+belief%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Popular+belief%22
+http://www.google.com/search?tbm=nws&q=%22Popular+belief%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Popular+belief%22+-wikipedia
+https://web.archive.org/web/20041113170608/http://www.uwo.ca/english/florilegium/vol2/boyle.html
+https://www.jstor.org/action/doBasicSearch?Query=%22Popular+belief%22&acc=on&wc=on
+https://www.vatican.va/roman_curia/congregations/ccdds/documents/rc_con_ccdds_doc_20020513_vers-direttorio_en.html

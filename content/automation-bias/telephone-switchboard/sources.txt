@@ -1,0 +1,13 @@
+http://scholar.google.com/scholar?q=%22Telephone+switchboard%22
+http://www.google.com/search?&q=%22Telephone+switchboard%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Telephone+switchboard%22
+http://www.google.com/search?tbm=nws&q=%22Telephone+switchboard%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Telephone+switchboard%22+-wikipedia
+http://www.privateline.com/TelephoneHistory5/maleoperator.htm
+http://www.atlantatelephonehistory.info/atlanta:part1
+https://catalog.archives.gov/id/10674889
+https://web.archive.org/web/20130312205515/http://www.privateline.com/TelephoneHistory5/maleoperator.htm
+https://www.jstor.org/action/doBasicSearch?Query=%22Telephone+switchboard%22&acc=on&wc=on
+https://www.pbs.org/wgbh/amex/telephone/filmmore/description.html
+https://www.wikidata.org/wiki/Q589666#identifiers
+https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Telephone

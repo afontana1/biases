@@ -1,0 +1,10 @@
+http://web.cse.ohio-state.edu/~patel.2004/Glossary/HTML_Files/vacuously_true.html
+http://citeseer.ist.psu.edu/beer97efficient.html
+http://www.swarthmore.edu/NatSci/smaurer1/Math18H/vacuous.pdf
+http://doi.org/10.1007%2F3-540-63166-6_28
+https://books.google.com/books?id=ETA9AAAAQBAJ&pg=PA261
+https://math.stackexchange.com/q/1257728
+https://courses.cs.cornell.edu/cs2800/wiki/index.php/Vacuously_true
+https://abstractmath.org/MM/MMConditional.htm
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every#description
+https://proofwiki.org/wiki/Definition:Vacuous_Truth

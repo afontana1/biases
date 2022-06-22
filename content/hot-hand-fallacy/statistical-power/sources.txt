@@ -1,0 +1,13 @@
+http://pubmed.ncbi.nlm.nih.gov/19013761
+http://doi.org/10.1002%2Fsim.4780110811
+http://doi.org/10.1016%2Fj.jclinepi.2008.08.005
+http://doi.org/10.1198%2F000313001300339897
+http://dx.doi.org/10.1002/9780470377963
+http://www.worldcat.org/issn/0277-6715
+http://eprints.st-andrews.ac.uk/archive/00000417/01/ThomasCB1997.pdf
+https://powerandsamplesize.com
+https://www.statisticsdonewrong.com/power.html
+https://www.youtube.com/watch?v=UFhJefdVCjE
+https://www.gpower.hhu.de/
+https://webpower.psychstat.org
+https://www.statsmodels.org/

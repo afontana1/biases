@@ -1,0 +1,13 @@
+http://people.csail.mit.edu/sfelshin/saintonge/homepage.html
+http://memory.loc.gov/cgi-bin/ampage?collId=lljc&fileName=003/lljc003.db&recNum=136&itemLink=r?ammem/hlaw:@field(DOCID+@lit(jc00359))%230030137&linkText=1
+http://library.thinkquest.org/10966/data/yorktn.shtml
+http://www.ushistory.org/carpentershall/history/french.htm
+http://www.ushistory.org/franklin/info/index.htm
+https://www.cia.gov/library/center-for-the-study-of-intelligence/csi-publications/books-and-monographs/intelligence/orgintell.html
+https://www.cia.gov/library/center-for-the-study-of-intelligence/csi-publications/books-and-monographs/intelligence/intelltech.html
+https://www.cia.gov/news-information/featured-story-archive/2011-featured-story-archive/intelligence-and-the-committee-of-secret-correspondence.html
+https://www.loc.gov/rr/program/bib/ourdocs/alliance.html
+https://history.state.gov/milestones/1776-1783/Treaty
+https://web.archive.org/web/20081112114812/https://www.cia.gov/library/center-for-the-study-of-intelligence/csi-publications/books-and-monographs/intelligence/intelltech.html
+https://web.archive.org/web/20111217095046/http://library.thinkquest.org/10966/data/yorktn.shtml
+https://web.archive.org/web/20120927010140/https://www.cia.gov/library/center-for-the-study-of-intelligence/csi-publications/books-and-monographs/intelligence/orgintell.html

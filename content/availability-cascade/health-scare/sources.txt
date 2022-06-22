@@ -1,0 +1,9 @@
+http://scholar.google.com/scholar?q=%22Health+scare%22
+http://www.google.com/search?&q=%22Health+scare%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Health+scare%22
+http://www.google.com/search?tbm=nws&q=%22Health+scare%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Health+scare%22+-wikipedia
+http://pubmed.ncbi.nlm.nih.gov/20051427
+http://doi.org/10.1177%2F1363459309341875
+https://abcnews.go.com/Health/Decade/top-10-health-scares-past-10-years/story?id=9249373
+https://www.jstor.org/action/doBasicSearch?Query=%22Health+scare%22&acc=on&wc=on

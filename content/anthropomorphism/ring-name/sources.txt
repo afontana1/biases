@@ -1,0 +1,10 @@
+http://scholar.google.com/scholar?q=%22Ring+name%22
+http://www.google.com/search?&q=%22Ring+name%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Ring+name%22
+http://www.google.com/search?tbm=nws&q=%22Ring+name%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Ring+name%22+-wikipedia
+http://deadwrestlers.net/wrestlersrealnames.html
+http://worldcat.org/oclc/928642534
+http://www.worldcat.org/oclc/928642534
+https://www.wrestlinginc.com/news/2019/02/what-in-a-ring-name-a-look-at-wwe-evolving-approach-to-651266/
+https://www.jstor.org/action/doBasicSearch?Query=%22Ring+name%22&acc=on&wc=on

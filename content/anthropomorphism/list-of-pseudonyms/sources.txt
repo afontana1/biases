@@ -1,0 +1,9 @@
+http://scholar.google.com/scholar?q=%22List+of+pseudonyms%22
+http://www.google.com/search?&q=%22List+of+pseudonyms%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22List+of+pseudonyms%22
+http://www.google.com/search?tbm=nws&q=%22List+of+pseudonyms%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22List+of+pseudonyms%22+-wikipedia
+http://www.tehetsegpont.hu/dokumentumok/eml_ntt_20110511.doc
+https://web.archive.org/web/20070110115700/http://www.famousfolk.com/
+https://web.archive.org/web/20120502011603/http://www.tehetsegpont.hu/dokumentumok/eml_ntt_20110511.doc
+https://www.jstor.org/action/doBasicSearch?Query=%22List+of+pseudonyms%22&acc=on&wc=on

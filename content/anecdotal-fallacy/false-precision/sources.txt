@@ -1,0 +1,9 @@
+http://scholar.google.com/scholar?q=%22False+precision%22
+http://www.google.com/search?&q=%22False+precision%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22False+precision%22
+http://www.google.com/search?tbm=nws&q=%22False+precision%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22False+precision%22+-wikipedia
+http://www.fallacyfiles.org/fakeprec.html
+https://books.google.com/books?id=5oSU5PepogEC&pg=PA55
+https://books.google.com/books?id=YMPuBQAAQBAJ&pg=PT78
+https://www.jstor.org/action/doBasicSearch?Query=%22False+precision%22&acc=on&wc=on

@@ -1,0 +1,11 @@
+http://scholar.google.com/scholar?q=%22The+Trimates%22
+http://www.google.com/search?&q=%22The+Trimates%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22The+Trimates%22
+http://www.google.com/search?tbm=nws&q=%22The+Trimates%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22The+Trimates%22+-wikipedia
+http://pubmed.ncbi.nlm.nih.gov/17838264
+http://doi.org/10.1126%2Fscience.260.5106.420
+https://www.nytimes.com/2007/01/06/opinion/06galdikas.html
+https://ui.adsabs.harvard.edu/abs/1993Sci...260..420M
+https://www.jstor.org/action/doBasicSearch?Query=%22The+Trimates%22&acc=on&wc=on
+https://api.semanticscholar.org/CorpusID:5060859

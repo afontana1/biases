@@ -1,0 +1,9 @@
+http://www.rossettiarchive.org/docs/ap4.o4.raw.html
+http://www.worldcat.org/issn/0042-5206
+https://books.google.com/books?id=QzJ3yNVVqtUC&pg=PA479
+https://d-nb.info/gnd/7607510-2
+https://archive.org/search.php?query=(+title:%22Once+a+Week%22+)
+https://www.jstor.org/stable/40601047
+https://viaf.org/viaf/214009910
+https://www.wikidata.org/wiki/Q7091757#identifiers
+https://www.worldcat.org/identities/containsVIAFID/214009910

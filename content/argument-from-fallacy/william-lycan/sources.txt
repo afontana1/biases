@@ -1,0 +1,17 @@
+http://cantic.bnc.cat/registres/CUCId/a10115481
+http://www.wlycan.com
+http://www.unc.edu/~ujanel/
+http://data.bibliotheken.nl/id/thes/p068159633
+https://aleph.nkp.cz/F/?func=find-c&local_base=aut&ccl_term=ica=vse2005315990&CON_LNG=ENG
+https://catalogue.bnf.fr/ark:/12148/cb12036829f
+https://data.bnf.fr/ark:/12148/cb12036829f
+https://www.idref.fr/02855583X
+https://id.loc.gov/authorities/names/n84023878
+https://d-nb.info/gnd/139419632
+https://id.ndl.go.jp/auth/ndlna/01025134
+https://authority.bibsys.no/authority/rest/authorities/html/90117038
+https://web.archive.org/web/20061028083222/http://www.unc.edu/~ujanel/LycanVita.html
+https://isni.org/isni/0000000116176009
+https://viaf.org/viaf/34473461
+https://www.wikidata.org/wiki/Q3480449#identifiers
+https://www.worldcat.org/identities/lccn-n84023878/

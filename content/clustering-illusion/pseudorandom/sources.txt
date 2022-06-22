@@ -1,0 +1,8 @@
+http://www.fourmilab.ch/hotbits
+http://doi.org/10.1561%2F0400000010
+http://www.rand.org/pubs/monograph_reports/MR1418/index2.html
+https://www.bbc.com/news/technology-33839925
+https://books.google.com/books?id=EuguvA-w5OEC
+https://www.nytimes.com/2001/06/12/science/connoisseurs-of-chaos-offer-a-valuable-product-randomness.html
+https://people.seas.harvard.edu/~salil/pseudorandomness/pseudorandomness-Aug12.pdf
+https://web.archive.org/web/20051023025710/http://www.merrymeet.com/jon/usingrandom.html

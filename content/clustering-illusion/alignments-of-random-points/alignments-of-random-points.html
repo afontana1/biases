@@ -1,0 +1,435 @@
+<div class="mw-parser-output"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Phenomenon in statistics</div>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="/wiki/File:Ley_lines.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Ley_lines.svg/300px-Ley_lines.svg.png" decoding="async" width="300" height="300" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Ley_lines.svg/450px-Ley_lines.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Ley_lines.svg/600px-Ley_lines.svg.png 2x" data-file-width="400" data-file-height="400" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Ley_lines.svg" class="internal" title="Enlarge"></a></div>80 4-point near-alignments of 137 random points</div></div></div>
+<p><b>Alignments of random points in a plane</b> can be demonstrated by <a href="/wiki/Statistics" title="Statistics">statistics</a> to be <a href="/wiki/Counter-intuitively" class="mw-redirect" title="Counter-intuitively">counter-intuitively</a> easy to find when a large number of <a href="/wiki/Randomness" title="Randomness">random</a> points are marked on a bounded flat surface.  This has been put forward as a demonstration that <a href="/wiki/Ley_line" title="Ley line">ley lines</a> and other similar mysterious alignments believed by some to be phenomena of deep significance might exist solely due to chance alone, as opposed to the supernatural or anthropological explanations put forward by their proponents. The topic has also been studied in the fields of <a href="/wiki/Computer_vision" title="Computer vision">computer vision</a> and <a href="/wiki/Astronomy" title="Astronomy">astronomy</a>.
+</p><p>A number of studies have examined the mathematics of alignment of random points on the plane.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup><sup id="cite_ref-edmunds_2-0" class="reference"><a href="#cite_note-edmunds-2">&#91;2&#93;</a></sup><sup id="cite_ref-george_3-0" class="reference"><a href="#cite_note-george-3">&#91;3&#93;</a></sup><sup id="cite_ref-hal-inria_4-0" class="reference"><a href="#cite_note-hal-inria-4">&#91;4&#93;</a></sup> In all of these, the width of the line — the allowed displacement of the positions of the points from a perfect straight line — is important. It allows the fact that real-world features are not mathematical points, and that their positions need not line up exactly for them to be considered in alignment. <a href="/wiki/Alfred_Watkins" title="Alfred Watkins">Alfred Watkins</a>, in his classic work on ley lines <i><a href="/wiki/The_Old_Straight_Track" title="The Old Straight Track">The Old Straight Track</a></i>, used the width of a pencil line on a map as the threshold for the tolerance of what might be regarded as an alignment. For example, using a 1&#160;mm pencil line to draw alignments on a <a href="/wiki/Scale_(map)" title="Scale (map)">1:50,000 scale</a> <a href="/wiki/Ordnance_Survey" title="Ordnance Survey">Ordnance Survey</a> map, the corresponding width on the ground would be 50 m.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Estimate_of_probability_of_chance_alignments"><span class="tocnumber">1</span> <span class="toctext">Estimate of probability of chance alignments</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#More_precise_estimate_of_expected_number_of_alignments"><span class="tocnumber">2</span> <span class="toctext">More precise estimate of expected number of alignments</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Computer_simulation_of_alignments"><span class="tocnumber">3</span> <span class="toctext">Computer simulation of alignments</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Estimate_of_probability_of_chance_alignments">Estimate of probability of chance alignments</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Alignments_of_random_points&amp;action=edit&amp;section=1" title="Edit section: Estimate of probability of chance alignments">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/Contrary_to_intuition" class="mw-redirect" title="Contrary to intuition">Contrary to intuition</a>, finding alignments between randomly placed points on a landscape gets progressively easier as the geographic area to be considered increases. One way of understanding this phenomenon is to see that the increase in the number of possible <a href="/wiki/Combination" title="Combination">combinations</a> of sets of points in that area overwhelms the decrease in the probability that any given set of points in that area line up.
+</p><p>One definition which expresses the generally accepted meaning of "alignment" is:
+</p>
+<dl><dd><i>A set of points, chosen from a given set of landmark points, all of which lie within at least one straight path of a given width</i></dd></dl>
+<p>More precisely, a path of width <i>w</i> may be defined as the set of all points within a distance of <i>w/2</i> of a <a href="/wiki/Straight_line" class="mw-redirect" title="Straight line">straight line</a> on a plane, or a <a href="/wiki/Great_circle" title="Great circle">great circle</a> on a sphere, or in general any <a href="/wiki/Geodesic" title="Geodesic">geodesic</a> on any other kind of <a href="/wiki/Manifold" title="Manifold">manifold</a>.  Note that, in general, any given set of points that are aligned in this way will contain a large number of infinitesimally different straight paths.  Therefore, only the existence of at least one straight path is necessary to determine whether a set of points is an alignment. For this reason, it is easier to count the sets of points, rather than the paths themselves.
+The number of alignments found is very sensitive to the allowed width <i>w</i>, increasing approximately proportionately to <i>w</i><sup><i>k</i>-2</sup>, where <i>k</i> is the number of points in an alignment.
+</p><p>The following is a very approximate order-of-magnitude estimate of the likelihood of alignments, assuming a plane covered with uniformly distributed "significant" points.
+</p><p>Consider a set of <i>n</i> points in a compact area with approximate diameter <i>L</i> and area approximately <i>L</i><sup>2</sup>. Consider a valid line to be one where every point is within distance <i>w</i>/2 of the line (that is, lies on a track of width <i>w</i>, where <i>w</i> ≪ <i>L</i>).
+</p><p>Consider all the unordered sets of <i>k</i> points from the <i>n</i> points, of which there are:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\binom {n}{k}}={\frac {n!}{(n-k)!\,k!}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow>
+            <mrow class="MJX-TeXAtom-OPEN">
+              <mo maxsize="2.047em" minsize="2.047em">(</mo>
+            </mrow>
+            <mfrac linethickness="0">
+              <mi>n</mi>
+              <mi>k</mi>
+            </mfrac>
+            <mrow class="MJX-TeXAtom-CLOSE">
+              <mo maxsize="2.047em" minsize="2.047em">)</mo>
+            </mrow>
+          </mrow>
+        </mrow>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mrow>
+              <mi>n</mi>
+              <mo>!</mo>
+            </mrow>
+            <mrow>
+              <mo stretchy="false">(</mo>
+              <mi>n</mi>
+              <mo>&#x2212;<!-- − --></mo>
+              <mi>k</mi>
+              <mo stretchy="false">)</mo>
+              <mo>!</mo>
+              <mspace width="thinmathspace" />
+              <mi>k</mi>
+              <mo>!</mo>
+            </mrow>
+          </mfrac>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\binom {n}{k}}={\frac {n!}{(n-k)!\,k!}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1065e327d2ca75be3c4dd2e461f608864f9c6e24" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.671ex; width:18.898ex; height:6.343ex;" alt="{\displaystyle {\binom {n}{k}}={\frac {n!}{(n-k)!\,k!}}}"/></span></dd></dl>
+<p>(see <a href="/wiki/Factorial" title="Factorial">factorial</a> and <a href="/wiki/Binomial_coefficient" title="Binomial coefficient">binomial coefficient</a> for notation).
+</p><p>To make a rough estimate of the probability that any given subset of <i>k</i> points is approximately <a href="/wiki/Collinearity" title="Collinearity">collinear</a> in the way defined above, consider the line between the "leftmost" and "rightmost" two points in that set (for some arbitrary left/right axis: we can choose top and bottom for the exceptional vertical case). These two points are by definition on this line. For each of the remaining <i>k</i>-2 points, the probability that the point is "near enough" to the line is roughly <i>w</i>/<i>L</i>, which can be seen by considering the ratio of the area of the line tolerance zone (roughly <i>wL</i>) and the overall area (roughly <i>L</i><sup>2</sup>).
+</p><p>So, the expected number of k-point alignments, by this definition, is very roughly:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\frac {n!}{(n-k)!\,k!}}\left({\frac {w}{L}}\right)^{k-2}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mrow>
+              <mi>n</mi>
+              <mo>!</mo>
+            </mrow>
+            <mrow>
+              <mo stretchy="false">(</mo>
+              <mi>n</mi>
+              <mo>&#x2212;<!-- − --></mo>
+              <mi>k</mi>
+              <mo stretchy="false">)</mo>
+              <mo>!</mo>
+              <mspace width="thinmathspace" />
+              <mi>k</mi>
+              <mo>!</mo>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <msup>
+          <mrow>
+            <mo>(</mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+                <mi>w</mi>
+                <mi>L</mi>
+              </mfrac>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>2</mn>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\frac {n!}{(n-k)!\,k!}}\left({\frac {w}{L}}\right)^{k-2}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/83a505c06fa6a0f48b67da6e70086e4f73647dd7" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.671ex; width:19.449ex; height:6.176ex;" alt="{\displaystyle {\frac {n!}{(n-k)!\,k!}}\left({\frac {w}{L}}\right)^{k-2}}"/></span></dd></dl>
+<p>Among other things this can be used to show that, contrary to intuition, the number of k-point lines expected from random chance in a plane covered with points at a given density, for a given line width, increases much more than linearly with the size of the area considered, since the <a href="/wiki/Combinatorial_explosion" title="Combinatorial explosion">combinatorial explosion</a> of growth in the number of possible combinations of points more than makes up for the increase in difficulty of any given combination lining up.
+</p>
+<h2><span class="mw-headline" id="More_precise_estimate_of_expected_number_of_alignments">More precise estimate of expected number of alignments</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Alignments_of_random_points&amp;action=edit&amp;section=2" title="Edit section: More precise estimate of expected number of alignments">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A more precise expression for the number of 3-point alignments of maximum width <i>w</i> and maximum length <i>d</i> expected by chance among <i>n</i> points placed randomly on a square of side <i>L</i> is <sup id="cite_ref-edmunds_2-1" class="reference"><a href="#cite_note-edmunds-2">&#91;2&#93;</a></sup>
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mu ={\frac {\pi }{3}}{\frac {w}{L}}\left({\frac {d}{L}}\right)^{3}n\left(n-1\right)\left(n-2\right)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03BC;<!-- μ --></mi>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mi>&#x03C0;<!-- π --></mi>
+            <mn>3</mn>
+          </mfrac>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mi>w</mi>
+            <mi>L</mi>
+          </mfrac>
+        </mrow>
+        <msup>
+          <mrow>
+            <mo>(</mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+                <mi>d</mi>
+                <mi>L</mi>
+              </mfrac>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>3</mn>
+          </mrow>
+        </msup>
+        <mi>n</mi>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <mi>n</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>1</mn>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <mi>n</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>2</mn>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mu ={\frac {\pi }{3}}{\frac {w}{L}}\left({\frac {d}{L}}\right)^{3}n\left(n-1\right)\left(n-2\right)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ae86499e2f2f4d38dddec2e33348fc4c26fd12fa" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:32.646ex; height:6.509ex;" alt="\mu ={\frac  {\pi }{3}}{\frac  {w}{L}}\left({{\frac  {d}{L}}}\right)^{{3}}n\left(n-1\right)\left(n-2\right)"/></span></dd></dl>
+<p>If edge effects (alignments lost over the boundaries of the square) are included, then the expression becomes
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mu ={\frac {\pi }{3}}{\frac {w}{L}}\left({\frac {d}{L}}\right)^{3}n\left(n-1\right)\left(n-2\right)\left(1-{\frac {3}{\pi }}\left({\frac {d}{L}}\right)+{\frac {3}{5}}\left({\frac {4}{\pi }}-1\right)\left({\frac {d}{L}}\right)^{2}\right)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03BC;<!-- μ --></mi>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mi>&#x03C0;<!-- π --></mi>
+            <mn>3</mn>
+          </mfrac>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mi>w</mi>
+            <mi>L</mi>
+          </mfrac>
+        </mrow>
+        <msup>
+          <mrow>
+            <mo>(</mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+                <mi>d</mi>
+                <mi>L</mi>
+              </mfrac>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>3</mn>
+          </mrow>
+        </msup>
+        <mi>n</mi>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <mi>n</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>1</mn>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <mi>n</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>2</mn>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <mn>1</mn>
+            <mo>&#x2212;<!-- − --></mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+                <mn>3</mn>
+                <mi>&#x03C0;<!-- π --></mi>
+              </mfrac>
+            </mrow>
+            <mrow>
+              <mo>(</mo>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mfrac>
+                  <mi>d</mi>
+                  <mi>L</mi>
+                </mfrac>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+            <mo>+</mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+                <mn>3</mn>
+                <mn>5</mn>
+              </mfrac>
+            </mrow>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                    <mn>4</mn>
+                    <mi>&#x03C0;<!-- π --></mi>
+                  </mfrac>
+                </mrow>
+                <mo>&#x2212;<!-- − --></mo>
+                <mn>1</mn>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+            <msup>
+              <mrow>
+                <mo>(</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                    <mi>d</mi>
+                    <mi>L</mi>
+                  </mfrac>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>2</mn>
+              </mrow>
+            </msup>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mu ={\frac {\pi }{3}}{\frac {w}{L}}\left({\frac {d}{L}}\right)^{3}n\left(n-1\right)\left(n-2\right)\left(1-{\frac {3}{\pi }}\left({\frac {d}{L}}\right)+{\frac {3}{5}}\left({\frac {4}{\pi }}-1\right)\left({\frac {d}{L}}\right)^{2}\right)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/17b54ed4ecac92cc1a786dd59f199d9d70d0f72e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.171ex; width:71.212ex; height:7.509ex;" alt="\mu ={\frac  {\pi }{3}}{\frac  {w}{L}}\left({{\frac  {d}{L}}}\right)^{{3}}n\left(n-1\right)\left(n-2\right)\left(1-{\frac  {3}{\pi }}\left({\frac  {d}{L}}\right)+{\frac  {3}{5}}\left({\frac  {4}{\pi }}-1\right)\left({\frac  {d}{L}}\right)^{{2}}\right)"/></span></dd></dl>
+<p>A generalisation to <i>k</i>-point alignments (ignoring edge effects) is<sup id="cite_ref-george_3-1" class="reference"><a href="#cite_note-george-3">&#91;3&#93;</a></sup>
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mu ={\frac {\pi n\left(n-1\right)\left(n-2\right)\cdots \left(n-\left(k-1\right)\right)}{k\left(k-2\right)!}}\left({\frac {w}{L}}\right)^{k-2}\left({\frac {d}{L}}\right)^{k}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03BC;<!-- μ --></mi>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mrow>
+              <mi>&#x03C0;<!-- π --></mi>
+              <mi>n</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>n</mi>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mn>1</mn>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>n</mi>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mn>2</mn>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+              <mo>&#x22EF;<!-- ⋯ --></mo>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>n</mi>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <mi>k</mi>
+                      <mo>&#x2212;<!-- − --></mo>
+                      <mn>1</mn>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+            </mrow>
+            <mrow>
+              <mi>k</mi>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>k</mi>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mn>2</mn>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+              <mo>!</mo>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <msup>
+          <mrow>
+            <mo>(</mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+                <mi>w</mi>
+                <mi>L</mi>
+              </mfrac>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <msup>
+          <mrow>
+            <mo>(</mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+                <mi>d</mi>
+                <mi>L</mi>
+              </mfrac>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mu ={\frac {\pi n\left(n-1\right)\left(n-2\right)\cdots \left(n-\left(k-1\right)\right)}{k\left(k-2\right)!}}\left({\frac {w}{L}}\right)^{k-2}\left({\frac {d}{L}}\right)^{k}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6a7709a3b6a12a116d264c5dd348c09919ed9cda" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.671ex; width:55.21ex; height:6.843ex;" alt="\mu ={\frac  {\pi n\left(n-1\right)\left(n-2\right)\cdots \left(n-\left(k-1\right)\right)}{k\left(k-2\right)!}}\left({\frac  {w}{L}}\right)^{{k-2}}\left({{\frac  {d}{L}}}\right)^{{k}}"/></span></dd></dl>
+<p>which has roughly similar asymptotic scaling properties as the crude approximation in the previous section, with combinatorial explosion for large <i>n</i> overwhelming the effects of other variables.
+</p>
+<h2><span class="mw-headline" id="Computer_simulation_of_alignments">Computer simulation of alignments</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Alignments_of_random_points&amp;action=edit&amp;section=3" title="Edit section: Computer simulation of alignments">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="/wiki/File:Leylines.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/4/49/Leylines.png" decoding="async" width="300" height="300" class="thumbimage" data-file-width="300" data-file-height="300" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Leylines.png" class="internal" title="Enlarge"></a></div>607 4-point alignments of 269 random points</div></div></div>
+<p><a href="/wiki/Computer_simulation" title="Computer simulation">Computer simulations</a> show that points on a plane tend to form alignments similar to those found by ley hunters in numbers consistent with the order-of-magnitude estimates above, suggesting that ley lines may also be generated by chance. This phenomenon occurs regardless of whether the points are generated pseudo-randomly by computer, or from data sets of mundane features such as <a href="/wiki/Pizza" title="Pizza">pizza</a> <a href="/wiki/Restaurant" title="Restaurant">restaurants</a> or <a href="/wiki/Telephone_booth" title="Telephone booth">telephone booths</a>.
+</p><p>It is easy to find alignments of 4 to 8 points in reasonably small data sets with <i>w</i> = 50 m.
+Choosing large areas or larger values of <i>w</i> makes it easy to find alignments of 20 or more points.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Alignments_of_random_points&amp;action=edit&amp;section=4" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Apophenia" title="Apophenia">Apophenia</a></li>
+<li><a href="/wiki/Clustering_illusion" title="Clustering illusion">Clustering illusion</a></li>
+<li><a href="/wiki/Coincidence" title="Coincidence">Coincidence</a></li>
+<li><a href="/wiki/Complete_spatial_randomness" title="Complete spatial randomness">Complete spatial randomness</a></li>
+<li><a href="/wiki/General_position" title="General position">General position</a></li>
+<li><a href="/wiki/Pattern_recognition" title="Pattern recognition">Pattern recognition</a></li>
+<li><a href="/wiki/Procrustes_analysis" title="Procrustes analysis">Procrustes analysis</a></li>
+<li><a href="/wiki/Ramsey_theory" title="Ramsey theory">Ramsey theory</a>, for an interesting and important notion of "unavoidable coincidences"</li>
+<li><a href="/wiki/Statistical_shape_analysis" title="Statistical shape analysis">Statistical shape analysis</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Alignments_of_random_points&amp;action=edit&amp;section=5" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r1011085734">.mw-parser-output .reflist{font-size:90%;margin-bottom:0.5em;list-style-type:decimal}.mw-parser-output .reflist .references{font-size:100%;margin-bottom:0;list-style-type:inherit}.mw-parser-output .reflist-columns-2{column-width:30em}.mw-parser-output .reflist-columns-3{column-width:25em}.mw-parser-output .reflist-columns{margin-top:0.3em}.mw-parser-output .reflist-columns ol{margin-top:0}.mw-parser-output .reflist-columns li{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .reflist-upper-alpha{list-style-type:upper-alpha}.mw-parser-output .reflist-upper-roman{list-style-type:upper-roman}.mw-parser-output .reflist-lower-alpha{list-style-type:lower-alpha}.mw-parser-output .reflist-lower-greek{list-style-type:lower-greek}.mw-parser-output .reflist-lower-roman{list-style-type:lower-roman}</style><div class="reflist">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"> <a rel="nofollow" class="external text" href="https://www.jstor.org/stable/1426603">"Alignments in Two-Dimensional Random Sets of Points"</a>, David G. Kendall and Wilfrid S. Kendall, <i>Advances in Applied Probability</i>, vol. 12, No. 2 (Jun., 1980), pp. 380-424
+Published by: Applied Probability Trust.</span>
+</li>
+<li id="cite_note-edmunds-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-edmunds_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-edmunds_2-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">Edmunds, M.G. &amp; George, G.H., <i>Random Alignment of Quasars</i>,  Nature, vol. 290, pages 481-483, 1981 April 9</span>
+</li>
+<li id="cite_note-george-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-george_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-george_3-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><style data-mw-deduplicate="TemplateStyles:r1067248974">.mw-parser-output cite.citation{font-style:inherit;word-wrap:break-word}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation:target{background-color:rgba(0,127,255,0.133)}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output .cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;color:#d33}.mw-parser-output .cs1-visible-error{color:#d33}.mw-parser-output .cs1-maint{display:none;color:#3a3;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><cite id="CITEREFGeorge2003" class="citation web cs1">George, G.H (2003-08-03). <a rel="nofollow" class="external text" href="http://www.engr.mun.ca/~ggeorge/astron/thesis.html">"Ph.D. Thesis of Glyn George: The Alignment and Clustering of Quasars"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2017-02-17</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Ph.D.+Thesis+of+Glyn+George%3A+The+Alignment+and+Clustering+of+Quasars&amp;rft.date=2003-08-03&amp;rft.aulast=George&amp;rft.aufirst=G.H&amp;rft_id=http%3A%2F%2Fwww.engr.mun.ca%2F~ggeorge%2Fastron%2Fthesis.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlignments+of+random+points" class="Z3988"></span></span>
+</li>
+<li id="cite_note-hal-inria-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-hal-inria_4-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFJosé_LezamaRafael_Grompone_von_GioiJean-Michel_MorelGregory_Randall" class="citation web cs1">José Lezama; Rafael Grompone von Gioi; Jean-Michel Morel; Gregory Randall. <a rel="nofollow" class="external text" href="http://hal.inria.fr/docs/00/95/65/96/PDF/point-alignement-detection.pdf">"Point Alignment Detection"</a> <span class="cs1-format">(PDF)</span><span class="reference-accessdate">. Retrieved <span class="nowrap">2014-05-08</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Point+Alignment+Detection&amp;rft.au=Jos%C3%A9+Lezama&amp;rft.au=Rafael+Grompone+von+Gioi&amp;rft.au=Jean-Michel+Morel&amp;rft.au=Gregory+Randall&amp;rft_id=http%3A%2F%2Fhal.inria.fr%2Fdocs%2F00%2F95%2F65%2F96%2FPDF%2Fpoint-alignement-detection.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlignments+of+random+points" class="Z3988"></span></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFWatkins1988" class="citation book cs1">Watkins, Alfred (1988). <i>The Old Straight Track: Its Mounds, Beacons, Moats, Sites and Mark Stones</i>. Abacus. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9780349137070" title="Special:BookSources/9780349137070"><bdi>9780349137070</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Old+Straight+Track%3A+Its+Mounds%2C+Beacons%2C+Moats%2C+Sites+and+Mark+Stones&amp;rft.pub=Abacus&amp;rft.date=1988&amp;rft.isbn=9780349137070&amp;rft.aulast=Watkins&amp;rft.aufirst=Alfred&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlignments+of+random+points" class="Z3988"></span></span>
+</li>
+</ol></div></div>
+<style data-mw-deduplicate="TemplateStyles:r1061077711">.mw-parser-output .portal-bar{font-size:88%;font-weight:bold;display:flex;justify-content:center;align-items:baseline}.mw-parser-output .portal-bar-bordered{padding:0 2em;background-color:#fdfdfd;border:1px solid #a2a9b1;clear:both;margin:1em auto 0}.mw-parser-output .portal-bar-unbordered{padding:0 1.7em;margin-left:0}.mw-parser-output .portal-bar-header{margin:0 1em 0 0.5em;padding:0.2em 0;flex:0 0 auto;min-height:24px;line-height:22px}.mw-parser-output .portal-bar-content{display:flex;flex-flow:row wrap;align-items:baseline;flex:0 1 auto;padding:0.15em 0;column-gap:1em}.mw-parser-output .portal-bar-item{display:flex;align-items:baseline;margin:0.15em 0;min-height:24px;text-align:left}.mw-parser-output .portal-bar-logo{width:22px;line-height:22px;margin:0 0.2em;text-align:right}.mw-parser-output .portal-bar-link{margin:0 0.2em;text-align:left}@media screen and (max-width:768px){.mw-parser-output .portal-bar{font-size:88%;font-weight:bold;display:flex;flex-flow:column wrap}.mw-parser-output .portal-bar-header{text-align:center;flex:0;padding-left:0.5em;margin:0 auto}.mw-parser-output .portal-bar-content{display:flex;flex-flow:row wrap;align-items:baseline;flex:0;margin:0 auto;column-gap:1em;border-top:1px solid #a2a9b1}}.mw-parser-output .navbox+link+.portal-bar-bordered{margin-top:-1px}.mw-parser-output .navbox+style+.portal-bar-bordered{margin-top:-1px}.mw-parser-output .portal-bar+.navbox-styles+.navbox{margin-top:-1px}</style><div class="portal-bar noprint metadata noviewer portal-bar-bordered" role="navigation" aria-label="Portals"><span class="portal-bar-header"><a href="/wiki/Wikipedia:Contents/Portals" title="Wikipedia:Contents/Portals">Portals</a>:</span><div class="portal-bar-content"><div class="portal-bar-item"><span class="portal-bar-logo"><a href="/wiki/File:Nuvola_apps_edu_mathematics_blue-p.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Nuvola_apps_edu_mathematics_blue-p.svg/19px-Nuvola_apps_edu_mathematics_blue-p.svg.png" decoding="async" width="19" height="19" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Nuvola_apps_edu_mathematics_blue-p.svg/29px-Nuvola_apps_edu_mathematics_blue-p.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Nuvola_apps_edu_mathematics_blue-p.svg/38px-Nuvola_apps_edu_mathematics_blue-p.svg.png 2x" data-file-width="128" data-file-height="128" /></a></span><span class="portal-bar-link"><a href="/wiki/Portal:Mathematics" title="Portal:Mathematics">Mathematics</a></span></div><div class="portal-bar-item"><span class="portal-bar-logo"><a href="/wiki/File:Stylised_atom_with_three_Bohr_model_orbits_and_stylised_nucleus.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Stylised_atom_with_three_Bohr_model_orbits_and_stylised_nucleus.svg/17px-Stylised_atom_with_three_Bohr_model_orbits_and_stylised_nucleus.svg.png" decoding="async" width="17" height="19" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Stylised_atom_with_three_Bohr_model_orbits_and_stylised_nucleus.svg/26px-Stylised_atom_with_three_Bohr_model_orbits_and_stylised_nucleus.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Stylised_atom_with_three_Bohr_model_orbits_and_stylised_nucleus.svg/34px-Stylised_atom_with_three_Bohr_model_orbits_and_stylised_nucleus.svg.png 2x" data-file-width="530" data-file-height="600" /></a></span><span class="portal-bar-link"><a href="/wiki/Portal:Physics" title="Portal:Physics">Physics</a></span></div><div class="portal-bar-item"><span class="portal-bar-logo"><a href="/wiki/File:Crab_Nebula.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/00/Crab_Nebula.jpg/19px-Crab_Nebula.jpg" decoding="async" width="19" height="19" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/00/Crab_Nebula.jpg/29px-Crab_Nebula.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/00/Crab_Nebula.jpg/38px-Crab_Nebula.jpg 2x" data-file-width="3864" data-file-height="3864" /></a></span><span class="portal-bar-link"><a href="/wiki/Portal:Astronomy" title="Portal:Astronomy">Astronomy</a></span></div><div class="portal-bar-item"><span class="portal-bar-logo"><a href="/wiki/File:He1523a.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/He1523a.jpg/16px-He1523a.jpg" decoding="async" width="16" height="19" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/He1523a.jpg/25px-He1523a.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5f/He1523a.jpg/33px-He1523a.jpg 2x" data-file-width="180" data-file-height="207" /></a></span><span class="portal-bar-link"><a href="/wiki/Portal:Stars" title="Portal:Stars">Stars</a></span></div><div class="portal-bar-item"><span class="portal-bar-logo"><a href="/wiki/File:RocketSunIcon.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/RocketSunIcon.svg/19px-RocketSunIcon.svg.png" decoding="async" width="19" height="19" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/RocketSunIcon.svg/29px-RocketSunIcon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d6/RocketSunIcon.svg/38px-RocketSunIcon.svg.png 2x" data-file-width="128" data-file-height="128" /></a></span><span class="portal-bar-link"><a href="/wiki/Portal:Spaceflight" title="Portal:Spaceflight">Spaceflight</a></span></div><div class="portal-bar-item"><span class="portal-bar-logo"><a href="/wiki/File:Earth-moon.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Earth-moon.jpg/21px-Earth-moon.jpg" decoding="async" width="21" height="17" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Earth-moon.jpg/32px-Earth-moon.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Earth-moon.jpg/42px-Earth-moon.jpg 2x" data-file-width="3000" data-file-height="2400" /></a></span><span class="portal-bar-link"><a href="/wiki/Portal:Outer_space" title="Portal:Outer space">Outer space</a></span></div><div class="portal-bar-item"><span class="portal-bar-logo"><a href="/wiki/File:Nuvola_apps_kalzium.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Nuvola_apps_kalzium.svg/19px-Nuvola_apps_kalzium.svg.png" decoding="async" width="19" height="19" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Nuvola_apps_kalzium.svg/29px-Nuvola_apps_kalzium.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Nuvola_apps_kalzium.svg/38px-Nuvola_apps_kalzium.svg.png 2x" data-file-width="128" data-file-height="128" /></a></span><span class="portal-bar-link"><a href="/wiki/Portal:Science" title="Portal:Science">Science</a></span></div></div></div></div>

@@ -1,0 +1,11 @@
+http://scholar.google.com/scholar?q=%22Indoctrination%22
+http://www.google.com/search?&q=%22Indoctrination%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Indoctrination%22
+http://www.google.com/search?tbm=nws&q=%22Indoctrination%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Indoctrination%22+-wikipedia
+https://www.etymonline.com/word/indoctrinate#etymonline_v_6396
+https://link.springer.com/referenceworkentry/10.1007/978-981-287-532-7_325-1
+https://d-nb.info/gnd/4123421-2
+https://www.jstor.org/action/doBasicSearch?Query=%22Indoctrination%22&acc=on&wc=on
+https://ftl.toolforge.org/cgi-bin/ftl?st=wp&su=Indoctrination
+https://www.wikidata.org/wiki/Q375159#identifiers

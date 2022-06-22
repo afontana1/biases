@@ -1,0 +1,12 @@
+http://scholar.google.com/scholar?q=%22Panacea%22+medicine
+http://www.google.com/search?&q=%22Panacea%22+medicine&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Panacea%22+medicine
+http://www.google.com/search?tbm=nws&q=%22Panacea%22+medicine+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Panacea%22+medicine+-wikipedia
+http://pubmed.ncbi.nlm.nih.gov/10571242
+http://naeb.brit.org/uses/search/filtered/?string=Panacea&tribe=24&use_category=1
+http://naeb.brit.org/uses/search/filtered/?string=panacea&tribe=&use_category=1
+http://doi.org/10.1016%2FS0006-2952(99)00212-9
+https://books.google.com/books?id=5rgkCwAAQBAJ
+https://msu.edu/unit/msuaa/magazine/s98/honey.htm
+https://www.jstor.org/action/doBasicSearch?Query=%22Panacea%22+medicine&acc=on&wc=on

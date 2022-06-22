@@ -1,0 +1,15 @@
+http://scholar.google.com/scholar?q=%22Academy+and+College+of+Philadelphia%22
+http://www.google.com/search?&q=%22Academy+and+College+of+Philadelphia%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Academy+and+College+of+Philadelphia%22
+http://www.google.com/search?tbm=nws&q=%22Academy+and+College+of+Philadelphia%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Academy+and+College+of+Philadelphia%22+-wikipedia
+http://www.archives.upenn.edu/primdocs/upl/upl125.pdf
+http://doi.org/10.1093%2Fref:odnb%2F67719
+http://geohack.toolforge.org/geohack.php?pagename=Academy_and_College_of_Philadelphia&params=39.951_N_75.195_W_type:edu_globe:earth_region:US-PA
+https://books.google.com/books?id=6jYMCAAAQBAJ&dq=archibald+gamble+&pg=PA88
+https://www.oxforddnb.com/help/subscribe#public
+https://www.oxforddnb.com/view/10.1093/ref:odnb/9780198614128.001.0001/odnb-9780198614128-e-67719
+https://web.archive.org/web/20060428155156/http://www.archives.upenn.edu/histy/features/1700s/penn1700s.html
+https://web.archive.org/web/20120205112444/http://www.archives.upenn.edu/primdocs/upl/upl125.pdf
+https://www.gutenberg.org/files/20203/20203-h/20203-h.htm
+https://www.jstor.org/action/doBasicSearch?Query=%22Academy+and+College+of+Philadelphia%22&acc=on&wc=on

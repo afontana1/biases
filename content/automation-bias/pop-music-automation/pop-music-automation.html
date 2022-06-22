@@ -1,0 +1,397 @@
+<div class="mw-parser-output"><p><b>Pop music automation</b> is a field of study among musicians and computer scientists with a goal of producing successful <a href="/wiki/Pop_music" title="Pop music">pop music</a> algorithmically. It is often based on the premise that pop music is especially formulaic, unchanging, and easy to compose. The idea of automating pop <a href="/wiki/Music_composition" class="mw-redirect" title="Music composition">music composition</a> is related to many ideas in <a href="/wiki/Algorithmic_music" class="mw-redirect" title="Algorithmic music">algorithmic music</a>, <a href="/wiki/Artificial_Intelligence" class="mw-redirect" title="Artificial Intelligence">Artificial Intelligence</a> (AI) and <a href="/wiki/Computational_creativity" title="Computational creativity">computational creativity</a>.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Overview:_automation_in_music"><span class="tocnumber">1</span> <span class="toctext">Overview: automation in music</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Automatic_accompaniment"><span class="tocnumber">2</span> <span class="toctext">Automatic accompaniment</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Melody_generation"><span class="tocnumber">3</span> <span class="toctext">Melody generation</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Lyric_composition"><span class="tocnumber">4</span> <span class="toctext">Lyric composition</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Software"><span class="tocnumber">5</span> <span class="toctext">Software</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#More_or_less_free"><span class="tocnumber">5.1</span> <span class="toctext">More or less free</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Commercial"><span class="tocnumber">5.2</span> <span class="toctext">Commercial</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Overview:_automation_in_music">Overview: automation in music</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Pop_music_automation&amp;action=edit&amp;section=1" title="Edit section: Overview: automation in music">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/Algorithm" title="Algorithm">Algorithms</a> (or, at the very least, formal sets of rules) have been used to compose music for centuries; the procedures used to plot voice-leading in <a href="/wiki/Counterpoint" title="Counterpoint">counterpoint</a>, for example, can often be reduced to algorithmic determinacy.  Now the term is usually reserved, however, for the use of formal procedures to make music without human intervention.
+</p><p>Classical music automation software exists that generates music in the style of <a href="/wiki/Mozart" class="mw-redirect" title="Mozart">Mozart</a> and <a href="/wiki/Bach" class="mw-redirect" title="Bach">Bach</a> and <a href="/wiki/Jazz" title="Jazz">jazz</a>. Most notably, <a href="/wiki/David_Cope" title="David Cope">David Cope</a><sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup> has written a software system called "Experiments in Musical Intelligence" (or "EMI") that is capable of analyzing and generalizing from existing music by a human composer to generate novel musical compositions in the same style. EMI's output is convincing enough to persuade human listeners that its music is human-generated to a high level of competence.
+</p><p>Creativity research in jazz has focused on the process of <a href="/wiki/Jazz_improvisation" title="Jazz improvisation">improvisation</a> and the cognitive demands that this places on a musical agent: reasoning about time, remembering and conceptualizing what has already been played, and planning ahead for what might be played next.
+</p><p>Inevitably associated with Pop music automation is <a href="/wiki/Musical_analysis" title="Musical analysis">Pop music analysis</a>.
+</p><p>Projects in Pop music automation may include, but are not limited to, ideas in melody creation and song development, vocal generation or improvement, automatic accompaniment and lyric composition.
+</p>
+<h2><span class="mw-headline" id="Automatic_accompaniment">Automatic accompaniment</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Pop_music_automation&amp;action=edit&amp;section=2" title="Edit section: Automatic accompaniment">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Some systems exist that automatically choose chords to accompany a vocal melody in real-time. A user with no musical experience can create a song with instrumental accompaniment just by singing into a microphone.
+An example is a Microsoft Research project called Songsmith,<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> which trains a <a href="/wiki/Hidden_Markov_model" title="Hidden Markov model">Hidden Markov model</a> using a music database and uses that
+model to select chords for new melodies.
+</p>
+<h2><span class="mw-headline" id="Melody_generation">Melody generation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Pop_music_automation&amp;action=edit&amp;section=3" title="Edit section: Melody generation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Automatic melody generation is often done with a <a href="/wiki/Markov_chain" title="Markov chain">Markov chain</a>, the states of the system become note or pitch values, and a <a href="/wiki/Probability_vector" title="Probability vector">probability vector</a> for each note is constructed, completing a transition probability matrix (see below). An algorithm is constructed to produce and output note values based on the transition matrix weightings, which could be <a href="/wiki/MIDI" title="MIDI">MIDI</a> note values, frequency (<a href="/wiki/Hertz" title="Hertz">Hz</a>), or any other desirable metric.
+</p>
+<table class="wikitable" style="float: left">
+<caption>1st-order matrix
+</caption>
+<tbody><tr>
+<th>Note</th>
+<th>A</th>
+<th>C#</th>
+<th>Eb
+</th></tr>
+<tr>
+<th>A
+</th>
+<td>0.1</td>
+<td>0.6</td>
+<td>0.3
+</td></tr>
+<tr>
+<th>C#
+</th>
+<td>0.25</td>
+<td>0.05</td>
+<td>0.7
+</td></tr>
+<tr>
+<th>Eb
+</th>
+<td>0.7</td>
+<td>0.3</td>
+<td>0
+</td></tr></tbody></table>
+<table class="wikitable" style="float: left">
+<caption>2nd-order matrix
+</caption>
+<tbody><tr>
+<th>Note</th>
+<th>A</th>
+<th>D</th>
+<th>G
+</th></tr>
+<tr>
+<th>AA
+</th>
+<td>0.18</td>
+<td>0.6</td>
+<td>0.22
+</td></tr>
+<tr>
+<th>AD
+</th>
+<td>0.5</td>
+<td>0.5</td>
+<td>0
+</td></tr>
+<tr>
+<th>AG
+</th>
+<td>0.15</td>
+<td>0.75</td>
+<td>0.1
+</td></tr>
+<tr>
+<th>DD
+</th>
+<td>0</td>
+<td>0</td>
+<td>1
+</td></tr>
+<tr>
+<th>DA
+</th>
+<td>0.25</td>
+<td>0</td>
+<td>0.75
+</td></tr>
+<tr>
+<th>DG
+</th>
+<td>0.9</td>
+<td>0.1</td>
+<td>0
+</td></tr>
+<tr>
+<th>GG
+</th>
+<td>0.4</td>
+<td>0.4</td>
+<td>0.2
+</td></tr>
+<tr>
+<th>GA
+</th>
+<td>0.5</td>
+<td>0.25</td>
+<td>0.25
+</td></tr>
+<tr>
+<th>GD
+</th>
+<td>1</td>
+<td>0</td>
+<td>0
+</td></tr>
+</tbody></table>
+<div style="clear:both;"></div>
+<p>A second-order Markov chain can be introduced by considering the current state <i>and</i> also the previous state, as indicated in the second table. Higher, <i>n</i>th-order chains tend to "group" particular notes together, while 'breaking off' into other patterns and sequences occasionally. These higher-order chains tend to generate results with a sense of <a href="/wiki/Phrase_(music)" title="Phrase (music)">phrasal</a> structure, rather than the 'aimless wandering' produced by a first-order system.<sup id="cite_ref-Roads_3-0" class="reference"><a href="#cite_note-Roads-3">&#91;3&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Lyric_composition">Lyric composition</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Pop_music_automation&amp;action=edit&amp;section=4" title="Edit section: Lyric composition">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Automated lyric creating software may take forms such as:
+</p>
+<ul><li>Selecting words according to their rhythm</li></ul>
+<p>The Tra-la-Lyrics system<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> produces song lyrics, in Portuguese, for a given melody. This not only involves matching each word syllable with a note in the melody, but also matching the word's stress with the strong beats of the melody.
+</p>
+<ul><li>Parsing existing Pop music (for content or word choice e.g.)</li></ul>
+<p>This involves <a href="/wiki/Natural_language_processing" title="Natural language processing">natural language processing</a>.
+Pablo Gervás<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup> has developed a noteworthy system called ASPERA that employs a <a href="/wiki/Case-based_reasoning" title="Case-based reasoning">case-based reasoning</a> (CBR) approach to generating poetic formulations of a given input text via a composition of poetic fragments that are retrieved from a case-base of existing poems. Each poem fragment in the ASPERA case-base is annotated with a prose string that expresses the meaning of the fragment, and this prose string is used as the retrieval key for each fragment. <a href="/wiki/Meter_(poetry)" class="mw-redirect" title="Meter (poetry)">Metrical</a> rules are then used to combine these fragments into a well-formed poetic structure.
+</p>
+<ul><li><a href="/wiki/Artificial_Creativity#Metaphor_and_simile" class="mw-redirect" title="Artificial Creativity">Automatic analogy</a> or <a href="/wiki/Artificial_Creativity#Story_generation" class="mw-redirect" title="Artificial Creativity">story creation</a></li></ul>
+<p>Programs like <a href="/w/index.php?title=TALE-SPIN&amp;action=edit&amp;redlink=1" class="new" title="TALE-SPIN (page does not exist)">TALE-SPIN</a>
+<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup> and The MINSTREL<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> system represent a complex elaboration of this basis approach, distinguishing a range of character-level goals in the story from a range of author-level goals for the story. Systems like Bringsjord's BRUTUS<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup> can create stories with complex inter-personal themes like betrayal. <br />
+On-line metaphor generation systems like 'Sardonicus' or 'Aristotle'<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup> can suggest lexical metaphors for a given descriptive goal (e.g., to describe a supermodel as skinny, the source terms “pencil”, “whip”, “whippet”, “rope”, “stick-insect” and “snake” are suggested). 
+</p>
+<ul><li>Free association of grouped words</li></ul>
+<p>Using a language database (such as <a href="/wiki/Wordnet" class="mw-redirect" title="Wordnet">wordnet</a>) one can create musings on a subject that may be weak grammatically but are still sensical. See such projects as the <a rel="nofollow" class="external text" href="http://nodebox.net/code/index.php/Flowerewolf">Flowerewolf</a> automatic poetry generator or the 
+<a rel="nofollow" class="external text" href="http://dev.null.org/dadaengine/">Dada engine</a>.
+</p>
+<h2><span class="mw-headline" id="Software">Software</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Pop_music_automation&amp;action=edit&amp;section=5" title="Edit section: Software">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="More_or_less_free">More or less free</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Pop_music_automation&amp;action=edit&amp;section=6" title="Edit section: More or less free">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a rel="nofollow" class="external text" href="http://www.kvraudio.com/get/1472.html">BreathCube</a> by xoxos. Simple lyrical vocal content is generated with simple music.</li>
+<li><a rel="nofollow" class="external text" href="http://www.kvraudio.com/get/1456.html">CubeBreath</a> by xoxos. Audio input is vocoded in tune with the music.</li>
+<li><a rel="nofollow" class="external text" href="http://www.mu-tech.co.jp/AcsWebE/setparam.asp">Midi Internet Algorithmic Composition </a></li>
+<li><a rel="nofollow" class="external text" href="http://composerprogrammer.com/infno.html">infno</a> - Infinite generator of electronic dance music and synth pop.</li>
+<li><a rel="nofollow" class="external text" href="https://algorithmictrap.com/">Algorithmic Trap</a> - Trap beat generator.</li></ul>
+<h3><span class="mw-headline" id="Commercial">Commercial</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Pop_music_automation&amp;action=edit&amp;section=7" title="Edit section: Commercial">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a rel="nofollow" class="external text" href="http://www.pgmusic.com/bandbox.htm">Band in a box</a> generates any element, potentially creates whole new songs from scratch.</li>
+<li><a rel="nofollow" class="external text" href="http://www.palette-mct.com/">Musical Palette - Melody Composing Tool</a></li>
+<li><a rel="nofollow" class="external text" href="http://research.microsoft.com/en-us/um/redmond/projects/songsmith/">SongSmith</a>:Automatic Accompaniment for Vocal Melodies</li>
+<li><a rel="nofollow" class="external text" href="http://www.write-music.com/">Ludwig 3.0</a> automatic accompaniment, writes arrangements for given instruments, plays its own songs for an infinitely long time.</li>
+<li><a rel="nofollow" class="external text" href="http://hp.vector.co.jp/authors/VA014815/music/English/autocomp.html">Automated Composing System</a> creates music in many different styles</li></ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Pop_music_automation&amp;action=edit&amp;section=8" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Algorithmic_music" class="mw-redirect" title="Algorithmic music">Algorithmic music</a></li>
+<li><a href="/wiki/Artificial_Creativity" class="mw-redirect" title="Artificial Creativity">Artificial Creativity</a></li>
+<li><a href="/wiki/Computer_music" title="Computer music">Computer music</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Pop_music_automation&amp;action=edit&amp;section=9" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r1011085734">.mw-parser-output .reflist{font-size:90%;margin-bottom:0.5em;list-style-type:decimal}.mw-parser-output .reflist .references{font-size:100%;margin-bottom:0;list-style-type:inherit}.mw-parser-output .reflist-columns-2{column-width:30em}.mw-parser-output .reflist-columns-3{column-width:25em}.mw-parser-output .reflist-columns{margin-top:0.3em}.mw-parser-output .reflist-columns ol{margin-top:0}.mw-parser-output .reflist-columns li{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .reflist-upper-alpha{list-style-type:upper-alpha}.mw-parser-output .reflist-upper-roman{list-style-type:upper-roman}.mw-parser-output .reflist-lower-alpha{list-style-type:lower-alpha}.mw-parser-output .reflist-lower-greek{list-style-type:lower-greek}.mw-parser-output .reflist-lower-roman{list-style-type:lower-roman}</style><div class="reflist">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><style data-mw-deduplicate="TemplateStyles:r1067248974">.mw-parser-output cite.citation{font-style:inherit;word-wrap:break-word}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation:target{background-color:rgba(0,127,255,0.133)}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output .cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;color:#d33}.mw-parser-output .cs1-visible-error{color:#d33}.mw-parser-output .cs1-maint{display:none;color:#3a3;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><cite id="CITEREFCope2006" class="citation cs2">Cope, David (2006), <i>Computer Models of Musical Creativity</i>, Cambridge, MA: MIT Press</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Computer+Models+of+Musical+Creativity&amp;rft.pub=Cambridge%2C+MA%3A+MIT+Press&amp;rft.date=2006&amp;rft.aulast=Cope&amp;rft.aufirst=David&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APop+music+automation" class="Z3988"></span></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external autonumber" href="http://research.microsoft.com/~dan/mysong/">[1]</a> and <a rel="nofollow" class="external autonumber" href="http://dub.washington.edu/djangosite/media/papers/tmpb2x1ZD.pdf">[2]</a></span>
+</li>
+<li id="cite_note-Roads-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-Roads_3-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFCurtis_Roads1996" class="citation cs2">Curtis Roads, ed. (1996), <i>The Computer Music Tutorial</i>, MIT Press, <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-262-18158-4" title="Special:BookSources/0-262-18158-4"><bdi>0-262-18158-4</bdi></a></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Computer+Music+Tutorial&amp;rft.pub=MIT+Press&amp;rft.date=1996&amp;rft.isbn=0-262-18158-4&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APop+music+automation" class="Z3988"></span></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFGonçalo_Oliveira2007" class="citation cs2">Gonçalo Oliveira, Hugo;  et&#160;al. (2007), <i>Tra-la-lyrics: an approach to generate text based on rhythm</i>, Proceedings of the 4th International Joint Workshop on Computational Creativity, pp. 47–55, London, UK, (June 2007)</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Tra-la-lyrics%3A+an+approach+to+generate+text+based+on+rhythm&amp;rft.pub=Proceedings+of+the+4th+International+Joint+Workshop+on+Computational+Creativity%2C+pp.+47%E2%80%9355%2C+London%2C+UK%2C+%28June+2007%29&amp;rft.date=2007&amp;rft.aulast=Gon%C3%A7alo+Oliveira&amp;rft.aufirst=Hugo&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APop+music+automation" class="Z3988"></span></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFGervás2001" class="citation cs2">Gervás, Pablo (2001), <i>An expert system for the composition of formal Spanish poetry</i>, Journal of Knowledge-Based Systems 14(3-4) pp 181&#8211;188</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=An+expert+system+for+the+composition+of+formal+Spanish+poetry&amp;rft.pub=Journal+of+Knowledge-Based+Systems+14%283-4%29+pp+181%26ndash%3B188&amp;rft.date=2001&amp;rft.aulast=Gerv%C3%A1s&amp;rft.aufirst=Pablo&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APop+music+automation" class="Z3988"></span></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFMeehan1981" class="citation cs2">Meehan, James (1981), <i>TALE-SPIN</i>, Shank, R. C. and Riesbeck, C. K., (eds.), Inside Computer Understanding: Five Programs plus Miniatures. Hillsdale, NJ: Lawrence Erlbaum Associates</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=TALE-SPIN&amp;rft.pub=Shank%2C+R.+C.+and+Riesbeck%2C+C.+K.%2C+%28eds.%29%2C+Inside+Computer+Understanding%3A+Five+Programs+plus+Miniatures.+Hillsdale%2C+NJ%3A+Lawrence+Erlbaum+Associates&amp;rft.date=1981&amp;rft.aulast=Meehan&amp;rft.aufirst=James&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APop+music+automation" class="Z3988"></span></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFTurner1994" class="citation cs2">Turner, S.R. (1994), <i>The Creative Process: A Computer Model of Storytelling</i>, Hillsdale, NJ: Lawrence Erlbaum Associates</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Creative+Process%3A+A+Computer+Model+of+Storytelling&amp;rft.pub=Hillsdale%2C+NJ%3A+Lawrence+Erlbaum+Associates&amp;rft.date=1994&amp;rft.aulast=Turner&amp;rft.aufirst=S.R.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APop+music+automation" class="Z3988"></span></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFBringsjord,_S.2000" class="citation cs2">Bringsjord, S., Ferrucci, D. A. (2000), <i>Artificial Intelligence and Literary Creativity. Inside the Mind of BRUTUS, a Storytelling Machine.</i>, Hillsdale NJ: Lawrence Erlbaum Associates</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Artificial+Intelligence+and+Literary+Creativity.+Inside+the+Mind+of+BRUTUS%2C+a+Storytelling+Machine.&amp;rft.pub=Hillsdale+NJ%3A+Lawrence+Erlbaum+Associates&amp;rft.date=2000&amp;rft.aulast=Bringsjord%2C+S.&amp;rft.aufirst=Ferrucci%2C+D.+A.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APop+music+automation" class="Z3988"></span></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFVeale,_Tony2007" class="citation cs2">Veale, Tony, Hao, Yanfen (2007), <i>Comprehending and Generating Apt Metaphors: A Web-driven, Case-based Approach to Figurative Language</i>, Proceedings of AAAI 2007, the 22nd AAAI Conference on Artificial Intelligence. Vancouver, Canada</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Comprehending+and+Generating+Apt+Metaphors%3A+A+Web-driven%2C+Case-based+Approach+to+Figurative+Language&amp;rft.pub=Proceedings+of+AAAI+2007%2C+the+22nd+AAAI+Conference+on+Artificial+Intelligence.+Vancouver%2C+Canada&amp;rft.date=2007&amp;rft.aulast=Veale%2C+Tony&amp;rft.aufirst=Hao%2C+Yanfen&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APop+music+automation" class="Z3988"></span></span>
+</li>
+</ol></div></div>
+<div class="navbox-styles nomobile"><style data-mw-deduplicate="TemplateStyles:r1061467846">.mw-parser-output .navbox{box-sizing:border-box;border:1px solid #a2a9b1;width:100%;clear:both;font-size:88%;text-align:center;padding:1px;margin:1em auto 0}.mw-parser-output .navbox .navbox{margin-top:0}.mw-parser-output .navbox+.navbox,.mw-parser-output .navbox+.navbox-styles+.navbox{margin-top:-1px}.mw-parser-output .navbox-inner,.mw-parser-output .navbox-subgroup{width:100%}.mw-parser-output .navbox-group,.mw-parser-output .navbox-title,.mw-parser-output .navbox-abovebelow{padding:0.25em 1em;line-height:1.5em;text-align:center}.mw-parser-output .navbox-group{white-space:nowrap;text-align:right}.mw-parser-output .navbox,.mw-parser-output .navbox-subgroup{background-color:#fdfdfd}.mw-parser-output .navbox-list{line-height:1.5em;border-color:#fdfdfd}.mw-parser-output .navbox-list-with-group{text-align:left;border-left-width:2px;border-left-style:solid}.mw-parser-output tr+tr>.navbox-abovebelow,.mw-parser-output tr+tr>.navbox-group,.mw-parser-output tr+tr>.navbox-image,.mw-parser-output tr+tr>.navbox-list{border-top:2px solid #fdfdfd}.mw-parser-output .navbox-title{background-color:#ccf}.mw-parser-output .navbox-abovebelow,.mw-parser-output .navbox-group,.mw-parser-output .navbox-subgroup .navbox-title{background-color:#ddf}.mw-parser-output .navbox-subgroup .navbox-group,.mw-parser-output .navbox-subgroup .navbox-abovebelow{background-color:#e6e6ff}.mw-parser-output .navbox-even{background-color:#f7f7f7}.mw-parser-output .navbox-odd{background-color:transparent}.mw-parser-output .navbox .hlist td dl,.mw-parser-output .navbox .hlist td ol,.mw-parser-output .navbox .hlist td ul,.mw-parser-output .navbox td.hlist dl,.mw-parser-output .navbox td.hlist ol,.mw-parser-output .navbox td.hlist ul{padding:0.125em 0}.mw-parser-output .navbox .navbar{display:block;font-size:100%}.mw-parser-output .navbox-title .navbar{float:left;text-align:left;margin-right:0.5em}</style></div><div role="navigation" class="navbox" aria-labelledby="Popular/pop_music" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2" style="background:#87CEEB;"><style data-mw-deduplicate="TemplateStyles:r1063604349">.mw-parser-output .navbar{display:inline;font-size:88%;font-weight:normal}.mw-parser-output .navbar-collapse{float:left;text-align:left}.mw-parser-output .navbar-boxtext{word-spacing:0}.mw-parser-output .navbar ul{display:inline-block;white-space:nowrap;line-height:inherit}.mw-parser-output .navbar-brackets::before{margin-right:-0.125em;content:"[ "}.mw-parser-output .navbar-brackets::after{margin-left:-0.125em;content:" ]"}.mw-parser-output .navbar li{word-spacing:-0.125em}.mw-parser-output .navbar a>span,.mw-parser-output .navbar a>abbr{text-decoration:inherit}.mw-parser-output .navbar-mini abbr{font-variant:small-caps;border-bottom:none;text-decoration:none;cursor:inherit}.mw-parser-output .navbar-ct-full{font-size:114%;margin:0 7em}.mw-parser-output .navbar-ct-mini{font-size:114%;margin:0 4em}</style><div class="navbar plainlinks hlist navbar-mini"><ul><li class="nv-view"><a href="/wiki/Template:Pop_music" title="Template:Pop music"><abbr title="View this template" style="background:#87CEEB;;;background:none transparent;border:none;box-shadow:none;padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Pop_music" title="Template talk:Pop music"><abbr title="Discuss this template" style="background:#87CEEB;;;background:none transparent;border:none;box-shadow:none;padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Pop_music&amp;action=edit"><abbr title="Edit this template" style="background:#87CEEB;;;background:none transparent;border:none;box-shadow:none;padding:0;">e</abbr></a></li></ul></div><div id="Popular/pop_music" style="font-size:114%;margin:0 4em"><a href="/wiki/Popular_music" title="Popular music">Popular</a>/<a href="/wiki/Pop_music" title="Pop music">pop music</a></div></th></tr><tr><th scope="row" class="navbox-group" style="background:#87CEEB;;width:1%">General forms <br />of Western <br />popular music</th><td class="navbox-list-with-group navbox-list navbox-odd hlist" style="width:100%;padding:0"><div style="padding:0 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Adult_contemporary_music" title="Adult contemporary music">Adult contemporary</a></li>
+<li><a href="/wiki/Christmas_music" title="Christmas music">Christmas music</a></li>
+<li><a href="/wiki/Contemporary_Christian_music" title="Contemporary Christian music">Contemporary Christian music</a></li>
+<li><a href="/wiki/Crossover_music" title="Crossover music">Crossover music</a></li>
+<li><a href="/wiki/Easy_listening" title="Easy listening">Easy listening</a></li>
+<li><a href="/wiki/Hyperpop" title="Hyperpop">Hyperpop</a></li>
+<li><a href="/wiki/Traditional_pop" title="Traditional pop">Traditional</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;background:#87CEEB;">Major genres</th><td class="navbox-list-with-group navbox-list navbox-even" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Blues" title="Blues">Blues</a></li>
+<li><a href="/wiki/Country_music" title="Country music">Country</a></li>
+<li><a href="/wiki/Contemporary_folk_music" title="Contemporary folk music">Folk (contemporary)</a></li>
+<li><a href="/wiki/Hip_hop_music" title="Hip hop music">Hip hop</a></li>
+<li><a href="/wiki/Jazz" title="Jazz">Jazz</a></li>
+<li><a href="/wiki/Contemporary_R%26B" title="Contemporary R&amp;B">R&amp;B</a></li>
+<li><a href="/wiki/Pop_music" title="Pop music">Pop</a></li>
+<li><a href="/wiki/Rock_music" title="Rock music">Rock</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;background:#87CEEB;">Song types</th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Car_song" title="Car song">Car song</a></li>
+<li><a href="/wiki/Cover_version" title="Cover version">Cover version</a></li>
+<li><a href="/wiki/Illustrated_song" title="Illustrated song">Illustrated song</a></li>
+<li><a href="/wiki/Jingle" title="Jingle">Jingle</a></li>
+<li><a href="/wiki/Novelty_song" title="Novelty song">Novelty song</a></li>
+<li><a href="/wiki/Pocket_symphony" title="Pocket symphony">Pocket symphony</a></li>
+<li><a href="/wiki/Sentimental_ballad" title="Sentimental ballad">Sentimental ballad</a></li>
+<li><a href="/wiki/Slow_jam" title="Slow jam">Slow jam</a></li>
+<li><a href="/wiki/Standard_(music)" title="Standard (music)">Standard</a></li>
+<li><a href="/wiki/Three-minute_pop_song" title="Three-minute pop song">Three-minute</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="background:#87CEEB;;width:1%">Topics specific to <br />pop music style</th><td class="navbox-list-with-group navbox-list navbox-odd hlist" style="width:100%;padding:0"><div style="padding:0 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><td colspan="2" class="navbox-list navbox-even" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Millennial_whoop" title="Millennial whoop">Millennial whoop</a></li>
+<li><a class="mw-selflink selflink">Pop music automation</a></li>
+<li><a href="/wiki/Rockism_and_poptimism" title="Rockism and poptimism">Rockism and poptimism</a></li>
+<li><a href="/wiki/Spanish_Tinge" title="Spanish Tinge">Spanish Tinge</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;background:#87CEEB;">Subgenres<br />(by style)</th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Ambient_pop" title="Ambient pop">Ambient</a></li>
+<li><a href="/wiki/Art_pop" title="Art pop">Art</a></li>
+<li><a href="/wiki/Avant-pop" title="Avant-pop">Avant-pop</a></li>
+<li><a href="/wiki/Baroque_pop" title="Baroque pop">Baroque</a></li>
+<li><a href="/wiki/Beat_music" title="Beat music">Beat music/Merseybeat</a></li>
+<li><a href="/wiki/Bedroom_pop" class="mw-redirect" title="Bedroom pop">Bedroom</a></li>
+<li><a href="/wiki/Brill_Building_(genre)" title="Brill Building (genre)">Brill Building</a></li>
+<li><a href="/wiki/Bubblegum_music" title="Bubblegum music">Bubblegum music</a></li>
+<li><a href="/wiki/Chalga" title="Chalga">Chalga</a></li>
+<li><a href="/wiki/Country_pop" title="Country pop">Country</a>
+<ul><li><a href="/wiki/Cowboy_pop" title="Cowboy pop">Cowboy</a></li></ul></li>
+<li><a href="/wiki/Cringe_pop" title="Cringe pop">Cringe</a></li>
+<li><a href="/wiki/Crunkcore" title="Crunkcore">Crunkcore</a></li>
+<li><a href="/wiki/Dance-pop" title="Dance-pop">Dance</a></li>
+<li><a href="/wiki/Dancehall_pop" title="Dancehall pop">Dancehall</a></li>
+<li><a href="/wiki/Dark_pop" class="mw-redirect" title="Dark pop">Dark</a></li>
+<li><a href="/wiki/Disco_polo" title="Disco polo">Disco polo</a></li>
+<li><a href="/wiki/Doo-wop" title="Doo-wop">Doo-wop</a></li>
+<li><a href="/wiki/Downtempo_pop" class="mw-redirect" title="Downtempo pop">Downtempo</a></li>
+<li><a href="/wiki/Dream_pop" title="Dream pop">Dream</a></li>
+<li><a href="/wiki/Emo_pop" title="Emo pop">Emo</a></li>
+<li><a href="/wiki/Experimental_pop" title="Experimental pop">Experimental</a></li>
+<li><a href="/wiki/Filmi" title="Filmi">Filmi</a></li>
+<li><a href="/wiki/Folk-pop" title="Folk-pop">Folk</a></li>
+<li><a href="/wiki/Glam_metal" title="Glam metal">Glam metal</a></li>
+<li><a href="/wiki/Hypnagogic_pop" title="Hypnagogic pop">Hypnagogic</a></li>
+<li><a href="/wiki/Indie_pop" title="Indie pop">Indie</a>
+<ul><li><a href="/wiki/Chamber_pop" title="Chamber pop">Chamber</a></li>
+<li><a href="/wiki/Dunedin_sound" title="Dunedin sound">Dunedin sound</a></li>
+<li><a href="/wiki/Paisley_underground" class="mw-redirect" title="Paisley underground">Paisley underground</a></li>
+<li><a href="/wiki/Twee_pop" title="Twee pop">Twee</a></li></ul></li>
+<li><a href="/wiki/New_Pop" title="New Pop">New</a></li>
+<li><a href="/wiki/Noise_pop" title="Noise pop">Noise</a></li>
+<li><a href="/wiki/Northern_soul" title="Northern soul">Northern soul</a></li>
+<li><a href="/wiki/Operatic_pop" title="Operatic pop">Operatic</a></li>
+<li><a href="/wiki/Orchestral_pop" title="Orchestral pop">Orchestral</a>
+<ul><li><a href="/wiki/Chamber_pop" title="Chamber pop">Chamber</a></li></ul></li>
+<li><a href="/wiki/Pop-punk" title="Pop-punk">Punk</a></li>
+<li><a href="/wiki/Pop_rap" title="Pop rap">Rap</a></li>
+<li><a href="/wiki/Pop_rock" title="Pop rock">Rock</a>
+<ul><li><a href="/wiki/Jangle_pop" title="Jangle pop">Jangle</a></li>
+<li><a href="/wiki/Power_pop" title="Power pop">Power</a></li></ul></li>
+<li><a href="/wiki/Progressive_pop" title="Progressive pop">Progressive</a></li>
+<li><a href="/wiki/Psychedelic_pop" title="Psychedelic pop">Psychedelic</a></li>
+<li><a href="/wiki/Quiet_storm" title="Quiet storm">Quiet storm</a></li>
+<li><a href="/wiki/Reggae-pop" class="mw-redirect" title="Reggae-pop">Reggae</a></li>
+<li><a href="/wiki/Sad_pop" title="Sad pop">Sad</a></li>
+<li><a href="/wiki/Smooth_jazz" title="Smooth jazz">Smooth jazz</a></li>
+<li><a href="/wiki/Sophisti-pop" title="Sophisti-pop">Sophisti-pop</a></li>
+<li><a href="/wiki/Space_age_pop" title="Space age pop">Space age</a></li>
+<li><a href="/wiki/Surf_pop" class="mw-redirect" title="Surf pop">Surf</a></li>
+<li><a href="/wiki/Sunshine_pop" title="Sunshine pop">Sunshine</a></li>
+<li><a href="/wiki/Swamp_pop" title="Swamp pop">Swamp</a></li>
+<li><a href="/wiki/Synth-pop" title="Synth-pop">Synthesizer</a>
+<ul><li><a href="/wiki/Electropop" title="Electropop">Electro</a></li></ul></li>
+<li><a href="/wiki/Teen_pop" title="Teen pop">Teen</a></li>
+<li><a href="/wiki/Traditional_pop" title="Traditional pop">Traditional</a></li>
+<li><a href="/wiki/Tropipop" title="Tropipop">Tropical</a></li>
+<li><a href="/wiki/Wonky_pop" title="Wonky pop">Wonky</a></li>
+<li><a href="/wiki/Worldbeat" title="Worldbeat">Worldbeat</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="background:#87CEEB;;width:1%">Cultural impact of ...</th><td class="navbox-list-with-group navbox-list navbox-even hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Cultural_impact_of_Elvis_Presley" title="Cultural impact of Elvis Presley">Elvis Presley</a></li>
+<li><a href="/wiki/Cultural_impact_of_Madonna" title="Cultural impact of Madonna">Madonna</a></li>
+<li><a href="/wiki/Cultural_impact_of_Michael_Jackson" title="Cultural impact of Michael Jackson">Michael Jackson</a></li>
+<li><a href="/wiki/Cultural_impact_of_the_Beatles" title="Cultural impact of the Beatles">The Beatles</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="background:#87CEEB;;width:1%">Lists</th><td class="navbox-list-with-group navbox-list navbox-odd hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/List_of_best-selling_albums" title="List of best-selling albums">Best-selling albums</a></li>
+<li><a href="/wiki/List_of_best-selling_music_artists" title="List of best-selling music artists">Best-selling artists</a>
+<ul><li><a href="/wiki/List_of_best-selling_girl_groups" title="List of best-selling girl groups">Girl groups</a></li></ul></li>
+<li><a href="/wiki/List_of_best-selling_singles" title="List of best-selling singles">Best-selling singles</a></li>
+<li><a href="/wiki/List_of_popular_music_genres" class="mw-redirect" title="List of popular music genres">Genres</a></li>
+<li><a href="/wiki/Honorific_nicknames_in_popular_music" title="Honorific nicknames in popular music">Honorific nicknames</a></li>
+<li><a href="/wiki/Glossary_of_jazz_and_popular_music" title="Glossary of jazz and popular music">Glossary of terms</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="background:#87CEEB;;width:1%">Other topics</th><td class="navbox-list-with-group navbox-list navbox-even hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/50s_progression" class="mw-redirect" title="50s progression">50s progression</a></li>
+<li><a href="/wiki/Boy_band" title="Boy band">Boy band</a></li>
+<li><a href="/wiki/British_Invasion" title="British Invasion">British Invasion</a></li>
+<li><a href="/wiki/Catchiness" title="Catchiness">Catchiness</a></li>
+<li><a href="/wiki/Chill-out_music" title="Chill-out music">Chill-out music</a></li>
+<li><a href="/wiki/Concept_album" title="Concept album">Concept album</a></li>
+<li><a href="/wiki/Dance-rock" title="Dance-rock">Dance-rock</a></li>
+<li><a href="/wiki/Earworm" title="Earworm">Earworm</a></li>
+<li><a href="/wiki/Folk_music" title="Folk music">Folk music</a></li>
+<li><a href="/wiki/Girl_group" title="Girl group">Girl group</a></li>
+<li><a href="/wiki/Groove_(music)" title="Groove (music)">Groove</a></li>
+<li><a href="/wiki/Hook_(music)" title="Hook (music)">Hook</a></li>
+<li><a href="/wiki/Imperial_phase" title="Imperial phase">Imperial phase</a></li>
+<li><a href="/wiki/Lick_(music)" title="Lick (music)">Lick</a></li>
+<li><a href="/wiki/Microgenre" title="Microgenre">Microgenre</a></li>
+<li><a href="/wiki/Record_chart" title="Record chart">Record chart</a></li>
+<li><a href="/wiki/Recording_consciousness" title="Recording consciousness">Recording consciousness</a></li>
+<li><a href="/wiki/Popular_culture" title="Popular culture">Popular culture</a></li>
+<li><a href="/wiki/Pop_icon" title="Pop icon">Pop icon</a></li>
+<li><a href="/wiki/Soft_rock" title="Soft rock">Soft rock</a></li>
+<li><a href="/wiki/Song_structure" title="Song structure">Song structure</a></li>
+<li><a href="/wiki/Stan_(fan)" class="mw-redirect" title="Stan (fan)">Stan</a></li>
+<li><a href="/wiki/Recording_studio_as_an_instrument" title="Recording studio as an instrument">Studio as an instrument</a></li>
+<li><a href="/wiki/Tin_Pan_Alley" title="Tin Pan Alley">Tin Pan Alley</a></li>
+<li><a href="/wiki/Wall_of_Sound" title="Wall of Sound">Wall of Sound</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="background:#87CEEB;;width:1%">Regional variants</th><td class="navbox-list-with-group navbox-list navbox-odd hlist" style="width:100%;padding:0"><div style="padding:0 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%;background:#87CEEB;">Africa</th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/African_popular_music" title="African popular music">Africa</a>
+<ul><li><a href="/wiki/Moroccan_pop" title="Moroccan pop">Morocco</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;background:#87CEEB;">The Americas</th><td class="navbox-list-with-group navbox-list navbox-even" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/American_popular_music" title="American popular music">American</a></li>
+<li><a href="/wiki/M%C3%BAsica_popular_brasileira" title="Música popular brasileira">Brazilian</a></li>
+<li><a href="/wiki/Latin_pop" title="Latin pop">Latin</a>
+<ul><li><a href="/wiki/Tropipop" title="Tropipop">Colombian</a></li>
+<li><a href="/wiki/Mexican_pop_music" title="Mexican pop music">Mexican</a></li></ul></li>
+<li><a href="/wiki/Nueva_ola" title="Nueva ola">Nueva ola</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;background:#87CEEB;">Asia</th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Arabic_pop_music" title="Arabic pop music">Arabic</a></li>
+<li><a href="/wiki/Assyrian_folk/pop_music" title="Assyrian folk/pop music">Assyrian</a></li>
+<li><a href="/wiki/Azerbaijani_pop_music" title="Azerbaijani pop music">Azerbaijani</a></li>
+<li><a href="/wiki/C-pop" title="C-pop">Chinese</a>
+<ul><li><a href="/wiki/Cantopop" title="Cantopop">Cantopop</a></li>
+<li><a href="/wiki/Hokkien_pop" title="Hokkien pop">Taiwanese</a></li>
+<li><a href="/wiki/Hong_Kong_English_pop" title="Hong Kong English pop">Hong Kong English pop</a></li>
+<li><a href="/wiki/Mandopop" title="Mandopop">Mandarin</a>
+<ul><li><a href="/wiki/French_Mandopop" title="French Mandopop">French Mandopop</a></li></ul></li>
+<li><a href="/wiki/Xinyao" title="Xinyao">Xinyao</a></li>
+<li><a href="/wiki/Zhongguo_feng_(music)" title="Zhongguo feng (music)">Zhongguo feng</a></li>
+<li><a href="/wiki/Chinoiserie_music" class="mw-redirect" title="Chinoiserie music">Chinoiserie</a></li></ul></li>
+<li><a href="/wiki/Indian_pop" title="Indian pop">Indian</a>
+<ul><li><a href="/wiki/Bhangra_(music)" title="Bhangra (music)">Bhangra</a></li></ul></li>
+<li><a href="/wiki/Indo_pop" title="Indo pop">Indonesian</a></li>
+<li><a href="/wiki/Iranian_pop_music" title="Iranian pop music">Iranian</a></li>
+<li><a href="/wiki/J-pop" title="J-pop">Japanese</a>
+<ul><li><a href="/wiki/City_pop" title="City pop">City pop</a></li>
+<li><a href="/wiki/Shibuya-kei" title="Shibuya-kei">Shibuya-kei</a></li></ul></li>
+<li><a href="/wiki/Q-pop" title="Q-pop">Kazakhstani</a></li>
+<li><a href="/wiki/K-pop" title="K-pop">Korean</a></li>
+<li><a href="/wiki/Lao_pop" title="Lao pop">Lao</a></li>
+<li><a href="/wiki/Malaysian_pop" class="mw-redirect" title="Malaysian pop">Malaysian</a></li>
+<li><a href="/wiki/Pakistani_pop_music" class="mw-redirect" title="Pakistani pop music">Pakistani</a></li>
+<li><a href="/wiki/Pinoy_pop" title="Pinoy pop">Philippine</a></li>
+<li><a href="/wiki/Thai_pop_music" title="Thai pop music">Thai</a></li>
+<li><a href="/wiki/Turkish_pop_music" title="Turkish pop music">Turkish</a></li>
+<li><a href="/wiki/V-pop" title="V-pop">Vietnamese</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;background:#87CEEB;">Europe</th><td class="navbox-list-with-group navbox-list navbox-even" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/British_pop_music" title="British pop music">British</a></li>
+<li><a href="/wiki/Europop" title="Europop">European</a>
+<ul><li><a href="/wiki/Austropop" title="Austropop">Austrian</a></li>
+<li><a href="/wiki/Nederpop" title="Nederpop">Dutch</a>
+<ul><li><a href="/wiki/Nederbeat" title="Nederbeat">Nederbeat</a></li></ul></li>
+<li><a href="/wiki/Eurodance" title="Eurodance">Eurodance</a></li>
+<li><a href="/wiki/French_pop_music" title="French pop music">French</a></li>
+<li><a href="/wiki/Y%C3%A9-y%C3%A9" title="Yé-yé">Yé-yé</a></li>
+<li><a href="/wiki/La%C3%AFko" title="Laïko">Greek</a></li>
+<li><a href="/wiki/Hungarian_pop" title="Hungarian pop">Hungarian</a></li>
+<li><a href="/wiki/Italian_popular_music#Rock_and_pop" title="Italian popular music">Italian</a></li>
+<li><a href="/wiki/Russian_pop" title="Russian pop">Russian</a></li>
+<li><a href="/wiki/Scandipop" class="mw-redirect" title="Scandipop">Scandipop</a>
+<ul><li><a href="/wiki/Swedish_popular_music" class="mw-redirect" title="Swedish popular music">Swedish</a></li></ul></li>
+<li><a href="/wiki/Serbian_pop" title="Serbian pop">Serbian</a>
+<ul><li><a href="/wiki/Turbo-folk" title="Turbo-folk">Turbo-folk</a></li></ul></li>
+<li><a href="/wiki/Latin_pop" title="Latin pop">Spanish</a></li></ul></li>
+<li><a href="/wiki/Music_of_North_Macedonia#Pop_music" title="Music of North Macedonia">North Macedonian</a>
+<ul><li><a href="/wiki/%C4%8Calgija" title="Čalgija">Čalgija</a></li></ul></li>
+<li><a href="/wiki/Muzica_populara" title="Muzica populara">Romanian</a>
+<ul><li><a href="/wiki/Manele" title="Manele">Manele</a></li></ul></li>
+<li><a href="/wiki/Pop_music_in_Ukraine" title="Pop music in Ukraine">Ukrainian</a></li>
+<li><a href="/wiki/Popular_music_in_the_Socialist_Federal_Republic_of_Yugoslavia" class="mw-redirect" title="Popular music in the Socialist Federal Republic of Yugoslavia">SFR Yugoslavia</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;background:#87CEEB;">South America</th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Music_of_Argentina#Popular_music" title="Music of Argentina">Argentine</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr></tbody></table></div></div>

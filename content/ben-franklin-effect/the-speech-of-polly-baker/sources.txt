@@ -1,0 +1,13 @@
+http://scholar.google.com/scholar?q=%22The+Speech+of+Polly+Baker%22
+http://www.google.com/search?&q=%22The+Speech+of+Polly+Baker%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22The+Speech+of+Polly+Baker%22
+http://www.google.com/search?tbm=nws&q=%22The+Speech+of+Polly+Baker%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22The+Speech+of+Polly+Baker%22+-wikipedia
+http://doi.org/10.1086%2F391415
+http://www.jstor.org/stable/2708664
+http://www.jstor.org/stable/437038
+http://id.worldcat.org/fast/1746570/
+http://www.bodley.ox.ac.uk/cgi-bin/ilej/image1.pl?item=page&seq=1&size=1&id=gm.1747.5.x.17.x.x.u29
+https://id.loc.gov/authorities/subjects/sh2008002949
+https://www.jstor.org/action/doBasicSearch?Query=%22The+Speech+of+Polly+Baker%22&acc=on&wc=on
+https://www.wikidata.org/wiki/Q7765788#identifiers

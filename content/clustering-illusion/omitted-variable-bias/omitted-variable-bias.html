@@ -1,0 +1,754 @@
+<div class="mw-parser-output"><table class="box-More_footnotes plainlinks metadata ambox ambox-style ambox-More_footnotes" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/40px-Text_document_with_red_question_mark.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/60px-Text_document_with_red_question_mark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/80px-Text_document_with_red_question_mark.svg.png 2x" data-file-width="48" data-file-height="48" /></div></td><td class="mbox-text"><div class="mbox-text-span">This article includes a list of general <a href="/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">references</a>, but it remains largely unverified because <b>it lacks sufficient corresponding <a href="/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a></b>.<span class="hide-when-compact"> Please help to <a href="/wiki/Wikipedia:WikiProject_Fact_and_Reference_Check" class="mw-redirect" title="Wikipedia:WikiProject Fact and Reference Check">improve</a> this article by <a href="/wiki/Wikipedia:When_to_cite" title="Wikipedia:When to cite">introducing</a> more precise citations.</span>  <span class="date-container"><i>(<span class="date">July 2010</span>)</i></span><span class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></span></div></td></tr></tbody></table>
+<p>In <a href="/wiki/Statistics" title="Statistics">statistics</a>, <b>omitted-variable bias</b> (<b>OVB</b>) occurs when a statistical model leaves out one or more relevant variables. The bias results in the model attributing the effect of the missing variables to those that were included.
+</p><p>More specifically, OVB is the <a href="/wiki/Estimator_bias" class="mw-redirect" title="Estimator bias">bias</a> that appears in the estimates of <a href="/wiki/Parameter" title="Parameter">parameters</a> in a <a href="/wiki/Regression_analysis" title="Regression analysis">regression analysis</a>, when the assumed <a href="/wiki/Statistical_model_specification" title="Statistical model specification">specification</a> is incorrect in that it omits an independent variable that is a determinant of the dependent variable and correlated with one or more of the included independent variables.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#In_linear_regression"><span class="tocnumber">1</span> <span class="toctext">In linear regression</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Intuition"><span class="tocnumber">1.1</span> <span class="toctext">Intuition</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Detailed_analysis"><span class="tocnumber">1.2</span> <span class="toctext">Detailed analysis</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Effect_in_ordinary_least_squares"><span class="tocnumber">2</span> <span class="toctext">Effect in ordinary least squares</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="In_linear_regression">In linear regression</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Omitted-variable_bias&amp;action=edit&amp;section=1" title="Edit section: In linear regression">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Intuition">Intuition</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Omitted-variable_bias&amp;action=edit&amp;section=2" title="Edit section: Intuition">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Suppose the true cause-and-effect relationship is given by:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle y=a+bx+cz+u}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>y</mi>
+        <mo>=</mo>
+        <mi>a</mi>
+        <mo>+</mo>
+        <mi>b</mi>
+        <mi>x</mi>
+        <mo>+</mo>
+        <mi>c</mi>
+        <mi>z</mi>
+        <mo>+</mo>
+        <mi>u</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle y=a+bx+cz+u}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0429cb8d7de18bcb04bdb928b82aeceeabe8d303" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:19.757ex; height:2.509ex;" alt="y=a+bx+cz+u"/></span></dd></dl>
+<p>with parameters <i>a, b, c</i>, dependent variable <i>y</i>, independent variables <i>x</i> and <i>z</i>, and error term <i>u</i>. We wish to know the effect of <i>x</i> itself upon <i>y</i> (that is, we wish to obtain an estimate of <i>b</i>).
+</p><p>Two conditions must hold true for omitted-variable bias to exist in <a href="/wiki/Linear_regression" title="Linear regression">linear regression</a>:
+</p>
+<ul><li>the omitted variable must be a determinant of the dependent variable (i.e., its true regression coefficient must not be zero); and</li>
+<li>the omitted variable must be correlated with an independent variable specified in the regression (i.e., cov(<i>z</i>,<i>x</i>) must not equal zero).</li></ul>
+<p>Suppose we omit <i>z</i> from the regression, and suppose the relation between <i>x</i> and <i>z</i> is given by
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle z=d+fx+e}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>z</mi>
+        <mo>=</mo>
+        <mi>d</mi>
+        <mo>+</mo>
+        <mi>f</mi>
+        <mi>x</mi>
+        <mo>+</mo>
+        <mi>e</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle z=d+fx+e}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4df18c483bb3800021b6e9a75ce6273b245c09ff" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:14.775ex; height:2.509ex;" alt="z=d+fx+e"/></span></dd></dl>
+<p>with parameters <i>d</i>, <i>f</i> and error term <i>e</i>. Substituting the second equation into the first gives
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle y=(a+cd)+(b+cf)x+(u+ce).}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>y</mi>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mi>a</mi>
+        <mo>+</mo>
+        <mi>c</mi>
+        <mi>d</mi>
+        <mo stretchy="false">)</mo>
+        <mo>+</mo>
+        <mo stretchy="false">(</mo>
+        <mi>b</mi>
+        <mo>+</mo>
+        <mi>c</mi>
+        <mi>f</mi>
+        <mo stretchy="false">)</mo>
+        <mi>x</mi>
+        <mo>+</mo>
+        <mo stretchy="false">(</mo>
+        <mi>u</mi>
+        <mo>+</mo>
+        <mi>c</mi>
+        <mi>e</mi>
+        <mo stretchy="false">)</mo>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle y=(a+cd)+(b+cf)x+(u+ce).}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/645bd083f1d7c75ea2f7e43fe70eb0ace3340a43" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:36.016ex; height:2.843ex;" alt="y=(a+cd)+(b+cf)x+(u+ce)."/></span></dd></dl>
+<p>If a regression of <i>y</i> is conducted upon <i>x</i> only, this last equation is what is estimated, and the regression coefficient on <i>x</i> is actually an estimate of (<i>b</i>&#160;+&#160;<i>cf</i> ), giving not simply an estimate of the desired direct effect of <i>x</i> upon <i>y</i> (which is <i>b</i>), but rather of its sum with the indirect effect (the effect <i>f</i> of <i>x</i> on <i>z</i> times the effect <i>c</i> of <i>z</i> on <i>y</i>). Thus by omitting the variable <i>z</i> from the regression, we have estimated the <a href="/wiki/Total_derivative" title="Total derivative">total derivative</a> of <i>y</i> with respect to <i>x</i> rather than its <a href="/wiki/Partial_derivative" title="Partial derivative">partial derivative</a> with respect to&#160;<i>x</i>. These differ if both <i>c</i> and <i>f</i> are non-zero.
+</p><p>The direction and extent of the bias are both contained in <i>cf</i>, since the effect sought is <i>b</i> but the regression estimates <i>b+cf</i>. The extent of the bias is the absolute value of <i>cf</i>, and the direction of bias is upward (toward a more positive or less negative value) if <i>cf</i> &gt; 0 (if the direction of correlation between <i>y</i> and <i>z</i> is the same as that between <i>x</i> and <i>z</i>), and it is downward otherwise.
+</p>
+<h3><span class="mw-headline" id="Detailed_analysis">Detailed analysis</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Omitted-variable_bias&amp;action=edit&amp;section=3" title="Edit section: Detailed analysis">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>As an example, consider a <a href="/wiki/Linear_model" title="Linear model">linear model</a> of the form
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle y_{i}=x_{i}\beta +z_{i}\delta +u_{i},\qquad i=1,\dots ,n}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <msub>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mi>&#x03B2;<!-- β --></mi>
+        <mo>+</mo>
+        <msub>
+          <mi>z</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mi>&#x03B4;<!-- δ --></mi>
+        <mo>+</mo>
+        <msub>
+          <mi>u</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <mspace width="2em" />
+        <mi>i</mi>
+        <mo>=</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mo>,</mo>
+        <mi>n</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle y_{i}=x_{i}\beta +z_{i}\delta +u_{i},\qquad i=1,\dots ,n}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/22420dc529659280ad84472de6f3b029aaba8b6e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:36.554ex; height:2.676ex;" alt="y_{i}=x_{i}\beta +z_{i}\delta +u_{i},\qquad i=1,\dots ,n"/></span></dd></dl>
+<p>where
+</p>
+<ul><li><i>x</i><sub><i>i</i></sub> is a 1&#160;×&#160;<i>p</i> row vector of values of <i>p</i> <a href="/wiki/Independent_variable" class="mw-redirect" title="Independent variable">independent variables</a> observed at time <i>i</i> or for the <i>i</i><sup>&#160;th</sup> study participant;</li>
+<li><i>β</i> is a <i>p</i>&#160;×&#160;1 column vector of unobservable parameters (the response coefficients of the dependent variable to each of the <i>p</i> independent variables in <i>x</i><sub><i>i</i></sub>) to be estimated;</li>
+<li><i>z</i><sub><i>i</i></sub> is a scalar and is the value of another independent variable that is observed at time <i>i</i> or for the <i>i</i><sup>&#160;th</sup> study participant;</li>
+<li><i>δ</i> is a scalar and is an unobservable parameter (the response coefficient of the dependent variable to <i>z</i><sub><i>i</i></sub>) to be estimated;</li>
+<li><i>u</i><sub><i>i</i></sub> is the unobservable <a href="/wiki/Errors_and_residuals_in_statistics" class="mw-redirect" title="Errors and residuals in statistics">error term</a> occurring at time <i>i</i> or for the <i>i</i><sup>&#160;th</sup> study participant; it is an unobserved realization of a <a href="/wiki/Random_variable" title="Random variable">random variable</a> having <a href="/wiki/Expected_value" title="Expected value">expected value</a>&#160;0 (conditionally on <i>x</i><sub><i>i</i></sub> and <i>z</i><sub><i>i</i></sub>);</li>
+<li><i>y</i><sub><i>i</i></sub> is the observation of the <a href="/wiki/Dependent_variable" class="mw-redirect" title="Dependent variable">dependent variable</a> at time <i>i</i> or for the <i>i</i><sup>&#160;th</sup> study participant.</li></ul>
+<p>We collect the observations of all variables subscripted <i>i</i> = 1, ..., <i>n</i>, and stack them one below another, to obtain the <a href="/wiki/Matrix_(mathematics)" title="Matrix (mathematics)">matrix</a> <i>X</i> and the <a href="/wiki/Vector_(mathematics)" class="mw-redirect" title="Vector (mathematics)">vectors</a> <i>Y</i>, <i>Z</i>, and <i>U</i>: 
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle X=\left[{\begin{array}{c}x_{1}\\\vdots \\x_{n}\end{array}}\right]\in \mathbb {R} ^{n\times p},}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>X</mi>
+        <mo>=</mo>
+        <mrow>
+          <mo>[</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mtable rowspacing="4pt" columnspacing="1em">
+              <mtr>
+                <mtd>
+                  <msub>
+                    <mi>x</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mn>1</mn>
+                    </mrow>
+                  </msub>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mo>&#x22EE;<!-- ⋮ --></mo>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <msub>
+                    <mi>x</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>n</mi>
+                    </mrow>
+                  </msub>
+                </mtd>
+              </mtr>
+            </mtable>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <msup>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="double-struck">R</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mo>&#x00D7;<!-- × --></mo>
+            <mi>p</mi>
+          </mrow>
+        </msup>
+        <mo>,</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle X=\left[{\begin{array}{c}x_{1}\\\vdots \\x_{n}\end{array}}\right]\in \mathbb {R} ^{n\times p},}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d1c6d4d2a81aedba032abc31b2c6a34c5e4e9e8d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -4.671ex; width:19.968ex; height:10.509ex;" alt="X=\left[{\begin{array}{c}x_{1}\\\vdots \\x_{n}\end{array}}\right]\in {\mathbb  {R}}^{{n\times p}},"/></span></dd></dl>
+<p>and
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle Y=\left[{\begin{array}{c}y_{1}\\\vdots \\y_{n}\end{array}}\right],\quad Z=\left[{\begin{array}{c}z_{1}\\\vdots \\z_{n}\end{array}}\right],\quad U=\left[{\begin{array}{c}u_{1}\\\vdots \\u_{n}\end{array}}\right]\in \mathbb {R} ^{n\times 1}.}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>Y</mi>
+        <mo>=</mo>
+        <mrow>
+          <mo>[</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mtable rowspacing="4pt" columnspacing="1em">
+              <mtr>
+                <mtd>
+                  <msub>
+                    <mi>y</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mn>1</mn>
+                    </mrow>
+                  </msub>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mo>&#x22EE;<!-- ⋮ --></mo>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <msub>
+                    <mi>y</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>n</mi>
+                    </mrow>
+                  </msub>
+                </mtd>
+              </mtr>
+            </mtable>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+        <mo>,</mo>
+        <mspace width="1em" />
+        <mi>Z</mi>
+        <mo>=</mo>
+        <mrow>
+          <mo>[</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mtable rowspacing="4pt" columnspacing="1em">
+              <mtr>
+                <mtd>
+                  <msub>
+                    <mi>z</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mn>1</mn>
+                    </mrow>
+                  </msub>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mo>&#x22EE;<!-- ⋮ --></mo>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <msub>
+                    <mi>z</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>n</mi>
+                    </mrow>
+                  </msub>
+                </mtd>
+              </mtr>
+            </mtable>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+        <mo>,</mo>
+        <mspace width="1em" />
+        <mi>U</mi>
+        <mo>=</mo>
+        <mrow>
+          <mo>[</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mtable rowspacing="4pt" columnspacing="1em">
+              <mtr>
+                <mtd>
+                  <msub>
+                    <mi>u</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mn>1</mn>
+                    </mrow>
+                  </msub>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mo>&#x22EE;<!-- ⋮ --></mo>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <msub>
+                    <mi>u</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>n</mi>
+                    </mrow>
+                  </msub>
+                </mtd>
+              </mtr>
+            </mtable>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <msup>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="double-struck">R</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mo>&#x00D7;<!-- × --></mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle Y=\left[{\begin{array}{c}y_{1}\\\vdots \\y_{n}\end{array}}\right],\quad Z=\left[{\begin{array}{c}z_{1}\\\vdots \\z_{n}\end{array}}\right],\quad U=\left[{\begin{array}{c}u_{1}\\\vdots \\u_{n}\end{array}}\right]\in \mathbb {R} ^{n\times 1}.}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d95f1e524dffe37179d7ecd41a0e2f4f3f154ed3" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -4.671ex; width:49.265ex; height:10.509ex;" alt="Y=\left[{\begin{array}{c}y_{1}\\\vdots \\y_{n}\end{array}}\right],\quad Z=\left[{\begin{array}{c}z_{1}\\\vdots \\z_{n}\end{array}}\right],\quad U=\left[{\begin{array}{c}u_{1}\\\vdots \\u_{n}\end{array}}\right]\in {\mathbb  {R}}^{{n\times 1}}."/></span></dd></dl>
+<p>If the independent variable <i>z</i> is omitted from the regression, then the estimated values of the response parameters of the other independent variables will be given by the usual <a href="/wiki/Least_squares" title="Least squares">least squares</a> calculation,
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\widehat {\beta }}=(X'X)^{-1}X'Y\,}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mover>
+              <mi>&#x03B2;<!-- β --></mi>
+              <mo>&#x005E;<!-- ^ --></mo>
+            </mover>
+          </mrow>
+        </mrow>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mi>X</mi>
+          <mo>&#x2032;</mo>
+        </msup>
+        <mi>X</mi>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+        <msup>
+          <mi>X</mi>
+          <mo>&#x2032;</mo>
+        </msup>
+        <mi>Y</mi>
+        <mspace width="thinmathspace" />
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\widehat {\beta }}=(X'X)^{-1}X'Y\,}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c5cc63bd3de842aa796522a2f7b9cddb644f57cb" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:18.26ex; height:3.509ex;" alt="{\displaystyle {\widehat {\beta }}=(X&#039;X)^{-1}X&#039;Y\,}"/></span></dd></dl>
+<p>(where the "prime" notation means the <a href="/wiki/Transpose" title="Transpose">transpose</a> of a matrix and the -1 superscript is <a href="/wiki/Matrix_inversion" class="mw-redirect" title="Matrix inversion">matrix inversion</a>).
+</p><p>Substituting for <i>Y</i> based on the assumed linear model,
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\begin{aligned}{\widehat {\beta }}&amp;=(X'X)^{-1}X'(X\beta +Z\delta +U)\\&amp;=(X'X)^{-1}X'X\beta +(X'X)^{-1}X'Z\delta +(X'X)^{-1}X'U\\&amp;=\beta +(X'X)^{-1}X'Z\delta +(X'X)^{-1}X'U.\end{aligned}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+            <mtr>
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mover>
+                      <mi>&#x03B2;<!-- β --></mi>
+                      <mo>&#x005E;<!-- ^ --></mo>
+                    </mover>
+                  </mrow>
+                </mrow>
+              </mtd>
+              <mtd>
+                <mi></mi>
+                <mo>=</mo>
+                <mo stretchy="false">(</mo>
+                <msup>
+                  <mi>X</mi>
+                  <mo>&#x2032;</mo>
+                </msup>
+                <mi>X</mi>
+                <msup>
+                  <mo stretchy="false">)</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo>&#x2212;<!-- − --></mo>
+                    <mn>1</mn>
+                  </mrow>
+                </msup>
+                <msup>
+                  <mi>X</mi>
+                  <mo>&#x2032;</mo>
+                </msup>
+                <mo stretchy="false">(</mo>
+                <mi>X</mi>
+                <mi>&#x03B2;<!-- β --></mi>
+                <mo>+</mo>
+                <mi>Z</mi>
+                <mi>&#x03B4;<!-- δ --></mi>
+                <mo>+</mo>
+                <mi>U</mi>
+                <mo stretchy="false">)</mo>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd />
+              <mtd>
+                <mi></mi>
+                <mo>=</mo>
+                <mo stretchy="false">(</mo>
+                <msup>
+                  <mi>X</mi>
+                  <mo>&#x2032;</mo>
+                </msup>
+                <mi>X</mi>
+                <msup>
+                  <mo stretchy="false">)</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo>&#x2212;<!-- − --></mo>
+                    <mn>1</mn>
+                  </mrow>
+                </msup>
+                <msup>
+                  <mi>X</mi>
+                  <mo>&#x2032;</mo>
+                </msup>
+                <mi>X</mi>
+                <mi>&#x03B2;<!-- β --></mi>
+                <mo>+</mo>
+                <mo stretchy="false">(</mo>
+                <msup>
+                  <mi>X</mi>
+                  <mo>&#x2032;</mo>
+                </msup>
+                <mi>X</mi>
+                <msup>
+                  <mo stretchy="false">)</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo>&#x2212;<!-- − --></mo>
+                    <mn>1</mn>
+                  </mrow>
+                </msup>
+                <msup>
+                  <mi>X</mi>
+                  <mo>&#x2032;</mo>
+                </msup>
+                <mi>Z</mi>
+                <mi>&#x03B4;<!-- δ --></mi>
+                <mo>+</mo>
+                <mo stretchy="false">(</mo>
+                <msup>
+                  <mi>X</mi>
+                  <mo>&#x2032;</mo>
+                </msup>
+                <mi>X</mi>
+                <msup>
+                  <mo stretchy="false">)</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo>&#x2212;<!-- − --></mo>
+                    <mn>1</mn>
+                  </mrow>
+                </msup>
+                <msup>
+                  <mi>X</mi>
+                  <mo>&#x2032;</mo>
+                </msup>
+                <mi>U</mi>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd />
+              <mtd>
+                <mi></mi>
+                <mo>=</mo>
+                <mi>&#x03B2;<!-- β --></mi>
+                <mo>+</mo>
+                <mo stretchy="false">(</mo>
+                <msup>
+                  <mi>X</mi>
+                  <mo>&#x2032;</mo>
+                </msup>
+                <mi>X</mi>
+                <msup>
+                  <mo stretchy="false">)</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo>&#x2212;<!-- − --></mo>
+                    <mn>1</mn>
+                  </mrow>
+                </msup>
+                <msup>
+                  <mi>X</mi>
+                  <mo>&#x2032;</mo>
+                </msup>
+                <mi>Z</mi>
+                <mi>&#x03B4;<!-- δ --></mi>
+                <mo>+</mo>
+                <mo stretchy="false">(</mo>
+                <msup>
+                  <mi>X</mi>
+                  <mo>&#x2032;</mo>
+                </msup>
+                <mi>X</mi>
+                <msup>
+                  <mo stretchy="false">)</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo>&#x2212;<!-- − --></mo>
+                    <mn>1</mn>
+                  </mrow>
+                </msup>
+                <msup>
+                  <mi>X</mi>
+                  <mo>&#x2032;</mo>
+                </msup>
+                <mi>U</mi>
+                <mo>.</mo>
+              </mtd>
+            </mtr>
+          </mtable>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\begin{aligned}{\widehat {\beta }}&amp;=(X'X)^{-1}X'(X\beta +Z\delta +U)\\&amp;=(X'X)^{-1}X'X\beta +(X'X)^{-1}X'Z\delta +(X'X)^{-1}X'U\\&amp;=\beta +(X'X)^{-1}X'Z\delta +(X'X)^{-1}X'U.\end{aligned}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/705b0558e3d67358b5dbaa98dd1bcb4088a75786" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -4.505ex; width:53.326ex; height:10.176ex;" alt="{\displaystyle {\begin{aligned}{\widehat {\beta }}&amp;=(X&#039;X)^{-1}X&#039;(X\beta +Z\delta +U)\\&amp;=(X&#039;X)^{-1}X&#039;X\beta +(X&#039;X)^{-1}X&#039;Z\delta +(X&#039;X)^{-1}X&#039;U\\&amp;=\beta +(X&#039;X)^{-1}X&#039;Z\delta +(X&#039;X)^{-1}X&#039;U.\end{aligned}}}"/></span></dd></dl>
+<p>On taking expectations, the contribution of the final term is zero; this follows from the assumption that <i>U</i> is uncorrelated with the regressors <i>X</i>. On simplifying the remaining terms:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\begin{aligned}E[{\widehat {\beta }}\mid X]&amp;=\beta +(X'X)^{-1}E[X'Z\mid X]\delta \\&amp;=\beta +{\text{bias}}.\end{aligned}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+            <mtr>
+              <mtd>
+                <mi>E</mi>
+                <mo stretchy="false">[</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mover>
+                      <mi>&#x03B2;<!-- β --></mi>
+                      <mo>&#x005E;<!-- ^ --></mo>
+                    </mover>
+                  </mrow>
+                </mrow>
+                <mo>&#x2223;<!-- ∣ --></mo>
+                <mi>X</mi>
+                <mo stretchy="false">]</mo>
+              </mtd>
+              <mtd>
+                <mi></mi>
+                <mo>=</mo>
+                <mi>&#x03B2;<!-- β --></mi>
+                <mo>+</mo>
+                <mo stretchy="false">(</mo>
+                <msup>
+                  <mi>X</mi>
+                  <mo>&#x2032;</mo>
+                </msup>
+                <mi>X</mi>
+                <msup>
+                  <mo stretchy="false">)</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo>&#x2212;<!-- − --></mo>
+                    <mn>1</mn>
+                  </mrow>
+                </msup>
+                <mi>E</mi>
+                <mo stretchy="false">[</mo>
+                <msup>
+                  <mi>X</mi>
+                  <mo>&#x2032;</mo>
+                </msup>
+                <mi>Z</mi>
+                <mo>&#x2223;<!-- ∣ --></mo>
+                <mi>X</mi>
+                <mo stretchy="false">]</mo>
+                <mi>&#x03B4;<!-- δ --></mi>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd />
+              <mtd>
+                <mi></mi>
+                <mo>=</mo>
+                <mi>&#x03B2;<!-- β --></mi>
+                <mo>+</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mtext>bias</mtext>
+                </mrow>
+                <mo>.</mo>
+              </mtd>
+            </mtr>
+          </mtable>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\begin{aligned}E[{\widehat {\beta }}\mid X]&amp;=\beta +(X'X)^{-1}E[X'Z\mid X]\delta \\&amp;=\beta +{\text{bias}}.\end{aligned}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cb10ed26180682aa1ee31abe61f98437f607f018" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.671ex; width:37.726ex; height:6.509ex;" alt="{\displaystyle {\begin{aligned}E[{\widehat {\beta }}\mid X]&amp;=\beta +(X&#039;X)^{-1}E[X&#039;Z\mid X]\delta \\&amp;=\beta +{\text{bias}}.\end{aligned}}}"/></span></dd></dl>
+<p>The second term after the equal sign is the omitted-variable bias in this case, which is non-zero if the omitted variable <i>z</i> is correlated with any of the included variables in the matrix <i>X</i> (that is, if <i>X&#8242;Z</i> does not equal a vector of zeroes). Note that the bias is equal to the weighted portion of <i>z</i><sub><i>i</i></sub> which is "explained" by <i>x</i><sub><i>i</i></sub>.
+</p>
+<h2><span class="mw-headline" id="Effect_in_ordinary_least_squares">Effect in ordinary least squares</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Omitted-variable_bias&amp;action=edit&amp;section=4" title="Edit section: Effect in ordinary least squares">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The <a href="/wiki/Gauss%E2%80%93Markov_theorem" title="Gauss–Markov theorem">Gauss–Markov theorem</a> states that regression models which fulfill the classical linear regression model assumptions provide the <a href="/wiki/Efficiency_(statistics)" title="Efficiency (statistics)">most efficient</a>, linear and <a href="/wiki/Bias_of_an_estimator" title="Bias of an estimator">unbiased</a> estimators. In <a href="/wiki/Ordinary_least_squares" title="Ordinary least squares">ordinary least squares</a>, the relevant assumption of the classical linear regression model is that the error term is uncorrelated with the regressors.
+</p><p>The presence of omitted-variable bias violates this particular assumption. The violation causes the OLS estimator to be biased and <a href="/wiki/Consistency_(statistics)" title="Consistency (statistics)">inconsistent</a>. The direction of the bias depends on the estimators as well as the <a href="/wiki/Covariance" title="Covariance">covariance</a> between the regressors and the omitted variables. A positive covariance of the omitted variable with both a regressor and the dependent variable will lead the OLS estimate of the included regressor's coefficient to be greater than the true value of that coefficient. This effect can be seen by taking the expectation of the parameter, as shown in the previous section.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Omitted-variable_bias&amp;action=edit&amp;section=5" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Confounding_variable" class="mw-redirect" title="Confounding variable">Confounding variable</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Omitted-variable_bias&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><style data-mw-deduplicate="TemplateStyles:r1067248974">.mw-parser-output cite.citation{font-style:inherit;word-wrap:break-word}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation:target{background-color:rgba(0,127,255,0.133)}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output .cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;color:#d33}.mw-parser-output .cs1-visible-error{color:#d33}.mw-parser-output .cs1-maint{display:none;color:#3a3;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><cite id="CITEREFBarretoHowland2006" class="citation book cs1">Barreto; Howland (2006). <a rel="nofollow" class="external text" href="http://www3.wabash.edu/econometrics/EconometricsBook/chap18.htm">"Omitted Variable Bias"</a>. <i>Introductory Econometrics: Using Monte Carlo Simulation with Microsoft Excel</i>. Cambridge University Press.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Omitted+Variable+Bias&amp;rft.btitle=Introductory+Econometrics%3A+Using+Monte+Carlo+Simulation+with+Microsoft+Excel&amp;rft.pub=Cambridge+University+Press&amp;rft.date=2006&amp;rft.au=Barreto&amp;rft.au=Howland&amp;rft_id=http%3A%2F%2Fwww3.wabash.edu%2Feconometrics%2FEconometricsBook%2Fchap18.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOmitted-variable+bias" class="Z3988"></span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFClarke2005" class="citation journal cs1">Clarke, Kevin A. (2005). "The Phantom Menace: Omitted Variable Bias in Econometric Research". <i>Conflict Management and Peace Science</i>. <b>22</b> (4): 341–352. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1080%2F07388940500339183">10.1080/07388940500339183</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Conflict+Management+and+Peace+Science&amp;rft.atitle=The+Phantom+Menace%3A+Omitted+Variable+Bias+in+Econometric+Research&amp;rft.volume=22&amp;rft.issue=4&amp;rft.pages=341-352&amp;rft.date=2005&amp;rft_id=info%3Adoi%2F10.1080%2F07388940500339183&amp;rft.aulast=Clarke&amp;rft.aufirst=Kevin+A.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOmitted-variable+bias" class="Z3988"></span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFGreene1993" class="citation book cs1">Greene, W. H. (1993). <i>Econometric Analysis</i> (2nd&#160;ed.). Macmillan. pp.&#160;245–246.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Econometric+Analysis&amp;rft.pages=245-246&amp;rft.edition=2nd&amp;rft.pub=Macmillan&amp;rft.date=1993&amp;rft.aulast=Greene&amp;rft.aufirst=W.+H.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOmitted-variable+bias" class="Z3988"></span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFWooldridge2009" class="citation book cs1">Wooldridge, Jeffrey M. (2009). "Omitted Variable Bias: The Simple Case". <i>Introductory Econometrics: A Modern Approach</i>. Mason, OH: Cengage Learning. pp.&#160;89–93. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9780324660548" title="Special:BookSources/9780324660548"><bdi>9780324660548</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Omitted+Variable+Bias%3A+The+Simple+Case&amp;rft.btitle=Introductory+Econometrics%3A+A+Modern+Approach&amp;rft.place=Mason%2C+OH&amp;rft.pages=89-93&amp;rft.pub=Cengage+Learning&amp;rft.date=2009&amp;rft.isbn=9780324660548&amp;rft.aulast=Wooldridge&amp;rft.aufirst=Jeffrey+M.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOmitted-variable+bias" class="Z3988"></span></li></ul>
+<div class="navbox-styles nomobile"><style data-mw-deduplicate="TemplateStyles:r1061467846">.mw-parser-output .navbox{box-sizing:border-box;border:1px solid #a2a9b1;width:100%;clear:both;font-size:88%;text-align:center;padding:1px;margin:1em auto 0}.mw-parser-output .navbox .navbox{margin-top:0}.mw-parser-output .navbox+.navbox,.mw-parser-output .navbox+.navbox-styles+.navbox{margin-top:-1px}.mw-parser-output .navbox-inner,.mw-parser-output .navbox-subgroup{width:100%}.mw-parser-output .navbox-group,.mw-parser-output .navbox-title,.mw-parser-output .navbox-abovebelow{padding:0.25em 1em;line-height:1.5em;text-align:center}.mw-parser-output .navbox-group{white-space:nowrap;text-align:right}.mw-parser-output .navbox,.mw-parser-output .navbox-subgroup{background-color:#fdfdfd}.mw-parser-output .navbox-list{line-height:1.5em;border-color:#fdfdfd}.mw-parser-output .navbox-list-with-group{text-align:left;border-left-width:2px;border-left-style:solid}.mw-parser-output tr+tr>.navbox-abovebelow,.mw-parser-output tr+tr>.navbox-group,.mw-parser-output tr+tr>.navbox-image,.mw-parser-output tr+tr>.navbox-list{border-top:2px solid #fdfdfd}.mw-parser-output .navbox-title{background-color:#ccf}.mw-parser-output .navbox-abovebelow,.mw-parser-output .navbox-group,.mw-parser-output .navbox-subgroup .navbox-title{background-color:#ddf}.mw-parser-output .navbox-subgroup .navbox-group,.mw-parser-output .navbox-subgroup .navbox-abovebelow{background-color:#e6e6ff}.mw-parser-output .navbox-even{background-color:#f7f7f7}.mw-parser-output .navbox-odd{background-color:transparent}.mw-parser-output .navbox .hlist td dl,.mw-parser-output .navbox .hlist td ol,.mw-parser-output .navbox .hlist td ul,.mw-parser-output .navbox td.hlist dl,.mw-parser-output .navbox td.hlist ol,.mw-parser-output .navbox td.hlist ul{padding:0.125em 0}.mw-parser-output .navbox .navbar{display:block;font-size:100%}.mw-parser-output .navbox-title .navbar{float:left;text-align:left;margin-right:0.5em}</style></div><div role="navigation" class="navbox" aria-labelledby="Biases" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><style data-mw-deduplicate="TemplateStyles:r1063604349">.mw-parser-output .navbar{display:inline;font-size:88%;font-weight:normal}.mw-parser-output .navbar-collapse{float:left;text-align:left}.mw-parser-output .navbar-boxtext{word-spacing:0}.mw-parser-output .navbar ul{display:inline-block;white-space:nowrap;line-height:inherit}.mw-parser-output .navbar-brackets::before{margin-right:-0.125em;content:"[ "}.mw-parser-output .navbar-brackets::after{margin-left:-0.125em;content:" ]"}.mw-parser-output .navbar li{word-spacing:-0.125em}.mw-parser-output .navbar a>span,.mw-parser-output .navbar a>abbr{text-decoration:inherit}.mw-parser-output .navbar-mini abbr{font-variant:small-caps;border-bottom:none;text-decoration:none;cursor:inherit}.mw-parser-output .navbar-ct-full{font-size:114%;margin:0 7em}.mw-parser-output .navbar-ct-mini{font-size:114%;margin:0 4em}</style><div class="navbar plainlinks hlist navbar-mini"><ul><li class="nv-view"><a href="/wiki/Template:Biases" title="Template:Biases"><abbr title="View this template" style=";;background:none transparent;border:none;box-shadow:none;padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Biases" title="Template talk:Biases"><abbr title="Discuss this template" style=";;background:none transparent;border:none;box-shadow:none;padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Biases&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;box-shadow:none;padding:0;">e</abbr></a></li></ul></div><div id="Biases" style="font-size:114%;margin:0 4em"><a href="/wiki/Bias" title="Bias">Biases</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%"><div style="display:inline-block; padding:0.1em 0;line-height:1.2em;"><a href="/wiki/Cognitive_bias" title="Cognitive bias">Cognitive biases</a></div></th><td class="navbox-list-with-group navbox-list navbox-odd hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Actor%E2%80%93observer_asymmetry" title="Actor–observer asymmetry">Actor–observer</a></li>
+<li><a href="/wiki/Acquiescence_bias" title="Acquiescence bias">Acquiescence</a></li>
+<li><a href="/wiki/Ambiguity_effect" title="Ambiguity effect">Ambiguity</a></li>
+<li><a href="/wiki/Anchoring_(cognitive_bias)" title="Anchoring (cognitive bias)">Anchoring</a></li>
+<li><a href="/wiki/Attentional_bias" title="Attentional bias">Attentional</a></li>
+<li><a href="/wiki/Attribution_bias" title="Attribution bias">Attribution</a></li>
+<li><a href="/wiki/Authority_bias" title="Authority bias">Authority</a></li>
+<li><a href="/wiki/Automation_bias" title="Automation bias">Automation</a></li>
+<li><a href="/wiki/Belief_bias" title="Belief bias">Belief</a></li>
+<li><a href="/wiki/Bias_blind_spot" title="Bias blind spot">Blind spot</a></li>
+<li><a href="/wiki/Choice-supportive_bias" title="Choice-supportive bias">Choice-supportive</a></li>
+<li><a href="/wiki/Confirmation_bias" title="Confirmation bias">Confirmation</a></li>
+<li><a href="/wiki/Compassion_fade" title="Compassion fade">Compassion fade</a></li>
+<li><a href="/wiki/Congruence_bias" title="Congruence bias">Congruence</a></li>
+<li><a href="/wiki/Courtesy_bias" class="mw-redirect" title="Courtesy bias">Courtesy</a></li>
+<li><a href="/wiki/Cultural_bias" title="Cultural bias">Cultural</a></li>
+<li><a href="/wiki/Distinction_bias" title="Distinction bias">Distinction</a></li>
+<li><a href="/wiki/Dunning%E2%80%93Kruger_effect" title="Dunning–Kruger effect">Dunning–Kruger</a></li>
+<li><a href="/wiki/Egocentric_bias" title="Egocentric bias">Egocentric</a></li>
+<li><a href="/wiki/Emotional_bias" title="Emotional bias">Emotional</a></li>
+<li><a href="/wiki/Extrinsic_incentives_bias" title="Extrinsic incentives bias">Extrinsic incentives</a></li>
+<li><a href="/wiki/Fading_affect_bias" title="Fading affect bias">Fading affect</a></li>
+<li><a href="/wiki/Framing_effect_(psychology)" title="Framing effect (psychology)">Framing</a></li>
+<li><a href="/wiki/Frequency_illusion" title="Frequency illusion">Frequency</a></li>
+<li><a href="/wiki/Fundamental_attribution_error" title="Fundamental attribution error">Correspondence</a></li>
+<li><a href="/wiki/Halo_effect" title="Halo effect">Halo effect</a></li>
+<li><a href="/wiki/Hindsight_bias" title="Hindsight bias">Hindsight</a></li>
+<li><a href="/wiki/Horn_effect" title="Horn effect">Horn effect</a></li>
+<li><a href="/wiki/Hostile_attribution_bias" title="Hostile attribution bias">Hostile attribution</a></li>
+<li><a href="/wiki/Impact_bias" title="Impact bias">Impact</a></li>
+<li><a href="/wiki/Implicit_stereotype" title="Implicit stereotype">Implicit</a></li>
+<li><a href="/wiki/In-group_favoritism" title="In-group favoritism">In-group</a></li>
+<li><a href="/wiki/Mere-exposure_effect" title="Mere-exposure effect">Mere-exposure effect</a></li>
+<li><a href="/wiki/Negativity_bias" title="Negativity bias">Negativity</a></li>
+<li><a href="/wiki/Normalcy_bias" title="Normalcy bias">Normalcy</a></li>
+<li><a href="/wiki/Omission_bias" title="Omission bias">Omission</a></li>
+<li><a href="/wiki/Optimism_bias" title="Optimism bias">Optimism</a></li>
+<li><a href="/wiki/Out-group_homogeneity" title="Out-group homogeneity">Out-group homogeneity</a></li>
+<li><a href="/wiki/Outcome_bias" title="Outcome bias">Outcome</a></li>
+<li><a href="/wiki/Overton_window" title="Overton window">Overton window</a></li>
+<li><a href="/wiki/Precision_bias" title="Precision bias">Precision</a></li>
+<li><a href="/wiki/Present_bias" title="Present bias">Present</a></li>
+<li><a href="/wiki/Pro-innovation_bias" title="Pro-innovation bias">Pro-innovation</a></li>
+<li><a href="/wiki/Response_bias" title="Response bias">Response</a></li>
+<li><a href="/wiki/Restraint_bias" title="Restraint bias">Restraint</a></li>
+<li><a href="/wiki/Self-serving_bias" title="Self-serving bias">Self-serving</a></li>
+<li><a href="/wiki/Social_comparison_bias" title="Social comparison bias">Social comparison</a></li>
+<li><a href="/wiki/Status_quo_bias" title="Status quo bias">Status quo</a></li>
+<li><a href="/wiki/Time-saving_bias" title="Time-saving bias">Time-saving</a></li>
+<li><a href="/wiki/Trait_ascription_bias" title="Trait ascription bias">Trait ascription</a></li>
+<li><a href="/wiki/Von_Restorff_effect" title="Von Restorff effect">von Restorff effect</a></li>
+<li><a href="/wiki/Zero-risk_bias" title="Zero-risk bias">Zero-risk</a></li>
+<li><a href="/wiki/Cognitive_bias_in_animals" title="Cognitive bias in animals">In animals</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Bias_(statistics)" title="Bias (statistics)">Statistical biases</a></th><td class="navbox-list-with-group navbox-list navbox-even hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Bias_of_an_estimator" title="Bias of an estimator">Estimator</a></li>
+<li><a href="/wiki/Forecast_bias" title="Forecast bias">Forecast</a></li>
+<li><a href="/wiki/Healthy_user_bias" title="Healthy user bias">Healthy user</a></li>
+<li><a href="/wiki/Information_bias_(epidemiology)" title="Information bias (epidemiology)">Information</a>
+<ul><li><a href="/wiki/Information_bias_(psychology)" title="Information bias (psychology)">Psychological</a></li></ul></li>
+<li><a href="/wiki/Lead_time_bias" title="Lead time bias">Lead time</a></li>
+<li><a href="/wiki/Length_time_bias" title="Length time bias">Length time</a></li>
+<li><a href="/wiki/Participation_bias" title="Participation bias">Non-response</a></li>
+<li><a href="/wiki/Observer_bias" title="Observer bias">Observer</a></li>
+<li><a class="mw-selflink selflink">Omitted-variable</a></li>
+<li><a href="/wiki/Participation_bias" title="Participation bias">Participation</a></li>
+<li><a href="/wiki/Recall_bias" title="Recall bias">Recall</a></li>
+<li><a href="/wiki/Sampling_bias" title="Sampling bias">Sampling</a></li>
+<li><a href="/wiki/Selection_bias" title="Selection bias">Selection</a></li>
+<li><a href="/wiki/Self-selection_bias" title="Self-selection bias">Self-selection</a></li>
+<li><a href="/wiki/Social-desirability_bias" title="Social-desirability bias">Social desirability</a></li>
+<li><a href="/wiki/Spectrum_bias" title="Spectrum bias">Spectrum</a></li>
+<li><a href="/wiki/Survivorship_bias" title="Survivorship bias">Survivorship</a></li>
+<li><a href="/wiki/Systematic_error" class="mw-redirect" title="Systematic error">Systematic error</a></li>
+<li><a href="/wiki/Systemic_bias" title="Systemic bias">Systemic</a></li>
+<li><a href="/wiki/Verification_bias" title="Verification bias">Verification</a></li>
+<li><a href="/wiki/Wet_bias" title="Wet bias">Wet</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Other biases</th><td class="navbox-list-with-group navbox-list navbox-odd hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Academic_bias" title="Academic bias">Academic</a></li>
+<li><a href="/wiki/Funding_bias" title="Funding bias">Funding</a></li>
+<li><a href="/wiki/FUTON_bias" title="FUTON bias">FUTON</a></li>
+<li><a href="/wiki/Inductive_bias" title="Inductive bias">Inductive</a></li>
+<li><a href="/wiki/Infrastructure_bias" title="Infrastructure bias">Infrastructure</a></li>
+<li><a href="/wiki/Inherent_bias" title="Inherent bias">Inherent</a></li>
+<li><a href="/wiki/Bias_in_education" class="mw-redirect" title="Bias in education">In education</a></li>
+<li><a href="/wiki/Media_bias" title="Media bias">Media</a>
+<ul><li><a href="/wiki/False_balance" title="False balance">False balance</a></li>
+<li><a href="/wiki/United_States_news_media_and_the_Vietnam_War" title="United States news media and the Vietnam War">Vietnam War</a></li>
+<li><a href="/wiki/Media_of_Norway" class="mw-redirect" title="Media of Norway">Norway</a></li>
+<li><a href="/wiki/Media_bias_in_South_Asia" title="Media bias in South Asia">South Asia</a></li>
+<li><a href="/wiki/Media_of_Sweden" class="mw-redirect" title="Media of Sweden">Sweden</a></li>
+<li><a href="/wiki/Media_bias_in_the_United_States" title="Media bias in the United States">United States</a></li>
+<li><a href="/wiki/Media_coverage_of_the_Arab%E2%80%93Israeli_conflict" title="Media coverage of the Arab–Israeli conflict">Arab–Israeli conflict</a></li>
+<li><a href="/wiki/Media_portrayal_of_the_Ukrainian_crisis" title="Media portrayal of the Ukrainian crisis">Ukraine</a></li></ul></li>
+<li><a href="/wiki/Net_bias" title="Net bias">Net</a></li>
+<li><a href="/wiki/Political_bias" title="Political bias">Political bias</a></li>
+<li><a href="/wiki/Publication_bias" title="Publication bias">Publication</a></li>
+<li><a href="/wiki/Reporting_bias" title="Reporting bias">Reporting</a></li>
+<li><a href="/wiki/White_hat_bias" title="White hat bias">White hat</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Bias reduction</th><td class="navbox-list-with-group navbox-list navbox-even hlist" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Cognitive_bias_mitigation" title="Cognitive bias mitigation">Cognitive bias mitigation</a></li>
+<li><a href="/wiki/Debiasing" title="Debiasing">Debiasing</a></li>
+<li><a href="/wiki/Heuristic_(psychology)" title="Heuristic (psychology)">Heuristics in judgment and decision-making</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>Lists: <a href="/wiki/List_of_cognitive_biases" title="List of cognitive biases">General</a>&#160;<b>&#183;</b>&#32;<a href="/wiki/List_of_memory_biases" class="mw-redirect" title="List of memory biases">Memory</a></div></td></tr></tbody></table></div></div>

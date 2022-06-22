@@ -1,0 +1,16 @@
+http://scholar.google.com/scholar?q=%22Serbian+name%22
+http://www.google.com/search?&q=%22Serbian+name%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Serbian+name%22
+http://www.google.com/search?tbm=nws&q=%22Serbian+name%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Serbian+name%22+-wikipedia
+http://en.scientificcommons.org/41510473
+http://etnografskimuzej.rs/wp-content/uploads/2014/01/Glasnik-Etnografskog-muzeja-u-Beogradu-knjiga-15-godina-19401.pdf
+http://pod2.stat.gov.rs/ObjavljenePublikacije/Popis2011/Najcesca%20imena%20i%20pezimena.pdf
+http://www.politika.rs/rubrike/Drustvo/U-Srbiji-najvise-Jovanovica-Petrovica-i-Nikolica.lt.html
+http://www.poreklo.rs/2012/04/05/srpska-prezimena-u-dalmaciji/
+http://www.poreklo.rs/2012/07/03/poreklo-prezimena-srba-u-potkozarju/
+https://books.google.com/books?id=1D9CAQAAIAAJ
+https://books.google.com/books?id=CLcrAQAAIAAJ
+https://books.google.com/books?id=Fc0cAAAAMAAJ
+https://books.google.com/books?id=oIDhGAAACAAJ
+https://www.jstor.org/action/doBasicSearch?Query=%22Serbian+name%22&acc=on&wc=on

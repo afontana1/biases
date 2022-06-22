@@ -1,0 +1,17 @@
+http://www.oxfordreference.com/view/10.1093/oi/authority.20110803100339430
+http://pubmed.ncbi.nlm.nih.gov/1271218
+http://pubmed.ncbi.nlm.nih.gov/15367078
+http://pubmed.ncbi.nlm.nih.gov/26544688
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4636231
+http://arxiv.org/abs/1506.06021
+http://arxiv.org/abs/1506.06072
+http://doi.org/10.1006%2Fjrpe.1998.2221
+http://doi.org/10.1007%2F978-94-007-0753-5_2219
+http://doi.org/10.1037%2F0022-3514.33.4.403
+http://doi.org/10.1037%2F0033-2909.130.5.711
+http://doi.org/10.1371%2Fjournal.pone.0142390
+http://doi.org/10.7717%2Fpeerj-cs.26
+https://www.business2community.com/brandviews/buffer/want-improve-social-media-sharing-harness-power-positivity-social-media-01039931
+https://ui.adsabs.harvard.edu/abs/2015PLoSO..1042390F
+https://ui.adsabs.harvard.edu/abs/2015arXiv150606072F
+https://api.semanticscholar.org/CorpusID:14133100

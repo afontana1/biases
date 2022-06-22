@@ -1,0 +1,8 @@
+http://www.sitmo.com/doc/Generating_Normal_Distributed_Random_Numbers
+http://www.phy.duke.edu/~rgb/General/rand_rate.php
+http://webpages.uncc.edu/yonwang/liltest/
+http://webpages.uncc.edu/yonwang/papers/liltest.pdf
+http://doi.org/10.1016%2Fj.cose.2015.05.005
+http://doi.org/10.2307%2F2980655
+http://www.jstor.org/stable/2980655
+https://www.purdue.edu/uns/html4ever/2005/050426.Fischbach.pi.html

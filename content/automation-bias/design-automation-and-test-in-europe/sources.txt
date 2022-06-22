@@ -1,0 +1,15 @@
+http://www.date-conference.com
+http://scholar.google.com/scholar?q=%22Design+Automation+and+Test+in+Europe%22
+http://www.google.com/search?&q=%22Design+Automation+and+Test+in+Europe%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Design+Automation+and+Test+in+Europe%22
+http://www.google.com/search?tbm=nws&q=%22Design+Automation+and+Test+in+Europe%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Design+Automation+and+Test+in+Europe%22+-wikipedia
+https://www.date-conference.com/#:~:text=The%20Design,%20Automation,%20and%20Test,in%20April%20and%20May%202020
+https://download-pdfs.com/v6/preview/?pid=6&offer_id=26&ref_id=34335f6e1fc40068eb49263e5945981f_e6cef1e4_c28f910b&sub1=36572&keyword=Design,%20Automation,%20And%20Test%20In%20Europe#
+https://id.loc.gov/authorities/names/n99053793
+https://d-nb.info/gnd/1092297774
+https://dblp.org/db/conf/date/index.html
+https://www.jstor.org/action/doBasicSearch?Query=%22Design+Automation+and+Test+in+Europe%22&acc=on&wc=on
+https://viaf.org/viaf/145604915
+https://www.wikidata.org/wiki/Q5264252#identifiers
+https://www.worldcat.org/identities/containsVIAFID/145604915

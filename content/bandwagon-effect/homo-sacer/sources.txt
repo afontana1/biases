@@ -1,0 +1,12 @@
+http://scholar.google.com/scholar?q=%22Homo+sacer%22
+http://www.google.com/search?&q=%22Homo+sacer%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Homo+sacer%22
+http://www.google.com/search?tbm=nws&q=%22Homo+sacer%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Homo+sacer%22+-wikipedia
+https://books.google.com/books?id=3tTfzsdmbl4C&q=prescription+homo+sacer&pg=PA167
+https://www.nytimes.com/2007/03/24/opinion/24zizek.html?_r=0
+https://www.academia.edu/517231/Homo_Sacer_y_violencia_divina_en_el_caso_judio_Lo_insacrificable_sometido_a_castigo
+https://archive.org/details/homosacersoverei0000agam
+https://web.archive.org/web/20140221055613/http://www.egs.edu/faculty/giorgio-agamben/articles/we-refugees/
+https://web.archive.org/web/20150923224204/http://www.egs.edu/faculty/giorgio-agamben/articles/life-a-work-of-art-without-an-author/
+https://www.jstor.org/action/doBasicSearch?Query=%22Homo+sacer%22&acc=on&wc=on

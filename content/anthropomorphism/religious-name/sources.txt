@@ -1,0 +1,10 @@
+http://scholar.google.com/scholar?q=%22Religious+name%22
+http://www.google.com/search?&q=%22Religious+name%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Religious+name%22
+http://www.google.com/search?tbm=nws&q=%22Religious+name%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Religious+name%22+-wikipedia
+http://www.catholicculture.org/culture/liturgicalyear/activities/view.cfm?id=207
+http://www.newadvent.org/cathen/10673c.htm
+http://www.ukdp.co.uk/name-change-religious-conversion/
+https://www.jstor.org/action/doBasicSearch?Query=%22Religious+name%22&acc=on&wc=on
+https://www.vatican.va/archive/ENG0015/__P7K.HTM#$295

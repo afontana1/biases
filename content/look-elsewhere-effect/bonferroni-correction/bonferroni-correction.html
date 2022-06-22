@@ -1,0 +1,452 @@
+<div class="mw-parser-output"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Statistical technique used to correct for multiple comparisons</div>
+<p>In <a href="/wiki/Statistics" title="Statistics">statistics</a>, the <b>Bonferroni correction</b> is a method to counteract the problem of <a href="/wiki/Multiple_comparisons_problem" title="Multiple comparisons problem">multiple comparisons</a>. Bonferroni correction is the simplest method for counteracting the multiple comparisons problem; however, it is a conservative method that gives greater chance of failure to reject a false null hypothesis than other methods, as it ignores potentially valuable information, such as the distribution of p-values across all comparisons (which, if the null hypothesis is correct for all comparisons, is expected to take uniform distribution). 
+</p><p>Of note, the Bonferroni correction controls for family-wise error rate (i.e. relating to the null hypothesis being true for all comparisons simultaneously; alternatively that the null hypothesis is false for at least one test). Alternative approaches, such as the <a href="/wiki/False_discovery_rate#Benjamini–Hochberg_procedure" title="False discovery rate">Benjamini–Hochberg procedure</a>, are explicitly designed to control error rate when detecting individual "discoveries", and are thus more appropriate in many scenarios, such as the detection of <a href="/wiki/Gene_expression_profiling" title="Gene expression profiling">differentially expressed genes</a> in <a href="/wiki/Bioinformatics" title="Bioinformatics">bioinformatics</a>.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Background"><span class="tocnumber">1</span> <span class="toctext">Background</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Definition"><span class="tocnumber">2</span> <span class="toctext">Definition</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Extensions"><span class="tocnumber">3</span> <span class="toctext">Extensions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Generalization"><span class="tocnumber">3.1</span> <span class="toctext">Generalization</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Confidence_intervals"><span class="tocnumber">3.2</span> <span class="toctext">Confidence intervals</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Continuous_problems"><span class="tocnumber">3.3</span> <span class="toctext">Continuous problems</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Alternatives"><span class="tocnumber">4</span> <span class="toctext">Alternatives</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Criticism"><span class="tocnumber">5</span> <span class="toctext">Criticism</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Background">Background</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bonferroni_correction&amp;action=edit&amp;section=1" title="Edit section: Background">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The method is named for its use of the <a href="/wiki/Bonferroni_inequalities" class="mw-redirect" title="Bonferroni inequalities">Bonferroni inequalities</a>.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup>
+An extension of the method to <a href="/wiki/Confidence_intervals" class="mw-redirect" title="Confidence intervals">confidence intervals</a> was proposed by <a href="/wiki/Olive_Jean_Dunn" title="Olive Jean Dunn">Olive Jean Dunn</a>.<sup id="cite_ref-Dunn1961_2-0" class="reference"><a href="#cite_note-Dunn1961-2">&#91;2&#93;</a></sup>
+</p><p><a href="/wiki/Statistical_hypothesis_testing" title="Statistical hypothesis testing">Statistical hypothesis testing</a> is based on rejecting the <a href="/wiki/Null_hypothesis" title="Null hypothesis">null hypothesis</a> if the likelihood of the observed data under the null hypotheses is low. If multiple hypotheses are tested, the chance of observing a rare event increases, and therefore, the likelihood of incorrectly rejecting a null hypothesis (i.e., making a <a href="/wiki/Type_I_error" class="mw-redirect" title="Type I error">Type I error</a>) increases.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup>
+</p><p>The Bonferroni correction compensates for that increase by testing each individual hypothesis at a significance level of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \alpha /m}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03B1;<!-- α --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mi>m</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \alpha /m}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f4c4e3720141261887fab9693eaf32d6a65d3837" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.69ex; height:2.843ex;" alt="\alpha /m"/></span>, where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \alpha }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03B1;<!-- α --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \alpha }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b79333175c8b3f0840bfb4ec41b8072c83ea88d3" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.488ex; height:1.676ex;" alt="\alpha "/></span> is the desired overall alpha level and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle m}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>m</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle m}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0a07d98bb302f3856cbabc47b2b9016692e3f7bc" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.04ex; height:1.676ex;" alt="m"/></span> is the number of hypotheses.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> For example, if a trial is testing <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle m=20}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>m</mi>
+        <mo>=</mo>
+        <mn>20</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle m=20}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/003f58fd782a8ea62aa011defdf402a9567f4f42" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:7.464ex; height:2.176ex;" alt="m=20"/></span> hypotheses with a desired <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \alpha =0.05}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03B1;<!-- α --></mi>
+        <mo>=</mo>
+        <mn>0.05</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \alpha =0.05}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9fdb2e1d36bb136f99c1a76e11e8bc05906354b8" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:8.72ex; height:2.176ex;" alt="\alpha = 0.05"/></span>, then the Bonferroni correction would test each individual hypothesis at <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \alpha =0.05/20=0.0025}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03B1;<!-- α --></mi>
+        <mo>=</mo>
+        <mn>0.05</mn>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mn>20</mn>
+        <mo>=</mo>
+        <mn>0.0025</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \alpha =0.05/20=0.0025}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/bd4304b0e97c05b0e6490635c0e01d9f42c71d27" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:21.765ex; height:2.843ex;" alt="{\displaystyle \alpha =0.05/20=0.0025}"/></span>. Likewise, when constructing multiple confidence intervals the same phenomenon appears.
+</p>
+<h2><span class="mw-headline" id="Definition">Definition</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bonferroni_correction&amp;action=edit&amp;section=2" title="Edit section: Definition">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Let <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle H_{1},\ldots ,H_{m}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>H</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mo>,</mo>
+        <msub>
+          <mi>H</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>m</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle H_{1},\ldots ,H_{m}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/64680698cbdb7c49a1eebd6e210f68d677c468f0" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:11.77ex; height:2.509ex;" alt="{\displaystyle H_{1},\ldots ,H_{m}}"/></span> be a family of hypotheses and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle p_{1},\ldots ,p_{m}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>p</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mo>,</mo>
+        <msub>
+          <mi>p</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>m</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle p_{1},\ldots ,p_{m}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/92e43e4cbe8115165ca3559393f90caee2e86a75" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; margin-left: -0.089ex; width:10.336ex; height:2.009ex;" alt="{\displaystyle p_{1},\ldots ,p_{m}}"/></span> their corresponding <a href="/wiki/P-value" title="P-value">p-values</a>. Let <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle m}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>m</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle m}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0a07d98bb302f3856cbabc47b2b9016692e3f7bc" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.04ex; height:1.676ex;" alt="m"/></span> be the total number of null hypotheses, and let <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle m_{0}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>m</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle m_{0}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3a6ff51ee949104fe6fae553cfbdfba29d5fac1e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.095ex; height:2.009ex;" alt="m_{0}"/></span> be the number of true null hypotheses (which is presumably unknown to the researcher). The <a href="/wiki/Familywise_error_rate" class="mw-redirect" title="Familywise error rate">familywise error rate</a> (FWER) is the probability of rejecting at least one true <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle H_{i}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>H</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle H_{i}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7bd0312f590cc5a400008938f3cc304d42ad3986" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.731ex; height:2.509ex;" alt="H_{{i}}"/></span>, that is, of making at least one <a href="/wiki/Type_I_error" class="mw-redirect" title="Type I error">type I error</a>. The Bonferroni correction rejects the null hypothesis for each <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle p_{i}\leq {\frac {\alpha }{m}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>p</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mi>&#x03B1;<!-- α --></mi>
+            <mi>m</mi>
+          </mfrac>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle p_{i}\leq {\frac {\alpha }{m}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/16358edfbf546100fa79428a8264d2a9e4788554" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; margin-left: -0.089ex; width:8.034ex; height:4.676ex;" alt="{\displaystyle p_{i}\leq {\frac {\alpha }{m}}}"/></span>, thereby controlling the <a href="/wiki/Familywise_error_rate" class="mw-redirect" title="Familywise error rate">FWER</a> at <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \leq \alpha }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <mi>&#x03B1;<!-- α --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \leq \alpha }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/413e538ade3a7e83a2febbbc4f27178a056843b4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.505ex; width:3.941ex; height:2.176ex;" alt="{\displaystyle \leq \alpha }"/></span>. Proof of this control follows from <a href="/wiki/Boole%27s_inequality" title="Boole&#39;s inequality">Boole's inequality</a>, as follows:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\text{FWER}}=P\left\{\bigcup _{i=1}^{m_{0}}\left(p_{i}\leq {\frac {\alpha }{m}}\right)\right\}\leq \sum _{i=1}^{m_{0}}\left\{P\left(p_{i}\leq {\frac {\alpha }{m}}\right)\right\}=m_{0}{\frac {\alpha }{m}}\leq \alpha .}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>FWER</mtext>
+        </mrow>
+        <mo>=</mo>
+        <mi>P</mi>
+        <mrow>
+          <mo>{</mo>
+          <mrow>
+            <munderover>
+              <mo>&#x22C3;<!-- ⋃ --></mo>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>i</mi>
+                <mo>=</mo>
+                <mn>1</mn>
+              </mrow>
+              <mrow class="MJX-TeXAtom-ORD">
+                <msub>
+                  <mi>m</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>0</mn>
+                  </mrow>
+                </msub>
+              </mrow>
+            </munderover>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>p</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>i</mi>
+                  </mrow>
+                </msub>
+                <mo>&#x2264;<!-- ≤ --></mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                    <mi>&#x03B1;<!-- α --></mi>
+                    <mi>m</mi>
+                  </mfrac>
+                </mrow>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+          </mrow>
+          <mo>}</mo>
+        </mrow>
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <msub>
+              <mi>m</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>0</mn>
+              </mrow>
+            </msub>
+          </mrow>
+        </munderover>
+        <mrow>
+          <mo>{</mo>
+          <mrow>
+            <mi>P</mi>
+            <mrow>
+              <mo>(</mo>
+              <mrow>
+                <msub>
+                  <mi>p</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>i</mi>
+                  </mrow>
+                </msub>
+                <mo>&#x2264;<!-- ≤ --></mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                    <mi>&#x03B1;<!-- α --></mi>
+                    <mi>m</mi>
+                  </mfrac>
+                </mrow>
+              </mrow>
+              <mo>)</mo>
+            </mrow>
+          </mrow>
+          <mo>}</mo>
+        </mrow>
+        <mo>=</mo>
+        <msub>
+          <mi>m</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mi>&#x03B1;<!-- α --></mi>
+            <mi>m</mi>
+          </mfrac>
+        </mrow>
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <mi>&#x03B1;<!-- α --></mi>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\text{FWER}}=P\left\{\bigcup _{i=1}^{m_{0}}\left(p_{i}\leq {\frac {\alpha }{m}}\right)\right\}\leq \sum _{i=1}^{m_{0}}\left\{P\left(p_{i}\leq {\frac {\alpha }{m}}\right)\right\}=m_{0}{\frac {\alpha }{m}}\leq \alpha .}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f5a25e29ec5478b06b9856a892469c72ac50b285" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.171ex; width:67.048ex; height:7.509ex;" alt="{\displaystyle {\text{FWER}}=P\left\{\bigcup _{i=1}^{m_{0}}\left(p_{i}\leq {\frac {\alpha }{m}}\right)\right\}\leq \sum _{i=1}^{m_{0}}\left\{P\left(p_{i}\leq {\frac {\alpha }{m}}\right)\right\}=m_{0}{\frac {\alpha }{m}}\leq \alpha .}"/></span></dd></dl>
+<p>This control does not require any assumptions about dependence among the p-values or about how many of the null hypotheses are true.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Extensions">Extensions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bonferroni_correction&amp;action=edit&amp;section=3" title="Edit section: Extensions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Generalization">Generalization</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bonferroni_correction&amp;action=edit&amp;section=4" title="Edit section: Generalization">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Rather than testing each hypothesis at the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \alpha /m}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03B1;<!-- α --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mi>m</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \alpha /m}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f4c4e3720141261887fab9693eaf32d6a65d3837" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.69ex; height:2.843ex;" alt="\alpha /m"/></span> level, the hypotheses may be tested at any other combination of levels that add up to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \alpha }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03B1;<!-- α --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \alpha }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b79333175c8b3f0840bfb4ec41b8072c83ea88d3" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.488ex; height:1.676ex;" alt="\alpha "/></span>, provided that the level of each test is decided before looking at the data.<sup id="cite_ref-pmid8014990_6-0" class="reference"><a href="#cite_note-pmid8014990-6">&#91;6&#93;</a></sup> For example, for two hypothesis tests, an overall <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \alpha }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03B1;<!-- α --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \alpha }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b79333175c8b3f0840bfb4ec41b8072c83ea88d3" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.488ex; height:1.676ex;" alt="\alpha "/></span> of 0.05 could be maintained by conducting one test at 0.04 and the other at 0.01.
+</p>
+<h3><span class="mw-headline" id="Confidence_intervals">Confidence intervals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bonferroni_correction&amp;action=edit&amp;section=5" title="Edit section: Confidence intervals">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The procedure proposed by Dunn<sup id="cite_ref-Dunn1961_2-1" class="reference"><a href="#cite_note-Dunn1961-2">&#91;2&#93;</a></sup> can be used to adjust <a href="/wiki/Confidence_intervals" class="mw-redirect" title="Confidence intervals">confidence intervals</a>. If one establishes <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle m}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>m</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle m}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0a07d98bb302f3856cbabc47b2b9016692e3f7bc" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.04ex; height:1.676ex;" alt="m"/></span> confidence intervals, and wishes to have an overall confidence level of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 1-\alpha }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>1</mn>
+        <mo>&#x2212;<!-- − --></mo>
+        <mi>&#x03B1;<!-- α --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 1-\alpha }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9afa7876fb8b4fb8c4d8039ebed6cd1cbc4781cd" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.505ex; width:5.49ex; height:2.343ex;" alt="1-\alpha"/></span>, each individual confidence interval can be adjusted to the level of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 1-{\frac {\alpha }{m}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>1</mn>
+        <mo>&#x2212;<!-- − --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mi>&#x03B1;<!-- α --></mi>
+            <mi>m</mi>
+          </mfrac>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 1-{\frac {\alpha }{m}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/71329d1b0a91c858b82ce1899cde06155842035b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:6.879ex; height:4.676ex;" alt="1-{\frac  {\alpha }{m}}"/></span>.<sup id="cite_ref-Dunn1961_2-2" class="reference"><a href="#cite_note-Dunn1961-2">&#91;2&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Continuous_problems">Continuous problems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bonferroni_correction&amp;action=edit&amp;section=6" title="Edit section: Continuous problems">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>When searching for a signal in a continuous parameter space there can also be a problem of multiple comparisons, or look-elsewhere effect. For example, a physicist might be looking to discover a particle of unknown mass by considering a large range of masses; this was the case during the Nobel Prize winning detection of the <a href="/wiki/Higgs_boson" title="Higgs boson">Higgs boson</a>. In such cases, one can apply a continuous generalization of the Bonferroni correction by employing <a href="/wiki/Bayesian_statistics" title="Bayesian statistics">Bayesian</a> logic to relate the effective number of trials, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle m}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>m</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle m}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0a07d98bb302f3856cbabc47b2b9016692e3f7bc" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.04ex; height:1.676ex;" alt="m"/></span>, to the prior-to-posterior volume ratio.<sup id="cite_ref-Bayer2020_7-0" class="reference"><a href="#cite_note-Bayer2020-7">&#91;7&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Alternatives">Alternatives</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bonferroni_correction&amp;action=edit&amp;section=7" title="Edit section: Alternatives">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r1033289096">.mw-parser-output .hatnote{font-style:italic}.mw-parser-output div.hatnote{padding-left:1.6em;margin-bottom:0.5em}.mw-parser-output .hatnote i{font-style:normal}.mw-parser-output .hatnote+link+.hatnote{margin-top:-0.5em}</style><div role="note" class="hatnote navigation-not-searchable">Main article: <a href="/wiki/Familywise_error_rate#Controlling_procedures" class="mw-redirect" title="Familywise error rate">Familywise error rate §&#160;Controlling procedures</a></div>
+<p>There are alternative ways to control the <a href="/wiki/Familywise_error_rate" class="mw-redirect" title="Familywise error rate">familywise error rate</a>.
+For example, the <a href="/wiki/Holm%E2%80%93Bonferroni_method" title="Holm–Bonferroni method">Holm–Bonferroni method</a> and the <a href="/wiki/%C5%A0id%C3%A1k_correction" title="Šidák correction">Šidák correction</a> are universally more powerful procedures than the Bonferroni correction, meaning that they are always at least as powerful. Unlike the Bonferroni procedure, these methods do not control the <a href="/wiki/Expected_number" class="mw-redirect" title="Expected number">expected number</a> of Type I errors per family (the per-family Type I error rate).<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Criticism">Criticism</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bonferroni_correction&amp;action=edit&amp;section=8" title="Edit section: Criticism">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>With respect to <a href="/wiki/Familywise_error_rate" class="mw-redirect" title="Familywise error rate">FWER</a> control, the Bonferroni correction can be conservative if there are a large number of tests and/or the test statistics are positively correlated.<sup id="cite_ref-Moran2003_9-0" class="reference"><a href="#cite_note-Moran2003-9">&#91;9&#93;</a></sup>
+</p><p>The correction comes at the cost of increasing the probability of producing <a href="/wiki/Type_I_and_type_II_errors#Type_II_error" title="Type I and type II errors">false negatives</a>, i.e., reducing <a href="/wiki/Statistical_power" class="mw-redirect" title="Statistical power">statistical power</a>.<sup id="cite_ref-Nakagawa2004_10-0" class="reference"><a href="#cite_note-Nakagawa2004-10">&#91;10&#93;</a></sup><sup id="cite_ref-Moran2003_9-1" class="reference"><a href="#cite_note-Moran2003-9">&#91;9&#93;</a></sup> There is not a definitive consensus on how to define a family in all cases, and adjusted test results may vary depending on the number of tests included in the <a href="/wiki/Familywise_error_rate#The_concept_of_a_family" class="mw-redirect" title="Familywise error rate">family</a> of hypotheses.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (June 2016)">citation needed</span></a></i>&#93;</sup> Such criticisms apply to <a href="/wiki/Familywise_error_rate" class="mw-redirect" title="Familywise error rate">FWER</a> control in general, and are not specific to the Bonferroni correction.
+</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bonferroni_correction&amp;action=edit&amp;section=9" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r1011085734">.mw-parser-output .reflist{font-size:90%;margin-bottom:0.5em;list-style-type:decimal}.mw-parser-output .reflist .references{font-size:100%;margin-bottom:0;list-style-type:inherit}.mw-parser-output .reflist-columns-2{column-width:30em}.mw-parser-output .reflist-columns-3{column-width:25em}.mw-parser-output .reflist-columns{margin-top:0.3em}.mw-parser-output .reflist-columns ol{margin-top:0}.mw-parser-output .reflist-columns li{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .reflist-upper-alpha{list-style-type:upper-alpha}.mw-parser-output .reflist-upper-roman{list-style-type:upper-roman}.mw-parser-output .reflist-lower-alpha{list-style-type:lower-alpha}.mw-parser-output .reflist-lower-greek{list-style-type:lower-greek}.mw-parser-output .reflist-lower-roman{list-style-type:lower-roman}</style><div class="reflist">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text">Bonferroni, C. E., Teoria statistica delle classi e calcolo delle probabilità, Pubblicazioni del R Istituto Superiore di Scienze Economiche e Commerciali di Firenze 1936</span>
+</li>
+<li id="cite_note-Dunn1961-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-Dunn1961_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Dunn1961_2-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Dunn1961_2-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><style data-mw-deduplicate="TemplateStyles:r1067248974">.mw-parser-output cite.citation{font-style:inherit;word-wrap:break-word}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation:target{background-color:rgba(0,127,255,0.133)}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output .cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;color:#d33}.mw-parser-output .cs1-visible-error{color:#d33}.mw-parser-output .cs1-maint{display:none;color:#3a3;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><cite id="CITEREFDunn1961" class="citation journal cs1">Dunn, Olive Jean (1961). <a rel="nofollow" class="external text" href="http://sci2s.ugr.es/keel/pdf/algorithm/articulo/1961-Bonferroni_Dunn-JASA.pdf">"Multiple Comparisons Among Means"</a> <span class="cs1-format">(PDF)</span>. <i><a href="/wiki/Journal_of_the_American_Statistical_Association" title="Journal of the American Statistical Association">Journal of the American Statistical Association</a></i>. <b>56</b> (293): 52–64. <a href="/wiki/CiteSeerX_(identifier)" class="mw-redirect" title="CiteSeerX (identifier)">CiteSeerX</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.309.1277">10.1.1.309.1277</a></span>. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1080%2F01621459.1961.10482090">10.1080/01621459.1961.10482090</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+the+American+Statistical+Association&amp;rft.atitle=Multiple+Comparisons+Among+Means&amp;rft.volume=56&amp;rft.issue=293&amp;rft.pages=52-64&amp;rft.date=1961&amp;rft_id=%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.309.1277%23id-name%3DCiteSeerX&amp;rft_id=info%3Adoi%2F10.1080%2F01621459.1961.10482090&amp;rft.aulast=Dunn&amp;rft.aufirst=Olive+Jean&amp;rft_id=http%3A%2F%2Fsci2s.ugr.es%2Fkeel%2Fpdf%2Falgorithm%2Farticulo%2F1961-Bonferroni_Dunn-JASA.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABonferroni+correction" class="Z3988"></span></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFMittelhammerJudgeMiller2000" class="citation book cs1">Mittelhammer, Ron C.; Judge, George G.; Miller, Douglas J. (2000). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=fycmsfkK6RQC&amp;pg=PA73"><i>Econometric Foundations</i></a>. Cambridge University Press. pp.&#160;73–74. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-521-62394-0" title="Special:BookSources/978-0-521-62394-0"><bdi>978-0-521-62394-0</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Econometric+Foundations&amp;rft.pages=73-74&amp;rft.pub=Cambridge+University+Press&amp;rft.date=2000&amp;rft.isbn=978-0-521-62394-0&amp;rft.aulast=Mittelhammer&amp;rft.aufirst=Ron+C.&amp;rft.au=Judge%2C+George+G.&amp;rft.au=Miller%2C+Douglas+J.&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DfycmsfkK6RQC%26pg%3DPA73&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABonferroni+correction" class="Z3988"></span></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFMiller1966" class="citation book cs1">Miller, Rupert G. (1966). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=4C7VBwAAQBAJ"><i>Simultaneous Statistical Inference</i></a>. Springer. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9781461381228" title="Special:BookSources/9781461381228"><bdi>9781461381228</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Simultaneous+Statistical+Inference&amp;rft.pub=Springer&amp;rft.date=1966&amp;rft.isbn=9781461381228&amp;rft.aulast=Miller&amp;rft.aufirst=Rupert+G.&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3D4C7VBwAAQBAJ&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABonferroni+correction" class="Z3988"></span></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFGoemanSolari2014" class="citation journal cs1">Goeman, Jelle J.; Solari, Aldo (2014). "Multiple Hypothesis Testing in Genomics". <i><a href="/wiki/Statistics_in_Medicine_(journal)" title="Statistics in Medicine (journal)">Statistics in Medicine</a></i>. <b>33</b> (11): 1946–1978. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1002%2Fsim.6082">10.1002/sim.6082</a>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/24399688">24399688</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Statistics+in+Medicine&amp;rft.atitle=Multiple+Hypothesis+Testing+in+Genomics&amp;rft.volume=33&amp;rft.issue=11&amp;rft.pages=1946-1978&amp;rft.date=2014&amp;rft_id=info%3Adoi%2F10.1002%2Fsim.6082&amp;rft_id=info%3Apmid%2F24399688&amp;rft.aulast=Goeman&amp;rft.aufirst=Jelle+J.&amp;rft.au=Solari%2C+Aldo&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABonferroni+correction" class="Z3988"></span></span>
+</li>
+<li id="cite_note-pmid8014990-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-pmid8014990_6-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFNeuwaldGreen1994" class="citation journal cs1">Neuwald, AF; Green, P (1994). "Detecting patterns in protein sequences". <i>J. Mol. Biol</i>. <b>239</b> (5): 698–712. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1006%2Fjmbi.1994.1407">10.1006/jmbi.1994.1407</a>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/8014990">8014990</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=J.+Mol.+Biol.&amp;rft.atitle=Detecting+patterns+in+protein+sequences&amp;rft.volume=239&amp;rft.issue=5&amp;rft.pages=698-712&amp;rft.date=1994&amp;rft_id=info%3Adoi%2F10.1006%2Fjmbi.1994.1407&amp;rft_id=info%3Apmid%2F8014990&amp;rft.aulast=Neuwald&amp;rft.aufirst=AF&amp;rft.au=Green%2C+P&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABonferroni+correction" class="Z3988"></span></span>
+</li>
+<li id="cite_note-Bayer2020-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-Bayer2020_7-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFBayerSeljak2020" class="citation journal cs1">Bayer, Adrian E.; Seljak, Uroš (2020). <a rel="nofollow" class="external text" href="https://doi.org/10.1088%2F1475-7516%2F2020%2F10%2F009">"The look-elsewhere effect from a unified Bayesian and frequentist perspective"</a>. <i><a href="/wiki/Journal_of_Cosmology_and_Astroparticle_Physics" title="Journal of Cosmology and Astroparticle Physics">Journal of Cosmology and Astroparticle Physics</a></i>. <b>2020</b> (10): 009–009. <a href="/wiki/ArXiv_(identifier)" class="mw-redirect" title="ArXiv (identifier)">arXiv</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//arxiv.org/abs/2007.13821">2007.13821</a></span>. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1088%2F1475-7516%2F2020%2F10%2F009">10.1088/1475-7516/2020/10/009</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+Cosmology+and+Astroparticle+Physics&amp;rft.atitle=The+look-elsewhere+effect+from+a+unified+Bayesian+and+frequentist+perspective&amp;rft.volume=2020&amp;rft.issue=10&amp;rft.pages=009-009&amp;rft.date=2020&amp;rft_id=info%3Aarxiv%2F2007.13821&amp;rft_id=info%3Adoi%2F10.1088%2F1475-7516%2F2020%2F10%2F009&amp;rft.aulast=Bayer&amp;rft.aufirst=Adrian+E.&amp;rft.au=Seljak%2C+Uro%C5%A1&amp;rft_id=https%3A%2F%2Fdoi.org%2F10.1088%252F1475-7516%252F2020%252F10%252F009&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABonferroni+correction" class="Z3988"></span></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFFrane2015" class="citation journal cs1">Frane, Andrew (2015). <a rel="nofollow" class="external text" href="https://doi.org/10.22237%2Fjmasm%2F1430453040">"Are per-family Type I error rates relevant in social and behavioral science?"</a>. <i>Journal of Modern Applied Statistical Methods</i>. <b>14</b> (1): 12–23. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.22237%2Fjmasm%2F1430453040">10.22237/jmasm/1430453040</a></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+Modern+Applied+Statistical+Methods&amp;rft.atitle=Are+per-family+Type+I+error+rates+relevant+in+social+and+behavioral+science%3F&amp;rft.volume=14&amp;rft.issue=1&amp;rft.pages=12-23&amp;rft.date=2015&amp;rft_id=info%3Adoi%2F10.22237%2Fjmasm%2F1430453040&amp;rft.aulast=Frane&amp;rft.aufirst=Andrew&amp;rft_id=%2F%2Fdoi.org%2F10.22237%252Fjmasm%252F1430453040&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABonferroni+correction" class="Z3988"></span></span>
+</li>
+<li id="cite_note-Moran2003-9"><span class="mw-cite-backlink">^ <a href="#cite_ref-Moran2003_9-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Moran2003_9-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFMoran2003" class="citation journal cs1">Moran, Matthew (2003). "Arguments for rejecting the sequential Bonferroni in ecological studies". <i><a href="/wiki/Oikos" title="Oikos">Oikos</a></i>. <b>100</b> (2): 403–405. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1034%2Fj.1600-0706.2003.12010.x">10.1034/j.1600-0706.2003.12010.x</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Oikos&amp;rft.atitle=Arguments+for+rejecting+the+sequential+Bonferroni+in+ecological+studies&amp;rft.volume=100&amp;rft.issue=2&amp;rft.pages=403-405&amp;rft.date=2003&amp;rft_id=info%3Adoi%2F10.1034%2Fj.1600-0706.2003.12010.x&amp;rft.aulast=Moran&amp;rft.aufirst=Matthew&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABonferroni+correction" class="Z3988"></span></span>
+</li>
+<li id="cite_note-Nakagawa2004-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-Nakagawa2004_10-0">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFNakagawa2004" class="citation journal cs1">Nakagawa, Shinichi (2004). <a rel="nofollow" class="external text" href="https://academic.oup.com/beheco/article/15/6/1044/206216">"A farewell to Bonferroni: the problems of low statistical power and publication bias"</a>. <i><a href="/wiki/Behavioral_Ecology_(journal)" title="Behavioral Ecology (journal)">Behavioral Ecology</a></i>. <b>15</b> (6): 1044–1045. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.1093%2Fbeheco%2Farh107">10.1093/beheco/arh107</a></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Behavioral+Ecology&amp;rft.atitle=A+farewell+to+Bonferroni%3A+the+problems+of+low+statistical+power+and+publication+bias&amp;rft.volume=15&amp;rft.issue=6&amp;rft.pages=1044-1045&amp;rft.date=2004&amp;rft_id=info%3Adoi%2F10.1093%2Fbeheco%2Farh107&amp;rft.aulast=Nakagawa&amp;rft.aufirst=Shinichi&amp;rft_id=https%3A%2F%2Facademic.oup.com%2Fbeheco%2Farticle%2F15%2F6%2F1044%2F206216&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABonferroni+correction" class="Z3988"></span></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bonferroni_correction&amp;action=edit&amp;section=10" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://www.quantitativeskills.com/sisa/calculations/bonfer.htm">Bonferroni, Sidak online calculator</a></li></ul></div>

@@ -1,0 +1,17 @@
+http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.586.1913
+http://data.bibliotheken.nl/id/thes/p069506892
+http://www.apa.org/monitor/julaug02/eminent.aspx
+http://doi.org/10.1037%2F1089-2680.6.2.139
+http://id.worldcat.org/fast/47986/
+https://catalogue.bnf.fr/ark:/12148/cb124134810
+https://data.bnf.fr/ark:/12148/cb124134810
+https://www.idref.fr/067020925
+https://id.loc.gov/authorities/names/n79150367
+https://d-nb.info/gnd/12271752X
+https://web.archive.org/web/20051109040818/http://www.wjh.harvard.edu/~dtg/SpeedingwithNed.pdf
+https://isni.org/isni/0000000084063754
+https://api.semanticscholar.org/CorpusID:145668721
+https://snaccooperative.org/ark:/99166/w61t2h5m
+https://viaf.org/viaf/109029006
+https://www.wikidata.org/wiki/Q5342698#identifiers
+https://www.worldcat.org/identities/lccn-n79150367/

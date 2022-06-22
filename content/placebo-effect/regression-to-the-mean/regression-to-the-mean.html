@@ -1,0 +1,1169 @@
+<div class="mw-parser-output"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Statistical phenomenon – subsequent measurements of things tend to be closer to the average than initial extreme measurements</div>
+<style data-mw-deduplicate="TemplateStyles:r1033289096">.mw-parser-output .hatnote{font-style:italic}.mw-parser-output div.hatnote{padding-left:1.6em;margin-bottom:0.5em}.mw-parser-output .hatnote i{font-style:normal}.mw-parser-output .hatnote+link+.hatnote{margin-top:-0.5em}</style><div role="note" class="hatnote navigation-not-searchable">Not to be confused with the financial concept of <a href="/wiki/Mean_reversion_(finance)" title="Mean reversion (finance)">mean reversion</a>.</div>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="/wiki/File:Quincunx_(Galton_Box)_-_Galton_1889_diagram.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Quincunx_%28Galton_Box%29_-_Galton_1889_diagram.png/300px-Quincunx_%28Galton_Box%29_-_Galton_1889_diagram.png" decoding="async" width="300" height="233" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Quincunx_%28Galton_Box%29_-_Galton_1889_diagram.png/450px-Quincunx_%28Galton_Box%29_-_Galton_1889_diagram.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Quincunx_%28Galton_Box%29_-_Galton_1889_diagram.png/600px-Quincunx_%28Galton_Box%29_-_Galton_1889_diagram.png 2x" data-file-width="744" data-file-height="577" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Quincunx_(Galton_Box)_-_Galton_1889_diagram.png" class="internal" title="Enlarge"></a></div>Galton's experimental setup (Fig.8)</div></div></div>
+<p>In <a href="/wiki/Statistics" title="Statistics">statistics</a>, <b>regression toward the mean</b> (also called <b>reversion to the mean</b>, and <b>reversion to mediocrity</b>) is a concept that refers to the simple fact that if one <a href="/wiki/Sample_point" class="mw-redirect" title="Sample point">sample</a> of a <a href="/wiki/Random_variable" title="Random variable">random variable</a> is <a href="/wiki/Extreme_value_theory" title="Extreme value theory">extreme</a>, the next sampling of the same random variable is likely to be closer to its <a href="/wiki/Mean" title="Mean">mean</a>.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup><sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup> Furthermore, when many random variables are sampled and the most extreme results are intentionally picked out, it refers to the fact that (in many cases) a second sampling of these picked-out variables will result in "less extreme" results, closer to the initial mean of all of the variables.
+</p><p>Mathematically, the strength of this "regression" effect is dependent on whether or not all of the random variables are drawn <a href="/wiki/IID" class="mw-redirect" title="IID">from the same distribution</a>, or if there are genuine differences in the underlying distributions for each random variable. In the first case, the "regression" effect is statistically likely to occur, but in the second case, it may occur less strongly or not at all.
+</p><p>Regression toward the mean is thus a useful concept to consider when designing any scientific experiment, data analysis, or test, which intentionally selects the "most extreme" events - it indicates that follow-up checks may be useful in order to avoid jumping to false conclusions about these events; they may be "genuine" extreme events, a completely meaningless selection due to statistical noise, or a mix of the two cases.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> 
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Conceptual_examples"><span class="tocnumber">1</span> <span class="toctext">Conceptual examples</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Simple_example:_students_taking_a_test"><span class="tocnumber">1.1</span> <span class="toctext">Simple example: students taking a test</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Other_examples"><span class="tocnumber">1.2</span> <span class="toctext">Other examples</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#History"><span class="tocnumber">2</span> <span class="toctext">History</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Discovery"><span class="tocnumber">2.1</span> <span class="toctext">Discovery</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Evolving_usage_of_the_term"><span class="tocnumber">2.2</span> <span class="toctext">Evolving usage of the term</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Importance"><span class="tocnumber">3</span> <span class="toctext">Importance</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Misunderstandings"><span class="tocnumber">3.1</span> <span class="toctext">Misunderstandings</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Regression_fallacies"><span class="tocnumber">3.2</span> <span class="toctext">Regression fallacies</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Other_statistical_phenomena"><span class="tocnumber">3.3</span> <span class="toctext">Other statistical phenomena</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Definition_for_simple_linear_regression_of_data_points"><span class="tocnumber">4</span> <span class="toctext">Definition for simple linear regression of data points</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Definitions_for_bivariate_distribution_with_identical_marginal_distributions"><span class="tocnumber">5</span> <span class="toctext">Definitions for bivariate distribution with identical marginal distributions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Restrictive_definition"><span class="tocnumber">5.1</span> <span class="toctext">Restrictive definition</span></a>
+<ul>
+<li class="toclevel-3 tocsection-14"><a href="#Theorem"><span class="tocnumber">5.1.1</span> <span class="toctext">Theorem</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-15"><a href="#General_definition"><span class="tocnumber">5.2</span> <span class="toctext">General definition</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#Alternative_definition_in_financial_usage"><span class="tocnumber">6</span> <span class="toctext">Alternative definition in financial usage</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Further_reading"><span class="tocnumber">9</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#External_links"><span class="tocnumber">10</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Conceptual_examples">Conceptual examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Regression_toward_the_mean&amp;action=edit&amp;section=1" title="Edit section: Conceptual examples">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Simple_example:_students_taking_a_test">Simple example: students taking a test</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Regression_toward_the_mean&amp;action=edit&amp;section=2" title="Edit section: Simple example: students taking a test">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Consider a class of students taking a 100-item true/false test on a subject. Suppose that all students choose randomly on all questions. Then, each student's score would be a realization of one of a set of <a href="/wiki/Independent_and_identically_distributed_random_variables" title="Independent and identically distributed random variables">independent and identically distributed</a> <a href="/wiki/Random_variable" title="Random variable">random variables</a>, with an expected <a href="/wiki/Mean" title="Mean">mean</a> of 50. Naturally, some students will score substantially above 50 and some substantially below 50 just by chance. If one selects only the top scoring 10% of the students and gives them a second test on which they again choose randomly on all items, the mean score would again be expected to be close to 50. Thus the mean of these students would "regress" all the way back to the mean of all students who took the original test. No matter what a student scores on the original test, the best prediction of their score on the second test is 50.
+</p><p>If choosing answers to the test questions was not random – i.e. if there were no luck (good or bad) or random guessing involved in the answers supplied by the students – then all students would be expected to score the same on the second test as they scored on the original test, and there would be no regression toward the mean.
+</p><p>Most realistic situations fall between these two extremes: for example, one might consider exam scores as a combination of <a href="/wiki/Skill" title="Skill">skill</a> and <a href="/wiki/Luck" title="Luck">luck</a>. In this case, the subset of students scoring above average would be composed of those who were skilled and had not especially bad luck, together with those who were unskilled, but were extremely lucky. On a retest of this subset, the unskilled will be unlikely to repeat their lucky break, while the skilled will have a second chance to have bad luck. Hence, those who did well previously are unlikely to do quite as well in the second test even if the original cannot be replicated.
+</p><p>The following is an example of this second kind of regression toward the mean. A class of students takes two editions of the same test on two successive days. It has frequently been observed that the worst performers on the first day will tend to improve their scores on the second day, and the best performers on the first day will tend to do worse on the second day. The phenomenon occurs because student scores are determined in part by underlying ability and in part by chance. For the first test, some will be lucky, and score more than their ability, and some will be unlucky and score less than their ability. Some of the lucky students on the first test will be lucky again on the second test, but more of them will have (for them) average or below average scores. Therefore, a student who was lucky and over-performed their ability on the first test is more likely to have a worse score on the second test than a better score. Similarly, students who unluckily score less than their ability on the first test will tend to see their scores increase on the second test.  The larger the influence of luck in producing an extreme event, the less likely the luck will repeat itself in multiple events.
+</p>
+<h3><span class="mw-headline" id="Other_examples">Other examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Regression_toward_the_mean&amp;action=edit&amp;section=3" title="Edit section: Other examples">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>If your favourite sports team won the championship last year, what does that mean for their chances for winning next season? To the extent this result is due to skill (the team is in good condition, with a top coach, etc.), their win signals that it is more likely they will win again next year. But the greater the extent this is due to luck (other teams embroiled in a drug scandal, favourable draw, draft picks turned out to be productive, etc.), the less likely it is they will win again next year.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</p><p>If a business organisation has a highly profitable quarter, despite the underlying reasons for its performance being unchanged, it is likely to do less well the next quarter.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup>
+</p><p>Baseball players who hit well in their rookie season are likely to do worse their second; the "<a href="/wiki/Sophomore_slump" title="Sophomore slump">Sophomore slump</a>". Similarly, regression towards the mean is an explanation for the <a href="/wiki/Sports_Illustrated_cover_jinx" title="Sports Illustrated cover jinx"><i>Sports Illustrated</i> cover jinx</a> — periods of exceptional performance which results in a cover feature are likely to be followed by periods of more mediocre performance, giving the impression that appearing on the cover causes an athlete's decline.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Regression_toward_the_mean&amp;action=edit&amp;section=4" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Discovery">Discovery</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Regression_toward_the_mean&amp;action=edit&amp;section=5" title="Edit section: Discovery">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright"><div class="thumbinner" style="width:442px;"><a href="/wiki/File:Galton%27s_correlation_diagram_1875.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Galton%27s_correlation_diagram_1875.jpg/440px-Galton%27s_correlation_diagram_1875.jpg" decoding="async" width="440" height="373" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Galton%27s_correlation_diagram_1875.jpg/660px-Galton%27s_correlation_diagram_1875.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/b/b2/Galton%27s_correlation_diagram_1875.jpg 2x" data-file-width="745" data-file-height="631" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Galton%27s_correlation_diagram_1875.jpg" class="internal" title="Enlarge"></a></div><a href="/wiki/Francis_Galton" title="Francis Galton">Francis Galton's</a> 1886 illustration of the correlation between the heights of adults and their parents.<sup id="cite_ref-galton1886_8-0" class="reference"><a href="#cite_note-galton1886-8">&#91;8&#93;</a></sup> The observation that adult children's heights tended to deviate less from the mean height than their parents suggested the concept of "regression toward the mean", giving <a href="/wiki/Regression_analysis" title="Regression analysis">regression analysis</a> its name.</div></div></div>
+<p>The concept of regression comes from <a href="/wiki/Genetics" title="Genetics">genetics</a> and was popularized by <a href="/wiki/Sir_Francis_Galton" class="mw-redirect" title="Sir Francis Galton">Sir Francis Galton</a> during the late 19th century with the publication of <i>Regression towards mediocrity in hereditary stature</i>.<sup id="cite_ref-galton1886_8-1" class="reference"><a href="#cite_note-galton1886-8">&#91;8&#93;</a></sup> Galton observed that extreme characteristics (e.g., height) in parents are not passed on completely to their offspring. Rather, the characteristics in the offspring <i>regress</i> towards a <i>mediocre</i> point (a point which has since been identified as the mean). By measuring the heights of hundreds of people, he was able to quantify regression to the mean, and estimate the size of the effect. Galton wrote that, "the average regression of the offspring is a constant fraction of their respective <a href="/wiki/Midparent" title="Midparent">mid-parental</a> deviations". This means that the difference between a child and its parents for some characteristic is proportional to its parents' deviation from typical people in the population. If its parents are each two inches taller than the averages for men and women, then, on average, the offspring will be shorter than its parents by some factor (which, today, we would call one minus the <a href="/wiki/Regression_analysis" title="Regression analysis">regression coefficient</a>) times two inches. For height, Galton estimated this coefficient to be about 2/3: the height of an individual will measure around a midpoint that is two thirds of the parents' deviation from the population average.
+</p><p>
+Galton also published these results<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup> using the simpler example of pellets falling through a <a href="/wiki/Bean_machine" class="mw-redirect" title="Bean machine">quincunx</a> to form a <a href="/wiki/Normal_distribution" title="Normal distribution">normal distribution</a> centred directly under their entrance point. These pellets might then be released down into a second gallery corresponding to a second measurement. Galton then asked the reverse question: "From where did these pellets come?" </p><blockquote><p>The answer was not <span class="nowrap" style="padding-left:0.1em;">&#39;</span><i>on average directly above</i><span class="nowrap" style="padding-left:0.1em;">&#39;</span>. Rather it was <span class="nowrap" style="padding-left:0.1em;">&#39;</span><i>on average, more towards the middle</i><span class="nowrap" style="padding-left:0.1em;">&#39;</span>, for the simple reason that there were more pellets above it towards the middle that could wander left than there were in the left extreme that could wander to the right, inwards.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup></p></blockquote>
+<h3><span class="mw-headline" id="Evolving_usage_of_the_term">Evolving usage of the term</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Regression_toward_the_mean&amp;action=edit&amp;section=6" title="Edit section: Evolving usage of the term">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Galton coined the term "regression" to describe an observable fact in the inheritance of multi-factorial <a href="/wiki/Quantitative_genetics" title="Quantitative genetics">quantitative genetic</a> traits: namely that the offspring of parents who lie at the tails of the distribution will tend to lie closer to the centre, the mean, of the distribution. He quantified this trend, and in doing so invented <a href="/wiki/Linear_regression" title="Linear regression">linear regression</a> analysis, thus laying the groundwork for much of modern statistical modelling. Since then, the term "regression" has taken on a variety of meanings, and it may be used by modern statisticians to describe phenomena of <a href="/wiki/Sampling_bias" title="Sampling bias">sampling bias</a> which have little to do with Galton's original observations in the field of genetics.
+</p><p>Though his mathematical analysis was correct, Galton's biological explanation for the regression phenomenon he observed is now known to be incorrect. He stated: "A child inherits partly from his parents, partly from his ancestors. Speaking generally, the further his genealogy goes back, the more numerous and varied will his ancestry become, until they cease to differ from any equally numerous sample taken at haphazard from the race at large."<sup id="cite_ref-galton1886_8-2" class="reference"><a href="#cite_note-galton1886-8">&#91;8&#93;</a></sup> This is incorrect, since a child receives its genetic make-up exclusively from its parents. There is no generation-skipping in genetic material: any genetic material from earlier ancestors must have passed through the parents (though it may not have been <a href="/wiki/Gene_expression" title="Gene expression">expressed</a> in them). The phenomenon is better understood if we assume that the inherited trait (e.g., height) is controlled by a large number of <a href="/wiki/Recessive" class="mw-redirect" title="Recessive">recessive</a> <a href="/wiki/Gene" title="Gene">genes</a>. Exceptionally tall individuals must be <a href="/wiki/Homozygous" class="mw-redirect" title="Homozygous">homozygous</a> for increased height mutations at a large proportion of these <a href="/wiki/Genetic_locus" class="mw-redirect" title="Genetic locus">loci</a>. But the loci which carry these mutations are not necessarily shared between two tall individuals, and if these individuals mate, their offspring will be on average homozygous for "tall" mutations on fewer loci than either of their parents. In addition, height is not entirely genetically determined, but also subject to environmental influences during development, which make offspring of exceptional parents even more likely to be closer to the average than their parents.
+</p><p>This <a href="/wiki/Population_genetics" title="Population genetics">population genetic</a> phenomenon of regression to the mean is best thought of as a combination of a binomially distributed process of inheritance plus normally distributed environmental influences. In contrast, the term "regression to the mean" is now often used to describe the phenomenon by which an initial <a href="/wiki/Sampling_bias" title="Sampling bias">sampling bias</a> may disappear as new, repeated, or larger samples display sample means that are closer to the true underlying population mean.
+</p>
+<h2><span class="mw-headline" id="Importance">Importance</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Regression_toward_the_mean&amp;action=edit&amp;section=7" title="Edit section: Importance">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="box-More_citations_needed plainlinks metadata ambox ambox-content ambox-Refimprove" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a href="/wiki/File:Question_book-new.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" decoding="async" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div></td><td class="mbox-text"><div class="mbox-text-span">This section <b>needs additional citations for <a href="/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>.<span class="hide-when-compact"> Please help <a class="external text" href="https://en.wikipedia.org/w/index.php?title=Regression_toward_the_mean&amp;action=edit">improve this article</a> by <a href="/wiki/Help:Referencing_for_beginners" title="Help:Referencing for beginners">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.<br /><small><span class="plainlinks"><i>Find sources:</i>&#160;<a rel="nofollow" class="external text" href="//www.google.com/search?as_eq=wikipedia&amp;q=%22Regression+toward+the+mean%22">"Regression toward the mean"</a>&#160;–&#160;<a rel="nofollow" class="external text" href="//www.google.com/search?tbm=nws&amp;q=%22Regression+toward+the+mean%22+-wikipedia&amp;tbs=ar:1">news</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//www.google.com/search?&amp;q=%22Regression+toward+the+mean%22&amp;tbs=bkt:s&amp;tbm=bks">newspapers</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//www.google.com/search?tbs=bks:1&amp;q=%22Regression+toward+the+mean%22+-wikipedia">books</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//scholar.google.com/scholar?q=%22Regression+toward+the+mean%22">scholar</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="https://www.jstor.org/action/doBasicSearch?Query=%22Regression+toward+the+mean%22&amp;acc=on&amp;wc=on">JSTOR</a></span></small></span>  <span class="date-container"><i>(<span class="date">November 2016</span>)</i></span><span class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></span></div></td></tr></tbody></table>
+<p>Regression toward the mean is a significant consideration in the <a href="/wiki/Design_of_experiments" title="Design of experiments">design of experiments</a>.
+</p><p>Take a hypothetical example of 1,000 individuals of a similar age who were examined and scored on the risk of experiencing a heart attack. Statistics could be used to measure the success of an intervention on the 50 who were rated at the greatest risk. The intervention could be a change in diet, exercise, or a drug treatment. Even if the interventions are worthless, the test group would be expected to show an improvement on their next physical exam, because of regression toward the mean. The best way to combat this effect is to divide the group randomly into a treatment group that receives the treatment, and a <a href="/wiki/Scientific_control" title="Scientific control">control</a> group that does not.  The treatment would then be judged effective only if the treatment group improves more than the control group.
+</p><p>Alternatively, a group of <a href="/wiki/Disadvantaged" title="Disadvantaged">disadvantaged</a> children could be tested to identify the ones with most college potential.  The top 1% could be identified and supplied with special enrichment courses, tutoring, counseling and computers. Even if the program is effective, their average scores may well be less when the test is repeated a year later. However, in these circumstances it may be considered unethical to have a control group of disadvantaged children whose special needs are ignored. A mathematical calculation for <a href="/wiki/Shrinkage_(statistics)" title="Shrinkage (statistics)">shrinkage</a> can adjust for this effect, although it will not be as reliable as the control group method (see also <a href="/wiki/Stein%27s_example" title="Stein&#39;s example">Stein's example</a>).
+</p><p>The effect can also be exploited for general inference and estimation. The hottest place in the country today is more likely to be cooler tomorrow than hotter, as compared to today. The best performing mutual fund over the last three years is more likely to see relative performance decline than improve over the next three years. The most successful Hollywood actor of this year is likely to have less gross than more gross for his or her next movie. The baseball player with the highest batting average by the All-Star break is more likely to have a lower average than a higher average over the second half of the season.
+</p>
+<h3><span class="mw-headline" id="Misunderstandings">Misunderstandings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Regression_toward_the_mean&amp;action=edit&amp;section=8" title="Edit section: Misunderstandings">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The concept of regression toward the mean can be misused very easily.
+</p><p>In the student test example above, it was assumed implicitly that what was being measured did not change between the two measurements. Suppose, however, that the course was pass/fail and students were required to score above 70 on both tests to pass. Then the students who scored under 70 the first time would have no incentive to do well, and might score worse on average the second time. The students just over 70, on the other hand, would have a strong incentive to study and concentrate while taking the test. In that case one might see movement <i>away</i> from 70, scores below it getting lower and scores above it getting higher. It is possible for changes between the measurement times to augment, offset or reverse the statistical tendency to regress toward the mean.
+</p><p>Statistical regression toward the mean is not a <a href="/wiki/Causality" title="Causality">causal</a> phenomenon. A student with the worst score on the test on the first day will not necessarily increase his score substantially on the second day due to the effect. On average, the worst scorers improve, but that is only true because the worst scorers are more likely to have been unlucky than lucky. To the extent that a score is determined randomly, or that a score has random variation or error, as opposed to being determined by the student's academic ability or being a "true value", the phenomenon will have an effect. A classic mistake in this regard was in education. The students that received praise for good work were noticed to do more poorly on the next measure, and the students who were punished for poor work were noticed to do better on the next measure. The educators decided to stop praising and keep punishing on this basis.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup> Such a decision was a mistake, because regression toward the mean is not based on cause and effect, but rather on random error in a natural distribution around a mean.
+</p><p>Although extreme individual measurements regress toward the mean, the second <a href="/wiki/Sampling_(statistics)" title="Sampling (statistics)">sample</a> of measurements will be no closer to the mean than the first. Consider the students again. Suppose the tendency of extreme individuals is to regress 10% of the way toward the <a href="/wiki/Mean" title="Mean">mean</a> of 80, so a student who scored 100 the first day is <a href="/wiki/Expected_value" title="Expected value">expected</a> to score 98 the second day, and a student who scored 70 the first day is expected to score 71 the second day. Those expectations are closer to the mean than the first day scores. But the second day scores will vary around their expectations; some will be higher and some will be lower. In addition, individuals that measure very close to the mean should expect to move away from the mean. The effect is the exact reverse of regression toward the mean, and exactly offsets it. So for extreme individuals, we expect the second score to be closer to the mean than the first score, but for <i>all</i> individuals, we expect the distribution of distances from the mean to be the same on both sets of measurements.
+</p><p>Related to the point above, regression toward the mean works equally well in both directions. We expect the student with the highest test score on the second day to have done worse on the first day. And if we compare the best student on the first day to the best student on the second day, regardless of whether it is the same individual or not, there is a tendency to regress toward the mean going in either direction. We expect the best scores on both days to be equally far from the mean.
+</p>
+<h3><span class="mw-headline" id="Regression_fallacies">Regression fallacies</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Regression_toward_the_mean&amp;action=edit&amp;section=9" title="Edit section: Regression fallacies">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1033289096"/><div role="note" class="hatnote navigation-not-searchable">Main article: <a href="/wiki/Regression_fallacy" title="Regression fallacy">Regression fallacy</a></div>
+<p>Many phenomena tend to be attributed to the wrong causes when regression to the mean is not taken into account.
+</p><p>An extreme example is <a href="/wiki/Horace_Secrist" title="Horace Secrist">Horace Secrist</a>'s 1933 book <i>The Triumph of Mediocrity in Business</i>, in which the statistics professor collected mountains of data to prove that the profit rates of competitive businesses tend toward the average over time. In fact, there is no such effect; the variability of profit rates is almost constant over time. Secrist had only described the common regression toward the mean. One exasperated reviewer, <a href="/wiki/Harold_Hotelling" title="Harold Hotelling">Harold Hotelling</a>, likened the book to "proving the multiplication table by arranging elephants in rows and columns, and then doing the same for numerous other kinds of animals".<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup>
+</p><p>The calculation and interpretation of "improvement scores" on standardized educational tests in Massachusetts probably provides another example of the regression fallacy.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (April 2013)">citation needed</span></a></i>&#93;</sup> In 1999, schools were given improvement goals. For each school, the Department of Education tabulated the difference in the average score achieved by students in 1999 and in 2000. It was quickly noted that most of the worst-performing schools had met their goals, which the Department of Education took as confirmation of the soundness of their policies. However, it was also noted that many of the supposedly best schools in the Commonwealth, such as Brookline High School (with 18 National Merit Scholarship finalists) were declared to have failed. As in many cases involving statistics and public policy, the issue is debated, but "improvement scores" were not announced in subsequent years and the findings appear to be a case of regression to the mean.
+</p><p>The psychologist <a href="/wiki/Daniel_Kahneman" title="Daniel Kahneman">Daniel Kahneman</a>, winner of the 2002 <a href="/wiki/Nobel_Memorial_Prize_in_Economic_Sciences" title="Nobel Memorial Prize in Economic Sciences">Nobel Memorial Prize in Economic Sciences</a>, pointed out that regression to the mean might explain why rebukes can seem to improve performance, while praise seems to backfire.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup>
+</p>
+<style data-mw-deduplicate="TemplateStyles:r996844942">.mw-parser-output .templatequote{overflow:hidden;margin:1em 0;padding:0 40px}.mw-parser-output .templatequote .templatequotecite{line-height:1.5em;text-align:left;padding-left:1.6em;margin-top:0}</style><blockquote class="templatequote"><p>I had the most satisfying Eureka experience of my career while attempting to teach flight instructors that praise is more effective than punishment for promoting skill-learning. When I had finished my enthusiastic speech, one of the most seasoned instructors in the audience raised his hand and made his own short speech, which began by conceding that positive reinforcement might be good for the birds, but went on to deny that it was optimal for flight cadets. He said, "On many occasions I have praised flight cadets for clean execution of some aerobatic maneuver, and in general when they try it again, they do worse. On the other hand, I have often screamed at cadets for bad execution, and in general they do better the next time. So please don't tell us that reinforcement works and punishment does not, because the opposite is the case." This was a joyous moment, in which I understood an important truth about the world: because we tend to reward others when they do well and punish them when they do badly, and because there is regression to the mean, it is part of the human condition that we are statistically punished for rewarding others and rewarded for punishing them. I immediately arranged a demonstration in which each participant tossed two coins at a target behind his back, without any feedback. We measured the distances from the target and could see that those who had done best the first time had mostly deteriorated on their second try, and vice versa. But I knew that this demonstration would not undo the effects of lifelong exposure to a perverse contingency.</p></blockquote>
+<p>The regression fallacy is also explained in <a href="/wiki/Rolf_Dobelli" title="Rolf Dobelli">Rolf Dobelli</a>'s <i><a href="/wiki/The_Art_of_Thinking_Clearly" title="The Art of Thinking Clearly">The Art of Thinking Clearly</a></i>.
+</p><p>UK law enforcement policies have encouraged the visible siting of static or mobile <a href="/wiki/Speed_camera" class="mw-redirect" title="Speed camera">speed cameras</a> at <a href="/wiki/Accident_blackspot" title="Accident blackspot">accident blackspots</a>. This policy was justified by a perception that there is a corresponding reduction in serious <a href="/wiki/Road_traffic_accidents" class="mw-redirect" title="Road traffic accidents">road traffic accidents</a> after a camera is set up. However, statisticians have pointed out that, although there is a net benefit in lives saved, failure to take into account the effects of regression to the mean results in the beneficial effects being overstated.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;14&#93;</a></sup><sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;15&#93;</a></sup><sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;16&#93;</a></sup>
+</p><p>Statistical analysts have long recognized the effect of regression to the mean in sports; they even have a special name for it: the "<a href="/wiki/Sophomore_slump" title="Sophomore slump">sophomore slump</a>". For example, <a href="/wiki/Carmelo_Anthony" title="Carmelo Anthony">Carmelo Anthony</a> of the <a href="/wiki/National_Basketball_Association" title="National Basketball Association">NBA</a>'s <a href="/wiki/Denver_Nuggets" title="Denver Nuggets">Denver Nuggets</a> had an outstanding rookie season in 2004. It was so outstanding that he could not be expected to repeat it: in 2005, Anthony's numbers had dropped from his rookie season. The reasons for the "sophomore slump" abound, as sports rely on adjustment and counter-adjustment, but luck-based excellence as a rookie is as good a reason as any. Regression to the mean in sports performance may also explain the apparent "<a href="/wiki/Sports_Illustrated_cover_jinx" title="Sports Illustrated cover jinx">Sports Illustrated cover jinx</a>" and the "<a href="/wiki/Madden_NFL#Madden_Curse" title="Madden NFL">Madden Curse</a>". <a href="/wiki/John_Hollinger" title="John Hollinger">John Hollinger</a> has an alternative name for the phenomenon of regression to the mean: the "fluke rule"<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (October 2015)">citation needed</span></a></i>&#93;</sup>, while <a href="/wiki/Bill_James" title="Bill James">Bill James</a> calls it the "Plexiglas Principle".<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (October 2015)">citation needed</span></a></i>&#93;</sup>
+</p><p>Because popular lore has focused on regression toward the mean as an account of declining performance of athletes from one season to the next, it has usually overlooked the fact that such regression can also account for improved performance. For example, if one looks at the <a href="/wiki/Batting_average_(baseball)" title="Batting average (baseball)">batting average</a> of <a href="/wiki/Major_League_Baseball" title="Major League Baseball">Major League Baseball</a> players in one season, those whose batting average was above the league mean tend to regress downward toward the mean the following year, while those whose batting average was below the mean tend to progress upward toward the mean the following year.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">&#91;17&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Other_statistical_phenomena">Other statistical phenomena</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Regression_toward_the_mean&amp;action=edit&amp;section=10" title="Edit section: Other statistical phenomena">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Regression toward the mean simply says that, following an extreme random event, the next random event is likely to be less extreme. In no sense does the future event "compensate for" or "even out" the previous event, though this is assumed in the <a href="/wiki/Gambler%27s_fallacy" title="Gambler&#39;s fallacy">gambler's fallacy</a> (and the variant <a href="/wiki/Law_of_averages" title="Law of averages">law of averages</a>). Similarly, the <a href="/wiki/Law_of_large_numbers" title="Law of large numbers">law of large numbers</a> states that in the long term, the average will tend towards the expected value, but makes no statement about individual trials. For example, following a run of 10 heads on a flip of a fair coin (a rare, extreme event), regression to the mean states that the next run of heads will likely be less than 10, while the law of large numbers states that in the long term, this event will likely average out, and the average fraction of heads will tend to 1/2. By contrast, the gambler's fallacy incorrectly assumes that the coin is now "due" for a run of tails to balance out.
+</p><p>The opposite effect is regression to the tail, resulting from a distribution with non-vanishing probability density towards infinity  <sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;18&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Definition_for_simple_linear_regression_of_data_points">Definition for simple linear regression of data points</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Regression_toward_the_mean&amp;action=edit&amp;section=11" title="Edit section: Definition for simple linear regression of data points">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>This is the definition of regression toward the mean that closely follows <a href="/wiki/Sir_Francis_Galton" class="mw-redirect" title="Sir Francis Galton">Sir Francis Galton</a>'s original usage.<sup id="cite_ref-galton1886_8-3" class="reference"><a href="#cite_note-galton1886-8">&#91;8&#93;</a></sup>
+</p><p>Suppose there are <i>n</i> data points {<i>y</i><sub><i>i</i></sub>, <i>x</i><sub><i>i</i></sub>}, where <i>i</i>&#160;=&#160;1,&#160;2, ..., <i>n</i>. We want to find the equation of the <b>regression line</b>, <i>i.e.</i> the straight line
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle y=\alpha +\beta x,\,}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>y</mi>
+        <mo>=</mo>
+        <mi>&#x03B1;<!-- α --></mi>
+        <mo>+</mo>
+        <mi>&#x03B2;<!-- β --></mi>
+        <mi>x</mi>
+        <mo>,</mo>
+        <mspace width="thinmathspace" />
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle y=\alpha +\beta x,\,}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/731c6bb6ae3b5f933db68a82e7377e63910a887c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:12.278ex; height:2.509ex;" alt="y=\alpha +\beta x,\,"/></span></dd></dl>
+<p>which would provide a  "best" fit for the data points. (Note that a straight line may not be the appropriate regression curve for the given data points.) Here the "best" will be understood as in the <a href="/wiki/Ordinary_least_squares" title="Ordinary least squares">least-squares</a> approach: such a line that minimizes the sum of squared residuals of the linear regression model. In other words, numbers <i>α</i> and <i>β</i> solve the following minimization problem:
+</p>
+<dl><dd>Find <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \min _{\alpha ,\,\beta }Q(\alpha ,\beta )}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <munder>
+          <mo movablelimits="true" form="prefix">min</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x03B1;<!-- α --></mi>
+            <mo>,</mo>
+            <mspace width="thinmathspace" />
+            <mi>&#x03B2;<!-- β --></mi>
+          </mrow>
+        </munder>
+        <mi>Q</mi>
+        <mo stretchy="false">(</mo>
+        <mi>&#x03B1;<!-- α --></mi>
+        <mo>,</mo>
+        <mi>&#x03B2;<!-- β --></mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \min _{\alpha ,\,\beta }Q(\alpha ,\beta )}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e13e8f7c4e584e5db4c6b2e1456ba6ef4e869e3f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.338ex; width:11.764ex; height:4.343ex;" alt="\min _{\alpha ,\,\beta }Q(\alpha ,\beta )"/></span>, where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle Q(\alpha ,\beta )=\sum _{i=1}^{n}{\hat {\varepsilon }}_{i}^{\,2}=\sum _{i=1}^{n}(y_{i}-\alpha -\beta x_{i})^{2}\ }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>Q</mi>
+        <mo stretchy="false">(</mo>
+        <mi>&#x03B1;<!-- α --></mi>
+        <mo>,</mo>
+        <mi>&#x03B2;<!-- β --></mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </munderover>
+        <msubsup>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mover>
+                <mi>&#x03B5;<!-- ε --></mi>
+                <mo stretchy="false">&#x005E;<!-- ^ --></mo>
+              </mover>
+            </mrow>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mspace width="thinmathspace" />
+            <mn>2</mn>
+          </mrow>
+        </msubsup>
+        <mo>=</mo>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </munderover>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo>&#x2212;<!-- − --></mo>
+        <mi>&#x03B1;<!-- α --></mi>
+        <mo>&#x2212;<!-- − --></mo>
+        <mi>&#x03B2;<!-- β --></mi>
+        <msub>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mtext>&#xA0;</mtext>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle Q(\alpha ,\beta )=\sum _{i=1}^{n}{\hat {\varepsilon }}_{i}^{\,2}=\sum _{i=1}^{n}(y_{i}-\alpha -\beta x_{i})^{2}\ }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0208bfeaff92fae02e3e8c33b6886b405edf3495" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.005ex; width:39.605ex; height:6.843ex;" alt="Q(\alpha ,\beta )=\sum _{i=1}^{n}{\hat {\varepsilon }}_{i}^{\,2}=\sum _{i=1}^{n}(y_{i}-\alpha -\beta x_{i})^{2}\ "/></span></dd></dl>
+<p>Using <a href="/wiki/Calculus" title="Calculus">calculus</a> it can be shown that the values of <i>α</i> and <i>β</i> that minimize the objective function <i>Q</i> are
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\begin{aligned}&amp;{\hat {\beta }}={\frac {\sum _{i=1}^{n}(x_{i}-{\bar {x}})(y_{i}-{\bar {y}})}{\sum _{i=1}^{n}(x_{i}-{\bar {x}})^{2}}}={\frac {{\overline {xy}}-{\bar {x}}{\bar {y}}}{{\overline {x^{2}}}-{\bar {x}}^{2}}}={\frac {\operatorname {Cov} [x,y]}{\operatorname {Var} [x]}}=r_{xy}{\frac {s_{y}}{s_{x}}},\\&amp;{\hat {\alpha }}={\bar {y}}-{\hat {\beta }}\,{\bar {x}},\end{aligned}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+            <mtr>
+              <mtd />
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mover>
+                      <mi>&#x03B2;<!-- β --></mi>
+                      <mo stretchy="false">&#x005E;<!-- ^ --></mo>
+                    </mover>
+                  </mrow>
+                </mrow>
+                <mo>=</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                    <mrow>
+                      <munderover>
+                        <mo>&#x2211;<!-- ∑ --></mo>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mi>i</mi>
+                          <mo>=</mo>
+                          <mn>1</mn>
+                        </mrow>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mi>n</mi>
+                        </mrow>
+                      </munderover>
+                      <mo stretchy="false">(</mo>
+                      <msub>
+                        <mi>x</mi>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mi>i</mi>
+                        </mrow>
+                      </msub>
+                      <mo>&#x2212;<!-- − --></mo>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mover>
+                            <mi>x</mi>
+                            <mo stretchy="false">&#x00AF;<!-- ¯ --></mo>
+                          </mover>
+                        </mrow>
+                      </mrow>
+                      <mo stretchy="false">)</mo>
+                      <mo stretchy="false">(</mo>
+                      <msub>
+                        <mi>y</mi>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mi>i</mi>
+                        </mrow>
+                      </msub>
+                      <mo>&#x2212;<!-- − --></mo>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mover>
+                            <mi>y</mi>
+                            <mo stretchy="false">&#x00AF;<!-- ¯ --></mo>
+                          </mover>
+                        </mrow>
+                      </mrow>
+                      <mo stretchy="false">)</mo>
+                    </mrow>
+                    <mrow>
+                      <munderover>
+                        <mo>&#x2211;<!-- ∑ --></mo>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mi>i</mi>
+                          <mo>=</mo>
+                          <mn>1</mn>
+                        </mrow>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mi>n</mi>
+                        </mrow>
+                      </munderover>
+                      <mo stretchy="false">(</mo>
+                      <msub>
+                        <mi>x</mi>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mi>i</mi>
+                        </mrow>
+                      </msub>
+                      <mo>&#x2212;<!-- − --></mo>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mover>
+                            <mi>x</mi>
+                            <mo stretchy="false">&#x00AF;<!-- ¯ --></mo>
+                          </mover>
+                        </mrow>
+                      </mrow>
+                      <msup>
+                        <mo stretchy="false">)</mo>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mn>2</mn>
+                        </mrow>
+                      </msup>
+                    </mrow>
+                  </mfrac>
+                </mrow>
+                <mo>=</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                    <mrow>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mover>
+                          <mrow>
+                            <mi>x</mi>
+                            <mi>y</mi>
+                          </mrow>
+                          <mo accent="false">&#x00AF;<!-- ¯ --></mo>
+                        </mover>
+                      </mrow>
+                      <mo>&#x2212;<!-- − --></mo>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mover>
+                            <mi>x</mi>
+                            <mo stretchy="false">&#x00AF;<!-- ¯ --></mo>
+                          </mover>
+                        </mrow>
+                      </mrow>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mover>
+                            <mi>y</mi>
+                            <mo stretchy="false">&#x00AF;<!-- ¯ --></mo>
+                          </mover>
+                        </mrow>
+                      </mrow>
+                    </mrow>
+                    <mrow>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mover>
+                          <msup>
+                            <mi>x</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mn>2</mn>
+                            </mrow>
+                          </msup>
+                          <mo accent="false">&#x00AF;<!-- ¯ --></mo>
+                        </mover>
+                      </mrow>
+                      <mo>&#x2212;<!-- − --></mo>
+                      <msup>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mover>
+                              <mi>x</mi>
+                              <mo stretchy="false">&#x00AF;<!-- ¯ --></mo>
+                            </mover>
+                          </mrow>
+                        </mrow>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mn>2</mn>
+                        </mrow>
+                      </msup>
+                    </mrow>
+                  </mfrac>
+                </mrow>
+                <mo>=</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                    <mrow>
+                      <mi>Cov</mi>
+                      <mo>&#x2061;<!-- ⁡ --></mo>
+                      <mo stretchy="false">[</mo>
+                      <mi>x</mi>
+                      <mo>,</mo>
+                      <mi>y</mi>
+                      <mo stretchy="false">]</mo>
+                    </mrow>
+                    <mrow>
+                      <mi>Var</mi>
+                      <mo>&#x2061;<!-- ⁡ --></mo>
+                      <mo stretchy="false">[</mo>
+                      <mi>x</mi>
+                      <mo stretchy="false">]</mo>
+                    </mrow>
+                  </mfrac>
+                </mrow>
+                <mo>=</mo>
+                <msub>
+                  <mi>r</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>x</mi>
+                    <mi>y</mi>
+                  </mrow>
+                </msub>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                    <msub>
+                      <mi>s</mi>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mi>y</mi>
+                      </mrow>
+                    </msub>
+                    <msub>
+                      <mi>s</mi>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mi>x</mi>
+                      </mrow>
+                    </msub>
+                  </mfrac>
+                </mrow>
+                <mo>,</mo>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd />
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mover>
+                      <mi>&#x03B1;<!-- α --></mi>
+                      <mo stretchy="false">&#x005E;<!-- ^ --></mo>
+                    </mover>
+                  </mrow>
+                </mrow>
+                <mo>=</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mover>
+                      <mi>y</mi>
+                      <mo stretchy="false">&#x00AF;<!-- ¯ --></mo>
+                    </mover>
+                  </mrow>
+                </mrow>
+                <mo>&#x2212;<!-- − --></mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mover>
+                      <mi>&#x03B2;<!-- β --></mi>
+                      <mo stretchy="false">&#x005E;<!-- ^ --></mo>
+                    </mover>
+                  </mrow>
+                </mrow>
+                <mspace width="thinmathspace" />
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mover>
+                      <mi>x</mi>
+                      <mo stretchy="false">&#x00AF;<!-- ¯ --></mo>
+                    </mover>
+                  </mrow>
+                </mrow>
+                <mo>,</mo>
+              </mtd>
+            </mtr>
+          </mtable>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\begin{aligned}&amp;{\hat {\beta }}={\frac {\sum _{i=1}^{n}(x_{i}-{\bar {x}})(y_{i}-{\bar {y}})}{\sum _{i=1}^{n}(x_{i}-{\bar {x}})^{2}}}={\frac {{\overline {xy}}-{\bar {x}}{\bar {y}}}{{\overline {x^{2}}}-{\bar {x}}^{2}}}={\frac {\operatorname {Cov} [x,y]}{\operatorname {Var} [x]}}=r_{xy}{\frac {s_{y}}{s_{x}}},\\&amp;{\hat {\alpha }}={\bar {y}}-{\hat {\beta }}\,{\bar {x}},\end{aligned}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f4ceb26f542d9dec173923b43d3e9589fef9f36f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -4.671ex; width:62.207ex; height:10.509ex;" alt="{\begin{aligned}&amp;{\hat {\beta }}={\frac {\sum _{i=1}^{n}(x_{i}-{\bar {x}})(y_{i}-{\bar {y}})}{\sum _{i=1}^{n}(x_{i}-{\bar {x}})^{2}}}={\frac {{\overline {xy}}-{\bar {x}}{\bar {y}}}{{\overline {x^{2}}}-{\bar {x}}^{2}}}={\frac {\operatorname {Cov} [x,y]}{\operatorname {Var} [x]}}=r_{xy}{\frac {s_{y}}{s_{x}}},\\&amp;{\hat {\alpha }}={\bar {y}}-{\hat {\beta }}\,{\bar {x}},\end{aligned}}"/></span></dd></dl>
+<p>where <i>r<sub>xy</sub></i> is the <a href="/wiki/Correlation#Sample_correlation" title="Correlation">sample correlation coefficient</a> between <i>x</i> and <i>y</i>, <i>s<sub>x</sub></i> is the <a href="/wiki/Standard_deviation" title="Standard deviation">standard deviation</a> of <i>x</i>, and <i>s<sub>y</sub></i> is correspondingly the standard deviation of <i>y</i>. Horizontal bar over a variable means the sample average of that variable. For example: <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\overline {xy}}={\tfrac {1}{n}}\textstyle \sum _{i=1}^{n}x_{i}y_{i}\ .}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mover>
+            <mrow>
+              <mi>x</mi>
+              <mi>y</mi>
+            </mrow>
+            <mo accent="false">&#x00AF;<!-- ¯ --></mo>
+          </mover>
+        </mrow>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mstyle displaystyle="false" scriptlevel="0">
+            <mfrac>
+              <mn>1</mn>
+              <mi>n</mi>
+            </mfrac>
+          </mstyle>
+        </mrow>
+        <mstyle displaystyle="false" scriptlevel="0">
+          <munderover>
+            <mo>&#x2211;<!-- ∑ --></mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>i</mi>
+              <mo>=</mo>
+              <mn>1</mn>
+            </mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>n</mi>
+            </mrow>
+          </munderover>
+          <msub>
+            <mi>x</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>i</mi>
+            </mrow>
+          </msub>
+          <msub>
+            <mi>y</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>i</mi>
+            </mrow>
+          </msub>
+          <mtext>&#xA0;</mtext>
+          <mo>.</mo>
+        </mstyle>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\overline {xy}}={\tfrac {1}{n}}\textstyle \sum _{i=1}^{n}x_{i}y_{i}\ .}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3b859b22e2bec56b6ca453087fbfe747bdcfe3bf" class="mwe-math-fallback-image-inline" style="vertical-align: -1.005ex; width:18.956ex; height:3.343ex;" aria-hidden="true" alt="{\overline {xy}}={\tfrac {1}{n}}\textstyle \sum _{i=1}^{n}x_{i}y_{i}\ ."/></span>
+</p><p>Substituting the above expressions for <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\hat {\alpha }}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mover>
+              <mi>&#x03B1;<!-- α --></mi>
+              <mo stretchy="false">&#x005E;<!-- ^ --></mo>
+            </mover>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\hat {\alpha }}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/682d943d1947245b587f282aba6c88f0870fb302" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.488ex; height:2.176ex;" alt="{\hat {\alpha }}"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\hat {\beta }}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mover>
+              <mi>&#x03B2;<!-- β --></mi>
+              <mo stretchy="false">&#x005E;<!-- ^ --></mo>
+            </mover>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\hat {\beta }}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/efdb50e00928e4013750a476dab75eeb3cbd5799" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.451ex; height:3.176ex;" alt="{\hat {\beta }}"/></span> into  <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle y=\alpha +\beta x,\,}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>y</mi>
+        <mo>=</mo>
+        <mi>&#x03B1;<!-- α --></mi>
+        <mo>+</mo>
+        <mi>&#x03B2;<!-- β --></mi>
+        <mi>x</mi>
+        <mo>,</mo>
+        <mspace width="thinmathspace" />
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle y=\alpha +\beta x,\,}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/731c6bb6ae3b5f933db68a82e7377e63910a887c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:12.278ex; height:2.509ex;" alt="y=\alpha +\beta x,\,"/></span> yields fitted values
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\hat {y}}={\hat {\alpha }}+{\hat {\beta }}x,\,}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mover>
+              <mi>y</mi>
+              <mo stretchy="false">&#x005E;<!-- ^ --></mo>
+            </mover>
+          </mrow>
+        </mrow>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mover>
+              <mi>&#x03B1;<!-- α --></mi>
+              <mo stretchy="false">&#x005E;<!-- ^ --></mo>
+            </mover>
+          </mrow>
+        </mrow>
+        <mo>+</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mover>
+              <mi>&#x03B2;<!-- β --></mi>
+              <mo stretchy="false">&#x005E;<!-- ^ --></mo>
+            </mover>
+          </mrow>
+        </mrow>
+        <mi>x</mi>
+        <mo>,</mo>
+        <mspace width="thinmathspace" />
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\hat {y}}={\hat {\alpha }}+{\hat {\beta }}x,\,}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/882e7f416e13ac2f087d9776234faae190a4e529" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:12.544ex; height:3.176ex;" alt="{\hat {y}}={\hat {\alpha }}+{\hat {\beta }}x,\,"/></span></dd></dl>
+<p>which yields
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\frac {{\hat {y}}-{\bar {y}}}{s_{y}}}=r_{xy}{\frac {x-{\bar {x}}}{s_{x}}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mrow>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mover>
+                    <mi>y</mi>
+                    <mo stretchy="false">&#x005E;<!-- ^ --></mo>
+                  </mover>
+                </mrow>
+              </mrow>
+              <mo>&#x2212;<!-- − --></mo>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mover>
+                    <mi>y</mi>
+                    <mo stretchy="false">&#x00AF;<!-- ¯ --></mo>
+                  </mover>
+                </mrow>
+              </mrow>
+            </mrow>
+            <msub>
+              <mi>s</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>y</mi>
+              </mrow>
+            </msub>
+          </mfrac>
+        </mrow>
+        <mo>=</mo>
+        <msub>
+          <mi>r</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>x</mi>
+            <mi>y</mi>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mrow>
+              <mi>x</mi>
+              <mo>&#x2212;<!-- − --></mo>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mover>
+                    <mi>x</mi>
+                    <mo stretchy="false">&#x00AF;<!-- ¯ --></mo>
+                  </mover>
+                </mrow>
+              </mrow>
+            </mrow>
+            <msub>
+              <mi>s</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>x</mi>
+              </mrow>
+            </msub>
+          </mfrac>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\frac {{\hat {y}}-{\bar {y}}}{s_{y}}}=r_{xy}{\frac {x-{\bar {x}}}{s_{x}}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6bf45e657726ef7be32114a6a585592120975e79" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:18.754ex; height:6.176ex;" alt="{\frac {{\hat {y}}-{\bar {y}}}{s_{y}}}=r_{xy}{\frac {x-{\bar {x}}}{s_{x}}}"/></span></dd></dl>
+<p>This shows the role <i>r</i><sub><i>xy</i></sub> plays in the regression line of standardized data points.
+</p><p>If −1&#160;&lt;&#160;<i>r</i><sub><i>xy</i></sub>&#160;&lt;&#160;1, then we say that the data points exhibit regression toward the mean. In other words, if linear regression is the appropriate model for a set of data points whose sample correlation coefficient is not perfect, then there is regression toward the mean. The predicted (or fitted) standardized value of <i>y</i> is closer to its mean than the standardized value of <i>x</i> is to its mean.
+</p>
+<h2><span class="mw-headline" id="Definitions_for_bivariate_distribution_with_identical_marginal_distributions">Definitions for bivariate distribution with identical marginal distributions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Regression_toward_the_mean&amp;action=edit&amp;section=12" title="Edit section: Definitions for bivariate distribution with identical marginal distributions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Restrictive_definition">Restrictive definition</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Regression_toward_the_mean&amp;action=edit&amp;section=13" title="Edit section: Restrictive definition">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Let <i>X</i><sub>1</sub>, <i>X</i><sub>2</sub> be <a href="/wiki/Random_variable" title="Random variable">random variables</a> with identical marginal distributions with mean <i>μ</i>. In this formalization, the <a href="/wiki/Joint_distribution" class="mw-redirect" title="Joint distribution">bivariate distribution</a> of <i>X</i><sub>1</sub> and <i>X</i><sub>2</sub> is said to exhibit <b>regression toward the mean</b> if, for every number <i>c</i>&#160;&gt;&#160;<i>μ</i>, we have
+</p>
+<dl><dd><i>&#956;</i>&#160;≤&#160;E[<i>X</i><sub>2</sub>&#160;|&#160;<i>X</i><sub>1</sub>&#160;=&#160;<i>c</i>]&#160;&lt;&#160;<i>c</i>,</dd></dl>
+<p>with the reverse inequalities holding for <i>c</i>&#160;&lt;&#160;<i>μ</i>.<sup id="cite_ref-Samuels_19-0" class="reference"><a href="#cite_note-Samuels-19">&#91;19&#93;</a></sup><sup id="cite_ref-Schmittlein_20-0" class="reference"><a href="#cite_note-Schmittlein-20">&#91;20&#93;</a></sup>
+</p><p>The following is an informal description of the above definition. Consider a population of <a href="/wiki/Widget_(economics)" title="Widget (economics)">widgets</a>. Each widget has two numbers, <i>X</i><sub>1</sub> and <i>X</i><sub>2</sub> (say, its left span (<i>X</i><sub>1</sub> ) and right span (<i>X</i><sub>2</sub>)). Suppose that the probability distributions of <i>X</i><sub>1</sub> and <i>X</i><sub>2</sub> in the population are identical, and that the means of <i>X</i><sub>1</sub> and <i>X</i><sub>2</sub> are both <i>μ</i>. We now take a random widget from the population, and denote its <i>X</i><sub>1</sub> value by <i>c</i>. (Note that <i>c</i> may be greater than, equal to, or smaller than <i>μ</i>.) We have no access to the value of this widget's <i>X</i><sub>2</sub> yet. Let <i>d</i> denote the expected value of <i>X</i><sub>2</sub> of this particular widget. (<i>i.e.</i> Let <i>d</i> denote the average value of <i>X</i><sub>2</sub> of all widgets in the population with <i>X</i><sub>1</sub>=<i>c</i>.) If the following condition is true:
+</p>
+<dl><dd>Whatever the value <i>c</i> is, <i>d</i> lies between <i>&#956;</i> and <i>c</i> (<i>i.e.</i> <i>d</i> is closer to <i>&#956;</i> than <i>c </i> is),</dd></dl>
+<p>then we say that <i>X</i><sub>1</sub> and <i>X</i><sub>2</sub> show <b>regression toward the mean</b>.
+</p><p>This definition accords closely with the current common usage, evolved from Galton's original usage, of the term "regression toward the mean." It is "restrictive" in the sense that not every bivariate distribution with identical marginal distributions exhibits regression toward the mean (under this definition).<sup id="cite_ref-Schmittlein_20-1" class="reference"><a href="#cite_note-Schmittlein-20">&#91;20&#93;</a></sup>
+</p>
+<h4><span class="mw-headline" id="Theorem">Theorem</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Regression_toward_the_mean&amp;action=edit&amp;section=14" title="Edit section: Theorem">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>If a pair (<i>X</i>,&#160;<i>Y</i>) of random variables follows a <a href="/wiki/Bivariate_normal_distribution" class="mw-redirect" title="Bivariate normal distribution">bivariate normal distribution</a>, then the conditional mean E(<i>Y</i>|<i>X</i>) is a linear function of <i>X</i>. The <a href="/wiki/Pearson_product-moment_correlation_coefficient" class="mw-redirect" title="Pearson product-moment correlation coefficient">correlation coefficient</a> <i>r</i> between <i>X</i> and <i>Y</i>, along with the marginal means and variances of <i>X</i> and <i>Y</i>, determines this linear relationship:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\frac {E(Y\mid X)-E[Y]}{\sigma _{y}}}=r{\frac {X-E[X]}{\sigma _{x}}},}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mrow>
+              <mi>E</mi>
+              <mo stretchy="false">(</mo>
+              <mi>Y</mi>
+              <mo>&#x2223;<!-- ∣ --></mo>
+              <mi>X</mi>
+              <mo stretchy="false">)</mo>
+              <mo>&#x2212;<!-- − --></mo>
+              <mi>E</mi>
+              <mo stretchy="false">[</mo>
+              <mi>Y</mi>
+              <mo stretchy="false">]</mo>
+            </mrow>
+            <msub>
+              <mi>&#x03C3;<!-- σ --></mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>y</mi>
+              </mrow>
+            </msub>
+          </mfrac>
+        </mrow>
+        <mo>=</mo>
+        <mi>r</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mrow>
+              <mi>X</mi>
+              <mo>&#x2212;<!-- − --></mo>
+              <mi>E</mi>
+              <mo stretchy="false">[</mo>
+              <mi>X</mi>
+              <mo stretchy="false">]</mo>
+            </mrow>
+            <msub>
+              <mi>&#x03C3;<!-- σ --></mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>x</mi>
+              </mrow>
+            </msub>
+          </mfrac>
+        </mrow>
+        <mo>,</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\frac {E(Y\mid X)-E[Y]}{\sigma _{y}}}=r{\frac {X-E[X]}{\sigma _{x}}},}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1139b41de03b98d327888dc8a7f0a2c9ab867375" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:33.294ex; height:6.343ex;" alt="{\displaystyle {\frac {E(Y\mid X)-E[Y]}{\sigma _{y}}}=r{\frac {X-E[X]}{\sigma _{x}}},}"/></span></dd></dl>
+<p>where <i>E[X]</i> and <i>E[Y]</i> are the expected values of <i>X</i> and <i>Y</i>, respectively, and σ<sub><i>x</i></sub> and σ<sub><i>y</i></sub> are the standard deviations of <i>X</i> and <i>Y</i>, respectively.
+</p><p>Hence the conditional expected value of <i>Y</i>, given that <i>X</i> is <i>t</i> <a href="/wiki/Standard_deviation" title="Standard deviation">standard deviations</a> above its mean (and that includes the case where it's below its mean, when <i>t</i>&#160;&lt;&#160;0), is <i>rt</i> standard deviations above the mean of <i>Y</i>. Since |<i>r</i>|&#160;≤&#160;1, <i>Y</i> is no farther from the mean than <i>X</i> is, as measured in the number of standard deviations.<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">&#91;21&#93;</a></sup>
+</p><p>Hence, if 0&#160;≤&#160;<i>r</i>&#160;&lt;&#160;1, then (<i>X</i>,&#160;<i>Y</i>) shows regression toward the mean (by this definition).
+</p>
+<h3><span class="mw-headline" id="General_definition">General definition</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Regression_toward_the_mean&amp;action=edit&amp;section=15" title="Edit section: General definition">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The following definition of <i>reversion toward the mean</i> has been proposed by Samuels as an alternative to the more restrictive definition of <i>regression toward the mean</i> above.<sup id="cite_ref-Samuels_19-1" class="reference"><a href="#cite_note-Samuels-19">&#91;19&#93;</a></sup>
+</p><p>Let <i>X</i><sub>1</sub>, <i>X</i><sub>2</sub> be <a href="/wiki/Random_variable" title="Random variable">random variables</a> with identical marginal distributions with mean <i>μ</i>. In this formalization, the <a href="/wiki/Joint_distribution" class="mw-redirect" title="Joint distribution">bivariate distribution</a> of <i>X</i><sub>1</sub> and <i>X</i><sub>2</sub> is said to exhibit <b>reversion toward the mean</b> if, for every number <i>c</i>, we have
+</p>
+<dl><dd><i>&#956;</i>&#160;≤&#160;E[<i>X</i><sub>2</sub>&#160;|&#160;<i>X</i><sub>1</sub>&#160;&gt;&#160;<i>c</i>]&#160;&lt;&#160;E[<i>X</i><sub>1</sub>&#160;|&#160;<i>X</i><sub>1</sub>&#160;&gt;&#160;<i>c</i>], and</dd></dl>
+<dl><dd><i>&#956;</i>&#160;≥&#160;E[<i>X</i><sub>2</sub>&#160;|&#160;<i>X</i><sub>1</sub>&#160;&lt;&#160;<i>c</i>]&#160;&gt;&#160;E[<i>X</i><sub>1</sub>&#160;|&#160;<i>X</i><sub>1</sub>&#160;&lt;&#160;<i>c</i>]</dd></dl>
+<p>This definition is "general" in the sense that every bivariate distribution with identical marginal distributions exhibits <i>reversion toward the mean</i>.
+</p>
+<h2><span class="mw-headline" id="Alternative_definition_in_financial_usage">Alternative definition in financial usage</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Regression_toward_the_mean&amp;action=edit&amp;section=16" title="Edit section: Alternative definition in financial usage">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/Jeremy_Siegel" title="Jeremy Siegel">Jeremy Siegel</a> uses the term "return to the mean" to describe a financial <a href="/wiki/Time_series" title="Time series">time series</a> in which "<a href="/wiki/Return_(finance)" class="mw-redirect" title="Return (finance)">returns</a> can be very unstable in the short run but very stable in the long run." More quantitatively, it is one in which the <a href="/wiki/Standard_deviation" title="Standard deviation">standard deviation</a> of average annual returns declines faster than the inverse of the holding period, implying that the process is not a <a href="/wiki/Random_walk" title="Random walk">random walk</a>, but that periods of lower returns are systematically followed by compensating periods of higher returns, as is the case in many seasonal businesses, for example.<sup id="cite_ref-22" class="reference"><a href="#cite_note-22">&#91;22&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Regression_toward_the_mean&amp;action=edit&amp;section=17" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Hardy%E2%80%93Weinberg_principle" title="Hardy–Weinberg principle">Hardy–Weinberg principle</a></li>
+<li><a href="/wiki/Internal_validity" title="Internal validity">Internal validity</a></li>
+<li><a href="/wiki/Law_of_large_numbers" title="Law of large numbers">Law of large numbers</a></li>
+<li><a href="/wiki/Martingale_(probability_theory)" title="Martingale (probability theory)">Martingale</a></li>
+<li><a href="/wiki/Regression_dilution" title="Regression dilution">Regression dilution</a></li>
+<li><a href="/wiki/Selection_bias" title="Selection bias">Selection bias</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Regression_toward_the_mean&amp;action=edit&amp;section=18" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r1011085734">.mw-parser-output .reflist{font-size:90%;margin-bottom:0.5em;list-style-type:decimal}.mw-parser-output .reflist .references{font-size:100%;margin-bottom:0;list-style-type:inherit}.mw-parser-output .reflist-columns-2{column-width:30em}.mw-parser-output .reflist-columns-3{column-width:25em}.mw-parser-output .reflist-columns{margin-top:0.3em}.mw-parser-output .reflist-columns ol{margin-top:0}.mw-parser-output .reflist-columns li{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .reflist-upper-alpha{list-style-type:upper-alpha}.mw-parser-output .reflist-upper-roman{list-style-type:upper-roman}.mw-parser-output .reflist-lower-alpha{list-style-type:lower-alpha}.mw-parser-output .reflist-lower-greek{list-style-type:lower-greek}.mw-parser-output .reflist-lower-roman{list-style-type:lower-roman}</style><div class="reflist reflist-columns references-column-width reflist-columns-2" style="">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><style data-mw-deduplicate="TemplateStyles:r1067248974">.mw-parser-output cite.citation{font-style:inherit;word-wrap:break-word}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation:target{background-color:rgba(0,127,255,0.133)}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output .cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;color:#d33}.mw-parser-output .cs1-visible-error{color:#d33}.mw-parser-output .cs1-maint{display:none;color:#3a3;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><cite id="CITEREFEveritt2002" class="citation book cs1">Everitt, B. S. (August 12, 2002). <i>The Cambridge Dictionary of Statistics</i> (2&#160;ed.). <a href="/wiki/Cambridge_University_Press" title="Cambridge University Press">Cambridge University Press</a>. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0521810999" title="Special:BookSources/978-0521810999"><bdi>978-0521810999</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Cambridge+Dictionary+of+Statistics&amp;rft.edition=2&amp;rft.pub=Cambridge+University+Press&amp;rft.date=2002-08-12&amp;rft.isbn=978-0521810999&amp;rft.aulast=Everitt&amp;rft.aufirst=B.+S.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFUptonCook2008" class="citation book cs1">Upton, Graham; Cook, Ian (21 August 2008). <i>Oxford Dictionary of Statistics</i>. <a href="/wiki/Oxford_University_Press" title="Oxford University Press">Oxford University Press</a>. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-19-954145-4" title="Special:BookSources/978-0-19-954145-4"><bdi>978-0-19-954145-4</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Oxford+Dictionary+of+Statistics&amp;rft.pub=Oxford+University+Press&amp;rft.date=2008-08-21&amp;rft.isbn=978-0-19-954145-4&amp;rft.aulast=Upton&amp;rft.aufirst=Graham&amp;rft.au=Cook%2C+Ian&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFStigler1997" class="citation journal cs1">Stigler, Stephen M (1997). <a rel="nofollow" class="external text" href="http://smm.sagepub.com/content/6/2/103.abstract">"Regression toward the mean, historically considered"</a>. <i>Statistical Methods in Medical Research</i>. <b>6</b> (2): 103–114. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1191%2F096228097676361431">10.1191/096228097676361431</a>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/9261910">9261910</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Statistical+Methods+in+Medical+Research&amp;rft.atitle=Regression+toward+the+mean%2C+historically+considered&amp;rft.volume=6&amp;rft.issue=2&amp;rft.pages=103-114&amp;rft.date=1997&amp;rft_id=info%3Adoi%2F10.1191%2F096228097676361431&amp;rft_id=info%3Apmid%2F9261910&amp;rft.aulast=Stigler&amp;rft.aufirst=Stephen+M&amp;rft_id=http%3A%2F%2Fsmm.sagepub.com%2Fcontent%2F6%2F2%2F103.abstract&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFChioleroParadis,_GRich,_BHanley,_JA2013" class="citation journal cs1">Chiolero, A; Paradis, G; Rich, B; Hanley, JA (2013). <a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC3854983">"Assessing the Relationship between the Baseline Value of a Continuous Variable and Subsequent Change Over Time"</a>. <i>Frontiers in Public Health</i>. <b>1</b>: 29. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.3389%2Ffpubh.2013.00029">10.3389/fpubh.2013.00029</a></span>. <a href="/wiki/PMC_(identifier)" class="mw-redirect" title="PMC (identifier)">PMC</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC3854983">3854983</a></span>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/24350198">24350198</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Frontiers+in+Public+Health&amp;rft.atitle=Assessing+the+Relationship+between+the+Baseline+Value+of+a+Continuous+Variable+and+Subsequent+Change+Over+Time.&amp;rft.volume=1&amp;rft.pages=29&amp;rft.date=2013&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC3854983%23id-name%3DPMC&amp;rft_id=info%3Apmid%2F24350198&amp;rft_id=info%3Adoi%2F10.3389%2Ffpubh.2013.00029&amp;rft.aulast=Chiolero&amp;rft.aufirst=A&amp;rft.au=Paradis%2C+G&amp;rft.au=Rich%2C+B&amp;rft.au=Hanley%2C+JA&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC3854983&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation news cs1"><a rel="nofollow" class="external text" href="http://www.burns-stat.com/review-thinking-fast-slow-daniel-kahneman">"A statistical review of 'Thinking, Fast and Slow' by Daniel Kahneman"</a>. <i>Burns Statistics</i>. November 11, 2013<span class="reference-accessdate">. Retrieved <span class="nowrap">January 1,</span> 2022</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Burns+Statistics&amp;rft.atitle=A+statistical+review+of+%27Thinking%2C+Fast+and+Slow%27+by+Daniel+Kahneman&amp;rft.date=2013-11-11&amp;rft_id=http%3A%2F%2Fwww.burns-stat.com%2Freview-thinking-fast-slow-daniel-kahneman&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://conceptually.org/concepts/regression-to-the-mean/">"What is regression to the mean? Definition and examples"</a>. <i>conceptually.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">October 25,</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=conceptually.org&amp;rft.atitle=What+is+regression+to+the+mean%3F+Definition+and+examples.&amp;rft_id=https%3A%2F%2Fconceptually.org%2Fconcepts%2Fregression-to-the-mean%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFGoldacre2009" class="citation book cs1"><a href="/wiki/Ben_Goldacre" title="Ben Goldacre">Goldacre, Ben</a> (April 4, 2009). <i><a href="/wiki/Bad_Science_(Goldacre_book)" title="Bad Science (Goldacre book)">Bad Science</a></i>. Fourth Estate. p.&#160;39. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0007284870" title="Special:BookSources/978-0007284870"><bdi>978-0007284870</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Bad+Science&amp;rft.pages=39&amp;rft.pub=Fourth+Estate&amp;rft.date=2009-04-04&amp;rft.isbn=978-0007284870&amp;rft.aulast=Goldacre&amp;rft.aufirst=Ben&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span></span>
+</li>
+<li id="cite_note-galton1886-8"><span class="mw-cite-backlink">^ <a href="#cite_ref-galton1886_8-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-galton1886_8-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-galton1886_8-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-galton1886_8-3"><sup><i><b>d</b></i></sup></a></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFGalton,_F.1886" class="citation journal cs1">Galton, F. (1886). <a rel="nofollow" class="external text" href="https://zenodo.org/record/1449548">"Regression towards mediocrity in hereditary stature"</a>. <i>The Journal of the Anthropological Institute of Great Britain and Ireland</i>. <b>15</b>: 246–263. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.2307%2F2841583">10.2307/2841583</a>. <a href="/wiki/JSTOR_(identifier)" class="mw-redirect" title="JSTOR (identifier)">JSTOR</a>&#160;<a rel="nofollow" class="external text" href="//www.jstor.org/stable/2841583">2841583</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=The+Journal+of+the+Anthropological+Institute+of+Great+Britain+and+Ireland&amp;rft.atitle=Regression+towards+mediocrity+in+hereditary+stature&amp;rft.volume=15&amp;rft.pages=246-263&amp;rft.date=1886&amp;rft_id=info%3Adoi%2F10.2307%2F2841583&amp;rft_id=%2F%2Fwww.jstor.org%2Fstable%2F2841583%23id-name%3DJSTOR&amp;rft.au=Galton%2C+F.&amp;rft_id=https%3A%2F%2Fzenodo.org%2Frecord%2F1449548&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFGalton1889" class="citation book cs1">Galton, Francis (1889). <a rel="nofollow" class="external text" href="https://archive.org/details/in.ernet.dli.2015.221860"><i>Natural Inheritance</i></a>. London: <a href="/wiki/Macmillan_Publishers" title="Macmillan Publishers">Macmillan</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Natural+Inheritance&amp;rft.place=London&amp;rft.pub=Macmillan&amp;rft.date=1889&amp;rft.aulast=Galton&amp;rft.aufirst=Francis&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fin.ernet.dli.2015.221860&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFStigler2010" class="citation journal cs1"><a href="/wiki/Stephen_Stigler" title="Stephen Stigler">Stigler, Stephen M.</a> (June 17, 2010). "Darwin, Galton and the Statistical Enlightenment". <i>Journal of the Royal Statistical Society, Series A</i>. <b>173</b> (3): 469–482, 477. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1111%2Fj.1467-985X.2010.00643.x">10.1111/j.1467-985X.2010.00643.x</a>. <a href="/wiki/ISSN_(identifier)" class="mw-redirect" title="ISSN (identifier)">ISSN</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/issn/1467-985X">1467-985X</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+the+Royal+Statistical+Society%2C+Series+A&amp;rft.atitle=Darwin%2C+Galton+and+the+Statistical+Enlightenment&amp;rft.volume=173&amp;rft.issue=3&amp;rft.pages=469-482%2C+477&amp;rft.date=2010-06-17&amp;rft_id=info%3Adoi%2F10.1111%2Fj.1467-985X.2010.00643.x&amp;rft.issn=1467-985X&amp;rft.aulast=Stigler&amp;rft.aufirst=Stephen+M.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFKahneman2011" class="citation book cs1"><a href="/wiki/Daniel_Kahneman" title="Daniel Kahneman">Kahneman, Daniel</a> (October 1, 2011). <i><a href="/wiki/Thinking_Fast_and_Slow" class="mw-redirect" title="Thinking Fast and Slow">Thinking Fast and Slow</a></i>. <a href="/wiki/Farrar,_Straus_and_Giroux" title="Farrar, Straus and Giroux">Farrar, Straus and Giroux</a>. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-374-27563-1" title="Special:BookSources/978-0-374-27563-1"><bdi>978-0-374-27563-1</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Thinking+Fast+and+Slow&amp;rft.pub=Farrar%2C+Straus+and+Giroux&amp;rft.date=2011-10-01&amp;rft.isbn=978-0-374-27563-1&amp;rft.aulast=Kahneman&amp;rft.aufirst=Daniel&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFSecristHotellingRortyGini1934" class="citation journal cs1">Secrist, Horace; Hotelling, Harold; Rorty, M. C.; Gini, Corrada; King, Wilford I. (June 1934). <a rel="nofollow" class="external text" href="http://www.jstor.org/stable/2278295">"Open Letters"</a>. <i>Journal of the American Statistical Association</i>. <b>29</b> (186): 196–205. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1080%2F01621459.1934.10502711">10.1080/01621459.1934.10502711</a>. <a href="/wiki/JSTOR_(identifier)" class="mw-redirect" title="JSTOR (identifier)">JSTOR</a>&#160;<a rel="nofollow" class="external text" href="//www.jstor.org/stable/2278295">2278295</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+the+American+Statistical+Association&amp;rft.atitle=Open+Letters&amp;rft.volume=29&amp;rft.issue=186&amp;rft.pages=196-205&amp;rft.date=1934-06&amp;rft_id=info%3Adoi%2F10.1080%2F01621459.1934.10502711&amp;rft_id=%2F%2Fwww.jstor.org%2Fstable%2F2278295%23id-name%3DJSTOR&amp;rft.aulast=Secrist&amp;rft.aufirst=Horace&amp;rft.au=Hotelling%2C+Harold&amp;rft.au=Rorty%2C+M.+C.&amp;rft.au=Gini%2C+Corrada&amp;rft.au=King%2C+Wilford+I.&amp;rft_id=http%3A%2F%2Fwww.jstor.org%2Fstable%2F2278295&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFDefulio2012" class="citation journal cs1">Defulio, Anthony (2012). <a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC3292229">"Quotation: Kahneman on Contingencies"</a>. <i>Journal of the Experimental Analysis of Behavior</i>. <b>97</b> (2): 182. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1901%2Fjeab.2012.97-182">10.1901/jeab.2012.97-182</a>. <a href="/wiki/PMC_(identifier)" class="mw-redirect" title="PMC (identifier)">PMC</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC3292229">3292229</a></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+the+Experimental+Analysis+of+Behavior&amp;rft.atitle=Quotation%3A+Kahneman+on+Contingencies&amp;rft.volume=97&amp;rft.issue=2&amp;rft.pages=182&amp;rft.date=2012&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC3292229%23id-name%3DPMC&amp;rft_id=info%3Adoi%2F10.1901%2Fjeab.2012.97-182&amp;rft.aulast=Defulio&amp;rft.aufirst=Anthony&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC3292229&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFWebster2005" class="citation news cs1">Webster, Ben (December 16, 2005). <a rel="nofollow" class="external text" href="http://www.timesonline.co.uk/article/speed-camera-benefits-overrated-gzk9nkhczdc">"Speed camera benefits overrated"</a>. <i><a href="/wiki/The_Times" title="The Times">The Times</a></i><span class="reference-accessdate">. Retrieved <span class="nowrap">January 1,</span> 2022</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=The+Times&amp;rft.atitle=Speed+camera+benefits+overrated&amp;rft.date=2005-12-16&amp;rft.aulast=Webster&amp;rft.aufirst=Ben&amp;rft_id=http%3A%2F%2Fwww.timesonline.co.uk%2Farticle%2Fspeed-camera-benefits-overrated-gzk9nkhczdc&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span><span style="font-size:0.95em; font-size:90%; color:#555">(subscription required)</span></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFMountain2006" class="citation journal cs1">Mountain, L. (2006). <a rel="nofollow" class="external text" href="https://doi.org/10.1111%2Fj.1740-9713.2006.00179.x">"Safety cameras: Stealth tax or life-savers?"</a>. <i>Significance</i>. <b>3</b> (3): 111–113. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.1111%2Fj.1740-9713.2006.00179.x">10.1111/j.1740-9713.2006.00179.x</a></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Significance&amp;rft.atitle=Safety+cameras%3A+Stealth+tax+or+life-savers%3F&amp;rft.volume=3&amp;rft.issue=3&amp;rft.pages=111-113&amp;rft.date=2006&amp;rft_id=info%3Adoi%2F10.1111%2Fj.1740-9713.2006.00179.x&amp;rft.aulast=Mountain&amp;rft.aufirst=L.&amp;rft_id=%2F%2Fdoi.org%2F10.1111%252Fj.1740-9713.2006.00179.x&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFMaherMountain2009" class="citation journal cs1">Maher, Mike; Mountain, Linda (2009). "The sensitivity of estimates of regression to the mean". <i>Accident Analysis &amp; Prevention</i>. <b>41</b> (4): 861–8. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1016%2Fj.aap.2009.04.020">10.1016/j.aap.2009.04.020</a>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/19540977">19540977</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Accident+Analysis+%26+Prevention&amp;rft.atitle=The+sensitivity+of+estimates+of+regression+to+the+mean&amp;rft.volume=41&amp;rft.issue=4&amp;rft.pages=861-8&amp;rft.date=2009&amp;rft_id=info%3Adoi%2F10.1016%2Fj.aap.2009.04.020&amp;rft_id=info%3Apmid%2F19540977&amp;rft.aulast=Maher&amp;rft.aufirst=Mike&amp;rft.au=Mountain%2C+Linda&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text">For an illustration see <a href="/wiki/Nate_Silver" title="Nate Silver">Nate Silver</a>, <a rel="nofollow" class="external text" href="http://www.baseballprospectus.com/article.php?articleid=1897">"Randomness: Catch the Fever!"</a>, <i><a href="/wiki/Baseball_Prospectus" title="Baseball Prospectus">Baseball Prospectus</a></i>, May 14, 2003.</span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFFlyvbjerg2020" class="citation journal cs1">Flyvbjerg, Bent (5 October 2020). <a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC7533687">"The law of regression to the tail: How to survive Covid-19, the climate crisis, and other disasters"</a>. <i>Environmental Science &amp; Policy</i>. <b>114</b>: 614–618. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1016%2Fj.envsci.2020.08.013">10.1016/j.envsci.2020.08.013</a>. <a href="/wiki/ISSN_(identifier)" class="mw-redirect" title="ISSN (identifier)">ISSN</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/issn/1462-9011">1462-9011</a>. <a href="/wiki/PMC_(identifier)" class="mw-redirect" title="PMC (identifier)">PMC</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC7533687">7533687</a></span>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/33041651">33041651</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Environmental+Science+%26+Policy&amp;rft.atitle=The+law+of+regression+to+the+tail%3A+How+to+survive+Covid-19%2C+the+climate+crisis%2C+and+other+disasters&amp;rft.volume=114&amp;rft.pages=614-618&amp;rft.date=2020-10-05&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC7533687%23id-name%3DPMC&amp;rft.issn=1462-9011&amp;rft_id=info%3Apmid%2F33041651&amp;rft_id=info%3Adoi%2F10.1016%2Fj.envsci.2020.08.013&amp;rft.aulast=Flyvbjerg&amp;rft.aufirst=Bent&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC7533687&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span></span>
+</li>
+<li id="cite_note-Samuels-19"><span class="mw-cite-backlink">^ <a href="#cite_ref-Samuels_19-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Samuels_19-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFSamuels1991" class="citation journal cs1">Samuels, Myra L. (November 1991). "Statistical Reversion Toward the Mean: More Universal than Regression Toward the Mean". <i><a href="/wiki/The_American_Statistician" title="The American Statistician">The American Statistician</a></i>. <b>45</b> (4): 344–346. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.2307%2F2684474">10.2307/2684474</a>. <a href="/wiki/JSTOR_(identifier)" class="mw-redirect" title="JSTOR (identifier)">JSTOR</a>&#160;<a rel="nofollow" class="external text" href="//www.jstor.org/stable/2684474">2684474</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=The+American+Statistician&amp;rft.atitle=Statistical+Reversion+Toward+the+Mean%3A+More+Universal+than+Regression+Toward+the+Mean&amp;rft.volume=45&amp;rft.issue=4&amp;rft.pages=344-346&amp;rft.date=1991-11&amp;rft_id=info%3Adoi%2F10.2307%2F2684474&amp;rft_id=%2F%2Fwww.jstor.org%2Fstable%2F2684474%23id-name%3DJSTOR&amp;rft.aulast=Samuels&amp;rft.aufirst=Myra+L.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span>.</span>
+</li>
+<li id="cite_note-Schmittlein-20"><span class="mw-cite-backlink">^ <a href="#cite_ref-Schmittlein_20-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Schmittlein_20-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFSchmittlein1989" class="citation journal cs1">Schmittlein, David C (August 1989). <a rel="nofollow" class="external text" href="https://www.jstor.org/pss/2685070">"Surprising Inferences from unsurprising Observations: Do Conditional Expectations really regress to the Mean?"</a>. <i>The American Statistician</i>. <b>43</b> (3): 176–183. <a href="/wiki/JSTOR_(identifier)" class="mw-redirect" title="JSTOR (identifier)">JSTOR</a>&#160;<a rel="nofollow" class="external text" href="//www.jstor.org/stable/2685070">2685070</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=The+American+Statistician&amp;rft.atitle=Surprising+Inferences+from+unsurprising+Observations%3A+Do+Conditional+Expectations+really+regress+to+the+Mean%3F&amp;rft.volume=43&amp;rft.issue=3&amp;rft.pages=176-183&amp;rft.date=1989-08&amp;rft_id=%2F%2Fwww.jstor.org%2Fstable%2F2685070%23id-name%3DJSTOR&amp;rft.aulast=Schmittlein&amp;rft.aufirst=David+C&amp;rft_id=https%3A%2F%2Fwww.jstor.org%2Fpss%2F2685070&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span></span>
+</li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFChernickFriis2003" class="citation book cs1">Chernick, Michael R.; Friis, Robert H. (March 17, 2003). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=QRwuz6yA97oC&amp;dq=%22bivariate+normal+distribution%22+%22regression+toward+the+mean%22&amp;pg=PA272"><i>Introductory Biostatistics for the Health Sciences</i></a>. <a href="/wiki/Wiley-Interscience" class="mw-redirect" title="Wiley-Interscience">Wiley-Interscience</a>. p.&#160;272. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-471-41137-6" title="Special:BookSources/978-0-471-41137-6"><bdi>978-0-471-41137-6</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Introductory+Biostatistics+for+the+Health+Sciences&amp;rft.pages=272&amp;rft.pub=Wiley-Interscience&amp;rft.date=2003-03-17&amp;rft.isbn=978-0-471-41137-6&amp;rft.aulast=Chernick&amp;rft.aufirst=Michael+R.&amp;rft.au=Friis%2C+Robert+H.&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DQRwuz6yA97oC%26dq%3D%2522bivariate%2Bnormal%2Bdistribution%2522%2B%2522regression%2Btoward%2Bthe%2Bmean%2522%26pg%3DPA272&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span></span>
+</li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFSiegel2007" class="citation book cs1">Siegel, Jeremy (November 27, 2007). <i>Stocks for the Long Run</i> (4th&#160;ed.). McGraw–Hill. pp.&#160;13, 28–29. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0071494700" title="Special:BookSources/978-0071494700"><bdi>978-0071494700</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Stocks+for+the+Long+Run&amp;rft.pages=13%2C+28-29&amp;rft.edition=4th&amp;rft.pub=McGraw%E2%80%93Hill&amp;rft.date=2007-11-27&amp;rft.isbn=978-0071494700&amp;rft.aulast=Siegel&amp;rft.aufirst=Jeremy&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Regression_toward_the_mean&amp;action=edit&amp;section=19" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFJ.M._Bland_and_D.G._Altman1994" class="citation journal cs1">J.M. Bland and D.G. Altman (June 1994). <a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC2540330">"Statistic Notes: Regression towards the mean"</a>. <i><a href="/wiki/British_Medical_Journal" class="mw-redirect" title="British Medical Journal">British Medical Journal</a></i>. <b>308</b> (6942): 1499. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1136%2Fbmj.308.6942.1499">10.1136/bmj.308.6942.1499</a>. <a href="/wiki/PMC_(identifier)" class="mw-redirect" title="PMC (identifier)">PMC</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC2540330">2540330</a></span>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/8019287">8019287</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=British+Medical+Journal&amp;rft.atitle=Statistic+Notes%3A+Regression+towards+the+mean&amp;rft.volume=308&amp;rft.issue=6942&amp;rft.pages=1499&amp;rft.date=1994-06&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC2540330%23id-name%3DPMC&amp;rft_id=info%3Apmid%2F8019287&amp;rft_id=info%3Adoi%2F10.1136%2Fbmj.308.6942.1499&amp;rft.au=J.M.+Bland+and+D.G.+Altman&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC2540330&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span> Article, including a diagram of Galton's original data.</li></ul>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFEdward_J._Dudewicz_&amp;_Satya_N._Mishra1988" class="citation book cs1">Edward J. Dudewicz &amp; Satya N. Mishra (1988). "Section 14.1: Estimation of regression parameters; Linear models". <i>Modern Mathematical Statistics</i>. <a href="/wiki/John_Wiley_%26_Sons" class="mw-redirect" title="John Wiley &amp; Sons">John Wiley &amp; Sons</a>. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-471-81472-6" title="Special:BookSources/978-0-471-81472-6"><bdi>978-0-471-81472-6</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Section+14.1%3A+Estimation+of+regression+parameters%3B+Linear+models&amp;rft.btitle=Modern+Mathematical+Statistics&amp;rft.pub=John+Wiley+%26+Sons&amp;rft.date=1988&amp;rft.isbn=978-0-471-81472-6&amp;rft.au=Edward+J.+Dudewicz+%26+Satya+N.+Mishra&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span></li></ul>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFFrancis_Galton1886" class="citation journal cs1"><a href="/wiki/Francis_Galton" title="Francis Galton">Francis Galton</a> (1886). <a rel="nofollow" class="external text" href="http://galton.org/essays/1880-1889/galton-1886-jaigi-regression-stature.pdf">"Regression towards mediocrity in hereditary stature"</a> <span class="cs1-format">(PDF)</span>. <i>The Journal of the Anthropological Institute of Great Britain and Ireland</i>. <b>15</b>: 246–263. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.2307%2F2841583">10.2307/2841583</a>. <a href="/wiki/JSTOR_(identifier)" class="mw-redirect" title="JSTOR (identifier)">JSTOR</a>&#160;<a rel="nofollow" class="external text" href="//www.jstor.org/stable/2841583">2841583</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=The+Journal+of+the+Anthropological+Institute+of+Great+Britain+and+Ireland&amp;rft.atitle=Regression+towards+mediocrity+in+hereditary+stature&amp;rft.volume=15&amp;rft.pages=246-263&amp;rft.date=1886&amp;rft_id=info%3Adoi%2F10.2307%2F2841583&amp;rft_id=%2F%2Fwww.jstor.org%2Fstable%2F2841583%23id-name%3DJSTOR&amp;rft.au=Francis+Galton&amp;rft_id=http%3A%2F%2Fgalton.org%2Fessays%2F1880-1889%2Fgalton-1886-jaigi-regression-stature.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span></li></ul>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFDonald_F._Morrison1967" class="citation book cs1">Donald F. Morrison (1967). "Chapter 3: Samples from the Multivariate Normal Population". <i>Multivariate Statistical Methods</i>. <a href="/wiki/McGraw-Hill" class="mw-redirect" title="McGraw-Hill">McGraw-Hill</a>. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-534-38778-5" title="Special:BookSources/978-0-534-38778-5"><bdi>978-0-534-38778-5</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Chapter+3%3A+Samples+from+the+Multivariate+Normal+Population&amp;rft.btitle=Multivariate+Statistical+Methods&amp;rft.pub=McGraw-Hill&amp;rft.date=1967&amp;rft.isbn=978-0-534-38778-5&amp;rft.au=Donald+F.+Morrison&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span></li></ul>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFStephen_M._Stigler1999" class="citation book cs1"><a href="/wiki/Stephen_M._Stigler" class="mw-redirect" title="Stephen M. Stigler">Stephen M. Stigler</a> (1999). "Chapter 9". <i>Statistics on the Table</i>. <a href="/wiki/Harvard_University_Press" title="Harvard University Press">Harvard University Press</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Chapter+9&amp;rft.btitle=Statistics+on+the+Table&amp;rft.pub=Harvard+University+Press&amp;rft.date=1999&amp;rft.au=Stephen+M.+Stigler&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span></li></ul>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFMyra_L._Samuels1991" class="citation journal cs1">Myra L. Samuels (November 1991). "Statistical Reversion Toward the Mean: More Universal than Regression Toward the Mean". <i><a href="/wiki/The_American_Statistician" title="The American Statistician">The American Statistician</a></i>. <b>45</b> (4): 344–346. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.2307%2F2684474">10.2307/2684474</a>. <a href="/wiki/JSTOR_(identifier)" class="mw-redirect" title="JSTOR (identifier)">JSTOR</a>&#160;<a rel="nofollow" class="external text" href="//www.jstor.org/stable/2684474">2684474</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=The+American+Statistician&amp;rft.atitle=Statistical+Reversion+Toward+the+Mean%3A+More+Universal+than+Regression+Toward+the+Mean&amp;rft.volume=45&amp;rft.issue=4&amp;rft.pages=344-346&amp;rft.date=1991-11&amp;rft_id=info%3Adoi%2F10.2307%2F2684474&amp;rft_id=%2F%2Fwww.jstor.org%2Fstable%2F2684474%23id-name%3DJSTOR&amp;rft.au=Myra+L.+Samuels&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARegression+toward+the+mean" class="Z3988"></span></li>
+<li>Stephen Senn. <a rel="nofollow" class="external text" href="https://www.jstor.org/pss/2684164">Regression: A New Mode for an Old Meaning</a>, <i><a href="/wiki/The_American_Statistician" title="The American Statistician">The American Statistician</a></i>, Vol 44, No 2 (May 1990), pp.&#160;181–183.</li>
+<li><a rel="nofollow" class="external text" href="http://isites.harvard.edu/fs/docs/icb.topic469678.files/regress_to_mean1.pdf">Regression Toward the Mean and the Study of Change</a>, <i>Psychological Bulletin</i></li>
+<li><a rel="nofollow" class="external text" href="http://davidmlane.com/hyperstat/B153351.html">A non-mathematical explanation of regression toward the mean.</a></li>
+<li><a rel="nofollow" class="external text" href="http://onlinestatbook.com/stat_sim/reg_to_mean/index.html">A simulation of regression toward the mean.</a></li>
+<li>Amanda Wachsmuth, Leland Wilkinson, Gerard E. Dallal. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20040729021422/http://www.spss.com/research/wilkinson/Publications/galton.pdf">Galton's Bend: An Undiscovered Nonlinearity in Galton's Family Stature Regression Data and a Likely Explanation Based on Pearson and Lee's Stature Data</a> <i>(A modern look at Galton's analysis.)</i></li>
+<li>Massachusetts standardized test scores, interpreted by a statistician as an example of regression: see <a rel="nofollow" class="external text" href="https://groups.google.com/groups?q=g:thl3845480903d&amp;dq=&amp;hl=en&amp;lr=&amp;ie=UTF-8&amp;oe=UTF-8&amp;safe=off&amp;selm=93ikdr%24i20%241%40nnrp1.deja.com">discussion in sci.stat.edu</a> and <a rel="nofollow" class="external text" href="https://groups.google.com/group/sci.stat.edu/tree/browse_frm/thread/c1086922ef405246/60bb528144835a38?rnum=21&amp;hl=en&amp;_done=%2Fgroup%2Fsci.sta">its continuation</a>.</li>
+<li><a href="/wiki/Gary_Smith_(economist)" title="Gary Smith (economist)">Gary Smith</a>, What the Luck: The Surprising Role of Chance in Our Everyday Lives, New York: Overlook, London: Duckworth. <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-4683-1375-8" title="Special:BookSources/978-1-4683-1375-8">978-1-4683-1375-8</a>.</li></ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Regression_toward_the_mean&amp;action=edit&amp;section=20" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/File:Commons-logo.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/12px-Commons-logo.svg.png" decoding="async" width="12" height="16" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/24px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></a> Media related to <a href="https://commons.wikimedia.org/wiki/Category:Regression_toward_the_mean" class="extiw" title="commons:Category:Regression toward the mean">Regression toward the mean</a> at Wikimedia Commons</li></ul>
+<div class="navbox-styles nomobile"><style data-mw-deduplicate="TemplateStyles:r1061467846">.mw-parser-output .navbox{box-sizing:border-box;border:1px solid #a2a9b1;width:100%;clear:both;font-size:88%;text-align:center;padding:1px;margin:1em auto 0}.mw-parser-output .navbox .navbox{margin-top:0}.mw-parser-output .navbox+.navbox,.mw-parser-output .navbox+.navbox-styles+.navbox{margin-top:-1px}.mw-parser-output .navbox-inner,.mw-parser-output .navbox-subgroup{width:100%}.mw-parser-output .navbox-group,.mw-parser-output .navbox-title,.mw-parser-output .navbox-abovebelow{padding:0.25em 1em;line-height:1.5em;text-align:center}.mw-parser-output .navbox-group{white-space:nowrap;text-align:right}.mw-parser-output .navbox,.mw-parser-output .navbox-subgroup{background-color:#fdfdfd}.mw-parser-output .navbox-list{line-height:1.5em;border-color:#fdfdfd}.mw-parser-output .navbox-list-with-group{text-align:left;border-left-width:2px;border-left-style:solid}.mw-parser-output tr+tr>.navbox-abovebelow,.mw-parser-output tr+tr>.navbox-group,.mw-parser-output tr+tr>.navbox-image,.mw-parser-output tr+tr>.navbox-list{border-top:2px solid #fdfdfd}.mw-parser-output .navbox-title{background-color:#ccf}.mw-parser-output .navbox-abovebelow,.mw-parser-output .navbox-group,.mw-parser-output .navbox-subgroup .navbox-title{background-color:#ddf}.mw-parser-output .navbox-subgroup .navbox-group,.mw-parser-output .navbox-subgroup .navbox-abovebelow{background-color:#e6e6ff}.mw-parser-output .navbox-even{background-color:#f7f7f7}.mw-parser-output .navbox-odd{background-color:transparent}.mw-parser-output .navbox .hlist td dl,.mw-parser-output .navbox .hlist td ol,.mw-parser-output .navbox .hlist td ul,.mw-parser-output .navbox td.hlist dl,.mw-parser-output .navbox td.hlist ol,.mw-parser-output .navbox td.hlist ul{padding:0.125em 0}.mw-parser-output .navbox .navbar{display:block;font-size:100%}.mw-parser-output .navbox-title .navbar{float:left;text-align:left;margin-right:0.5em}</style></div><div role="navigation" class="navbox" aria-labelledby="Statistics" style="padding:3px"><table class="nowraplinks hlist mw-collapsible uncollapsed navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><style data-mw-deduplicate="TemplateStyles:r1063604349">.mw-parser-output .navbar{display:inline;font-size:88%;font-weight:normal}.mw-parser-output .navbar-collapse{float:left;text-align:left}.mw-parser-output .navbar-boxtext{word-spacing:0}.mw-parser-output .navbar ul{display:inline-block;white-space:nowrap;line-height:inherit}.mw-parser-output .navbar-brackets::before{margin-right:-0.125em;content:"[ "}.mw-parser-output .navbar-brackets::after{margin-left:-0.125em;content:" ]"}.mw-parser-output .navbar li{word-spacing:-0.125em}.mw-parser-output .navbar a>span,.mw-parser-output .navbar a>abbr{text-decoration:inherit}.mw-parser-output .navbar-mini abbr{font-variant:small-caps;border-bottom:none;text-decoration:none;cursor:inherit}.mw-parser-output .navbar-ct-full{font-size:114%;margin:0 7em}.mw-parser-output .navbar-ct-mini{font-size:114%;margin:0 4em}</style><div class="navbar plainlinks hlist navbar-mini"><ul><li class="nv-view"><a href="/wiki/Template:Statistics" title="Template:Statistics"><abbr title="View this template" style=";;background:none transparent;border:none;box-shadow:none;padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Statistics" title="Template talk:Statistics"><abbr title="Discuss this template" style=";;background:none transparent;border:none;box-shadow:none;padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Statistics&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;box-shadow:none;padding:0;">e</abbr></a></li></ul></div><div id="Statistics" style="font-size:114%;margin:0 4em"><a href="/wiki/Statistics" title="Statistics">Statistics</a></div></th></tr><tr><td class="navbox-abovebelow" colspan="2"><div id="*_Outline_*_Index">
+<ul><li><a href="/wiki/Outline_of_statistics" title="Outline of statistics">Outline</a></li>
+<li><a href="/wiki/List_of_statistics_articles" title="List of statistics articles">Index</a></li></ul>
+</div></td></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em"></div><table class="nowraplinks mw-collapsible mw-collapsed navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div id="Descriptive_statistics" style="font-size:114%;margin:0 4em"><a href="/wiki/Descriptive_statistics" title="Descriptive statistics">Descriptive statistics</a></div></th></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Continuous_probability_distribution" class="mw-redirect" title="Continuous probability distribution">Continuous data</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="padding:0"><div style="padding:0 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%;font-weight:normal;"><a href="/wiki/Central_tendency" title="Central tendency">Center</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Mean" title="Mean">Mean</a>
+<ul><li><a href="/wiki/Arithmetic_mean" title="Arithmetic mean">arithmetic</a></li>
+<li><a href="/wiki/Geometric_mean" title="Geometric mean">geometric</a></li>
+<li><a href="/wiki/Harmonic_mean" title="Harmonic mean">harmonic</a></li>
+<li><a href="/wiki/Cubic_mean" title="Cubic mean">cubic</a></li>
+<li><a href="/wiki/Generalized_mean" title="Generalized mean">generalized/power</a></li></ul></li>
+<li><a href="/wiki/Median" title="Median">Median</a></li>
+<li><a href="/wiki/Mode_(statistics)" title="Mode (statistics)">Mode</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;font-weight:normal;"><a href="/wiki/Statistical_dispersion" title="Statistical dispersion">Dispersion</a></th><td class="navbox-list-with-group navbox-list navbox-even" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Variance#Sample_variance" title="Variance">Variance</a></li>
+<li><a href="/wiki/Standard_deviation" title="Standard deviation">Standard deviation</a></li>
+<li><a href="/wiki/Average_absolute_deviation" title="Average absolute deviation">Average absolute deviation</a></li>
+<li><a href="/wiki/Coefficient_of_variation" title="Coefficient of variation">Coefficient of variation</a></li>
+<li><a href="/wiki/Percentile" title="Percentile">Percentile</a></li>
+<li><a href="/wiki/Range_(statistics)" title="Range (statistics)">Range</a></li>
+<li><a href="/wiki/Interquartile_range" title="Interquartile range">Interquartile range</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;font-weight:normal;"><a href="/wiki/Shape_of_the_distribution" class="mw-redirect" title="Shape of the distribution">Shape</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Central_limit_theorem" title="Central limit theorem">Central limit theorem</a></li>
+<li><a href="/wiki/Moment_(mathematics)" title="Moment (mathematics)">Moments</a>
+<ul><li><a href="/wiki/Skewness" title="Skewness">Skewness</a></li>
+<li><a href="/wiki/Kurtosis" title="Kurtosis">Kurtosis</a></li>
+<li><a href="/wiki/L-moment" title="L-moment">L-moments</a></li></ul></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Count_data" title="Count data">Count data</a></th><td class="navbox-list-with-group navbox-list navbox-even" style="padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Index_of_dispersion" title="Index of dispersion">Index of dispersion</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:12.5em">Summary tables</th><td class="navbox-list-with-group navbox-list navbox-odd" style="padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Grouped_data" title="Grouped data">Grouped data</a></li>
+<li><a href="/wiki/Frequency_distribution" title="Frequency distribution">Frequency distribution</a></li>
+<li><a href="/wiki/Contingency_table" title="Contingency table">Contingency table</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Correlation_and_dependence" class="mw-redirect" title="Correlation and dependence">Dependence</a></th><td class="navbox-list-with-group navbox-list navbox-even" style="padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Pearson_correlation_coefficient" title="Pearson correlation coefficient">Pearson product-moment correlation</a></li>
+<li><a href="/wiki/Rank_correlation" title="Rank correlation">Rank correlation</a>
+<ul><li><a href="/wiki/Spearman%27s_rank_correlation_coefficient" title="Spearman&#39;s rank correlation coefficient">Spearman's ρ</a></li>
+<li><a href="/wiki/Kendall_rank_correlation_coefficient" title="Kendall rank correlation coefficient">Kendall's τ</a></li></ul></li>
+<li><a href="/wiki/Partial_correlation" title="Partial correlation">Partial correlation</a></li>
+<li><a href="/wiki/Scatter_plot" title="Scatter plot">Scatter plot</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Statistical_graphics" title="Statistical graphics">Graphics</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Bar_chart" title="Bar chart">Bar chart</a></li>
+<li><a href="/wiki/Biplot" title="Biplot">Biplot</a></li>
+<li><a href="/wiki/Box_plot" title="Box plot">Box plot</a></li>
+<li><a href="/wiki/Control_chart" title="Control chart">Control chart</a></li>
+<li><a href="/wiki/Correlogram" title="Correlogram">Correlogram</a></li>
+<li><a href="/wiki/Fan_chart_(statistics)" title="Fan chart (statistics)">Fan chart</a></li>
+<li><a href="/wiki/Forest_plot" title="Forest plot">Forest plot</a></li>
+<li><a href="/wiki/Histogram" title="Histogram">Histogram</a></li>
+<li><a href="/wiki/Pie_chart" title="Pie chart">Pie chart</a></li>
+<li><a href="/wiki/Q%E2%80%93Q_plot" title="Q–Q plot">Q–Q plot</a></li>
+<li><a href="/wiki/Run_chart" title="Run chart">Run chart</a></li>
+<li><a href="/wiki/Scatter_plot" title="Scatter plot">Scatter plot</a></li>
+<li><a href="/wiki/Stem-and-leaf_display" title="Stem-and-leaf display">Stem-and-leaf display</a></li>
+<li><a href="/wiki/Radar_chart" title="Radar chart">Radar chart</a></li>
+<li><a href="/wiki/Violin_plot" title="Violin plot">Violin plot</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em"></div><table class="nowraplinks mw-collapsible mw-collapsed navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div id="Data_collection" style="font-size:114%;margin:0 4em"><a href="/wiki/Data_collection" title="Data collection">Data collection</a></div></th></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Design_of_experiments" title="Design of experiments">Study design</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Statistical_population" title="Statistical population">Population</a></li>
+<li><a href="/wiki/Statistic" title="Statistic">Statistic</a></li>
+<li><a href="/wiki/Effect_size" title="Effect size">Effect size</a></li>
+<li><a href="/wiki/Statistical_power" class="mw-redirect" title="Statistical power">Statistical power</a></li>
+<li><a href="/wiki/Optimal_design" title="Optimal design">Optimal design</a></li>
+<li><a href="/wiki/Sample_size_determination" title="Sample size determination">Sample size determination</a></li>
+<li><a href="/wiki/Replication_(statistics)" title="Replication (statistics)">Replication</a></li>
+<li><a href="/wiki/Missing_data" title="Missing data">Missing data</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Survey_methodology" title="Survey methodology">Survey methodology</a></th><td class="navbox-list-with-group navbox-list navbox-even" style="padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Sampling_(statistics)" title="Sampling (statistics)">Sampling</a>
+<ul><li><a href="/wiki/Stratified_sampling" title="Stratified sampling">stratified</a></li>
+<li><a href="/wiki/Cluster_sampling" title="Cluster sampling">cluster</a></li></ul></li>
+<li><a href="/wiki/Standard_error" title="Standard error">Standard error</a></li>
+<li><a href="/wiki/Opinion_poll" title="Opinion poll">Opinion poll</a></li>
+<li><a href="/wiki/Questionnaire" title="Questionnaire">Questionnaire</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Experiment" title="Experiment">Controlled experiments</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Scientific_control" title="Scientific control">Scientific control</a></li>
+<li><a href="/wiki/Randomized_experiment" title="Randomized experiment">Randomized experiment</a></li>
+<li><a href="/wiki/Randomized_controlled_trial" title="Randomized controlled trial">Randomized controlled trial</a></li>
+<li><a href="/wiki/Random_assignment" title="Random assignment">Random assignment</a></li>
+<li><a href="/wiki/Blocking_(statistics)" title="Blocking (statistics)">Blocking</a></li>
+<li><a href="/wiki/Interaction_(statistics)" title="Interaction (statistics)">Interaction</a></li>
+<li><a href="/wiki/Factorial_experiment" title="Factorial experiment">Factorial experiment</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:12.5em">Adaptive Designs</th><td class="navbox-list-with-group navbox-list navbox-even" style="padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Adaptive_clinical_trial" title="Adaptive clinical trial">Adaptive clinical trial</a></li>
+<li><a href="/wiki/Up-and-Down_Designs" title="Up-and-Down Designs">Up-and-Down Designs</a></li>
+<li><a href="/wiki/Stochastic_approximation" title="Stochastic approximation">Stochastic approximation</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Observational_study" title="Observational study">Observational Studies</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Cross-sectional_study" title="Cross-sectional study">Cross-sectional study</a></li>
+<li><a href="/wiki/Cohort_study" title="Cohort study">Cohort study</a></li>
+<li><a href="/wiki/Natural_experiment" title="Natural experiment">Natural experiment</a></li>
+<li><a href="/wiki/Quasi-experiment" title="Quasi-experiment">Quasi-experiment</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em"></div><table class="nowraplinks mw-collapsible mw-collapsed navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div id="Statistical_inference" style="font-size:114%;margin:0 4em"><a href="/wiki/Statistical_inference" title="Statistical inference">Statistical inference</a></div></th></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Statistical_theory" title="Statistical theory">Statistical theory</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Population_(statistics)" class="mw-redirect" title="Population (statistics)">Population</a></li>
+<li><a href="/wiki/Statistic" title="Statistic">Statistic</a></li>
+<li><a href="/wiki/Probability_distribution" title="Probability distribution">Probability distribution</a></li>
+<li><a href="/wiki/Sampling_distribution" title="Sampling distribution">Sampling distribution</a>
+<ul><li><a href="/wiki/Order_statistic" title="Order statistic">Order statistic</a></li></ul></li>
+<li><a href="/wiki/Empirical_distribution_function" title="Empirical distribution function">Empirical distribution</a>
+<ul><li><a href="/wiki/Density_estimation" title="Density estimation">Density estimation</a></li></ul></li>
+<li><a href="/wiki/Statistical_model" title="Statistical model">Statistical model</a>
+<ul><li><a href="/wiki/Model_specification" class="mw-redirect" title="Model specification">Model specification</a></li>
+<li><a href="/wiki/Lp_space" title="Lp space">L<sup><i>p</i></sup> space</a></li></ul></li>
+<li><a href="/wiki/Statistical_parameter" title="Statistical parameter">Parameter</a>
+<ul><li><a href="/wiki/Location_parameter" title="Location parameter">location</a></li>
+<li><a href="/wiki/Scale_parameter" title="Scale parameter">scale</a></li>
+<li><a href="/wiki/Shape_parameter" title="Shape parameter">shape</a></li></ul></li>
+<li><a href="/wiki/Parametric_statistics" title="Parametric statistics">Parametric family</a>
+<ul><li><a href="/wiki/Likelihood_function" title="Likelihood function">Likelihood</a>&#160;<a href="/wiki/Monotone_likelihood_ratio" title="Monotone likelihood ratio"><span style="font-size:85%;">(monotone)</span></a></li>
+<li><a href="/wiki/Location%E2%80%93scale_family" title="Location–scale family">Location–scale family</a></li>
+<li><a href="/wiki/Exponential_family" title="Exponential family">Exponential family</a></li></ul></li>
+<li><a href="/wiki/Completeness_(statistics)" title="Completeness (statistics)">Completeness</a></li>
+<li><a href="/wiki/Sufficient_statistic" title="Sufficient statistic">Sufficiency</a></li>
+<li><a href="/wiki/Plug-in_principle" class="mw-redirect" title="Plug-in principle">Statistical functional</a>
+<ul><li><a href="/wiki/Bootstrapping_(statistics)" title="Bootstrapping (statistics)">Bootstrap</a></li>
+<li><a href="/wiki/U-statistic" title="U-statistic">U</a></li>
+<li><a href="/wiki/V-statistic" title="V-statistic">V</a></li></ul></li>
+<li><a href="/wiki/Optimal_decision" title="Optimal decision">Optimal decision</a>
+<ul><li><a href="/wiki/Loss_function" title="Loss function">loss function</a></li></ul></li>
+<li><a href="/wiki/Efficiency_(statistics)" title="Efficiency (statistics)">Efficiency</a></li>
+<li><a href="/wiki/Statistical_distance" title="Statistical distance">Statistical distance</a>
+<ul><li><a href="/wiki/Divergence_(statistics)" title="Divergence (statistics)">divergence</a></li></ul></li>
+<li><a href="/wiki/Asymptotic_theory_(statistics)" title="Asymptotic theory (statistics)">Asymptotics</a></li>
+<li><a href="/wiki/Robust_statistics" title="Robust statistics">Robustness</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Frequentist_inference" title="Frequentist inference">Frequentist inference</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="padding:0"><div style="padding:0 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%;font-weight:normal;"><a href="/wiki/Point_estimation" title="Point estimation">Point estimation</a></th><td class="navbox-list-with-group navbox-list navbox-even" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Estimating_equations" title="Estimating equations">Estimating equations</a>
+<ul><li><a href="/wiki/Maximum_likelihood" class="mw-redirect" title="Maximum likelihood">Maximum likelihood</a></li>
+<li><a href="/wiki/Method_of_moments_(statistics)" title="Method of moments (statistics)">Method of moments</a></li>
+<li><a href="/wiki/M-estimator" title="M-estimator">M-estimator</a></li>
+<li><a href="/wiki/Minimum_distance_estimation" class="mw-redirect" title="Minimum distance estimation">Minimum distance</a></li></ul></li>
+<li><a href="/wiki/Bias_of_an_estimator" title="Bias of an estimator">Unbiased estimators</a>
+<ul><li><a href="/wiki/Minimum-variance_unbiased_estimator" title="Minimum-variance unbiased estimator">Mean-unbiased minimum-variance</a>
+<ul><li><a href="/wiki/Rao%E2%80%93Blackwell_theorem" title="Rao–Blackwell theorem">Rao–Blackwellization</a></li>
+<li><a href="/wiki/Lehmann%E2%80%93Scheff%C3%A9_theorem" title="Lehmann–Scheffé theorem">Lehmann–Scheffé theorem</a></li></ul></li>
+<li><a href="/wiki/Median-unbiased_estimator" class="mw-redirect" title="Median-unbiased estimator">Median unbiased</a></li></ul></li>
+<li><a href="/wiki/Plug-in_principle" class="mw-redirect" title="Plug-in principle">Plug-in</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;font-weight:normal;"><a href="/wiki/Interval_estimation" title="Interval estimation">Interval estimation</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Confidence_interval" title="Confidence interval">Confidence interval</a></li>
+<li><a href="/wiki/Pivotal_quantity" title="Pivotal quantity">Pivot</a></li>
+<li><a href="/wiki/Likelihood_interval" class="mw-redirect" title="Likelihood interval">Likelihood interval</a></li>
+<li><a href="/wiki/Prediction_interval" title="Prediction interval">Prediction interval</a></li>
+<li><a href="/wiki/Tolerance_interval" title="Tolerance interval">Tolerance interval</a></li>
+<li><a href="/wiki/Resampling_(statistics)" title="Resampling (statistics)">Resampling</a>
+<ul><li><a href="/wiki/Bootstrapping_(statistics)" title="Bootstrapping (statistics)">Bootstrap</a></li>
+<li><a href="/wiki/Jackknife_resampling" title="Jackknife resampling">Jackknife</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;font-weight:normal;"><a href="/wiki/Statistical_hypothesis_testing" title="Statistical hypothesis testing">Testing hypotheses</a></th><td class="navbox-list-with-group navbox-list navbox-even" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/One-_and_two-tailed_tests" title="One- and two-tailed tests">1- &amp; 2-tails</a></li>
+<li><a href="/wiki/Power_(statistics)" class="mw-redirect" title="Power (statistics)">Power</a>
+<ul><li><a href="/wiki/Uniformly_most_powerful_test" title="Uniformly most powerful test">Uniformly most powerful test</a></li></ul></li>
+<li><a href="/wiki/Permutation_test" title="Permutation test">Permutation test</a>
+<ul><li><a href="/wiki/Randomization_test" class="mw-redirect" title="Randomization test">Randomization test</a></li></ul></li>
+<li><a href="/wiki/Multiple_comparisons" class="mw-redirect" title="Multiple comparisons">Multiple comparisons</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;font-weight:normal;"><a href="/wiki/Parametric_statistics" title="Parametric statistics">Parametric tests</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Likelihood-ratio_test" title="Likelihood-ratio test">Likelihood-ratio</a></li>
+<li><a href="/wiki/Score_test" title="Score test">Score/Lagrange multiplier</a></li>
+<li><a href="/wiki/Wald_test" title="Wald test">Wald</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:12.5em">Specific tests</th><td class="navbox-list-with-group navbox-list navbox-odd" style="padding:0"><div style="padding:0 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><td colspan="2" class="navbox-list navbox-even" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Z-test" title="Z-test"><i>Z</i>-test <span style="font-size:85%;">(normal)</span></a></li>
+<li><a href="/wiki/Student%27s_t-test" title="Student&#39;s t-test">Student's <i>t</i>-test</a></li>
+<li><a href="/wiki/F-test" title="F-test"><i>F</i>-test</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;font-weight:normal;"><a href="/wiki/Goodness_of_fit" title="Goodness of fit">Goodness of fit</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Chi-squared_test" title="Chi-squared test">Chi-squared</a></li>
+<li><a href="/wiki/G-test" title="G-test"><i>G</i>-test</a></li>
+<li><a href="/wiki/Kolmogorov%E2%80%93Smirnov_test" title="Kolmogorov–Smirnov test">Kolmogorov–Smirnov</a></li>
+<li><a href="/wiki/Anderson%E2%80%93Darling_test" title="Anderson–Darling test">Anderson–Darling</a></li>
+<li><a href="/wiki/Lilliefors_test" title="Lilliefors test">Lilliefors</a></li>
+<li><a href="/wiki/Jarque%E2%80%93Bera_test" title="Jarque–Bera test">Jarque–Bera</a></li>
+<li><a href="/wiki/Shapiro%E2%80%93Wilk_test" title="Shapiro–Wilk test">Normality <span style="font-size:85%;">(Shapiro–Wilk)</span></a></li>
+<li><a href="/wiki/Likelihood-ratio_test" title="Likelihood-ratio test">Likelihood-ratio test</a></li>
+<li><a href="/wiki/Model_selection" title="Model selection">Model selection</a>
+<ul><li><a href="/wiki/Cross-validation_(statistics)" title="Cross-validation (statistics)">Cross validation</a></li>
+<li><a href="/wiki/Akaike_information_criterion" title="Akaike information criterion">AIC</a></li>
+<li><a href="/wiki/Bayesian_information_criterion" title="Bayesian information criterion">BIC</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;font-weight:normal;"><a href="/wiki/Rank_statistics" class="mw-redirect" title="Rank statistics">Rank statistics</a></th><td class="navbox-list-with-group navbox-list navbox-even" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Sign_test" title="Sign test">Sign</a>
+<ul><li><a href="/wiki/Sample_median" class="mw-redirect" title="Sample median">Sample median</a></li></ul></li>
+<li><a href="/wiki/Wilcoxon_signed-rank_test" title="Wilcoxon signed-rank test">Signed rank <span style="font-size:85%;">(Wilcoxon)</span></a>
+<ul><li><a href="/wiki/Hodges%E2%80%93Lehmann_estimator" title="Hodges–Lehmann estimator">Hodges–Lehmann estimator</a></li></ul></li>
+<li><a href="/wiki/Mann%E2%80%93Whitney_U_test" title="Mann–Whitney U test">Rank sum <span style="font-size:85%;">(Mann–Whitney)</span></a></li>
+<li><a href="/wiki/Nonparametric_statistics" title="Nonparametric statistics">Nonparametric</a> <a href="/wiki/Analysis_of_variance" title="Analysis of variance">anova</a>
+<ul><li><a href="/wiki/Kruskal%E2%80%93Wallis_one-way_analysis_of_variance" title="Kruskal–Wallis one-way analysis of variance">1-way <span style="font-size:85%;">(Kruskal–Wallis)</span></a></li>
+<li><a href="/wiki/Friedman_test" title="Friedman test">2-way <span style="font-size:85%;">(Friedman)</span></a></li>
+<li><a href="/wiki/Jonckheere%27s_trend_test" title="Jonckheere&#39;s trend test">Ordered alternative <span style="font-size:85%;">(Jonckheere–Terpstra)</span></a></li></ul></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Bayesian_inference" title="Bayesian inference">Bayesian inference</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Bayesian_probability" title="Bayesian probability">Bayesian probability</a>
+<ul><li><a href="/wiki/Prior_probability" title="Prior probability">prior</a></li>
+<li><a href="/wiki/Posterior_probability" title="Posterior probability">posterior</a></li></ul></li>
+<li><a href="/wiki/Credible_interval" title="Credible interval">Credible interval</a></li>
+<li><a href="/wiki/Bayes_factor" title="Bayes factor">Bayes factor</a></li>
+<li><a href="/wiki/Bayes_estimator" title="Bayes estimator">Bayesian estimator</a>
+<ul><li><a href="/wiki/Maximum_a_posteriori_estimation" title="Maximum a posteriori estimation">Maximum posterior estimator</a></li></ul></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em"></div><table class="nowraplinks mw-collapsible mw-collapsed navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div id="CorrelationRegression_analysis" style="font-size:114%;margin:0 4em"><div class="hlist hlist-separated"><ul><li><a href="/wiki/Correlation_and_dependence" class="mw-redirect" title="Correlation and dependence">Correlation</a></li><li><a href="/wiki/Regression_analysis" title="Regression analysis">Regression analysis</a></li></ul></div></div></th></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Correlation_and_dependence" class="mw-redirect" title="Correlation and dependence">Correlation</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Pearson_product-moment_correlation_coefficient" class="mw-redirect" title="Pearson product-moment correlation coefficient">Pearson product-moment</a></li>
+<li><a href="/wiki/Partial_correlation" title="Partial correlation">Partial correlation</a></li>
+<li><a href="/wiki/Confounding" title="Confounding">Confounding variable</a></li>
+<li><a href="/wiki/Coefficient_of_determination" title="Coefficient of determination">Coefficient of determination</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Regression_analysis" title="Regression analysis">Regression analysis</a></th><td class="navbox-list-with-group navbox-list navbox-even" style="padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Errors_and_residuals_in_statistics" class="mw-redirect" title="Errors and residuals in statistics">Errors and residuals</a></li>
+<li><a href="/wiki/Regression_validation" title="Regression validation">Regression validation</a></li>
+<li><a href="/wiki/Mixed_model" title="Mixed model">Mixed effects models</a></li>
+<li><a href="/wiki/Simultaneous_equations_model" title="Simultaneous equations model">Simultaneous equations models</a></li>
+<li><a href="/wiki/Multivariate_adaptive_regression_splines" class="mw-redirect" title="Multivariate adaptive regression splines">Multivariate adaptive regression splines (MARS)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Linear_regression" title="Linear regression">Linear regression</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Simple_linear_regression" title="Simple linear regression">Simple linear regression</a></li>
+<li><a href="/wiki/Ordinary_least_squares" title="Ordinary least squares">Ordinary least squares</a></li>
+<li><a href="/wiki/General_linear_model" title="General linear model">General linear model</a></li>
+<li><a href="/wiki/Bayesian_linear_regression" title="Bayesian linear regression">Bayesian regression</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:12.5em">Non-standard predictors</th><td class="navbox-list-with-group navbox-list navbox-even" style="padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Nonlinear_regression" title="Nonlinear regression">Nonlinear regression</a></li>
+<li><a href="/wiki/Nonparametric_regression" title="Nonparametric regression">Nonparametric</a></li>
+<li><a href="/wiki/Semiparametric_regression" title="Semiparametric regression">Semiparametric</a></li>
+<li><a href="/wiki/Isotonic_regression" title="Isotonic regression">Isotonic</a></li>
+<li><a href="/wiki/Robust_regression" title="Robust regression">Robust</a></li>
+<li><a href="/wiki/Heteroscedasticity" title="Heteroscedasticity">Heteroscedasticity</a></li>
+<li><a href="/wiki/Homoscedasticity" title="Homoscedasticity">Homoscedasticity</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Generalized_linear_model" title="Generalized linear model">Generalized linear model</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Exponential_family" title="Exponential family">Exponential families</a></li>
+<li><a href="/wiki/Logistic_regression" title="Logistic regression">Logistic <span style="font-size:85%;">(Bernoulli)</span></a>&#160;/&#32;<a href="/wiki/Binomial_regression" title="Binomial regression">Binomial</a>&#160;/&#32;<a href="/wiki/Poisson_regression" title="Poisson regression">Poisson regressions</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Partition_of_sums_of_squares" title="Partition of sums of squares">Partition of variance</a></th><td class="navbox-list-with-group navbox-list navbox-even" style="padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Analysis_of_variance" title="Analysis of variance">Analysis of variance (ANOVA, anova)</a></li>
+<li><a href="/wiki/Analysis_of_covariance" title="Analysis of covariance">Analysis of covariance</a></li>
+<li><a href="/wiki/Multivariate_analysis_of_variance" title="Multivariate analysis of variance">Multivariate ANOVA</a></li>
+<li><a href="/wiki/Degrees_of_freedom_(statistics)" title="Degrees of freedom (statistics)">Degrees of freedom</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em"></div><table class="nowraplinks mw-collapsible mw-collapsed navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div id="Categorical_/_Multivariate_/_Time-series_/_Survival_analysis" style="font-size:114%;margin:0 4em"><a href="/wiki/Categorical_variable" title="Categorical variable">Categorical</a>&#160;/&#32;<a href="/wiki/Multivariate_statistics" title="Multivariate statistics">Multivariate</a>&#160;/&#32;<a href="/wiki/Time_series" title="Time series">Time-series</a>&#160;/&#32;<a href="/wiki/Survival_analysis" title="Survival analysis">Survival analysis</a></div></th></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Categorical_variable" title="Categorical variable">Categorical</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Cohen%27s_kappa" title="Cohen&#39;s kappa">Cohen's kappa</a></li>
+<li><a href="/wiki/Contingency_table" title="Contingency table">Contingency table</a></li>
+<li><a href="/wiki/Graphical_model" title="Graphical model">Graphical model</a></li>
+<li><a href="/wiki/Poisson_regression" title="Poisson regression">Log-linear model</a></li>
+<li><a href="/wiki/McNemar%27s_test" title="McNemar&#39;s test">McNemar's test</a></li>
+<li><a href="/wiki/Cochran-Mantel-Haenszel_statistics" class="mw-redirect" title="Cochran-Mantel-Haenszel statistics">Cochran-Mantel-Haenszel statistics</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Multivariate_statistics" title="Multivariate statistics">Multivariate</a></th><td class="navbox-list-with-group navbox-list navbox-even" style="padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/General_linear_model" title="General linear model">Regression</a></li>
+<li><a href="/wiki/Multivariate_analysis_of_variance" title="Multivariate analysis of variance">Manova</a></li>
+<li><a href="/wiki/Principal_component_analysis" title="Principal component analysis">Principal components</a></li>
+<li><a href="/wiki/Canonical_correlation" title="Canonical correlation">Canonical correlation</a></li>
+<li><a href="/wiki/Linear_discriminant_analysis" title="Linear discriminant analysis">Discriminant analysis</a></li>
+<li><a href="/wiki/Cluster_analysis" title="Cluster analysis">Cluster analysis</a></li>
+<li><a href="/wiki/Statistical_classification" title="Statistical classification">Classification</a></li>
+<li><a href="/wiki/Structural_equation_modeling" title="Structural equation modeling">Structural equation model</a>
+<ul><li><a href="/wiki/Factor_analysis" title="Factor analysis">Factor analysis</a></li></ul></li>
+<li><a href="/wiki/Multivariate_distribution" class="mw-redirect" title="Multivariate distribution">Multivariate distributions</a>
+<ul><li><a href="/wiki/Elliptical_distribution" title="Elliptical distribution">Elliptical distributions</a>
+<ul><li><a href="/wiki/Multivariate_normal_distribution" title="Multivariate normal distribution">Normal</a></li></ul></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Time_series" title="Time series">Time-series</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="padding:0"><div style="padding:0 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%;font-weight:normal;">General</th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Decomposition_of_time_series" title="Decomposition of time series">Decomposition</a></li>
+<li><a href="/wiki/Trend_estimation" class="mw-redirect" title="Trend estimation">Trend</a></li>
+<li><a href="/wiki/Stationary_process" title="Stationary process">Stationarity</a></li>
+<li><a href="/wiki/Seasonal_adjustment" title="Seasonal adjustment">Seasonal adjustment</a></li>
+<li><a href="/wiki/Exponential_smoothing" title="Exponential smoothing">Exponential smoothing</a></li>
+<li><a href="/wiki/Cointegration" title="Cointegration">Cointegration</a></li>
+<li><a href="/wiki/Structural_break" title="Structural break">Structural break</a></li>
+<li><a href="/wiki/Granger_causality" title="Granger causality">Granger causality</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;font-weight:normal;">Specific tests</th><td class="navbox-list-with-group navbox-list navbox-even" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Dickey%E2%80%93Fuller_test" title="Dickey–Fuller test">Dickey–Fuller</a></li>
+<li><a href="/wiki/Johansen_test" title="Johansen test">Johansen</a></li>
+<li><a href="/wiki/Ljung%E2%80%93Box_test" title="Ljung–Box test">Q-statistic <span style="font-size:85%;">(Ljung–Box)</span></a></li>
+<li><a href="/wiki/Durbin%E2%80%93Watson_statistic" title="Durbin–Watson statistic">Durbin–Watson</a></li>
+<li><a href="/wiki/Breusch%E2%80%93Godfrey_test" title="Breusch–Godfrey test">Breusch–Godfrey</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;font-weight:normal;"><a href="/wiki/Time_domain" title="Time domain">Time domain</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Autocorrelation" title="Autocorrelation">Autocorrelation (ACF)</a>
+<ul><li><a href="/wiki/Partial_autocorrelation_function" title="Partial autocorrelation function">partial (PACF)</a></li></ul></li>
+<li><a href="/wiki/Cross-correlation" title="Cross-correlation">Cross-correlation (XCF)</a></li>
+<li><a href="/wiki/Autoregressive%E2%80%93moving-average_model" title="Autoregressive–moving-average model">ARMA model</a></li>
+<li><a href="/wiki/Box%E2%80%93Jenkins_method" title="Box–Jenkins method">ARIMA model <span style="font-size:85%;">(Box–Jenkins)</span></a></li>
+<li><a href="/wiki/Autoregressive_conditional_heteroskedasticity" title="Autoregressive conditional heteroskedasticity">Autoregressive conditional heteroskedasticity (ARCH)</a></li>
+<li><a href="/wiki/Vector_autoregression" title="Vector autoregression">Vector autoregression (VAR)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;font-weight:normal;"><a href="/wiki/Frequency_domain" title="Frequency domain">Frequency domain</a></th><td class="navbox-list-with-group navbox-list navbox-even" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Spectral_density_estimation" title="Spectral density estimation">Spectral density estimation</a></li>
+<li><a href="/wiki/Fourier_analysis" title="Fourier analysis">Fourier analysis</a></li>
+<li><a href="/wiki/Wavelet" title="Wavelet">Wavelet</a></li>
+<li><a href="/wiki/Whittle_likelihood" title="Whittle likelihood">Whittle likelihood</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Survival_analysis" title="Survival analysis">Survival</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="padding:0"><div style="padding:0 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%;font-weight:normal;"><a href="/wiki/Survival_function" title="Survival function">Survival function</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Kaplan%E2%80%93Meier_estimator" title="Kaplan–Meier estimator">Kaplan–Meier estimator (product limit)</a></li>
+<li><a href="/wiki/Proportional_hazards_model" title="Proportional hazards model">Proportional hazards models</a></li>
+<li><a href="/wiki/Accelerated_failure_time_model" title="Accelerated failure time model">Accelerated failure time (AFT) model</a></li>
+<li><a href="/wiki/First-hitting-time_model" title="First-hitting-time model">First hitting time</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;font-weight:normal;"><a href="/wiki/Failure_rate" title="Failure rate">Hazard function</a></th><td class="navbox-list-with-group navbox-list navbox-even" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Nelson%E2%80%93Aalen_estimator" title="Nelson–Aalen estimator">Nelson–Aalen estimator</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;font-weight:normal;">Test</th><td class="navbox-list-with-group navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Log-rank_test" class="mw-redirect" title="Log-rank test">Log-rank test</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em"></div><table class="nowraplinks mw-collapsible mw-collapsed navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div id="Applications" style="font-size:114%;margin:0 4em"><a href="/wiki/List_of_fields_of_application_of_statistics" title="List of fields of application of statistics">Applications</a></div></th></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0"><div style="padding:0 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Biostatistics" title="Biostatistics">Biostatistics</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Bioinformatics" title="Bioinformatics">Bioinformatics</a></li>
+<li><a href="/wiki/Clinical_trial" title="Clinical trial">Clinical trials</a>&#160;/&#32;<a href="/wiki/Clinical_study_design" title="Clinical study design">studies</a></li>
+<li><a href="/wiki/Epidemiology" title="Epidemiology">Epidemiology</a></li>
+<li><a href="/wiki/Medical_statistics" title="Medical statistics">Medical statistics</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Engineering_statistics" title="Engineering statistics">Engineering statistics</a></th><td class="navbox-list-with-group navbox-list navbox-even" style="padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Chemometrics" title="Chemometrics">Chemometrics</a></li>
+<li><a href="/wiki/Methods_engineering" title="Methods engineering">Methods engineering</a></li>
+<li><a href="/wiki/Probabilistic_design" title="Probabilistic design">Probabilistic design</a></li>
+<li><a href="/wiki/Statistical_process_control" title="Statistical process control">Process</a>&#160;/&#32;<a href="/wiki/Quality_control" title="Quality control">quality control</a></li>
+<li><a href="/wiki/Reliability_engineering" title="Reliability engineering">Reliability</a></li>
+<li><a href="/wiki/System_identification" title="System identification">System identification</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Social_statistics" title="Social statistics">Social statistics</a></th><td class="navbox-list-with-group navbox-list navbox-odd" style="padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Actuarial_science" title="Actuarial science">Actuarial science</a></li>
+<li><a href="/wiki/Census" title="Census">Census</a></li>
+<li><a href="/wiki/Crime_statistics" title="Crime statistics">Crime statistics</a></li>
+<li><a href="/wiki/Demographic_statistics" title="Demographic statistics">Demography</a></li>
+<li><a href="/wiki/Econometrics" title="Econometrics">Econometrics</a></li>
+<li><a href="/wiki/Jurimetrics" title="Jurimetrics">Jurimetrics</a></li>
+<li><a href="/wiki/National_accounts" title="National accounts">National accounts</a></li>
+<li><a href="/wiki/Official_statistics" title="Official statistics">Official statistics</a></li>
+<li><a href="/wiki/Population_statistics" class="mw-redirect" title="Population statistics">Population statistics</a></li>
+<li><a href="/wiki/Psychometrics" title="Psychometrics">Psychometrics</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Spatial_analysis" title="Spatial analysis">Spatial statistics</a></th><td class="navbox-list-with-group navbox-list navbox-even" style="padding:0"><div style="padding:0 0.25em">
+<ul><li><a href="/wiki/Cartography" title="Cartography">Cartography</a></li>
+<li><a href="/wiki/Environmental_statistics" title="Environmental statistics">Environmental statistics</a></li>
+<li><a href="/wiki/Geographic_information_system" title="Geographic information system">Geographic information system</a></li>
+<li><a href="/wiki/Geostatistics" title="Geostatistics">Geostatistics</a></li>
+<li><a href="/wiki/Kriging" title="Kriging">Kriging</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/16px-Symbol_category_class.svg.png" decoding="async" title="Category" width="16" height="16" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/23px-Symbol_category_class.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/31px-Symbol_category_class.svg.png 2x" data-file-width="180" data-file-height="185" /><b><a href="/wiki/Category:Statistics" title="Category:Statistics">Category</a></b></li>
+<li><b><a href="/wiki/File:Nuvola_apps_edu_mathematics_blue-p.svg" class="image"><img alt="Nuvola apps edu mathematics blue-p.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Nuvola_apps_edu_mathematics_blue-p.svg/28px-Nuvola_apps_edu_mathematics_blue-p.svg.png" decoding="async" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Nuvola_apps_edu_mathematics_blue-p.svg/42px-Nuvola_apps_edu_mathematics_blue-p.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Nuvola_apps_edu_mathematics_blue-p.svg/56px-Nuvola_apps_edu_mathematics_blue-p.svg.png 2x" data-file-width="128" data-file-height="128" /></a>&#160;<a href="/wiki/Portal:Mathematics" title="Portal:Mathematics">Mathematics&#32;portal</a></b></li>
+<li><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/12px-Commons-logo.svg.png" decoding="async" title="Commons page" width="12" height="16" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/24px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /><b><a href="https://commons.wikimedia.org/wiki/Category:Statistics" class="extiw" title="commons:Category:Statistics">Commons</a></b></li>
+<li><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/37/People_icon.svg/16px-People_icon.svg.png" decoding="async" title="WikiProject" width="16" height="16" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/37/People_icon.svg/24px-People_icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/37/People_icon.svg/32px-People_icon.svg.png 2x" data-file-width="100" data-file-height="100" /> <b><a href="/wiki/Wikipedia:WikiProject_Statistics" title="Wikipedia:WikiProject Statistics">WikiProject</a></b></li></ul>
+</div></td></tr></tbody></table></div></div>

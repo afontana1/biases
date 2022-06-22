@@ -1,0 +1,12 @@
+http://scholar.google.com/scholar?q=%22Meaningful+learning%22
+http://www.google.com/search?&q=%22Meaningful+learning%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Meaningful+learning%22
+http://www.google.com/search?tbm=nws&q=%22Meaningful+learning%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Meaningful+learning%22+-wikipedia
+http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.505.2763
+http://web.ics.purdue.edu/~rallrich/learn/mean.html
+http://doi.org/10.1002%2Fsce.10032
+http://doi.org/10.1007%2F978-3-642-77512-3_3
+http://doi.org/10.1080%2F01443410.2016.1150420
+https://www.oxfordlearning.com/difference-rote-learning-meaningful-learning/
+https://www.jstor.org/action/doBasicSearch?Query=%22Meaningful+learning%22&acc=on&wc=on

@@ -1,0 +1,16 @@
+http://scholar.google.com/scholar?q=%22Posthumous+name%22
+http://www.google.com/search?&q=%22Posthumous+name%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Posthumous+name%22
+http://www.google.com/search?tbm=nws&q=%22Posthumous+name%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Posthumous+name%22+-wikipedia
+http://koreajoongangdaily.joins.com/news/article/Article.aspx?aid=3006407
+http://news.xinhuanet.com/xhfk/2010-08/11/c_12433570.htm
+http://www.koreatimes.co.kr/www/common/printpreview.asp?categoryCode=628&newsIdx=153615
+http://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART000927530
+http://www.archontology.org/nations/korea/01_notes.php
+http://www.worldcat.org/oclc/1554571
+http://www.ncue.edu.tw/~ccource/data/12.doc
+https://books.google.com/books?id=SwswAAAAMAAJ
+https://web.archive.org/web/20070930152451/http://www.ncue.edu.tw/~ccource/data/12.doc
+https://web.archive.org/web/20151222085954/http://www.archontology.org/nations/korea/01_notes.php
+https://www.jstor.org/action/doBasicSearch?Query=%22Posthumous+name%22&acc=on&wc=on

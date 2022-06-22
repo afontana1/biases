@@ -1,0 +1,12 @@
+http://scholar.google.com/scholar?q=%22Nonperson%22
+http://www.google.com/search?&q=%22Nonperson%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Nonperson%22
+http://www.google.com/search?tbm=nws&q=%22Nonperson%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Nonperson%22+-wikipedia
+http://www.ibtimes.com/korean-central-news-agency-kcna-deletes-online-archive-news-after-execution-jang-song-thaek-1510758
+http://sinonk.com/2016/10/31/on-reading-north-korean-media-the-curse-of-the-web/
+http://pubmed.ncbi.nlm.nih.gov/20681107
+http://doi.org/10.1093%2Fhgs%2Fdcq026
+http://www.jewishvirtuallibrary.org/jsource/Holocaust/gypsies.html
+https://www.jstor.org/action/doBasicSearch?Query=%22Nonperson%22&acc=on&wc=on
+https://api.semanticscholar.org/CorpusID:24793547

@@ -1,0 +1,9 @@
+http://scholar.google.com/scholar?q=%22Automated+attendant%22
+http://www.google.com/search?&q=%22Automated+attendant%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Automated+attendant%22
+http://www.google.com/search?tbm=nws&q=%22Automated+attendant%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Automated+attendant%22+-wikipedia
+http://www.wisegeek.org/what-is-a-phone-tree.htm#didyouknowout
+http://www.worldcat.org/issn/1528-9729
+https://books.google.com/books?id=Rf4DAAAAMBAJ&pg=PA76
+https://www.jstor.org/action/doBasicSearch?Query=%22Automated+attendant%22&acc=on&wc=on

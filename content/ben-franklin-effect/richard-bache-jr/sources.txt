@@ -1,0 +1,16 @@
+http://scholar.google.com/scholar?q=%22Richard+Bache+Jr.%22
+http://www.google.com/search?&q=%22Richard+Bache+Jr.%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Richard+Bache+Jr.%22
+http://www.google.com/search?tbm=nws&q=%22Richard+Bache+Jr.%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Richard+Bache+Jr.%22+-wikipedia
+http://www.tshaonline.org/handbook/online/articles/fba02
+http://id.worldcat.org/fast/1519219/
+https://books.google.com/books?id=DUeG7iobgI4C&q=%22richard+bache%22+and+texas&pg=PA187
+https://books.google.com/books?id=dUwUAAAAYAAJ&q=robert+j.+walker+and+mississppi+historical+socity&pg=PA359
+https://id.loc.gov/authorities/names/no94039221
+https://isni.org/isni/0000000385618864
+https://www.jstor.org/action/doBasicSearch?Query=%22Richard+Bache+Jr.%22&acc=on&wc=on
+https://snaccooperative.org/ark:/99166/w6wm2142
+https://viaf.org/viaf/206485565
+https://www.wikidata.org/wiki/Q7323889#identifiers
+https://www.worldcat.org/identities/lccn-no94039221/

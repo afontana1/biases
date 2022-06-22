@@ -1,0 +1,14 @@
+http://scholar.google.com/scholar?q=%22International+Conference+on+Computer-Aided+Design%22
+http://www.google.com/search?&q=%22International+Conference+on+Computer-Aided+Design%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22International+Conference+on+Computer-Aided+Design%22
+http://www.google.com/search?tbm=nws&q=%22International+Conference+on+Computer-Aided+Design%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22International+Conference+on+Computer-Aided+Design%22+-wikipedia
+http://www.iccad.com
+http://worldcat.org/oclc/907017455
+http://www.worldcat.org/oclc/907017455
+https://id.loc.gov/authorities/names/n83302049
+https://d-nb.info/gnd/1091889953
+https://www.jstor.org/action/doBasicSearch?Query=%22International+Conference+on+Computer-Aided+Design%22&acc=on&wc=on
+https://viaf.org/viaf/122593722
+https://www.wikidata.org/wiki/Q15995196#identifiers
+https://www.worldcat.org/identities/containsVIAFID/122593722

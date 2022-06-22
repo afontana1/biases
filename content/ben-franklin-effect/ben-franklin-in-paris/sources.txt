@@ -1,0 +1,10 @@
+http://scholar.google.com/scholar?q=%22Ben+Franklin+in+Paris%22
+http://www.google.com/search?&q=%22Ben+Franklin+in+Paris%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Ben+Franklin+in+Paris%22
+http://www.google.com/search?tbm=nws&q=%22Ben+Franklin+in+Paris%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Ben+Franklin+in+Paris%22+-wikipedia
+http://www.playbill.com/production/ben-franklin-in-paris-lunt-fontanne-theatre-vault-0000005074#
+https://www.ibdb.com/broadway-production/2827
+https://digital.library.illinois.edu/collections/810eac30-e3fb-012f-c5b6-0019b9e633c5-e/items?q=ben+franklin+in+paris
+https://digital.library.illinois.edu/collections/810eac30-e3fb-012f-c5b6-0019b9e633c5-e
+https://www.jstor.org/action/doBasicSearch?Query=%22Ben+Franklin+in+Paris%22&acc=on&wc=on

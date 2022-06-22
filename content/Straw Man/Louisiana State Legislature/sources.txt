@@ -1,0 +1,16 @@
+http://scholar.google.com/scholar?q=%22Louisiana+State+Legislature%22
+http://www.google.com/search?&q=%22Louisiana+State+Legislature%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Louisiana+State+Legislature%22
+http://www.google.com/search?tbm=nws&q=%22Louisiana+State+Legislature%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Louisiana+State+Legislature%22+-wikipedia
+http://house.louisiana.gov/
+http://senate.legis.state.la.us/
+http://www.legis.state.la.us/
+https://books.google.com/books?id=tIM1AQAAMAAJ&pg=PA67&lpg=PA67&dq=%22assembl%C3%A9e+g%C3%A9n%C3%A9rale%22+%22louisiane%22&source=bl&ots=dIRRG0OnHN&sig=TqhoMve0wKUj7eBr9h_3FAPcuZ0&hl=en&sa=X&ei=KUQvVPHqEpWfyATcloCQBg&ved=0CCYQ6AEwATgU#v=snippet&q=general%20assembly&f=false
+https://legis.la.gov/legis/LegisInfo.aspx
+https://id.loc.gov/authorities/names/n80046084
+https://www.jstor.org/action/doBasicSearch?Query=%22Louisiana+State+Legislature%22&acc=on&wc=on
+https://snaccooperative.org/ark:/99166/w61z8td4
+https://viaf.org/viaf/151875389
+https://www.wikidata.org/wiki/Q6689290#identifiers
+https://www.worldcat.org/identities/lccn-n80046084/

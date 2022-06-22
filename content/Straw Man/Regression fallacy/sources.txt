@@ -1,0 +1,13 @@
+http://scholar.google.com/scholar?q=%22Regression+fallacy%22
+http://www.google.com/search?&q=%22Regression+fallacy%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Regression+fallacy%22
+http://www.google.com/search?tbm=nws&q=%22Regression+fallacy%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Regression+fallacy%22+-wikipedia
+http://hdl.handle.net/1721.1%2F63653
+http://doi.org/10.1037%2F0022-3514.48.6.1377
+http://doi.org/10.2307%2F3440905
+http://www.jstor.org/stable/2727976
+http://www.jstor.org/stable/3440905
+https://archive.org/details/howweknowwhatisn00gilorich
+https://www.fallacyfiles.org/regressf.html
+https://www.jstor.org/action/doBasicSearch?Query=%22Regression+fallacy%22&acc=on&wc=on

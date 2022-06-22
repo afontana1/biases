@@ -1,0 +1,15 @@
+http://definitions.uslegal.com/h/harassment/
+http://definitions.uslegal.com/t/terroristic-threat/
+http://definitions.uslegal.com/t/threat-of-harm/
+http://www.leginfo.ca.gov/cgi-bin/displaycode?section=pen&group=00001-01000&file=422-422.4
+http://www.legislature.mi.gov/(S(koccjbzwql50hibj0nlh3355))/mileg.aspx?page=GetMCLDocument&objectname=mcl-750-147b
+http://leg.mt.gov/bills/mca/45/5/45-5-203.htm
+http://doi.org/10.1525%2Fnclr.2008.11.1.51
+http://www.mainelegislature.org/legis/statutes/17-a/title17-Asec210.html
+https://scholarship.law.bu.edu/faculty_scholarship/763
+https://d-nb.info/gnd/4150704-6
+https://id.ndl.go.jp/auth/ndlna/00567127
+https://web.archive.org/web/20161108133647/http://www.leginfo.ca.gov/cgi-bin/displaycode?section=pen&group=00001-01000&file=422-422.4
+https://web.archive.org/web/20200810060442/https://leg.mt.gov/bills/mca/45/5/45-5-203.htm
+https://www.oregonlaws.org/ors/30.198
+https://www.wikidata.org/wiki/Q3858303#identifiers

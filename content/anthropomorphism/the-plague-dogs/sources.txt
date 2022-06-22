@@ -1,0 +1,9 @@
+http://scholar.google.com/scholar?q=%22The+Plague+Dogs%22
+http://www.google.com/search?&q=%22The+Plague+Dogs%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22The+Plague+Dogs%22
+http://www.google.com/search?tbm=nws&q=%22The+Plague+Dogs%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22The+Plague+Dogs%22+-wikipedia
+http://doi.org/10.2307%2F1212546
+http://www.jstor.org/stable/1212546
+https://www.jstor.org/action/doBasicSearch?Query=%22The+Plague+Dogs%22&acc=on&wc=on
+https://www.worldcat.org/oclc/3496427

@@ -1,0 +1,10 @@
+http://scholar.google.com/scholar?q=%22Junto%22+club
+http://www.google.com/search?&q=%22Junto%22+club&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Junto%22+club
+http://www.google.com/search?tbm=nws&q=%22Junto%22+club+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Junto%22+club+-wikipedia
+http://franklinpapers.org/framedVolumes.jsp?vol=1&page=255a
+http://www.ushistory.org/franklin/philadelphia/aps.htm
+https://junto.global/
+https://web.archive.org/web/20120502102128/http://www.english.udel.edu/lemay/franklin/
+https://www.jstor.org/action/doBasicSearch?Query=%22Junto%22+club&acc=on&wc=on

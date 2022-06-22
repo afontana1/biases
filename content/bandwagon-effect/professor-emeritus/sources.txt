@@ -1,0 +1,11 @@
+http://scholar.google.com/scholar?q=%22Emeritus%22
+http://www.google.com/search?&q=%22Emeritus%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Emeritus%22
+http://www.google.com/search?tbm=nws&q=%22Emeritus%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Emeritus%22+-wikipedia
+https://www.etymonline.com/?term=emeritus
+https://www.merriam-webster.com/dictionary/emeritus
+https://d-nb.info/gnd/4152069-5
+https://www.formsofaddress.info/emeritus/
+https://www.jstor.org/action/doBasicSearch?Query=%22Emeritus%22&acc=on&wc=on
+https://www.wikidata.org/wiki/Q211830#identifiers

@@ -1,0 +1,8 @@
+http://scholar.google.com/scholar?q=%22Papal+name%22
+http://www.google.com/search?&q=%22Papal+name%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22Papal+name%22
+http://www.google.com/search?tbm=nws&q=%22Papal+name%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22Papal+name%22+-wikipedia
+https://books.google.com/books/pdf/Cyclopaedia_of_Biblical__Theological__an.pdf?id=YP-vwaB1IB0C&output=pdf&sig=v3LqGZTJQOQV5IZtL1AO3LQcaRg&source=gbs_summary_r&cad=0
+https://www.jstor.org/action/doBasicSearch?Query=%22Papal+name%22&acc=on&wc=on
+https://www.vatican.va/holy_father/francesco/speeches/2013/march/documents/papa-francesco_20130316_rappresentanti-media_en.html

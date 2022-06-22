@@ -1,0 +1,1719 @@
+<div class="mw-parser-output"><div class="thumb tright"><div class="thumbinner" style="width:258px;"><a href="/wiki/File:VennInfo3Var.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5d/VennInfo3Var.svg/256px-VennInfo3Var.svg.png" decoding="async" width="256" height="255" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5d/VennInfo3Var.svg/384px-VennInfo3Var.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5d/VennInfo3Var.svg/512px-VennInfo3Var.svg.png 2x" data-file-width="633" data-file-height="631" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:VennInfo3Var.svg" class="internal" title="Enlarge"></a></div><a href="/wiki/Venn_diagram" title="Venn diagram">Venn diagram</a> of information theoretic measures for three variables x, y, and z, represented by the lower left, lower right, and upper circles, respectively. The interaction information is represented by gray region, and it is the only one that can be negative.</div></div></div>
+<p>The <b>interaction information</b> is a generalization of the <a href="/wiki/Mutual_information" title="Mutual information">mutual information</a> for more than two variables.
+</p><p>There are many names for interaction information, including <i>amount of information</i>,<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup> <i>information correlation</i>,<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> <i>co-information</i>,<sup id="cite_ref-:0_3-0" class="reference"><a href="#cite_note-:0-3">&#91;3&#93;</a></sup> and simply <i>mutual information</i>.<sup id="cite_ref-:1_4-0" class="reference"><a href="#cite_note-:1-4">&#91;4&#93;</a></sup> Interaction information expresses the amount of information (redundancy or synergy) bound up in a set of variables, <i>beyond</i> that which is present in any subset of those variables. Unlike the mutual information, the interaction information can be either positive or negative. These functions, their negativity and minima have a direct interpretation in <a href="/wiki/Algebraic_topology" title="Algebraic topology">algebraic topology</a>.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Definition"><span class="tocnumber">1</span> <span class="toctext">Definition</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Properties"><span class="tocnumber">1.1</span> <span class="toctext">Properties</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Examples"><span class="tocnumber">1.2</span> <span class="toctext">Examples</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Positive_interaction_information"><span class="tocnumber">1.2.1</span> <span class="toctext">Positive interaction information</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Negative_interaction_information"><span class="tocnumber">1.2.2</span> <span class="toctext">Negative interaction information</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Difficulty_of_interpretation"><span class="tocnumber">2</span> <span class="toctext">Difficulty of interpretation</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Uses"><span class="tocnumber">3</span> <span class="toctext">Uses</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Definition">Definition</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Interaction_information&amp;action=edit&amp;section=1" title="Edit section: Definition">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The <a href="/wiki/Conditional_mutual_information" title="Conditional mutual information">conditional mutual information</a> can be used to inductively define the interaction information for any finite number of variables as follows:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle I(X_{1};\ldots ;X_{n+1})=I(X_{1};\ldots ;X_{n})-I(X_{1};\ldots ;X_{n}\mid X_{n+1}),}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>;</mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mo>;</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>;</mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mo>;</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>;</mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mo>;</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msub>
+        <mo>&#x2223;<!-- ∣ --></mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>,</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle I(X_{1};\ldots ;X_{n+1})=I(X_{1};\ldots ;X_{n})-I(X_{1};\ldots ;X_{n}\mid X_{n+1}),}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/421d6f14f37d97bdc85d150c35ead073e26dda09" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:58.708ex; height:2.843ex;" alt="{\displaystyle I(X_{1};\ldots ;X_{n+1})=I(X_{1};\ldots ;X_{n})-I(X_{1};\ldots ;X_{n}\mid X_{n+1}),}"/></span></dd></dl>
+<p>where
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle I(X_{1};\ldots ;X_{n}\mid X_{n+1})=\mathbb {E} _{X_{n+1}}{\big (}I(X_{1};\ldots ;X_{n})\mid X_{n+1}{\big )}.}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>;</mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mo>;</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msub>
+        <mo>&#x2223;<!-- ∣ --></mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="double-struck">E</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <msub>
+              <mi>X</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>n</mi>
+                <mo>+</mo>
+                <mn>1</mn>
+              </mrow>
+            </msub>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>;</mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mo>;</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>&#x2223;<!-- ∣ --></mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">)</mo>
+          </mrow>
+        </mrow>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle I(X_{1};\ldots ;X_{n}\mid X_{n+1})=\mathbb {E} _{X_{n+1}}{\big (}I(X_{1};\ldots ;X_{n})\mid X_{n+1}{\big )}.}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/598e0fb9947ff27c23ba4db9033d04734c0af6fe" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.005ex; width:54.61ex; height:3.176ex;" alt="{\displaystyle I(X_{1};\ldots ;X_{n}\mid X_{n+1})=\mathbb {E} _{X_{n+1}}{\big (}I(X_{1};\ldots ;X_{n})\mid X_{n+1}{\big )}.}"/></span></dd></dl>
+<p>Some authors<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup> define the interaction information differently, by swapping the two terms being subtracted in the preceding equation. This has the effect of reversing the sign for an odd number of variables.
+</p><p>For three variables <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \{X,Y,Z\}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo fence="false" stretchy="false">{</mo>
+        <mi>X</mi>
+        <mo>,</mo>
+        <mi>Y</mi>
+        <mo>,</mo>
+        <mi>Z</mi>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \{X,Y,Z\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c273a7d7c9d62fecbd0f563990095246fc64d37d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:9.826ex; height:2.843ex;" alt="\{X,Y,Z\}"/></span>, the interaction information <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle I(X;Y;Z)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mi>X</mi>
+        <mo>;</mo>
+        <mi>Y</mi>
+        <mo>;</mo>
+        <mi>Z</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle I(X;Y;Z)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e638502b81522f9ad4bf9538b37e91be03aa455f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:10.483ex; height:2.843ex;" alt="{\displaystyle I(X;Y;Z)}"/></span> is given by
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle I(X;Y;Z)=I(X;Y)-I(X;Y\mid Z)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mi>X</mi>
+        <mo>;</mo>
+        <mi>Y</mi>
+        <mo>;</mo>
+        <mi>Z</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mi>X</mi>
+        <mo>;</mo>
+        <mi>Y</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mi>X</mi>
+        <mo>;</mo>
+        <mi>Y</mi>
+        <mo>&#x2223;<!-- ∣ --></mo>
+        <mi>Z</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle I(X;Y;Z)=I(X;Y)-I(X;Y\mid Z)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6f402e5779b10a5fe19da0c21f86af1bd48d0027" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:35.576ex; height:2.843ex;" alt="{\displaystyle I(X;Y;Z)=I(X;Y)-I(X;Y\mid Z)}"/></span></dd></dl>
+<p>where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle I(X;Y)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mi>X</mi>
+        <mo>;</mo>
+        <mi>Y</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle I(X;Y)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/14b479006c523b8459baf3cf169e3f4a7bcd0771" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:7.768ex; height:2.843ex;" alt="I(X;Y)"/></span> is the mutual information between variables <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle X}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>X</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle X}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.98ex; height:2.176ex;" alt="X"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle Y}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>Y</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle Y}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/961d67d6b454b4df2301ac571808a3538b3a6d3f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.171ex; width:1.773ex; height:2.009ex;" alt="Y"/></span>, and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle I(X;Y\mid Z)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mi>X</mi>
+        <mo>;</mo>
+        <mi>Y</mi>
+        <mo>&#x2223;<!-- ∣ --></mo>
+        <mi>Z</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle I(X;Y\mid Z)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6b3e795cb3184109d4095fc428227b0f629ee573" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:11.386ex; height:2.843ex;" alt="{\displaystyle I(X;Y\mid Z)}"/></span> is the <a href="/wiki/Conditional_mutual_information" title="Conditional mutual information">conditional mutual information</a> between variables <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle X}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>X</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle X}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.98ex; height:2.176ex;" alt="X"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle Y}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>Y</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle Y}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/961d67d6b454b4df2301ac571808a3538b3a6d3f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.171ex; width:1.773ex; height:2.009ex;" alt="Y"/></span> given <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle Z}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>Z</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle Z}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1cc6b75e09a8aa3f04d8584b11db534f88fb56bd" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.68ex; height:2.176ex;" alt="Z"/></span>. The interaction information is <a href="/wiki/Symmetric_function" title="Symmetric function">symmetric</a>, so it does not matter which variable is conditioned on. This is easy to see when the interaction information is written in terms of entropy and joint entropy, as follows:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\begin{alignedat}{3}I(X;Y;Z)&amp;=&amp;&amp;\;{\bigl (}H(X)+H(Y)+H(Z){\bigr )}\\&amp;&amp;&amp;-{\bigl (}H(X,Y)+H(X,Z)+H(Y,Z){\bigr )}\\&amp;&amp;&amp;+H(X,Y,Z)\end{alignedat}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtable columnalign="right left right left right left" rowspacing="3pt" columnspacing="0em 0em 0em 0em 0em 0em" displaystyle="true">
+            <mtr>
+              <mtd>
+                <mi>I</mi>
+                <mo stretchy="false">(</mo>
+                <mi>X</mi>
+                <mo>;</mo>
+                <mi>Y</mi>
+                <mo>;</mo>
+                <mi>Z</mi>
+                <mo stretchy="false">)</mo>
+              </mtd>
+              <mtd>
+                <mi></mi>
+                <mo>=</mo>
+              </mtd>
+              <mtd />
+              <mtd>
+                <mi></mi>
+                <mspace width="thickmathspace" />
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mrow class="MJX-TeXAtom-OPEN">
+                    <mo maxsize="1.2em" minsize="1.2em">(</mo>
+                  </mrow>
+                </mrow>
+                <mi>H</mi>
+                <mo stretchy="false">(</mo>
+                <mi>X</mi>
+                <mo stretchy="false">)</mo>
+                <mo>+</mo>
+                <mi>H</mi>
+                <mo stretchy="false">(</mo>
+                <mi>Y</mi>
+                <mo stretchy="false">)</mo>
+                <mo>+</mo>
+                <mi>H</mi>
+                <mo stretchy="false">(</mo>
+                <mi>Z</mi>
+                <mo stretchy="false">)</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mrow class="MJX-TeXAtom-CLOSE">
+                    <mo maxsize="1.2em" minsize="1.2em">)</mo>
+                  </mrow>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd />
+              <mtd />
+              <mtd />
+              <mtd>
+                <mi></mi>
+                <mo>&#x2212;<!-- − --></mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mrow class="MJX-TeXAtom-OPEN">
+                    <mo maxsize="1.2em" minsize="1.2em">(</mo>
+                  </mrow>
+                </mrow>
+                <mi>H</mi>
+                <mo stretchy="false">(</mo>
+                <mi>X</mi>
+                <mo>,</mo>
+                <mi>Y</mi>
+                <mo stretchy="false">)</mo>
+                <mo>+</mo>
+                <mi>H</mi>
+                <mo stretchy="false">(</mo>
+                <mi>X</mi>
+                <mo>,</mo>
+                <mi>Z</mi>
+                <mo stretchy="false">)</mo>
+                <mo>+</mo>
+                <mi>H</mi>
+                <mo stretchy="false">(</mo>
+                <mi>Y</mi>
+                <mo>,</mo>
+                <mi>Z</mi>
+                <mo stretchy="false">)</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mrow class="MJX-TeXAtom-CLOSE">
+                    <mo maxsize="1.2em" minsize="1.2em">)</mo>
+                  </mrow>
+                </mrow>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd />
+              <mtd />
+              <mtd />
+              <mtd>
+                <mi></mi>
+                <mo>+</mo>
+                <mi>H</mi>
+                <mo stretchy="false">(</mo>
+                <mi>X</mi>
+                <mo>,</mo>
+                <mi>Y</mi>
+                <mo>,</mo>
+                <mi>Z</mi>
+                <mo stretchy="false">)</mo>
+              </mtd>
+            </mtr>
+          </mtable>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\begin{alignedat}{3}I(X;Y;Z)&amp;=&amp;&amp;\;{\bigl (}H(X)+H(Y)+H(Z){\bigr )}\\&amp;&amp;&amp;-{\bigl (}H(X,Y)+H(X,Z)+H(Y,Z){\bigr )}\\&amp;&amp;&amp;+H(X,Y,Z)\end{alignedat}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7ead8f9b1809ff8f30e3ba5c878da42947c73b3e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -4.338ex; width:49.926ex; height:9.843ex;" alt="{\displaystyle {\begin{alignedat}{3}I(X;Y;Z)&amp;=&amp;&amp;\;{\bigl (}H(X)+H(Y)+H(Z){\bigr )}\\&amp;&amp;&amp;-{\bigl (}H(X,Y)+H(X,Z)+H(Y,Z){\bigr )}\\&amp;&amp;&amp;+H(X,Y,Z)\end{alignedat}}}"/></span></dd></dl>
+<p>In general, for the set of variables <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\mathcal {V}}=\{X_{1},X_{2},\ldots ,X_{n}\}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">V</mi>
+          </mrow>
+        </mrow>
+        <mo>=</mo>
+        <mo fence="false" stretchy="false">{</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mo>,</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msub>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {V}}=\{X_{1},X_{2},\ldots ,X_{n}\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4a99ef938c6bcae1af711f81c8205104fa416bfe" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:22.265ex; height:2.843ex;" alt="{\displaystyle {\mathcal {V}}=\{X_{1},X_{2},\ldots ,X_{n}\}}"/></span>, the interaction information can be written in the following form (compare with <a href="/wiki/Kirkwood_approximation" title="Kirkwood approximation">Kirkwood approximation</a>):
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle I({\mathcal {V}})=\sum _{{\mathcal {T}}\subseteq {\mathcal {V}}}(-1)^{\left\vert {\mathcal {T}}\right\vert -1}H({\mathcal {T}})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">V</mi>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <munder>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi class="MJX-tex-caligraphic" mathvariant="script">T</mi>
+              </mrow>
+            </mrow>
+            <mo>&#x2286;<!-- ⊆ --></mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi class="MJX-tex-caligraphic" mathvariant="script">V</mi>
+              </mrow>
+            </mrow>
+          </mrow>
+        </munder>
+        <mo stretchy="false">(</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow>
+              <mo>|</mo>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mi class="MJX-tex-caligraphic" mathvariant="script">T</mi>
+                </mrow>
+              </mrow>
+              <mo>|</mo>
+            </mrow>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+        <mi>H</mi>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">T</mi>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle I({\mathcal {V}})=\sum _{{\mathcal {T}}\subseteq {\mathcal {V}}}(-1)^{\left\vert {\mathcal {T}}\right\vert -1}H({\mathcal {T}})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b7f346755d6517b3f514e42fef91a2625551774e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.338ex; width:26.543ex; height:5.843ex;" alt="{\displaystyle I({\mathcal {V}})=\sum _{{\mathcal {T}}\subseteq {\mathcal {V}}}(-1)^{\left\vert {\mathcal {T}}\right\vert -1}H({\mathcal {T}})}"/></span></dd></dl>
+<p>For three variables, the interaction information measures the influence of a variable <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle Z}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>Z</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle Z}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1cc6b75e09a8aa3f04d8584b11db534f88fb56bd" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.68ex; height:2.176ex;" alt="Z"/></span> on the amount of information shared between <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle X}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>X</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle X}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.98ex; height:2.176ex;" alt="X"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle Y}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>Y</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle Y}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/961d67d6b454b4df2301ac571808a3538b3a6d3f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.171ex; width:1.773ex; height:2.009ex;" alt="Y"/></span>. Because the term <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle I(X;Y\mid Z)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mi>X</mi>
+        <mo>;</mo>
+        <mi>Y</mi>
+        <mo>&#x2223;<!-- ∣ --></mo>
+        <mi>Z</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle I(X;Y\mid Z)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6b3e795cb3184109d4095fc428227b0f629ee573" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:11.386ex; height:2.843ex;" alt="{\displaystyle I(X;Y\mid Z)}"/></span> can be larger than <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle I(X;Y)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mi>X</mi>
+        <mo>;</mo>
+        <mi>Y</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle I(X;Y)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/14b479006c523b8459baf3cf169e3f4a7bcd0771" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:7.768ex; height:2.843ex;" alt="I(X;Y)"/></span>, the interaction information can be negative as well as positive. This will happen, for example, when <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle X}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>X</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle X}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.98ex; height:2.176ex;" alt="X"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle Y}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>Y</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle Y}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/961d67d6b454b4df2301ac571808a3538b3a6d3f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.171ex; width:1.773ex; height:2.009ex;" alt="Y"/></span> are independent but not conditionally independent given <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle Z}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>Z</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle Z}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1cc6b75e09a8aa3f04d8584b11db534f88fb56bd" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.68ex; height:2.176ex;" alt="Z"/></span>. Positive interaction information indicates that variable <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle Z}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>Z</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle Z}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1cc6b75e09a8aa3f04d8584b11db534f88fb56bd" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.68ex; height:2.176ex;" alt="Z"/></span> inhibits (i.e., <i>accounts for</i> or <i>explains</i> some of) the correlation between <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle X}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>X</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle X}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.98ex; height:2.176ex;" alt="X"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle Y}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>Y</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle Y}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/961d67d6b454b4df2301ac571808a3538b3a6d3f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.171ex; width:1.773ex; height:2.009ex;" alt="Y"/></span>, whereas negative interaction information indicates that variable <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle Z}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>Z</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle Z}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1cc6b75e09a8aa3f04d8584b11db534f88fb56bd" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.68ex; height:2.176ex;" alt="Z"/></span> facilitates or enhances the correlation.
+</p>
+<h3><span class="mw-headline" id="Properties">Properties</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Interaction_information&amp;action=edit&amp;section=2" title="Edit section: Properties">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Interaction information is bounded.  In the three variable case, it is bounded by<sup id="cite_ref-:1_4-1" class="reference"><a href="#cite_note-:1-4">&#91;4&#93;</a></sup>
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle -\min\{I(X;Y\mid Z),I(Y;Z\mid X),I(X;Z\mid Y)\}\leq I(X;Y;Z)\leq \min\{I(X;Y),I(Y;Z),I(X;Z)\}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo>&#x2212;<!-- − --></mo>
+        <mo movablelimits="true" form="prefix">min</mo>
+        <mo fence="false" stretchy="false">{</mo>
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mi>X</mi>
+        <mo>;</mo>
+        <mi>Y</mi>
+        <mo>&#x2223;<!-- ∣ --></mo>
+        <mi>Z</mi>
+        <mo stretchy="false">)</mo>
+        <mo>,</mo>
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mi>Y</mi>
+        <mo>;</mo>
+        <mi>Z</mi>
+        <mo>&#x2223;<!-- ∣ --></mo>
+        <mi>X</mi>
+        <mo stretchy="false">)</mo>
+        <mo>,</mo>
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mi>X</mi>
+        <mo>;</mo>
+        <mi>Z</mi>
+        <mo>&#x2223;<!-- ∣ --></mo>
+        <mi>Y</mi>
+        <mo stretchy="false">)</mo>
+        <mo fence="false" stretchy="false">}</mo>
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mi>X</mi>
+        <mo>;</mo>
+        <mi>Y</mi>
+        <mo>;</mo>
+        <mi>Z</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <mo movablelimits="true" form="prefix">min</mo>
+        <mo fence="false" stretchy="false">{</mo>
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mi>X</mi>
+        <mo>;</mo>
+        <mi>Y</mi>
+        <mo stretchy="false">)</mo>
+        <mo>,</mo>
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mi>Y</mi>
+        <mo>;</mo>
+        <mi>Z</mi>
+        <mo stretchy="false">)</mo>
+        <mo>,</mo>
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mi>X</mi>
+        <mo>;</mo>
+        <mi>Z</mi>
+        <mo stretchy="false">)</mo>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle -\min\{I(X;Y\mid Z),I(Y;Z\mid X),I(X;Z\mid Y)\}\leq I(X;Y;Z)\leq \min\{I(X;Y),I(Y;Z),I(X;Z)\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/49ab9707493ca90cfe6bdf760c7365328a92ff3b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:92.481ex; height:2.843ex;" alt="{\displaystyle -\min\{I(X;Y\mid Z),I(Y;Z\mid X),I(X;Z\mid Y)\}\leq I(X;Y;Z)\leq \min\{I(X;Y),I(Y;Z),I(X;Z)\}}"/></span></dd></dl>
+<p>If three variables form a Markov chain <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle X\to Y\to Z}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>X</mi>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mi>Y</mi>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mi>Z</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle X\to Y\to Z}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e028358f2bb672e864c563f5cc2fd8c8aea44453" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:12.662ex; height:2.176ex;" alt="{\displaystyle X\to Y\to Z}"/></span>, then <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle I(X;Z\mid Y)=0}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mi>X</mi>
+        <mo>;</mo>
+        <mi>Z</mi>
+        <mo>&#x2223;<!-- ∣ --></mo>
+        <mi>Y</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mn>0</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle I(X;Z\mid Y)=0}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/33c7913367670e223cabb3f40723cac9f49503ac" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:15.647ex; height:2.843ex;" alt="{\displaystyle I(X;Z\mid Y)=0}"/></span>, but <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle I(X;Z)\geq 0}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mi>X</mi>
+        <mo>;</mo>
+        <mi>Z</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x2265;<!-- ≥ --></mo>
+        <mn>0</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle I(X;Z)\geq 0}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/25305053c79a4b83a5fd6c5506dfc7f62ef01eef" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:11.936ex; height:2.843ex;" alt="{\displaystyle I(X;Z)\geq 0}"/></span>. Therefore
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle I(X;Y;Z)=I(X;Z)-I(X;Z\mid Y)=I(X;Z)\geq 0.}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mi>X</mi>
+        <mo>;</mo>
+        <mi>Y</mi>
+        <mo>;</mo>
+        <mi>Z</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mi>X</mi>
+        <mo>;</mo>
+        <mi>Z</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mi>X</mi>
+        <mo>;</mo>
+        <mi>Z</mi>
+        <mo>&#x2223;<!-- ∣ --></mo>
+        <mi>Y</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mi>X</mi>
+        <mo>;</mo>
+        <mi>Z</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x2265;<!-- ≥ --></mo>
+        <mn>0.</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle I(X;Y;Z)=I(X;Z)-I(X;Z\mid Y)=I(X;Z)\geq 0.}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/295f01edca410b3642f0ade899e1c299f0d920bd" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:51.164ex; height:2.843ex;" alt="{\displaystyle I(X;Y;Z)=I(X;Z)-I(X;Z\mid Y)=I(X;Z)\geq 0.}"/></span></dd></dl>
+<h3><span class="mw-headline" id="Examples">Examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Interaction_information&amp;action=edit&amp;section=3" title="Edit section: Examples">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Positive_interaction_information">Positive interaction information</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Interaction_information&amp;action=edit&amp;section=4" title="Edit section: Positive interaction information">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Positive interaction information seems much more natural than negative interaction information in the sense that such <i>explanatory</i> effects are typical of common-cause structures. For example, clouds cause rain and also block the sun; therefore, the correlation between rain and darkness is partly accounted for by the presence of clouds, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle I({\text{rain}};{\text{dark}}\mid {\text{cloud}})&lt;I({\text{rain}};{\text{dark}})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>rain</mtext>
+        </mrow>
+        <mo>;</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>dark</mtext>
+        </mrow>
+        <mo>&#x2223;<!-- ∣ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>cloud</mtext>
+        </mrow>
+        <mo stretchy="false">)</mo>
+        <mo>&lt;</mo>
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>rain</mtext>
+        </mrow>
+        <mo>;</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>dark</mtext>
+        </mrow>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle I({\text{rain}};{\text{dark}}\mid {\text{cloud}})&lt;I({\text{rain}};{\text{dark}})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0dd4037b8bd9d49dcc17caec466ec56bd72ffe53" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:35.707ex; height:2.843ex;" alt="{\displaystyle I({\text{rain}};{\text{dark}}\mid {\text{cloud}})&lt;I({\text{rain}};{\text{dark}})}"/></span>. The result is positive interaction information <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle I({\text{rain}};{\text{dark}};{\text{cloud}})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>rain</mtext>
+        </mrow>
+        <mo>;</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>dark</mtext>
+        </mrow>
+        <mo>;</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>cloud</mtext>
+        </mrow>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle I({\text{rain}};{\text{dark}};{\text{cloud}})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e353f213e178b1df97c4e949cd8ac3910dd9215a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:19.083ex; height:2.843ex;" alt="{\displaystyle I({\text{rain}};{\text{dark}};{\text{cloud}})}"/></span>.
+</p>
+<h4><span class="mw-headline" id="Negative_interaction_information">Negative interaction information</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Interaction_information&amp;action=edit&amp;section=5" title="Edit section: Negative interaction information">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>A car's engine can fail to start due to either a dead battery or a blocked fuel pump. Ordinarily, we assume that battery death and fuel pump blockage are independent events, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle I({\text{blocked fuel}};{\text{dead battery}})=0}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>blocked fuel</mtext>
+        </mrow>
+        <mo>;</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>dead battery</mtext>
+        </mrow>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mn>0</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle I({\text{blocked fuel}};{\text{dead battery}})=0}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1c5f2f6bd135be220ef214ce669d5057e2511d70" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:33.023ex; height:2.843ex;" alt="{\displaystyle I({\text{blocked fuel}};{\text{dead battery}})=0}"/></span>. But knowing that the car fails to start, if an inspection shows the battery to be in good health, we can conclude that the fuel pump must be blocked. Therefore <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle I({\text{blocked fuel}};{\text{dead battery}}\mid {\text{engine fails}})&gt;0}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>blocked fuel</mtext>
+        </mrow>
+        <mo>;</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>dead battery</mtext>
+        </mrow>
+        <mo>&#x2223;<!-- ∣ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>engine fails</mtext>
+        </mrow>
+        <mo stretchy="false">)</mo>
+        <mo>&gt;</mo>
+        <mn>0</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle I({\text{blocked fuel}};{\text{dead battery}}\mid {\text{engine fails}})&gt;0}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ce15f0bf0ce6341767f5b5618a7aa9c835016fa4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:46.084ex; height:2.843ex;" alt="{\displaystyle I({\text{blocked fuel}};{\text{dead battery}}\mid {\text{engine fails}})&gt;0}"/></span>, and the result is negative interaction information.
+</p>
+<h2><span class="mw-headline" id="Difficulty_of_interpretation">Difficulty of interpretation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Interaction_information&amp;action=edit&amp;section=6" title="Edit section: Difficulty of interpretation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The possible negativity of interaction information can be the source of some confusion.<sup id="cite_ref-:0_3-1" class="reference"><a href="#cite_note-:0-3">&#91;3&#93;</a></sup> Many authors have taken zero interaction information as a sign that three or more random variables do not interact, but this interpretation is wrong.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup>
+</p><p>To see how difficult interpretation can be, consider a set of eight independent binary variables <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \{X_{1},X_{2},X_{3},X_{4},X_{5},X_{6},X_{7},X_{8}\}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo fence="false" stretchy="false">{</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>3</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>4</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>5</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>6</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>7</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>8</mn>
+          </mrow>
+        </msub>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \{X_{1},X_{2},X_{3},X_{4},X_{5},X_{6},X_{7},X_{8}\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c0a38f7681703462467ba623491de27a42f30187" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:33.391ex; height:2.843ex;" alt="{\displaystyle \{X_{1},X_{2},X_{3},X_{4},X_{5},X_{6},X_{7},X_{8}\}}"/></span>. Agglomerate these variables as follows:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\begin{aligned}Y_{1}&amp;=\{X_{1},X_{2},X_{3},X_{4},X_{5},X_{6},X_{7}\}\\Y_{2}&amp;=\{X_{4},X_{5},X_{6},X_{7}\}\\Y_{3}&amp;=\{X_{5},X_{6},X_{7},X_{8}\}\end{aligned}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>Y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>1</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+              <mtd>
+                <mi></mi>
+                <mo>=</mo>
+                <mo fence="false" stretchy="false">{</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>1</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>3</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>4</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>6</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>7</mn>
+                  </mrow>
+                </msub>
+                <mo fence="false" stretchy="false">}</mo>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>Y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+              <mtd>
+                <mi></mi>
+                <mo>=</mo>
+                <mo fence="false" stretchy="false">{</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>4</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>6</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>7</mn>
+                  </mrow>
+                </msub>
+                <mo fence="false" stretchy="false">}</mo>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>Y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>3</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+              <mtd>
+                <mi></mi>
+                <mo>=</mo>
+                <mo fence="false" stretchy="false">{</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>6</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>7</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>8</mn>
+                  </mrow>
+                </msub>
+                <mo fence="false" stretchy="false">}</mo>
+              </mtd>
+            </mtr>
+          </mtable>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\begin{aligned}Y_{1}&amp;=\{X_{1},X_{2},X_{3},X_{4},X_{5},X_{6},X_{7}\}\\Y_{2}&amp;=\{X_{4},X_{5},X_{6},X_{7}\}\\Y_{3}&amp;=\{X_{5},X_{6},X_{7},X_{8}\}\end{aligned}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ecaf0d26ac9add810fc68874383a77ea4d67ac42" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -4.005ex; width:35.633ex; height:9.176ex;" alt="{\displaystyle {\begin{aligned}Y_{1}&amp;=\{X_{1},X_{2},X_{3},X_{4},X_{5},X_{6},X_{7}\}\\Y_{2}&amp;=\{X_{4},X_{5},X_{6},X_{7}\}\\Y_{3}&amp;=\{X_{5},X_{6},X_{7},X_{8}\}\end{aligned}}}"/></span></dd></dl>
+<p>Because the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle Y_{i}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>Y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle Y_{i}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d57be496fff95ee2a97ee43c7f7fe244b4dbf8ae" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.15ex; height:2.509ex;" alt="Y_{i}"/></span>'s overlap each other (are redundant) on the three binary variables <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \{X_{5},X_{6},X_{7}\}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo fence="false" stretchy="false">{</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>5</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>6</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>7</mn>
+          </mrow>
+        </msub>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \{X_{5},X_{6},X_{7}\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0673bba108e5fe03a8e1e12fa489a5479c7eaa06" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:13.328ex; height:2.843ex;" alt="{\displaystyle \{X_{5},X_{6},X_{7}\}}"/></span>, we would expect the interaction information <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle I(Y_{1};Y_{2};Y_{3})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>Y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>;</mo>
+        <msub>
+          <mi>Y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>;</mo>
+        <msub>
+          <mi>Y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>3</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle I(Y_{1};Y_{2};Y_{3})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f5d3e98d9abd3ecc40e9c19149d381fd4f8f758e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:12.263ex; height:2.843ex;" alt="{\displaystyle I(Y_{1};Y_{2};Y_{3})}"/></span> to equal <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 3}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>3</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 3}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/991e33c6e207b12546f15bdfee8b5726eafbbb2f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.162ex; height:2.176ex;" alt="3"/></span> bits, which it does. However, consider now the agglomerated variables
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\begin{aligned}Y_{1}&amp;=\{X_{1},X_{2},X_{3},X_{4},X_{5},X_{6},X_{7}\}\\Y_{2}&amp;=\{X_{4},X_{5},X_{6},X_{7}\}\\Y_{3}&amp;=\{X_{5},X_{6},X_{7},X_{8}\}\\Y_{4}&amp;=\{X_{7},X_{8}\}\end{aligned}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>Y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>1</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+              <mtd>
+                <mi></mi>
+                <mo>=</mo>
+                <mo fence="false" stretchy="false">{</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>1</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>3</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>4</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>6</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>7</mn>
+                  </mrow>
+                </msub>
+                <mo fence="false" stretchy="false">}</mo>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>Y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+              <mtd>
+                <mi></mi>
+                <mo>=</mo>
+                <mo fence="false" stretchy="false">{</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>4</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>6</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>7</mn>
+                  </mrow>
+                </msub>
+                <mo fence="false" stretchy="false">}</mo>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>Y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>3</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+              <mtd>
+                <mi></mi>
+                <mo>=</mo>
+                <mo fence="false" stretchy="false">{</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>6</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>7</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>8</mn>
+                  </mrow>
+                </msub>
+                <mo fence="false" stretchy="false">}</mo>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>Y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>4</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+              <mtd>
+                <mi></mi>
+                <mo>=</mo>
+                <mo fence="false" stretchy="false">{</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>7</mn>
+                  </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                  <mi>X</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>8</mn>
+                  </mrow>
+                </msub>
+                <mo fence="false" stretchy="false">}</mo>
+              </mtd>
+            </mtr>
+          </mtable>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\begin{aligned}Y_{1}&amp;=\{X_{1},X_{2},X_{3},X_{4},X_{5},X_{6},X_{7}\}\\Y_{2}&amp;=\{X_{4},X_{5},X_{6},X_{7}\}\\Y_{3}&amp;=\{X_{5},X_{6},X_{7},X_{8}\}\\Y_{4}&amp;=\{X_{7},X_{8}\}\end{aligned}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0ae1496ddc4d3892615ff87999ec6062fa3c3ab2" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -5.671ex; width:35.633ex; height:12.509ex;" alt="{\displaystyle {\begin{aligned}Y_{1}&amp;=\{X_{1},X_{2},X_{3},X_{4},X_{5},X_{6},X_{7}\}\\Y_{2}&amp;=\{X_{4},X_{5},X_{6},X_{7}\}\\Y_{3}&amp;=\{X_{5},X_{6},X_{7},X_{8}\}\\Y_{4}&amp;=\{X_{7},X_{8}\}\end{aligned}}}"/></span></dd></dl>
+<p>These are the same variables as before with the addition of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle Y_{4}=\{X_{7},X_{8}\}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>Y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>4</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo fence="false" stretchy="false">{</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>7</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>8</mn>
+          </mrow>
+        </msub>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle Y_{4}=\{X_{7},X_{8}\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9299b0ef6bbaa53be2f348e8e9905ff76c7b57e7" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:14.819ex; height:2.843ex;" alt="{\displaystyle Y_{4}=\{X_{7},X_{8}\}}"/></span>. However, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle I(Y_{1};Y_{2};Y_{3};Y_{4})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>I</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>Y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>;</mo>
+        <msub>
+          <mi>Y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>;</mo>
+        <msub>
+          <mi>Y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>3</mn>
+          </mrow>
+        </msub>
+        <mo>;</mo>
+        <msub>
+          <mi>Y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>4</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle I(Y_{1};Y_{2};Y_{3};Y_{4})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1142946a69ac28503e4f73149d2c906a2a90d5a6" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:15.702ex; height:2.843ex;" alt="{\displaystyle I(Y_{1};Y_{2};Y_{3};Y_{4})}"/></span> in this case is actually equal to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle +1}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo>+</mo>
+        <mn>1</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle +1}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d04cf05c67d41d9f39dabf6a90722ce860a76958" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.505ex; width:2.971ex; height:2.343ex;" alt="+1"/></span> bit, indicating less redundancy. This is correct in the sense that
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\begin{aligned}I(Y_{1};Y_{2};Y_{3};Y_{4})&amp;=I(Y_{1};Y_{2};Y_{3})-I(Y_{1};Y_{2};Y_{3}|Y_{4})\\&amp;=3-2\\&amp;=1\end{aligned}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+            <mtr>
+              <mtd>
+                <mi>I</mi>
+                <mo stretchy="false">(</mo>
+                <msub>
+                  <mi>Y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>1</mn>
+                  </mrow>
+                </msub>
+                <mo>;</mo>
+                <msub>
+                  <mi>Y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msub>
+                <mo>;</mo>
+                <msub>
+                  <mi>Y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>3</mn>
+                  </mrow>
+                </msub>
+                <mo>;</mo>
+                <msub>
+                  <mi>Y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>4</mn>
+                  </mrow>
+                </msub>
+                <mo stretchy="false">)</mo>
+              </mtd>
+              <mtd>
+                <mi></mi>
+                <mo>=</mo>
+                <mi>I</mi>
+                <mo stretchy="false">(</mo>
+                <msub>
+                  <mi>Y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>1</mn>
+                  </mrow>
+                </msub>
+                <mo>;</mo>
+                <msub>
+                  <mi>Y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msub>
+                <mo>;</mo>
+                <msub>
+                  <mi>Y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>3</mn>
+                  </mrow>
+                </msub>
+                <mo stretchy="false">)</mo>
+                <mo>&#x2212;<!-- − --></mo>
+                <mi>I</mi>
+                <mo stretchy="false">(</mo>
+                <msub>
+                  <mi>Y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>1</mn>
+                  </mrow>
+                </msub>
+                <mo>;</mo>
+                <msub>
+                  <mi>Y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msub>
+                <mo>;</mo>
+                <msub>
+                  <mi>Y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>3</mn>
+                  </mrow>
+                </msub>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mo stretchy="false">|</mo>
+                </mrow>
+                <msub>
+                  <mi>Y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>4</mn>
+                  </mrow>
+                </msub>
+                <mo stretchy="false">)</mo>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd />
+              <mtd>
+                <mi></mi>
+                <mo>=</mo>
+                <mn>3</mn>
+                <mo>&#x2212;<!-- − --></mo>
+                <mn>2</mn>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd />
+              <mtd>
+                <mi></mi>
+                <mo>=</mo>
+                <mn>1</mn>
+              </mtd>
+            </mtr>
+          </mtable>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\begin{aligned}I(Y_{1};Y_{2};Y_{3};Y_{4})&amp;=I(Y_{1};Y_{2};Y_{3})-I(Y_{1};Y_{2};Y_{3}|Y_{4})\\&amp;=3-2\\&amp;=1\end{aligned}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0bf371fd9c98f88a58dc2f79294b887370425cf5" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.838ex; width:49.971ex; height:8.843ex;" alt="{\displaystyle {\begin{aligned}I(Y_{1};Y_{2};Y_{3};Y_{4})&amp;=I(Y_{1};Y_{2};Y_{3})-I(Y_{1};Y_{2};Y_{3}|Y_{4})\\&amp;=3-2\\&amp;=1\end{aligned}}}"/></span></dd></dl>
+<p>but it remains difficult to interpret.
+</p>
+<h2><span class="mw-headline" id="Uses">Uses</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Interaction_information&amp;action=edit&amp;section=7" title="Edit section: Uses">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Jakulin and Bratko (2003b) provide a machine learning algorithm which uses interaction information.</li>
+<li>Killian, Kravitz and Gilson (2007) use mutual information expansion to extract entropy estimates from molecular simulations.</li>
+<li>LeVine and Weinstein (2014) use interaction information and other N-body information measures to quantify allosteric couplings in molecular simulations.</li>
+<li>Moore et al. (2006), Chanda P, Zhang A, Brazeau D, Sucheston L, Freudenheim JL, Ambrosone C, Ramanathan M. (2007) and Chanda P, Sucheston L, Zhang A, Brazeau D, Freudenheim JL, Ambrosone C, Ramanathan M. (2008) demonstrate the use of interaction information for analyzing gene-gene and gene-environmental interactions associated with complex diseases.</li>
+<li>Pandey and Sarkar (2017) use interaction information in Cosmology to study the influence of large-scale environments on galaxy properties.</li>
+<li>A python package for computing all multivariate interaction or mutual informations, conditional mutual information, joint entropies, total correlations, information distance in a dataset of n variables is available .<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup></li></ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Interaction_information&amp;action=edit&amp;section=8" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Mutual_information" title="Mutual information">Mutual information</a></li>
+<li><a href="/wiki/Total_correlation" title="Total correlation">Total correlation</a></li>
+<li><a href="/wiki/Dual_total_correlation" title="Dual total correlation">Dual total correlation</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Interaction_information&amp;action=edit&amp;section=9" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r1011085734">.mw-parser-output .reflist{font-size:90%;margin-bottom:0.5em;list-style-type:decimal}.mw-parser-output .reflist .references{font-size:100%;margin-bottom:0;list-style-type:inherit}.mw-parser-output .reflist-columns-2{column-width:30em}.mw-parser-output .reflist-columns-3{column-width:25em}.mw-parser-output .reflist-columns{margin-top:0.3em}.mw-parser-output .reflist-columns ol{margin-top:0}.mw-parser-output .reflist-columns li{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .reflist-upper-alpha{list-style-type:upper-alpha}.mw-parser-output .reflist-upper-roman{list-style-type:upper-roman}.mw-parser-output .reflist-lower-alpha{list-style-type:lower-alpha}.mw-parser-output .reflist-lower-greek{list-style-type:lower-greek}.mw-parser-output .reflist-lower-roman{list-style-type:lower-roman}</style><div class="reflist">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><style data-mw-deduplicate="TemplateStyles:r1067248974">.mw-parser-output cite.citation{font-style:inherit;word-wrap:break-word}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation:target{background-color:rgba(0,127,255,0.133)}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output .cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;color:#d33}.mw-parser-output .cs1-visible-error{color:#d33}.mw-parser-output .cs1-maint{display:none;color:#3a3;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><cite id="CITEREFTing1962" class="citation journal cs1">Ting, Hu Kuo (January 1962). <a rel="nofollow" class="external text" href="https://dx.doi.org/10.1137/1107041">"On the Amount of Information"</a>. <i>Theory of Probability &amp; Its Applications</i>. <b>7</b> (4): 439–447. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1137%2F1107041">10.1137/1107041</a>. <a href="/wiki/ISSN_(identifier)" class="mw-redirect" title="ISSN (identifier)">ISSN</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/issn/0040-585X">0040-585X</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Theory+of+Probability+%26+Its+Applications&amp;rft.atitle=On+the+Amount+of+Information&amp;rft.volume=7&amp;rft.issue=4&amp;rft.pages=439-447&amp;rft.date=1962-01&amp;rft_id=info%3Adoi%2F10.1137%2F1107041&amp;rft.issn=0040-585X&amp;rft.aulast=Ting&amp;rft.aufirst=Hu+Kuo&amp;rft_id=http%3A%2F%2Fdx.doi.org%2F10.1137%2F1107041&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AInteraction+information" class="Z3988"></span></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFWolf1996" class="citation techreport cs1">Wolf, David (May 1, 1996). <i>The Generalization of Mutual Information as the Information between a Set of Variables: The Information Correlation Function Hierarchy and the Information Structure of Multi-Agent Systems</i> (Technical report). NASA Ames Research Center.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=report&amp;rft.btitle=The+Generalization+of+Mutual+Information+as+the+Information+between+a+Set+of+Variables%3A+The+Information+Correlation+Function+Hierarchy+and+the+Information+Structure+of+Multi-Agent+Systems&amp;rft.pub=NASA+Ames+Research+Center&amp;rft.date=1996-05-01&amp;rft.aulast=Wolf&amp;rft.aufirst=David&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AInteraction+information" class="Z3988"></span></span>
+</li>
+<li id="cite_note-:0-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-:0_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:0_3-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFBell2003" class="citation conference cs1">Bell, Anthony (2003). <i>The co-information lattice</i>. 4th Int. Symp. Independent Component Analysis and Blind Source Separation.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.btitle=The+co-information+lattice&amp;rft.date=2003&amp;rft.aulast=Bell&amp;rft.aufirst=Anthony&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AInteraction+information" class="Z3988"></span></span>
+</li>
+<li id="cite_note-:1-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-:1_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:1_4-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFYeung1991" class="citation journal cs1">Yeung, R.W. (May 1991). <a rel="nofollow" class="external text" href="https://dx.doi.org/10.1109/18.79902">"A new outlook on Shannon's information measures"</a>. <i>IEEE Transactions on Information Theory</i>. <b>37</b> (3): 466–474. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1109%2F18.79902">10.1109/18.79902</a>. <a href="/wiki/ISSN_(identifier)" class="mw-redirect" title="ISSN (identifier)">ISSN</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/issn/0018-9448">0018-9448</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IEEE+Transactions+on+Information+Theory&amp;rft.atitle=A+new+outlook+on+Shannon%27s+information+measures&amp;rft.volume=37&amp;rft.issue=3&amp;rft.pages=466-474&amp;rft.date=1991-05&amp;rft_id=info%3Adoi%2F10.1109%2F18.79902&amp;rft.issn=0018-9448&amp;rft.aulast=Yeung&amp;rft.aufirst=R.W.&amp;rft_id=http%3A%2F%2Fdx.doi.org%2F10.1109%2F18.79902&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AInteraction+information" class="Z3988"></span></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFBaudotBennequin2015" class="citation journal cs1">Baudot, Pierre; Bennequin, Daniel (2015-05-13). <a rel="nofollow" class="external text" href="https://dx.doi.org/10.3390/e17053253">"The Homological Nature of Entropy"</a>. <i>Entropy</i>. <b>17</b> (5): 3253–3318. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.3390%2Fe17053253">10.3390/e17053253</a></span>. <a href="/wiki/ISSN_(identifier)" class="mw-redirect" title="ISSN (identifier)">ISSN</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/issn/1099-4300">1099-4300</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Entropy&amp;rft.atitle=The+Homological+Nature+of+Entropy&amp;rft.volume=17&amp;rft.issue=5&amp;rft.pages=3253-3318&amp;rft.date=2015-05-13&amp;rft_id=info%3Adoi%2F10.3390%2Fe17053253&amp;rft.issn=1099-4300&amp;rft.aulast=Baudot&amp;rft.aufirst=Pierre&amp;rft.au=Bennequin%2C+Daniel&amp;rft_id=http%3A%2F%2Fdx.doi.org%2F10.3390%2Fe17053253&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AInteraction+information" class="Z3988"></span></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFMcGill1954" class="citation journal cs1">McGill, William J. (June 1954). <a rel="nofollow" class="external text" href="https://dx.doi.org/10.1007/bf02289159">"Multivariate information transmission"</a>. <i>Psychometrika</i>. <b>19</b> (2): 97–116. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1007%2Fbf02289159">10.1007/bf02289159</a>. <a href="/wiki/ISSN_(identifier)" class="mw-redirect" title="ISSN (identifier)">ISSN</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/issn/0033-3123">0033-3123</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Psychometrika&amp;rft.atitle=Multivariate+information+transmission&amp;rft.volume=19&amp;rft.issue=2&amp;rft.pages=97-116&amp;rft.date=1954-06&amp;rft_id=info%3Adoi%2F10.1007%2Fbf02289159&amp;rft.issn=0033-3123&amp;rft.aulast=McGill&amp;rft.aufirst=William+J.&amp;rft_id=http%3A%2F%2Fdx.doi.org%2F10.1007%2Fbf02289159&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AInteraction+information" class="Z3988"></span></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFKrippendorff2009" class="citation journal cs1">Krippendorff, Klaus (August 2009). <a rel="nofollow" class="external text" href="http://www.tandfonline.com/doi/abs/10.1080/03081070902993160">"Information of interactions in complex systems"</a>. <i>International Journal of General Systems</i>. <b>38</b> (6): 669–680. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1080%2F03081070902993160">10.1080/03081070902993160</a>. <a href="/wiki/ISSN_(identifier)" class="mw-redirect" title="ISSN (identifier)">ISSN</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/issn/0308-1079">0308-1079</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=International+Journal+of+General+Systems&amp;rft.atitle=Information+of+interactions+in+complex+systems&amp;rft.volume=38&amp;rft.issue=6&amp;rft.pages=669-680&amp;rft.date=2009-08&amp;rft_id=info%3Adoi%2F10.1080%2F03081070902993160&amp;rft.issn=0308-1079&amp;rft.aulast=Krippendorff&amp;rft.aufirst=Klaus&amp;rft_id=http%3A%2F%2Fwww.tandfonline.com%2Fdoi%2Fabs%2F10.1080%2F03081070902993160&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AInteraction+information" class="Z3988"></span></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://infotopo.readthedocs.io/en/latest/index.html">"InfoTopo: Topological Information Data Analysis. Deep statistical unsupervised and supervised learning - File Exchange - Github"</a>. <i>github.com/pierrebaudot/infotopopy/</i><span class="reference-accessdate">. Retrieved <span class="nowrap">26 September</span> 2020</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=github.com%2Fpierrebaudot%2Finfotopopy%2F&amp;rft.atitle=InfoTopo%3A+Topological+Information+Data+Analysis.+Deep+statistical+unsupervised+and+supervised+learning+-+File+Exchange+-+Github&amp;rft_id=https%3A%2F%2Finfotopo.readthedocs.io%2Fen%2Flatest%2Findex.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AInteraction+information" class="Z3988"></span></span>
+</li>
+</ol></div></div>
+<ul><li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFBaudotBennequin2015" class="citation journal cs1">Baudot, P.; Bennequin, D. (2015). <a rel="nofollow" class="external text" href="http://www.mis.mpg.de/preprints/2015/preprint2015_10.pdf">"The homological nature of entropy"</a> <span class="cs1-format">(PDF)</span>. <i>Entropy</i>. <b>17</b> (5): 1–66. <a href="/wiki/Bibcode_(identifier)" class="mw-redirect" title="Bibcode (identifier)">Bibcode</a>:<a rel="nofollow" class="external text" href="https://ui.adsabs.harvard.edu/abs/2015Entrp..17.3253B">2015Entrp..17.3253B</a>. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.3390%2Fe17053253">10.3390/e17053253</a></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Entropy&amp;rft.atitle=The+homological+nature+of+entropy&amp;rft.volume=17&amp;rft.issue=5&amp;rft.pages=1-66&amp;rft.date=2015&amp;rft_id=info%3Adoi%2F10.3390%2Fe17053253&amp;rft_id=info%3Abibcode%2F2015Entrp..17.3253B&amp;rft.aulast=Baudot&amp;rft.aufirst=P.&amp;rft.au=Bennequin%2C+D.&amp;rft_id=http%3A%2F%2Fwww.mis.mpg.de%2Fpreprints%2F2015%2Fpreprint2015_10.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AInteraction+information" class="Z3988"></span></li>
+<li>Bell, A J (2003), <i>The co-information lattice</i> <a rel="nofollow" class="external autonumber" href="http://www.kecl.ntt.co.jp/icl/signal/ica2003/cdrom/data/0187.pdf">[1]</a></li>
+<li>Fano, R M (1961), <i>Transmission of Information: A Statistical Theory of Communications</i>, MIT Press, Cambridge, MA.</li>
+<li>Garner W R (1962). <i>Uncertainty and Structure as Psychological Concepts</i>, JohnWiley &amp; Sons, New York.</li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFHan1978" class="citation journal cs1">Han, T S (1978). <a rel="nofollow" class="external text" href="https://doi.org/10.1016%2Fs0019-9958%2878%2990275-9">"Nonnegative entropy measures of multivariate symmetric correlations"</a>. <i>Information and Control</i>. <b>36</b> (2): 133–156. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.1016%2Fs0019-9958%2878%2990275-9">10.1016/s0019-9958(78)90275-9</a></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Information+and+Control&amp;rft.atitle=Nonnegative+entropy+measures+of+multivariate+symmetric+correlations&amp;rft.volume=36&amp;rft.issue=2&amp;rft.pages=133-156&amp;rft.date=1978&amp;rft_id=info%3Adoi%2F10.1016%2Fs0019-9958%2878%2990275-9&amp;rft.aulast=Han&amp;rft.aufirst=T+S&amp;rft_id=%2F%2Fdoi.org%2F10.1016%252Fs0019-9958%252878%252990275-9&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AInteraction+information" class="Z3988"></span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFHan1980" class="citation journal cs1">Han, T S (1980). <a rel="nofollow" class="external text" href="https://doi.org/10.1016%2Fs0019-9958%2880%2990478-7">"Multiple mutual information and multiple interactions in frequency data"</a>. <i>Information and Control</i>. <b>46</b>: 26–45. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.1016%2Fs0019-9958%2880%2990478-7">10.1016/s0019-9958(80)90478-7</a></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Information+and+Control&amp;rft.atitle=Multiple+mutual+information+and+multiple+interactions+in+frequency+data&amp;rft.volume=46&amp;rft.pages=26-45&amp;rft.date=1980&amp;rft_id=info%3Adoi%2F10.1016%2Fs0019-9958%2880%2990478-7&amp;rft.aulast=Han&amp;rft.aufirst=T+S&amp;rft_id=%2F%2Fdoi.org%2F10.1016%252Fs0019-9958%252880%252990478-7&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AInteraction+information" class="Z3988"></span></li>
+<li>Hu Kuo Tin (1962), On the Amount of Information. Theory Probab. Appl.,7(4), 439-44. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20150721210447/https://baudot.olympe.in/wp-content/uploads/2015/07/Hu-Kuo-Ting-196-On-the-amount-of-information-PRINCEPTS.pdf">PDF</a></li>
+<li>Jakulin A &amp; Bratko I (2003a). Analyzing Attribute Dependencies, in N Lavra\quad{c}, D Gamberger, L Todorovski &amp; H Blockeel, eds, <i>Proceedings of the 7th European Conference on Principles and Practice of Knowledge Discovery in Databases</i>, Springer, Cavtat-Dubrovnik, Croatia, pp.&#160;229–240.</li>
+<li>Jakulin A &amp; Bratko I (2003b). Quantifying and visualizing attribute interactions <a rel="nofollow" class="external autonumber" href="https://arxiv.org/abs/cs/0308002v1">[2]</a>.</li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFMargolinWangCalifanoNemenman2010" class="citation journal cs1">Margolin, A; Wang, K; Califano, A; Nemenman, I (2010). "Multivariate dependence and genetic networks inference". <i>IET Syst Biol</i>. <b>4</b> (6): 428–440. <a href="/wiki/ArXiv_(identifier)" class="mw-redirect" title="ArXiv (identifier)">arXiv</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//arxiv.org/abs/1001.1681">1001.1681</a></span>. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1049%2Fiet-syb.2010.0009">10.1049/iet-syb.2010.0009</a>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/21073241">21073241</a>. <a href="/wiki/S2CID_(identifier)" class="mw-redirect" title="S2CID (identifier)">S2CID</a>&#160;<a rel="nofollow" class="external text" href="https://api.semanticscholar.org/CorpusID:14280921">14280921</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IET+Syst+Biol&amp;rft.atitle=Multivariate+dependence+and+genetic+networks+inference&amp;rft.volume=4&amp;rft.issue=6&amp;rft.pages=428-440&amp;rft.date=2010&amp;rft_id=info%3Aarxiv%2F1001.1681&amp;rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A14280921%23id-name%3DS2CID&amp;rft_id=info%3Apmid%2F21073241&amp;rft_id=info%3Adoi%2F10.1049%2Fiet-syb.2010.0009&amp;rft.aulast=Margolin&amp;rft.aufirst=A&amp;rft.au=Wang%2C+K&amp;rft.au=Califano%2C+A&amp;rft.au=Nemenman%2C+I&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AInteraction+information" class="Z3988"></span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFMcGill1954" class="citation journal cs1">McGill, W J (1954). "Multivariate information transmission". <i>Psychometrika</i>. <b>19</b> (2): 97–116. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1007%2Fbf02289159">10.1007/bf02289159</a>. <a href="/wiki/S2CID_(identifier)" class="mw-redirect" title="S2CID (identifier)">S2CID</a>&#160;<a rel="nofollow" class="external text" href="https://api.semanticscholar.org/CorpusID:126431489">126431489</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Psychometrika&amp;rft.atitle=Multivariate+information+transmission&amp;rft.volume=19&amp;rft.issue=2&amp;rft.pages=97-116&amp;rft.date=1954&amp;rft_id=info%3Adoi%2F10.1007%2Fbf02289159&amp;rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A126431489%23id-name%3DS2CID&amp;rft.aulast=McGill&amp;rft.aufirst=W+J&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AInteraction+information" class="Z3988"></span></li>
+<li>Moore JH, Gilbert JC, Tsai CT, Chiang FT, Holden T, Barney N, White BC (2006). A flexible computational framework for detecting, characterizing, and interpreting statistical patterns of epistasis in genetic studies of human disease susceptibility, <i>Journal of Theoretical Biology</i> <b>241</b>, 252-261. <a rel="nofollow" class="external autonumber" href="https://www.ncbi.nlm.nih.gov/pubmed/16457852?ordinalpos=19&amp;itool=EntrezSystem2.PEntrez.Pubmed.Pubmed_ResultsPanel.Pubmed_DefaultReportPanel.Pubmed_RVDocSum">[3]</a></li>
+<li>Nemenman I (2004). Information theory, multivariate dependence, and genetic network inference <a rel="nofollow" class="external autonumber" href="https://arxiv.org/abs/q-bio.QM/0406015">[4]</a>.</li>
+<li>Pearl, J (1988), <i>Probabilistic Reasoning in Intelligent Systems: Networks of Plausible Inference</i>, Morgan Kaufmann, San Mateo, CA.</li>
+<li>Tsujishita, T (1995), On triple mutual information, <i>Advances in applied mathematics</i> <b>16</b>, 269-274.</li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFChandaZhangBrazeauSucheston2007" class="citation journal cs1">Chanda, P; Zhang, A; Brazeau, D; Sucheston, L; Freudenheim, JL; Ambrosone, C; Ramanathan, M (2007). <a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC2265645">"Information-theoretic metrics for visualizing gene-environment interactions"</a>. <i>American Journal of Human Genetics</i>. <b>81</b> (5): 939–63. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1086%2F521878">10.1086/521878</a>. <a href="/wiki/PMC_(identifier)" class="mw-redirect" title="PMC (identifier)">PMC</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC2265645">2265645</a></span>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/17924337">17924337</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=American+Journal+of+Human+Genetics&amp;rft.atitle=Information-theoretic+metrics+for+visualizing+gene-environment+interactions&amp;rft.volume=81&amp;rft.issue=5&amp;rft.pages=939-63&amp;rft.date=2007&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC2265645%23id-name%3DPMC&amp;rft_id=info%3Apmid%2F17924337&amp;rft_id=info%3Adoi%2F10.1086%2F521878&amp;rft.aulast=Chanda&amp;rft.aufirst=P&amp;rft.au=Zhang%2C+A&amp;rft.au=Brazeau%2C+D&amp;rft.au=Sucheston%2C+L&amp;rft.au=Freudenheim%2C+JL&amp;rft.au=Ambrosone%2C+C&amp;rft.au=Ramanathan%2C+M&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC2265645&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AInteraction+information" class="Z3988"></span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFChandaSuchestonZhangBrazeau2008" class="citation journal cs1">Chanda, P; Sucheston, L; Zhang, A; Brazeau, D; Freudenheim, JL; Ambrosone, C; Ramanathan, M (2008). <a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC2567367">"AMBIENCE: a novel approach and efficient algorithm for identifying informative genetic and environmental associations with complex phenotypes"</a>. <i>Genetics</i>. <b>180</b> (2): 1191–210. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1534%2Fgenetics.108.088542">10.1534/genetics.108.088542</a>. <a href="/wiki/PMC_(identifier)" class="mw-redirect" title="PMC (identifier)">PMC</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC2567367">2567367</a></span>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/18780753">18780753</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Genetics&amp;rft.atitle=AMBIENCE%3A+a+novel+approach+and+efficient+algorithm+for+identifying+informative+genetic+and+environmental+associations+with+complex+phenotypes&amp;rft.volume=180&amp;rft.issue=2&amp;rft.pages=1191-210&amp;rft.date=2008&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC2567367%23id-name%3DPMC&amp;rft_id=info%3Apmid%2F18780753&amp;rft_id=info%3Adoi%2F10.1534%2Fgenetics.108.088542&amp;rft.aulast=Chanda&amp;rft.aufirst=P&amp;rft.au=Sucheston%2C+L&amp;rft.au=Zhang%2C+A&amp;rft.au=Brazeau%2C+D&amp;rft.au=Freudenheim%2C+JL&amp;rft.au=Ambrosone%2C+C&amp;rft.au=Ramanathan%2C+M&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC2567367&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AInteraction+information" class="Z3988"></span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFKillianKravitzGilson2007" class="citation journal cs1">Killian, B J; Kravitz, J Y; Gilson, M K (2007). <a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC2707031">"Extraction of configurational entropy from molecular simulations via an expansion approximation"</a>. <i>J. Chem. Phys</i>. <b>127</b> (2): 024107. <a href="/wiki/Bibcode_(identifier)" class="mw-redirect" title="Bibcode (identifier)">Bibcode</a>:<a rel="nofollow" class="external text" href="https://ui.adsabs.harvard.edu/abs/2007JChPh.127b4107K">2007JChPh.127b4107K</a>. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1063%2F1.2746329">10.1063/1.2746329</a>. <a href="/wiki/PMC_(identifier)" class="mw-redirect" title="PMC (identifier)">PMC</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC2707031">2707031</a></span>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/17640119">17640119</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=J.+Chem.+Phys.&amp;rft.atitle=Extraction+of+configurational+entropy+from+molecular+simulations+via+an+expansion+approximation&amp;rft.volume=127&amp;rft.issue=2&amp;rft.pages=024107&amp;rft.date=2007&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC2707031%23id-name%3DPMC&amp;rft_id=info%3Apmid%2F17640119&amp;rft_id=info%3Adoi%2F10.1063%2F1.2746329&amp;rft_id=info%3Abibcode%2F2007JChPh.127b4107K&amp;rft.aulast=Killian&amp;rft.aufirst=B+J&amp;rft.au=Kravitz%2C+J+Y&amp;rft.au=Gilson%2C+M+K&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC2707031&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AInteraction+information" class="Z3988"></span></li>
+<li>LeVine MV, Weinstein H (2014), NbIT - A New Information Theory-Based Analysis of Allosteric Mechanisms Reveals Residues that Underlie Function in the Leucine Transporter LeuT. <i>PLoS Computational Biology</i>. <a rel="nofollow" class="external autonumber" href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003603">[5]</a></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1067248974"/><cite id="CITEREFPandeySarkar2017" class="citation journal cs1">Pandey, Biswajit; Sarkar, Suman (2017). "How much a galaxy knows about its large-scale environment?: An information theoretic perspective". <i>Monthly Notices of the Royal Astronomical Society Letters</i>. <b>467</b> (1): L6. <a href="/wiki/ArXiv_(identifier)" class="mw-redirect" title="ArXiv (identifier)">arXiv</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//arxiv.org/abs/1611.00283">1611.00283</a></span>. <a href="/wiki/Bibcode_(identifier)" class="mw-redirect" title="Bibcode (identifier)">Bibcode</a>:<a rel="nofollow" class="external text" href="https://ui.adsabs.harvard.edu/abs/2017MNRAS.467L...6P">2017MNRAS.467L...6P</a>. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1093%2Fmnrasl%2Fslw250">10.1093/mnrasl/slw250</a>. <a href="/wiki/S2CID_(identifier)" class="mw-redirect" title="S2CID (identifier)">S2CID</a>&#160;<a rel="nofollow" class="external text" href="https://api.semanticscholar.org/CorpusID:119095496">119095496</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Monthly+Notices+of+the+Royal+Astronomical+Society+Letters&amp;rft.atitle=How+much+a+galaxy+knows+about+its+large-scale+environment%3F%3A+An+information+theoretic+perspective&amp;rft.volume=467&amp;rft.issue=1&amp;rft.pages=L6&amp;rft.date=2017&amp;rft_id=info%3Aarxiv%2F1611.00283&amp;rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A119095496%23id-name%3DS2CID&amp;rft_id=info%3Adoi%2F10.1093%2Fmnrasl%2Fslw250&amp;rft_id=info%3Abibcode%2F2017MNRAS.467L...6P&amp;rft.aulast=Pandey&amp;rft.aufirst=Biswajit&amp;rft.au=Sarkar%2C+Suman&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AInteraction+information" class="Z3988"></span></li>
+<li><a rel="nofollow" class="external free" href="https://www3.nd.edu/~jnl/ee80653/Fall2005/tutorials/sunil.pdf">https://www3.nd.edu/~jnl/ee80653/Fall2005/tutorials/sunil.pdf</a></li>
+<li>Yeung R W (1992). A new outlook on Shannon's information measures. in IEEE Transactions on Information Theory. <a rel="nofollow" class="external autonumber" href="https://ieeexplore.ieee.org/document/79902">[6]</a></li></ul></div>

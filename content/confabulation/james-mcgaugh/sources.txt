@@ -1,0 +1,15 @@
+http://scholar.google.com/scholar?q=%22James+McGaugh%22
+http://www.google.com/search?&q=%22James+McGaugh%22&tbs=bkt:s&tbm=bks
+http://www.google.com/search?as_eq=wikipedia&q=%22James+McGaugh%22
+http://www.google.com/search?tbm=nws&q=%22James+McGaugh%22+-wikipedia&tbs=ar:1
+http://www.google.com/search?tbs=bks:1&q=%22James+McGaugh%22+-wikipedia
+http://www.cnlm.uci.edu/
+http://www.faculty.uci.edu/profile.cfm?faculty_id=2140
+http://neurobiology.uci.edu/
+http://www.oac.cdlib.org/findaid/ark:/13030/kt2b69r92p
+https://cnlm.uci.edu/mcgaugh/
+https://librarian.nl.go.kr/LI/contents/L20101000000.do?id=KAC201209569
+https://www.jstor.org/action/doBasicSearch?Query=%22James+McGaugh%22&acc=on&wc=on
+https://viaf.org/viaf/79101193
+https://www.wikidata.org/wiki/Q6139321#identifiers
+https://www.worldcat.org/identities/containsVIAFID/79101193
